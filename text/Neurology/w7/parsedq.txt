@@ -1,0 +1,180 @@
+
+*Question 7.1.1 
+What neurotransmitter do motor neurons release at the neuromuscular juction?
+<ul>
+Acetylcholine 
+Glutamate
+Dopamine
+Glycine
+</ul>
+
+*Question 7.1.2 
+Increases in cytosolic calcium concentration in muscle cells cause contraction. How do these calcium signals come about in skeletal muscle?
+<ul>
+Nicotinic receptors are activated postsynaptically causing an influx of cations into the muscle and action potential firing in the muscle. The action potentials propagate across the muscle cells activating voltage-gated calcium channels, which induce a rise in cytosolic calcium concentration. 
+Nicotinic receptors are activated postsynaptically causing an influx of cations into the muscle. Some of these cations are calcium ions and these drive muscle contraction.
+The action potential invading the synaptic boutons of the motor neuron causes an increase in cytosolic calcium concentration which diffuses into the muscle
+Motor neurons secrete a growth factor which induces calcium signals
+</ul>
+
+*Question 7.1.3 
+A muscle is controlled by a group of motor neurons termed the "motor pool". How can we map the premotor neurons of a given "motor pool"?
+<ul>
+Injecting anatomical anterograde tracers into different areas of the brainstem and following the axonal trajectories
+Injecting anterograde transynaptic viral tracers into brainstem, and following the subsequent spread of virus to motor neurons
+Injecting retrograde transynaptic viral tracers into muscles, first infecting motor neurons and subsequently spreading to their presynaptic inputs
+Injecting anterotrograde transynaptic viral tracers into muscles, first to infect motor neurons and subsequent spread to their presynaptic inputs expressing a complement factor 
+</ul>
+
+*Question 7.1.4 
+Why is motor control critical for sensory perception?
+<ul>
+We move our eyes and heads, and therefore what our eyes see depends upon movements
+We move our hands and body, and therefore what we feel depends upon movements
+We sniff in order to enhance odor perception
+All of the above 
+</ul>
+
+*Question 7.1.5 
+Why might one propose that the motor function of whisker sensory cortex (wS1) is a negative feedback motor command, while the motor function of whisker motor cortex (wM1) is a motor command to enhance sensory input?
+<ul>
+Stimulation of wS1 drives sustained whisker protraction, while stimulation of wM1 drives rhythmic whisker protraction
+Stimulation of wS1 drives rhythmic whisker protraction, while stimulation of wM1 drives sustained whisker retraction
+Stimulation of wS1 drives sustained whisker retraction, while stimulation of wM1 drives sustained whisker protraction
+Stimulation of wS1 drives sustained whisker retraction, while stimulation of wM1 drives rhythmic whisker protraction 
+</ul>
+
+*Question 7.2.1 
+Which of the following statement about sensory percepts is not correct?
+<ul>
+Sensory percepts are learned through experiences
+Sensory percepts are subjective
+Sensory percepts are actively acquired
+Sensory percepts are independent of the observer 
+</ul>
+
+*Question 7.2.2 
+Psychometric curves plot the relationship between stimulus strength and behavioral performance. What is meant by the term "psychometric threshold"?
+<ul>
+The stimulus strength at which performance is half-maximal 
+The stimulus strength at which performance is just above chance
+The behavioral performance when stimulus strength is half maximal
+The behavioral performance when stimulus strength is just above noise level
+</ul>
+
+*Question 7.2.3 
+What are the minimal requirements for experimental investigation of subjective sensory percepts?
+<ul>
+Human subjects are needed for subjective sensory percepts
+Complex stimuli are needed for subjective sensory percepts
+Behavioral report of subjective percept by motor output 
+Visual stimuli are needed for subjective sensory percepts
+</ul>
+
+*Question 7.2.4 
+Which experiment tests for the sufficiency of neuronal activity in the C2 barrel column of primary somatosensory cortex (S1) to drive licking in a mouse trained in a detection task in which a 1 ms impulse is applied to the C2 whisker, and the mouse is trained to lick a water reward spout?
+<ul>
+Injection of TTX into the C2 barrel column
+Injection of CNQX and APV into the C2 barrel column
+Optogenetic stimulation of neurons in the C2 barrel column 
+All the above
+</ul>
+
+*Question 7.2.5 
+What pattern of neuronal activity is found in the C2 barrel column of mouse primary somatosensory cortex (S1) during a detection task in which a 1 ms impulse is applied to the C2 whisker, and the mouse is trained to lick a water reward spout?
+<ul>
+An early sensory response that reliably encodes sensory stimulus
+A late depolarization that encodes the subjective sensory percept
+Both of the above 
+None of the above
+</ul>
+
+*Question 7.3.1 
+Which of the following statements about reward-based learning is not correct?
+<ul>
+In reward-based learning we learn that in a specific stimulus context we should perform a specific motor output that will then lead to a reward
+In reward-based learning an animal needs to learn to transform sensory inputs into useful motor outputs
+Reward-based learning likely strengthens the synaptic circuits linking a specific sensory input with the motor circuits driving the rewarded motor output
+All learning relies upon reward signals 
+</ul>
+
+*Question 7.3.2 
+Which statement about the activity of midbrain dopaminergic neurons is not true?
+<ul>
+Dopamine neurons transiently increase their firing when an unexpected reward is delivered
+Dopamine neurons transiently increase their firing when a cue is presented that predicts future reward
+Dopamine neurons transiently decrease firing rate when an expected reward is delivered 
+Dopamine is thought to signal reward prediction error and is therefore a useful learning signal
+</ul>
+
+*Question 7.3.3 
+Where do the midbrain dopaminergic neurons of the substantia nigra pars compacta (SNc) prominently innervate?
+<ul>
+Hippocampus
+Amygdala
+Striatum 
+Olfactory bulb
+</ul>
+
+*Question 7.3.4 
+Which of the following statements about striatal projection neurons is correct?
+<ul>
+D1R-expressing projection neurons directly inhibit the substantia nigra reticulata (SNr) (direct pathway), resulting in disinhibition of brainstem motor nuclei ('go' signal) 
+D1R-expressing striatal projection neurons directly inhibit the substantia nigra reticulata (SNr) (direct pathway), resulting in inhibition of brainstem motor nuclei ('no go' signal)
+D2R-expressing striatal projection neurons directly inhibit the external globus pallidus (GPe), which in turn innervates the SNr (indirect pathway), resulting in disinhibition of brainstem motor nuclei ('go' signal)
+D2R-expressing striatal projection neurons directly inhibit the substantia nigra reticulata (SNr) (direct pathway), resulting in disinhibition of brainstem motor nuclei ('go' signal)
+</ul>
+
+*Question 7.3.5 
+Which of the following statements about the action of dopamine is not correct?
+<ul>
+Dopamine appears to potentiate cortical input onto the direct pathway striatal projection neurons through the activation of D1 receptors (strengthens direct pathway)
+Dopamine appears to depress cortical input onto the indirect pathway striatal projection neurons through the activation of D2 receptors (weakens indirect pathway)
+Dopamine acts on D1 receptors to promote the insertion of both AMPA and NMDA receptors onto the postsynaptic membranes of direct striatal projection neurons
+Dopamine acts on D2 receptors to promote calcium entry into indirect striatal projection neurons 
+</ul>
+
+*Question 7.4.1 
+According to the study of Gustavsson et al. (2011), how many people suffered from brain disorders in Europe in 2010?
+<ul>
+Less than 3 million
+50 million
+100 million
+More than 150 million 
+</ul>
+
+*Question 7.4.2 
+What are the early clinical symptoms of Parkinson's disease?
+<ul>
+Tonic seizures with high fever
+Forgetting conversations or appointments, routinely misplacing possessions
+Bradykinesia, tremor, rigidity, difficulty in walking 
+Double vision or blurring vision, fatigue, problems with bowel and bladder function
+</ul>
+
+*Question 7.4.3 
+What is thought to cause these symptoms of Parkinson's disease?
+<ul>
+Degeneration of glutamatergic neurons in sensorimotor cortex
+Degeneration of dopaminergic neurons in substantia nigra pars compacta 
+Degeneration of astrocytes in hippocampus CA1 region
+Degeneration of Purkinje cells in cerebellar cortex
+</ul>
+
+*Question 7.4.4 
+L-DOPA is an effective first treatment for the symptoms of Parkinson's disease. However, for some patients L-DOPA gradually becomes less effective and is associated with serious side-effects. As a further treatment for the symptoms of Parkinson's disease, deep brain stimulation might be considered. Which statement is true about deep brain stimulation?
+<ul>
+Deep brain stimulation is an experimental therapy, with mixed results, and not in general available as a treatment, but only as part of clinical trials
+Implantation of electrodes in human brains is unethical and not allowed in Europe
+More than 100,000 people across the world have already been implanted with deep brain stimulation electrodes with overall good results 
+Many millions of Parkinson's patients have already been implanted with deep brain stimulation electrodes and this is now a standard therapy
+</ul>
+
+*Question 7.4.5 
+Which region of the human brain is typically targeted by deep brain stimulation to alleviate symptoms of Parkinson's disease?
+<ul>
+Cerebellum
+Striatum
+Hippocampus
+Subthalamic nucleus 
+</ul>

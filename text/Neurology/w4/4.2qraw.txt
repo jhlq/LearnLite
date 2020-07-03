@@ -1,0 +1,60 @@
+Question 1 (1 point possible)
+
+At single synapses, glutamatergic excitatory postsynaptic potentials (EPSPs) are typically driven by which conductance/s?
+pure AMPA conductance pure AMPA conductance - incorrect
+pure NMDA conductance
+mixed NMDA and AMPA conductances
+metabotropic glutamate receptors
+
+Explanation
+
+Glutamatergic EPSPs are typically driven by mixed AMPA (fast) and NMDA (slower) conductances.
+You have used 1 of 1 submissions
+Question 2 (1 point possible)
+
+In which recording mode can we measure EPSPs and/or EPSCs?
+Both can be measured in the voltage-clamp configuration Both can be measured in the voltage-clamp configuration - incorrect
+Both can be measured in the current-clamp configuration
+Current-clamp for EPSPs, voltage-clamp for EPSCs
+Dynamic clamp is necessary to measure EPSCs
+
+Explanation
+
+In the current-clamp mode, we are able to clamp the current and observe membrane potentials, therefore with this mode we can observe excitatory postsynaptic potentials (EPSPs). In the voltage-clamp mode we are able to clamp the voltage and observe the currents passing through the membrane, so we can observe excitatory postsynaptic currents (EPSCs).
+You have used 1 of 1 submissions
+Question 3 (1/1 point)
+
+Why do EPSPs decay more slowly than the EPSCs?
+Because of the amplifier gives slower feedback currents during the EPSP decay period
+After an EPSP, the membrane potential discharges with the membrane time constant. In EPSCs the membrane potential is clamped, therefore there is no discharge, decay time is only dependent on the ion-channel kinetics. After an EPSP, the membrane potential discharges with the membrane time constant. In EPSCs the membrane potential is clamped, therefore there is no discharge, decay time is only dependent on the ion-channel kinetics. - correct
+In EPSPs there are more synapses involved than the EPSCs, therefore the time course is much longer in EPSPs.
+During an EPSC, the presynaptic terminal stops releasing neurotransmitter much earlier than during an EPSP. This causes a shorter time constant of decay for EPSCs.
+
+Explanation
+
+Let us consider an EPSC dominated by AMPA synaptic currents having ~2 ms of duration in response to presynaptic release of glutamate. When the AMPA conductance closes, that is the end of the EPSC (EPSCs are measured in voltage-clamp, therefore there is no charging of the membrane capacitance). But for an EPSP we need to consider the charging and discharging of the membrane capacitance. During the synaptic conductance a lot of charge entered the cell, changing the membrane potential and charging the membrane capacitance. The decay phase of the EPSP is determined by the discharge of membrane capacitance through the leak conductances. The membrane time constant depends on capacitance and leak conductance, and is typically on the order of tens of miliseconds for mammalian neurons. This is the difference between EPSCs (which have rapid time-courses) and EPSPs (which are much slower and longer-lasting, being filtered by the membrane capacitance).
+You have used 1 of 1 submissions
+Question 4 (1 point possible)
+
+A unitary EPSP (uEPSP) is a postsynaptic membrane potential response evoked by a single presynaptic action potential in one neuron. What is the most important determinant of trial-to-trial variability of the amplitude of uEPSPs?
+Probabilistic nature of synaptic transmission
+Action potential propagation failures Action potential propagation failures - incorrect
+Highly localised temperature fluctuations
+Measurement noise
+
+Explanation
+
+An action potential evokes neurotransmitter release from an individual presynaptic bouton in a quantal probabilistic manner. If the two neurons are synaptically connected by a single low release probability bouton, then the postsynaptic resonse will be highly variable. On the other hand if two neurons are connected by many reliable synaptic boutons, then the postsynaptic response will have low variance.
+You have used 1 of 1 submissions
+Question 5 (1/1 point)
+
+Why does the time-course of an EPSP differ depending upon where it is measured across the neuronal arborisation?
+There is much more glutamate released in the region of dendrites than the soma
+EPSPs spread across dendrites being filtered by their cable properties EPSPs spread across dendrites being filtered by their cable properties - correct
+There are less NMDA receptors in the soma
+EPSPs don't spread, and only generate local changes in membrane potential
+
+Explanation
+
+EPSPs are larger in amplitude and shorter in time course, when they are measured close to their site of generation in a dendrite. The large local membrane potential associated with a dendritic EPSP is caused by the high local membrane resistance (small leak conductance relative to the glutamate-gated conductance) and the small local capacitance (due to the small membrane area of thin dendrites). The local membrane potential is only briefly depolarised by a very large amount in the dendrite, because axial currents then rapidly spread the depolarisation. The axial currents are filtered by membrane capacitance and leak conductances. If we record simultaneously from a dendrite and a soma, we see a big fast EPSP in the dendrite, and a small slow EPSP in the soma.
+You have used 1 of 1 submissions

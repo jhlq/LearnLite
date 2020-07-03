@@ -1,0 +1,25 @@
+C = 10 pF
+
+e = 1.6 x 10^-19 C
+
+In order to calculate the number of the ions, first we need to know how much charge would need to change the membrane potential by 70 mv:
+
+Q = C x V
+
+= 10 x 10^-12 F x 70 x 10^-3 V
+
+= 0.7 pC -> the charge
+
+For the number of ions:
+
+Q = Number of ions x e
+
+Q = 0.7 pC
+
+e = 1.6 x 10^-19 C
+
+Q/e -> gives the number of ions
+
+Q/e = 0.7 x 10^-12 C / 1.6 x 10^-19 C
+
+Q/e = ~4 million ions

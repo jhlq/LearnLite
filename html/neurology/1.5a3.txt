@@ -1,0 +1,7 @@
+The length constant of a cylindrical cable dendrite is given by the square root of the membrane resistance divided by the axial resistance for a given length of dendrite.
+
+The membrane resistance for a given length of dendrite is generally given in units of Ohm.m (the longer the dendrite, the lower the membrane resistance).
+
+The axial resistance for a given length of dendrite is generally given in units of Ohm/m (the longer the dendrite, the greater the axial resistance).
+
+The voltage attenuation at steady state across the length of the dendritic cable is described by an exponential decay with this length constant.

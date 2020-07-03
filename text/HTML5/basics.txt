@@ -1,0 +1,218 @@
+***Basics
+HTML stands for HyperText Markup Language
+
+Begin documents with &lt;!doctype html&gt;
+
+Include javascript files like so: &lt;script src="script.js"&gt;&lt;/script&gt;
+
+**Structural elements
+http://web.archive.org/web/20140306141627/http://dev.opera.com/articles/view/new-structural-elements-in-html5/ These elements are based on data mining that determined the most frequent ids and classes often used with the div element.
+
+*&lt;header&gt;
+http://www.w3.org/TR/html5/sections.html#the-header-element
+
+Introduction of "sectioning elements": an article, a section, the entire document (header page). Typically the header of a Web site that appears on top of each page, or a header of a long article or section.
+
+*&lt;footer&gt;
+http://www.w3.org/TR/html5/sections.html#the-footer-element
+
+Contains the footer of a site, a long article or section.
+
+*&lt;nav&gt;
+http://www.w3.org/TR/html5/sections.html#the-nav-element
+
+Section that contains the main navigation links.
+
+*&lt;article&gt;
+http://www.w3.org/TR/html5/sections.html#the-article-element
+
+Independent content, which can be individually extracted from the document and syndicated (RSS or equivalent) without penalizing its understanding. Typically a blog post.
+
+*&lt;section&gt;
+http://www.w3.org/TR/html5/sections.html#the-section-element
+
+Generic section used to group different articles for different purposes or subjects, or to define the different sections of a single article. Generally used with a header.
+
+*&lt;time&gt;
+http://www.w3.org/TR/html5/text-level-semantics.html#the-time-element
+
+Used for marking up times and dates.
+
+*&lt;figure&gt; and &lt;figcaption&gt;
+http://www.w3.org/TR/html5/grouping-content.html#the-figure-element
+
+Used to encapsulate a figure as a single item, and contains a caption for the figure, respectively.
+
+*&lt;aside&gt;
+http://www.w3.org/TR/html5/sections.html#the-aside-element
+
+Section whose content is not necessarily directly related to the main content that surrounds it, but can provide additional information.
+
+*&lt;main&gt; 
+http://www.w3.org/TR/html5/grouping-content.html#the-main-element
+
+The main element represents the main content of the body of a document or application. The main content area consists of content that is directly related to or expands upon the central topic of a document or central functionality of an application. <b>There can be only one main element in a document </b> and it cannot descend.
+
+http://www.w3.org/html/wg/wiki/User:Sfaulkne/main-usecases#Introduction
+
+https://developer.mozilla.org/en-US/docs/Web/HTML/Element/main
+
+*&lt;div&gt; 
+For other styling, such as CSS hooks, see the following flowchart for advice on when to use div:
+
+<figure>
+ <img src="h5d-sectioning-flowchart.png"
+      alt="Flowchart for elements.">
+ <figcaption>From:
+http://html5doctor.com/
+</figcaption>
+</figure>
+
+*&lt;hn&gt; 
+Headers, replace n with a number, use h1 only once.
+
+*&lt;body&gt; 
+Section root
+
+*Additional resources
+<ul>
+https://github.com/h5o/h5o-chrome
+http://jsbin.com/binuxo/1/edit
+http://coding.smashingmagazine.com/2013/01/18/the-importance-of-sections/
+https://dev.opera.com/articles/new-structural-elements-in-html5/
+http://colinaut.com/2009/10/15/the-semantics-of-html5-structural-elements/
+http://learn.shayhowe.com/html-css/positioning-content/
+</ul>
+
+*Mixing together
+http://jsbin.com/heboke/19/edit Example blog.
+
+http://jsbin.com/heboke/26/edit Better version of the blog.
+
+A section for each month and an article for each post.
+
+http://jsbin.com/heboke/4/edit Tag cloud code.
+
+*More on article and section
+There can be articles in sections and sections in articles.
+
+Articles can contain the nav and footer elements.
+
+*Headings and structure
+Headers h1 to h6 define the document outline which can be visualized with the following extensions:
+<ul>
+https://chrome.google.com/webstore/detail/html5-outliner/afoibpobokebhgfnknfndkgemglggomo Chrome.
+https://addons.opera.com/addons/extensions/details/html5-outliner/1.0/?display=en Opera.
+https://addons.mozilla.org/en-US/firefox/addon/html5_outliner/ Firefox.
+http://jsbin.com/binuxo/1/edit Self contained code.
+</ul>
+
+Using a h3 after a h2 initiates a subsection in the first h2 whereas using another h2 creates a new section.
+
+*Best practices
+Always add a heading to explicit sectioning content. Without a header screen readers will say "Entering section" instead of, when there is a header, "Entering section with heading ..."
+
+The &lt;header&gt; element is just a container. It is not taken into account for defining new sections of a document nor does it affect the hierarchy levels. 
+
+Place the headers inside section and article elements.
+
+Inspect the document outline through one of the extensions presented above.
+
+In order to NOT display the heading content on screen the recommended technique 
+http://www.paciellogroup.com/blog/2012/08/notes-on-accessible-css-image-sprites/ is described in this article by Steve Faulkner. 
+Do not use display:none or visibility:hidden in your CSS stylesheet, as in that case the heading content will never be vocalized by screen readers
+
+All interactive content must have a visible focus indicator (and be on screen when focused).
+
+**Other elements and attributes
+*&lt;details&gt; and &lt;summary&gt; elements
+These elements have been introduced for displaying a foldable zone.
+
+http://jsbin.com/ifofib/3/edit?html,css,output
+
+http://jsbin.com/ayojup/2/edit Nesting is possible.
+
+http://www.alsacreations.com/article/lire/1335-html5-details-summary.html Can be styled with CSS. 
+Like this:
+http://jsbin.com/ifofib/46/edit
+Or that:
+http://jsbin.com/ifofib/8/edit
+
+Currently NOT supported in all browsers. See: 
+http://caniuse.com/#feat=details
+
+*Retro-compatibility
+A polyfill is a piece of JavaScript code you include in your HTML page, that will emulate HTML5 features not yet implemented in browsers.
+
+Can be found at 
+http://caniuse.com/
+and 
+http://html5please.com/
+
+http://jsbin.com/tupuxo/7/edit Light polyfill for details.
+
+http://jsbin.com/qociye/3/edit This light polyfill does not work 100%.
+
+http://jsbin.com/nogate/1/edit Heavy polyfills can quickly grow to daunting sizes.
+
+*The &lt;time&gt; element.
+Provides both a human readable part (the part between <time> and </time>) and a machine readable part contained within a datetime attribute. Dates are expressed as YYYY-MM-DD.
+
+http://www.brucelawson.co.uk/2012/best-of-time/
+
+The datetime attribute can be used for indicating a date/time or a duration:
+<ul>
+<time datetime="1905"> 	The year 1905
+<time datetime="1905-11"> 	November 1905
+<time datetime="11-13">  	November 13th (any year)
+<time datetime="1905-W21"> 	Week 21 from year 1905
+<time datetime="1905-11-13 09:00"> 	November 13th year 1905, time = 9:00
+<time datetime="1905-11-13T09:00"> 	Same as previous example, both syntaxes are supported, with and without the "T" between date and time.
+<time datetime="09:00Z"> 	9:00 in the morning, GMT
+<time datetime="09:00-05"> 	9:00 in the morning, GMT minus 5 hours
+<time datetime="09:00+05:45"> 	9:00 in the morning, GMT plus 5 hours 45 minutes, (like in Nepal that has 5:45 of difference with GMT)
+</ul>
+
+Duration values use the prefix “P” for “period” as in datetime="P4D" (period = four days). So you start the attribute string value with a "P", followed by a duration value that ends with another letter indicating the unit used, like "D" for "days",  “H” for hours, “M” for minutes and “S” for seconds. 
+
+*The &lt;mark&gt; element
+Highlight important parts of a text, like "quoting parts", etc.
+
+Display search results with search strings highlighted in the results.
+
+http://jsbin.com/otekov/3/edit
+
+Example CSS: mark {     background-color: green;     color: yellow; }
+
+*The download attribute for links
+Change the default name of downloaded objects: &lt;a href="link" download="newname"&gt;
+
+http://www.w3.org/TR/html5/links.html#downloading-resources
+
+http://www.htmlfivecan.com/#42
+
+For security reasons the image should be located on the same domain as the HTML page that contains the link.
+
+http://jsbin.com/amoxah/2/edit
+
+*The translate attribute
+Stop automatic translation of certain words or passages (such as code): &lt;span translate="no"&gt;var love=Infinity&lt;/span&gt;
+
+<ul>
+http://www.w3.org/TR/html5/dom.html#the-translate-attribute
+http://rishida.net/blog/?p=831
+http://www.w3.org/International/questions/qa-translate-flag
+</ul>
+
+<section class="yellow">
+**Microdata
+Used for search engine optimization and search result presentation.
+
+<ul>
+http://www.w3.org/TR/microdata/
+http://journal.code4lib.org/articles/6400
+http://diveinto.html5doctor.com/extensibility.html
+http://jsbin.com/uquboc/144/edit?html,output
+http://schema-creator.org/
+</ul>
+</section>

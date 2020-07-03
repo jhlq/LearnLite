@@ -1,0 +1,1 @@
+Neocortical GABAergic neurons largely regulate the activity of the local microcircuits in which they are embedded. They usually don't have long-range axonal projections, therefore it is impossible for them to inhibit sub-cortical regions directly.

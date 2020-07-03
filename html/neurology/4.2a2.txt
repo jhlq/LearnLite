@@ -1,0 +1,1 @@
+In the current-clamp mode, we are able to clamp the current and observe membrane potentials, therefore with this mode we can observe excitatory postsynaptic potentials (EPSPs). In the voltage-clamp mode we are able to clamp the voltage and observe the currents passing through the membrane, so we can observe excitatory postsynaptic currents (EPSCs).

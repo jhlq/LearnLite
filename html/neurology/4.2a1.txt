@@ -1,0 +1,1 @@
+Glutamatergic EPSPs are typically driven by mixed AMPA (fast) and NMDA (slower) conductances.

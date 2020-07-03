@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>ArtAI, Learn, HTML5, Introduction</title>
+<link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+<body>
+<h1>HTML5</h1>
+<nav>
+  <header>
+     <h2>Navigation menu</h2>
+   </header>
+	<ul>
+		<li><a href="index.html">Index</a></li>
+		<li><a href="../index.html">Learn index</a></li>
+	</ul>
+</nav>
+<header>
+<h2>Introduction</h2>
+</header>
+<p>Examples will be presented via JS Bin (<a href="http://jsbin.com/">http://jsbin.com/</a>), feel free to modify and base work on the examples.</p>
+<section>
+<header>
+<h3>Accessibility</h3>
+</header>
+<p>Website developers should take users with the following into consideration:
+<ul>
+	<li>Screen reader technology that vocalizes content</li>
+	<li>Weak internet connection</li>
+	<li>Mobile or old browsers</li>
+	<li>Low literacy</li>
+	<li>No mouse</li>
+</ul>
+</p>
+<p>Ensure that each page has a descriptive title and every image an alt text. <span class="medium">See more checks here: <a href="http://www.w3.org/WAI/eval/preliminary.html">http://www.w3.org/WAI/eval/preliminary.html</a></span>
+</p>
+</section>
+<section>
+<header>
+<h3>Course contents</h3>
+</header>
+<ul>
+	<li>HTML5 structuring elements</li>
+	<li>Multimedia API</li>
+	<li>Canvasdrawing</li>
+	<li>Accessible forms</li>
+</ul>
+</section>
+<section>
+<header>
+<h3>Suggested readings</h3>
+</header>
+<ul>
+<li> <a href="http://www.w3.org/WAI/intro/people-use-web/Overview.html">http://www.w3.org/WAI/intro/people-use-web/Overview.html</a> </li>
+<li> <a href="http://www.w3.org/WAI/tutorials/">http://www.w3.org/WAI/tutorials/</a> </li>
+<li> <a href="http://www.w3.org/WAI/">http://www.w3.org/WAI/</a> </li>
+</ul>
+</section>
+<section>
+<header>
+<h3>Internationalization</h3>
+</header>
+<p>The acronym i18n is used for internationalization since there are 18 letters between the i and the n. The standard encoding to use is UTF8, it is good practice to declare encoding and charset. If your website is in several languages have translated links to switch easily findable.</p>
+<h4>Suggested readings</h4>
+<ul>
+<li> <a href="http://www.w3.org/International/questions/qa-what-is-encoding">http://www.w3.org/International/questions/qa-what-is-encoding</a> </li>
+<li> <a href="http://www.w3.org/International/tutorials/tutorial-char-enc/Overview">http://www.w3.org/International/tutorials/tutorial-char-enc/Overview</a> </li>
+<li> <a href="http://www.w3.org/International/getting-started/language">http://www.w3.org/International/getting-started/language</a> </li>
+<li> <a href="http://www.w3.org/International/articles/language-tags/">http://www.w3.org/International/articles/language-tags/</a> </li>
+<li> <a href="http://www.w3.org/International/questions/qa-lang-priorities">http://www.w3.org/International/questions/qa-lang-priorities</a> </li>
+<li> <a href="http://www.w3.org/International/questions/qa-choosing-language-tags">http://www.w3.org/International/questions/qa-choosing-language-tags</a> </li>
+<li> <a href="http://www.w3.org/International/techniques/authoring-html-dynamic">http://www.w3.org/International/techniques/authoring-html-dynamic</a> </li>
+</ul>
+</section>
+</body>
+</html>
+

@@ -1,0 +1,171 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>LearnLite</title>
+</head>
+
+<body>
+	<h1>Mindfulness!</h1>
+
+	<p>Focusing is important in all tasks and meditation is training in focusing. Meditation has been shown to directly <a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3004979/">increase the density of gray matter in the brain</a> while creating happiness and peace. The program we describe here is designed to promote exercise in focused awareness by providing a cue that not only brings ones attention back to the practice but also offers a challenge of maintaining concentration during the countdown and catching the bell in awareness.</p>
+
+<p><img src="mindfulnessBell.png" alt="mindfulnessBell.png"> </p>
+
+	<p>Let us analyze <a href="mindfulness.jl"> 
+the source code</a> bit by bit:</p>
+	<code>
+using Gtk.ShortNames<br>
+import AudioIO
+	</code>
+	<p>
+	The first two lines pull in two packages for use, with "using" shorthand notation is made available whereas with "import" the full package name has to be typed to access internal functions. 
+	</p>
+	<code>
+bellfile="ZenTempleBell.wav"<br>
+if ispath(bellfile)<br>
+&emsp;	import WAV<br>
+&emsp;	bell=WAV.wavread(bellfile)[1][:,1]<br>
+else<br>
+&emsp;	samplerate=44100<br>
+&emsp;	seconds=3<br>
+&emsp;	x=linspace(2pi/samplerate,seconds*2pi,seconds*samplerate)<br>
+&emsp;	amp=0.3<br>
+&emsp;	d=linspace(1,0,seconds*samplerate)<br>
+&emsp;	A=444<br>
+&emsp;	r=(528/444)^(1/3)<br>
+&emsp;	bell=cos(A.*x).*d.*amp.+cos(A*r^3.*x).*d.*amp.+cos(A*r^5.*x).*d.*amp<br>
+end
+	</code>
+	<p>
+	Here we load <a href="ZenTempleBell.wav"> 
+the bell sound</a>, if the file is not present an A chord is manually constructed. Now a note on the volatile nature of using a language under heavy development, first the WAV package produced errors which were resolved by updating the packages, however when the Gtk package was updated it in turn produced errors, updating to a Julia version released on this very day produced a waterfall of deprecation warnings and did not fix the errors, however it did introduce backwards incompatibility when the Gtk package was rolled back to version 7 and this issue in turn was resolved by using a few months old version of Julia. The situation could probably have progressed smoother with the stable Julia v0.3, the use of which indeed being the official recommendation. 
+	</p>
+	<code>
+type Countdown<br>
+&emsp;	active::Bool<br>
+&emsp;	updated<br>
+&emsp;	remaining<br>
+end<br>
+c=Countdown(true,time(),900)
+	</code>
+	<p>
+This type stores information about the countdown, a dictionary can also be used, or variables attached to the Gtk framework such as the total countdown length.
+	</p>
+	<code>
+#Widgets<br>
+w=@Window("Mindfulness", 600, 300)<br>
+frame=@Frame("Bell"); push!(w,frame)<br>
+bb=@Box(:v); push!(frame,bb)<br>
+b=@Button("Ring the bell"); push!(bb,b)<br>
+lcd=@Label("Countdown:"); push!(bb,lcd)<br>
+cd=@Label("$(c.remaining)"); push!(bb,cd)<br>
+setproperty!(cd,:tooltip_text,"Catch me if you can!")<br>
+resume=@Button("Resume"); push!(bb,resume)<br>
+pause=@Button("Pause"); push!(bb,pause)<br>
+reset=@Button("Reset"); push!(bb,reset)<br>
+	</code>
+	<p>
+Here we define our window and its contents. Notice the ease with which we can set tooltip texts and the range for our spin button below, a few characters instead of having to deal with the cumbersome adjustments.
+	</p>
+	<code>
+hbox=@Box(:h); push!(bb,hbox)<br>
+len=@Label("Length:"); push!(hbox,len)<br>
+sb=@SpinButton(1:999999999); push!(hbox,sb)<br>
+setproperty!(sb,:value,c.remaining)<br>
+setproperty!(hbox,:expand,len,true)<br>
+setproperty!(hbox,:expand,sb,true)<br>
+setproperty!(hbox,:spacing,10)<br>
+<br>
+showall(w)<br>
+	</code>
+	<p>
+By putting a box in the box we can perform some formatting, an alternative option is to use to grid container. The final line makes the contents of the window visible.
+	</p>
+	<code>
+signal_connect(b, "clicked") do widget<br>
+&emsp;	AudioIO.play(bell)<br>
+end
+	</code>
+	<p>
+We need to connect our buttons to functions.
+	</p>
+	<code>
+function downcount()<br>
+&emsp;	c.remaining=c.remaining-(time()-c.updated)<br>
+&emsp;	if c.remaining<=0<br>
+&emsp;	&emsp;	AudioIO.play(bell)<br>
+&emsp;	&emsp;	c.remaining=getproperty(sb,:value,Int64)<br>
+&emsp;	end<br>
+&emsp;	setproperty!(cd,:label,"$(c.remaining)")<br>
+&emsp;	c.updated=time()<br>
+&emsp;	sleep(1)<br>
+end<br>
+signal_connect(resume, "clicked") do widget<br>
+&emsp;	if !c.active<br>
+&emsp;	&emsp;	c.updated=time()<br>
+&emsp;	&emsp;	c.active=true<br>
+&emsp;	&emsp;	@async while c.active;downcount();end<br>
+&emsp;	end<br>
+end
+	</code>
+	<p>
+This button activates the countdown as defined in downcount.
+	</p>
+	<code>
+signal_connect(pause, "clicked") do widget<br>
+&emsp;	c.active=false<br>
+end<br>
+signal_connect(reset, "clicked") do widget<br>
+&emsp;	c.remaining=getproperty(sb,:value,Int64)<br>
+&emsp;	setproperty!(cd,:label,"$(c.remaining)")<br>
+end
+	</code>
+	<p>
+These ones pause and reset the countdown.
+	</p>
+	<code>
+@async while c.active;downcount();end<br>
+if !isinteractive() #this will evaluate to true even if the script is loaded with -L<br>
+&emsp;	condition=Condition()<br>
+&emsp;	signal_connect(w, :destroy) do widget<br>
+&emsp;	&emsp;	notify(condition)<br>
+&emsp;	end<br>
+&emsp;	wait(condition)<br>
+&emsp;	c.active=false<br>
+end
+	</code>
+	<p>
+Now the final part is to make the program run until the user closes the main window, the Julia community values separation into importable and runnable code as opposed to solutions for mixing the two found in other languages, so make your files as reusable as possible and make a test driver that also serves as documentation. 
+	</p>
+
+	<p>
+Next we may want to arrange for this bell to automatically activate any time we start the computer, this can be achieved in Ubuntu by adding the following line to the file .gnomerc (and creating it if it isn't already there) in the home directory:
+	</p>
+	<code>
+julia ~/juliafiles/mindfulness.jl &
+	</code>
+<p>
+Now however the script is not invoked from the same folder as where the bell sound is located, so we need to make the following modification for the bell to be found:
+</p>
+<code>
+bellfile=dirname(Base.source_path())*"/ZenTempleBell.wav"
+</code>
+<p>We can also add a volume bar to the widgets:</p>
+<code>
+hbox2=@Box(:h); push!(bb,hbox2)<br>
+vol=@Label("Volume:"); push!(hbox2,vol)<br>
+volume=@Scale(false,0:0.05:3); push!(hbox2,volume)<br>
+voladj = @Adjustment(volume)<br>
+setproperty!(voladj,:value,1)<br>
+setproperty!(hbox2,:expand,volume,true)<br>
+setproperty!(hbox2,:margin,30)<br>
+setproperty!(hbox2,:spacing,15)
+</code>
+<p>Then modify all sounds of the bell to:</p>
+<code>
+AudioIO.play(getproperty(voladj,:value,Float64).*bell)
+</code>
+<p><br></p>
+</body>
+
+</html>

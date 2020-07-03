@@ -1,0 +1,1 @@
+When the mouse is in a quiet state, the membrane potential of layer 2/3 pyramidal neurons often fluctuates on relatively long time scales (hundreds of milliseconds) with an amplitude of ~10 mV. These slow membrane potential changes are highly correlated in nearby neurons, but nonetheless their action potential firing is usually poorly correlated.

@@ -1,0 +1,1 @@
+Voltage-gated sodium channels are rapidly activated by depolarisation on the tens of microsecond timescale. The sodium channels inactivate on the hundreds of microsecond timescale and therefore the voltage-gated sodium conductance evoked by depolarisation is transient only lasting ~200 us.

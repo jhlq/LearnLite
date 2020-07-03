@@ -1,0 +1,1 @@
+There is a high concentration of voltage-gated calcium channels in the presynaptic bouton. As the membrane potential depolarises beyond ~-40 mV, voltage-gated calcium channels become activated. The influx of calcium through those channels increases the calcium concentration in the immediate vicinity of the synaptic vesicles, thus driving vesicle fusion.

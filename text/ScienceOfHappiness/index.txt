@@ -1,0 +1,21 @@
+***Science of Happiness
+These notes are based on
+https://www.edx.org/course/science-happiness-uc-berkeleyx-gg101x-1 a course at edX.
+
+
+Content:
+<ul>
+week1.html Introduction to the Science of Happiness
+week2.html The Power of Social Connection
+week3.html Compassion & Kindness
+week4.html Cooperation & Reconciliation 
+week5.html Review
+week6.html Mindfulness, Attention, and Focus
+week7.html Mental Habits of Happiness
+week8.html Gratitude
+week9.html New Frontiers and Happiness "Fit"
+week10.html Summary
+</ul>
+
+https://courses.edx.org/asset-v1:BerkeleyX+GG101x+3T2015+type@asset+block/Bibliography_Nov._14.pdf Bibliography.
+

@@ -1,0 +1,225 @@
+
+*Question 2.1.1 
+Which aspect of ion channel function depends upon the membrane potential for a voltage-gated channel?
+<ul>
+Single channel conductance
+Reversal potential
+Open probability Open probability  
+Ion selectivity
+</ul>
+
+*Question 2.1.2 
+Which region is the voltage sensing domain of a voltage-gated sodium channel?
+<ul>
+Extracellular N-terminal domain
+Channel pore through voltage-dependent Magnesium binding
+Auxilary voltage-sensing subunits
+S4 transmembrane region S4 transmembrane region  
+</ul>
+
+*Question 2.1.3 
+At which potential do the voltage-dependent sodium and potassium channels become activated?
+<ul>
+-40 mV and more depolarized -40 mV and more depolarized  
+-50 mV and more hyperpolarized
+-70 mV and more hyperpolarized
+between -100 mV and -80 mV
+</ul>
+
+*Question 2.1.4 
+Approximately how many sodium channels are needed in order to make a large impact upon the membrane potential of a typical mammalian neuron?
+<ul>
+1
+10
+100
+1000 1000  
+</ul>
+
+*Question 2.1.5 
+Opening voltage-gated potassium channels
+Always causes depolarisation under physiological conditions
+Always causes hyperpolarisation under physiological conditions
+Always drives the membrane potential to the potassium reversal potential Always drives the membrane potential to the potassium reversal potential  
+The effect depends upon the membrane potential before opening
+</ul>
+Explanatio
+
+*Question 2.2.1 
+Which statement about the kinetics of voltage-gated sodium channels is incorrect?
+<ul>
+Depolarisation can open sodium channels within 100 us. Depolarisation can open sodium channels within 100 us.  
+Depolarisation opens sodium channels only after 100 us.
+Depolarisation opens a sodium conductance lasting approximately 200 us.
+After activation by depolarisation, voltage-gated sodium channels inactivate on the timescale of hundreds of microseconds.
+</ul>
+
+*Question 2.2.2 
+Which statement about the kinetics of voltage-gated potassium channels is correct?
+<ul>
+The potassium conductance is faster than the voltage-gated sodium conductance.
+The potassium conductance is delayed and long lasting. The potassium conductance is delayed and long lasting.  
+The potassium conductance is fully activated within 100 us of depolarisation.
+The potassium conductance is fully inactivated within a few hundred microseconds of the activation
+</ul>
+
+*Question 2.2.3 
+Depolarisation of neurons induces a time-dependent activation of voltage-gated sodium and potassium conductances. What statement below is correct?
+<ul>
+The single-channel conductance of a voltage-gated ion channel depends strongly upon the time-course of the membrane potential.
+The open probability of voltage-gated channels depends only upon voltage.
+Voltage-gated channels open and close under precise temporal control of the membrane potential
+Voltage-gated channels open and close stochastically on the microsecond timescale with a slower underlying change in open probability governed by the membrane potential. Voltage-gated channels open and close stochastically on the microsecond timescale with a slower underlying change in open probability governed by the membrane potential.  
+</ul>
+
+*Question 2.2.4 
+Following the activation of a voltage-gated sodium channel, approximately how long does it take before the channel recovers fully from inactivation?
+<ul>
+3 us
+100 us
+3 ms 3 ms  
+100 ms
+</ul>
+
+*Question 2.2.5 
+The voltage-gated potassium channels are
+the same ion channel proteins that maintain hyperpolarised resting membrane potentials.
+a diverse family of ion channels encoded by many different genes. a diverse family of ion channels encoded by many different genes.  
+encoded by a single gene in mammals
+not structurally related to voltage-gated sodium channels
+</ul>
+Explanatio
+
+*Question 2.3.1 
+Which of the following statements about neuronal action potentials is not true?
+<ul>
+Action potentials are all-or-none events lasting ~ 1 ms
+Action potentials are all-or-none events lasting ~ 10 ms Action potentials are all-or-none events lasting ~ 10 ms  
+The amplitude of an action potential depends upon the type and density of sodium and potassium channels
+The duration of an action potential depends upon the type and density of sodium and potassium channels
+</ul>
+
+*Question 2.3.2 
+The depolarisation phase of the action potential occurs because of:
+the opening of voltage-gated Na+ channels the opening of voltage-gated Na+ channels  
+the opening of voltage-gated K+ channels
+the closure of resting K+ channels
+the opening of voltage-gated Cl− channels
+</ul>
+Explanatio
+
+*Question 2.3.3 
+The repolarisation phase of the action potential occurs because:
+K+ ions continue to diffuse out of the cell while voltage-gated Na+ ion channels begin to open
+of delayed activation of K+ channels after voltage-gated Na+ ion channels begin to close of delayed activation of K+ channels after voltage-gated Na+ ion channels begin to close  
+Na+ channels remain open after voltage-gated K+ ion channels begin to close
+Cl- ions continue to diffuse in the cell after voltage-gated K+ ion channels begin to close
+</ul>
+Explanatio
+
+*Question 2.3.4 
+Action potential threshold is:
+far from the membrane potential at which voltage-gated sodium and potassium channels are activated
+reached when the voltage-dependent increase in sodium current outpaces the increase in potassium current over a sufficiently long period reached when the voltage-dependent increase in sodium current outpaces the increase in potassium current over a sufficiently long period  
+identical for all mammalian neurons
+independent of the gating kinetics of voltage-gated sodium and potassium channels
+</ul>
+Explanatio
+
+*Question 2.3.5 
+Neocortical fast-spiking GABAergic neurons can fire at much higher rates than neocortical excitatory pyramidal neurons. Why?
+<ul>
+They express different potassium channels They express different potassium channels  
+They have different resting membrane potentials
+They have a higher input resistance
+They are smaller in size
+</ul>
+
+*Question 2.4.1 
+Why do most neurons in the mammalian brain need such a signal as the action potential?
+<ul>
+To allow flexible and dynamic information coding
+To reduce energy expenditure
+To encode a high rate of information
+To reliably transmit information across long distances To reliably transmit information across long distances  
+</ul>
+
+*Question 2.4.2 
+Where does the action potential usually initiate in a mammalian neuron?
+<ul>
+Soma
+Dendrite
+Node of Ranvier
+Axon initial segment Axon initial segment  
+</ul>
+
+*Question 2.4.3 
+Action potential propagation speed decreases with:
+Lower membrane capacitance
+Lower axial resistance
+Lower resting membrane resistance Lower resting membrane resistance  
+Larger axonal cross sectional area
+</ul>
+Explanatio
+
+*Question 2.4.4 
+Myelination strongly affects action potential propagation. Which statement about myelination is incorrect?
+<ul>
+Specialised glial cells extend processes wrapping lipid membranes around axons.
+Myelination is interrupted at nodes of Ranvier, where the action potential is actively boosted by a high density of voltage-gated sodium channels.
+Myelination increases membrane capacitance Myelination increases membrane capacitance  
+Myelination increases membrane resistance
+</ul>
+
+*Question 2.4.5 
+If an action potential has a duration of 1 ms and an axonal propagation speed of 1 m/s, then what is the spatial extent of the depolarisation along an axonal cable at any given moment in time during action potential firing?
+<ul>
+10 um
+100 um
+1 mm 1 mm  
+10 mm
+</ul>
+
+*Question 2.5.1 
+What is the main reason to put positive pressure in a patch-clamp recording pipette while approaching the target cell?
+<ul>
+Pushing the intracellular solution outside the pipette to keep the cells healthy
+To make the glass pipette opening bigger
+Keep the pipette tip clean Keep the pipette tip clean  
+To have a cleaner extracellular space in order to get a better image of the target neuron
+</ul>
+
+*Question 2.5.2 
+What is a giga-seal?
+<ul>
+A giga-ohm scale resistance between the inside of the pipette and the extracellular space when the pipette is attached to the cell membrane A giga-ohm scale resistance between the inside of the pipette and the extracellular space when the pipette is attached to the cell membrane  
+A tight junction between two neurons with a small leak conductance
+A giga-ohm scale resistance at the pipette tip opening
+The 'giga' refers to the high rate of ions flowing through channels as observed with the patch-clamp technique
+</ul>
+
+*Question 2.5.3 
+Which statement is not true for a cell recorded under good voltage-clamp?
+<ul>
+The membrane potential is fixed by the experimenter and current is measured.
+The current is fixed by the experimenter and membrane potential is measured. The current is fixed by the experimenter and membrane potential is measured.  
+The membrane potential is isopotential across the cell membrane.
+Capacitative currents play no role in the measured currents.
+</ul>
+
+*Question 2.5.4 
+In the current-clamp mode we measure:
+Current
+Membrane potential Membrane potential  
+Capacitance
+Membrane resistance
+</ul>
+Explanatio
+
+*Question 2.5.5 
+With the given concentrations of potassium in the extracellular solution (2.5 mM) and the intracellular solution (139 mM), what is the reversal potential for potassium at the recording temperature of 35 Celsius?
+<ul>
+-96.6 mV
+-80.2 mV
+-106.6 mV -106.6 mV  
+-107.3 mV
+</ul>

@@ -1,0 +1,3 @@
+The membrane potential changes would be slower and smaller in the dendrite. It would take some time to fill the capacitance of the dendritic membrane and for the axial currents to propagate. There would also be some leak of axial current across the ion channels present in dendrites. There would therefore be a drop in voltage going away from the injection site in the soma and there would be some temporal filtering.
+
+Note that there is much less filtering of the voltage signal propagating out from the soma into the dendrites, compared to the very extensive filtering of voltage signals coming from the dendrites to the soma. Think about the large surface area (and capacitance) of the soma compared to the thin dendrites.

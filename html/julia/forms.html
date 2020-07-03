@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>LearnLite</title>
+</head>
+
+<body>
+	<h1>Differential forms!</h1>
+
+	<p>Let's make some functions for symbolic calculations with wedge products! There are many ways to accomplish this, let us start with a suboptimal way and see how we can improve it. We need some kind of organized storage for our expression and Julia has a well developed type system so let's define a custom type:</p>
+
+	<code>
+type PForm <: Form #PForm is part of the Form family<br>
+&emsp;	forms #an array of the differentials<br>
+&emsp;	p #length of forms<br>
+&emsp;	PForm(f)=(pf=new(f); pf.p=()->length(pf.forms); pf) #p is automatically defined at type initialization<br>
+end
+	</code>
+
+<p>Now what is suboptimal about this? One thing is that the p has to be called as a function to obtain the number of forms, adding a pair of parentheses is not the most work intense task however something has to have motivated the creation of a function instead of just assigning the length of forms at initiation to p, and that motivation is to allow the length of forms to change. With such an allowance the wedge products can be constructed without initiating new types:
+</p>
+
+<code>
+function &and;(f1::Differential,f2::Differential)<br>
+&emsp;	PForm([f1,f2])<br>
+end<br>
+function &and;(pf::PForm,f::Differential)<br>
+&emsp;	push!(pf.forms,f)<br>
+&emsp;	pf #We need be careful here, since the last value is returned if we don't make it the whole PForm only the forms field will be returned.<br>
+end<br>
+function &and;(f::Differential,pf::PForm)<br>
+&emsp;	insert!(pf.forms,1,f)<br>
+&emsp;	pf<br>
+end
+</code>
+	
+	<p>Now &and; is a specific operator symbol which can be called as other primal operations such as * and /, <a href="https://github.com/JuliaLang/julia/blob/master/src/julia-parser.scm"> 
+a list of operator symbols in Julia can be found here.</a> </p>
+
+</body>
+
+</html>

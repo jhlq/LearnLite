@@ -1,0 +1,1 @@
+In the transmembrane alpha helix of ion channels, the polar groups of the amino acid backbone are all internal, hidden within the helix stabilised by hydrogen bonds. If the amino acid sidechains are hydrophobic, then the entire alpha helix is non-polar, allowing close interaction with the lipid membrane.

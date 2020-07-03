@@ -1,0 +1,60 @@
+Question 1 (1/1 point)
+
+In mature neocortical pyramidal cells (and many other cell-types of the mammalian brain), the main place where glutamatergic synapses are found is:
+On parent dendrites
+On dendritic spines On dendritic spines - correct
+On axonal boutons
+On axon initial segments
+
+Explanation
+
+For many cells, the excitatory glutamatergic inputs that arrive across the dendritic arborization do not come directly on the main parent dendrites. The main place where glutamatergic synapses are found in mature neocortical pyramidal neurons (and many other mammalian cell-types) is on dendritic spines.
+You have used 1 of 1 submissions
+Question 2 (1/1 point)
+
+What would be a typical length of a dendritic spine?
+0.1 nm
+10 nm
+1 um 1 um - correct
+10 um
+
+Explanation
+
+Dendritic spines are ~1 micrometer in length (measured from the spine head to the parent dendrite). The spines grow from the parent dendrite and make contacts with presynaptic specializations.
+You have used 1 of 1 submissions
+Question 3 (1/1 point)
+
+What would be a typical volume of a large spine-head?
+1 ul
+1 nl
+1 pl
+1 fl 1 fl - correct
+
+Explanation
+
+Large spine-heads have a length scale of ~1 um. They thus have a volume of ~1 um^3. This correspends to 10^-18 m^3 = 10^-15 l = 1 fl. Most spines are considerably smaller than 1 femtoliter.
+You have used 1 of 1 submissions
+Question 4 (1/1 point)
+
+Which of the following statements regarding the function of dendritic spines is not correct?
+Ca2+ signals can be localised to a single dendritic spine
+Localised Ca2+ signals in single spines are likely to be important for synapse specific plasticity
+Spines are rigid unchanging structures Spines are rigid unchanging structures - correct
+The electrical resistance of some spine necks may be so large that the membrane potential in the spine head can differ substantially from the parent dendrite.
+
+Explanation
+
+Calcium rises can occur in spines through activation of NMDA receptors, voltage-gated calcium channels and release of calcium from intracellular stores. It can be difficult for Ca2+ ions to diffuse out of the spine head, because the spine neck can be very small in diameter (~100 nm). This means that Ca2+ signals can be localized to a single dendritic spine, which then might help synaptic plasticity to remain synapse-specific. The spine neck can be so thin that it might offer giga-Ohm resistance, which could significantly filter glutamatergic signalling. However, spines are not rigid unchanging structures, rather they are highly dynamic.
+You have used 1 of 1 submissions
+Question 5 (1/1 point)
+
+Dendritic spines are highly motile structures due to
+Actin filaments Actin filaments - correct
+Microtubules
+Spine apparatus
+CaMKII
+
+Explanation
+
+Dendritic spines are highly dynamic structures due to their cytoskeleton, which is rich in actin filaments. Actin is readily polymerised and depolymerised under the control of a variety of mechanisms, forming the basis of motility in many cellular processes.
+You have used 1 of 1 submissions

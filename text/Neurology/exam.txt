@@ -1,0 +1,133 @@
+
+***Exam
+**Questions
+
+*Week 1 - Question 1
+What would be the reversal potentials of potassium (K+), sodium (Na+) and chloride (Cl-) ions at 37 Celsius if the intracellular concentration of K+ was 150 mM and the extracellular concentration of K+ was 5 mM; the intracellular concentration of Na+ was 10 mM and the extracellular concentration of Na+ was 150 mM; and the intracellular concentration of Cl- was 10 mM and the extracellular concentration of Cl- was 150 mM?
+<ul>
+K+ -88.5 mV; Na+ +70.1 mV; and Cl- -90.7 mV
+K+: -100.6 mV; Na+: -54.1 mV; and Cl-: 32.5 mV
+K+: -90.8 mV; Na+: +72.3 mV; and Cl-: -72.3 mV
+K+: +100.6 mV; Na+: +63.8 mV; and Cl-: -67.4 mV
+</ul>
+
+*Week 1 - Question 2 
+What would be the membrane potential of this cell if the relative permeability of the cell membrane to K : Na : Cl was 100 : 1 : 10 ?
+<ul>
+-65.5 mV
+-82.6 mV
+-52.1 mV
+-90.0 mV
+</ul>
+
+
+*Week 2 - Question 1 
+What conductances underlie the action potential?
+<ul>
+Voltage-gated sodium channels drive the depolarising phase of the action potential and voltage-gated potassium channels drive the repolarising/hyperpolarising phase of the action potential
+Voltage-gated potassium channels drive the depolarising phase of the action potential and voltage-gated sodium channels drive the repolarising/hyperpolarising phase of the action potential
+Voltage-gated calcium channels drive the depolarising phase of the action potential and voltage-gated potassium channels drive the repolarising/hyperpolarising phase of the action potential
+Voltage-gated sodium channels drive the depolarising phase of the action potential and voltage-gated chloride channels drive the repolarising/hyperpolarising phase of the action potential
+</ul>
+
+
+*Week 2 - Question 2 
+What would be a typical amplitude and duration of an action potential?
+<ul>
+100 mV, 10 ms
+10 mV, 1 ms
+100 mV, 1 ms
+10 mV, 10 ms
+</ul>
+
+*Week 3 - Question 1 
+Which statement about synaptic transmission is not correct?
+<ul>
+Action potentials in axonal boutons evoke calcium influx driving neurotransmitter release
+Every action potential invading a presynaptic bouton causes neurotransmitter release
+Exocytosis of synaptic vesicles is a probabilistic event depending strongly upon calcium concentration
+Postsynaptic ionotropic receptors increase their open probability upon binding neurotransmitter evoking postsynaptic potentials
+</ul>
+
+*Week 3 - Question 2 
+What would be a typical amplitude and duration of a unitary postsynaptic potential measured at the soma?
+<ul>
+30 mV, 1 ms
+1 mV, 1 ms
+30 mV, 10 ms
+1 mV, 10 ms
+</ul>
+
+*Week 4 - Question 1 
+Fast glutamatergic synaptic transmission is mediated by two major types of glutamate receptors. What best describes their characteristics?
+<ul>
+AMPA receptors drive fast conductances, and NMDA receptors drive slower voltage-dependent conductances
+NMDA receptors drive fast conductances, and AMPA receptors drive slower voltage-dependent conductances
+Most AMPA receptors are calcium permeable, but most NMDA receptors are not
+Most AMPA receptors have a voltage-dependent magnesium block
+</ul>
+
+*Week 4 - Question 2 
+A prominent hypothesis suggests that memories may be encoded by changes in synaptic strength. Which statement about synaptic plasticity is incorrect?
+<ul>
+Synaptic strength can be increased by inserting more glutamate receptors into the postsynaptic density
+Synaptic strength can be decreased by removing glutamate receptors from the postsynaptic density
+Most forms of synaptic plasticity are thought to be independent of calcium signalling
+Synaptic strength can be changed by altering the presynaptic neurotransmitter release probability
+</ul>
+
+*Week 5 - Question 1 
+Which statement about GABAergic inhibition in the mammalian brain is incorrect?
+<ul>
+GABA acts presynaptically causing a reduction in neurotransmitter release probability
+GABA acts postsynaptically activating GABA-B receptors which open potassium channels
+Although there are much fewer GABAergic neurons in the brain compared to glutamatergic neurons, the number of GABAergic synapses is almost the same as the number of glutamatergic synapses
+Fast GABAergic synaptic transmission depends upon the activation of ionotropic GABA-A receptors
+</ul>
+
+*Week 5 - Question 2 
+Normally we consider GABAergic neurons as exerting an inhibitory action. However, under some circumstances action potential firing in GABAergic neurons serves to increase the activity of nearby excitatory neurons. What would not contribute to such an excitatory action of GABAergic neurons?
+<ul>
+During early development, intracellular neuronal chloride concentration is elevated
+Some GABAergic neurons inhibit other GABAergic neurons, thereby causing disinhibition
+GABA acts postsynaptically on excitatory neurons to change their action potential threshold to more depolarised potentials
+GABA could act presynaptically to inhibit the release of neuromodulators with an inhibitory action
+</ul>
+
+*Week 6 - Question 1 
+The mouse is increasingly used as a model system for studying mammalian brain function. Which statement is not true?
+<ul>
+Genes coding for proteins are similar comparing man and mouse
+The same large-scale brain structures are found in man and mouse
+The synaptic connectivity of the mouse brain is entirely determined by genetic programs, allowing reproducible experimental data to be gathered
+Mouse genetics allows cell-types to be usefully defined and manipulated
+</ul>
+
+
+*Week 6 - Question 2 
+Why is two-photon microscopy of interest to neuroscientists?
+<ul>
+It allows imaging thoughout the depth of the living mouse brain
+It has a much higher temporal resolution than other techniques
+It converts fluorophores into actuators
+It allows spatially confined excitation of fluorophores in the brain
+</ul>
+
+*Week 7 - Question 1 
+In the experimental investigation of sensory perception, why is it essential to study awake behaving animals?
+<ul>
+Sensory percepts are often actively acquired through movement of sensors
+Sensory processing differs across various brain states
+Sensory percepts are subjective and need to be reported by the observer
+All of the above
+</ul>
+
+
+*Week 7 - Question 2 
+According to Gustavsson et al. (2011) European Neuropsychopharmacology 21: 718-779, which were the three most economically costly brain disorders for Europe in 2010?
+<ul>
+Mood disorders (e.g. depression); Dementia (e.g. Alzheimer's disease); and Psychotic disorders (e.g. schizophrenia)
+Headaches (e.g. migraines); Sleep disorders (e.g. insomnia); and Traumatic brain injury (e.g. motor bike accidents)
+Parkinson's disease; Addiction (e.g. alchohol); and Epilepsy
+Brain tumors (e.g. brain cancer); Multiple sclerosis; and Stroke (loss of blood supply to brain) 
+</ul>

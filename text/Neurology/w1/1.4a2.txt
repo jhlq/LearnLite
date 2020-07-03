@@ -1,0 +1,1 @@
+If potassium channels increase their open probability, the potassium conductance increases and the membrane potential of the cell tends to the equilibrium potential of potassium which is ~-90 mV. Since the resting membrane potential is -70 mV, the cell will hyperpolarize in response to the increased potassium conductance.

@@ -1,0 +1,60 @@
+Question 1 (1/1 point)
+
+Why is glutamate important for sensory perception?
+Glutamate is a flavor enhancer (MSG), thus enhancing taste perception
+Glutamatergic synaptic circuits are involved in signalling all sensory information from periphery to cortex Glutamatergic synaptic circuits are involved in signalling all sensory information from periphery to cortex - correct
+Glutamate helps the myelination of long axons which makes the signalling process more efficient
+Glutamate contributes to sensory perception indirectly by modulating GABAergic signalling
+</ul>
+Explanatio
+
+Glutamatergic synapses are crucial for sending sensory information from the periphery to the neocortex, where it's thought that sensory percepts are generated. That makes glutamate, acting as a neurotransmitter, an essential part of sensory perception.
+12345
+Question 2 (1/1 point)
+
+Which statement below correctly describes the synaptic stations for tactile and/or visual sensory signals to reach the neocortex?
+Tactile information is signalled directly from brainstem to the neocortex
+Visual information is signalled to the visual cortex directly from the retina
+Both tactile and visual sensory information are signalled through separate pathways in the thalamus to the neocortex Both tactile and visual sensory information are signalled through separate pathways in the thalamus to the neocortex - correct
+Tactile and visual information is combined through convergent synapses in the thalamus before being signalled to the cortex
+</ul>
+Explanatio
+
+Mechanogated sensory neurons of the dorsal root ganglia or trigeminal ganglia signal tactile information. They release glutamate at synapses in brainstem, exciting postsynaptic neurons, which in turn send glutamatergic signals to postsynaptic neurons in the thalamus. Retinal ganglion cells receive visual information through glutamatergic synapses from retinal bipolar cells, which are excited by glutamate released from retinal photoreceptors. The retinal ganglion cells in turn release glutamate onto postsynaptic thalamic neurons. Vision and touch are processed in separate parts of the thalamus, ventrobasal (VB) thalamus for touch and lateral geniculate nucleus (LGN) of the thalamus for vision. The VB sends glutamatergic signals to the primary somatosensory (S1) cortex for tactile perception and the LGN projecs glutamatergic axons to the primary visual (V1) cortex for visual perception.
+12345
+Question 3 (1 point possible)
+
+The neocortex can be divided into layers. Which statement below is incorrect?
+Layer 1 has few excitatory neurons
+Excitatory pyramidal neurons dominate in layers 2, 3, 5 and 6
+Thalamic innervation of layer 4 is a prominent feature of primary sensory cortices Thalamic innervation of layer 4 is a prominent feature of primary sensory cortices - correct
+Layer 5 pyramidal neurons have dendrites confined to layer 5
+</ul>
+Explanatio
+
+The excitatory pyramidal neurons in layer 5 have long apical dendrites that typically reach layer 1, where they have an extensive dendritic tuft.
+12345
+Question 4 (1/1 point)
+
+Sensory information is processed in part by local microcircuits of synaptically-connected excitatory glutamatergic neurons in primary sensory cortices. Which statement below is not true?
+Excitatory neurons are sparsely connected to each other with a probability of ~10 %
+Excitatory layer 4 neurons recieve relatively little excitatory input from other cortical layers
+Excitatory layer 4 neurons release glutamate onto postsynaptically connected neurons that are found in all cortical layers 2-6
+Excitatory layer 5 neurons only receive excitatory input from other layer 5 neurons Excitatory layer 5 neurons only receive excitatory input from other layer 5 neurons - correct
+</ul>
+Explanatio
+
+Excitatory layer 5 neurons receive excitatory input from all other cortical layers (layers 2-6). They are therefore thought to contribute importantly to delivering the output of the cortical computation to subcortical brain areas.
+12345
+Question 5 (1/1 point)
+
+Which statement below best describes the uEPSP amplitude distribution (as measured in the soma across different pairs of neurons) found within local cortical microcircuits of synaptically-connected excitatory glutamatergic neurons?
+uEPSPs typically have an amplitude of 1 mV
+Most uEPSPs have an amplitude of less than 0.5 mV and a small fraction of uEPSPs are larger than 1 mV in amplitude Most uEPSPs have an amplitude of less than 0.5 mV and a small fraction of uEPSPs are larger than 1 mV in amplitude - correct
+Most uEPSPs have an amplitude of more than 1 mV and a small fraction of uEPSPs are smaller than 0.5 mV in amplitude
+uEPSPs typically have an amplitude of 0.1 mV
+</ul>
+Explanatio
+
+When measured in somatic current-clamp recordings, the amplitude distribution of uEPSPs is found to have a near 'log-normal' distribution. Most uEPSPs have an amplitude of a few hundred microvolts, but large amplitude (1-10 mV) uEPSPs are found between some pairs of neurons, albeit only in a small minority of the connected pairs of neurons.
+12345

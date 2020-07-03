@@ -1,0 +1,1 @@
+The output neurons of the cerebellar cortex are Purkinje cells and they are GABAergic. They inhibit the deep cerebellar nuclei.

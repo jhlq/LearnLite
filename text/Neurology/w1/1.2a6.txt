@@ -1,0 +1,1 @@
+The lipid cell membrane has a specific capacitance of ~1 µF/cm^2. For convenience we can convert this constant into units per µm^2. The specific capacitance of the cell membrane is ~10 fF/µm^2. For a cell with a surface area of 1000 µm^2, this gives 10 fF/µm^2 x 1000 µm^2 = 10 pF.

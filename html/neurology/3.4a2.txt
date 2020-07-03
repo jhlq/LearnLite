@@ -1,0 +1,1 @@
+Metabotropic receptors are membrane proteins with seven transmembrane alpha helices. They are coupled to GTP-binding proteins and when the neurotransmitter binds to the receptor, the GTP-binding protein is activated and diffuses away from the receptor to evoke downstream signalling in the cell.

@@ -1,0 +1,1 @@
+LTP induction requires the activation of NMDA recepotrs, giving rise to an increase in cytosolic Ca2+ in the postsynapse and the activation of protein kinase CaMKII. The activation of the protein phosphatase calcineurin is required for LTD induction, but not for LTP induction.

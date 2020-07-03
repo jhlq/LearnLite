@@ -1,0 +1,1 @@
+Optogenetics allows researchers to deal with causal interventions in the mammalian brain through genetically expressing actuators that control neuronal activity. One can use powerful mouse genetics and decide which cells to stimulate or to inhibit. Moreover, these actuators are under optical control, and can be turned on and off with millisecond temporal resolution.

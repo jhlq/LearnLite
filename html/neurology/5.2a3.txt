@@ -1,0 +1,1 @@
+If the membrane potential is at the chloride reversal potential, then there is no GABA-A-mediated synaptic current, but the conductance is still there.

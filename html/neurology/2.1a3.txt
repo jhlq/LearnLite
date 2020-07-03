@@ -1,0 +1,1 @@
+Voltage-gated sodium and potassium channels begin to open when the membrane potential is in range from -50 mV to -40 mV. They are closed at resting membrane potentials. As the membrane potential depolarises further (becomes more positive than -40 mV) then the open probability increases steeply.

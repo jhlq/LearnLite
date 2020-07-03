@@ -1,0 +1,39 @@
+span.easy {
+    background-color: lightgreen;
+}
+span.medium {
+    background-color: yellow;
+}
+span.hard {
+    background-color: red;
+}
+section.yellow {
+    background-color: yellow;
+}
+div.yellow {
+    background-color: yellow;
+}
+
+header, 
+nav, 
+section, 
+article, 
+aside, 
+footer {
+	display: block
+}
+nav li {
+	display: inline;
+	margin: 0 5px
+}
+nav li:first-child {
+	margin-left: 0
+}
+nav a {
+	padding: 3px 5px 3px
+}
+nav header {
+margin-left: 0;
+		font-size: 9px;
+padding: 0
+	}

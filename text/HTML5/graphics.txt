@@ -1,0 +1,292 @@
+***Graphics
+**Basics of HTML5 canvas
+*Javascript
+<ul>
+http://www.codecademy.com/tracks/javascript Introduction for beginners.
+https://developer.mozilla.org/en-US/docs/JavaScript/Guide
+http://teamtreehouse.com/library/websites/javascript-foundations%C2%A0
+http://jsbin.com/ahahoc/1/edit?html,console,output Minimal example.
+</ul>
+
+The javascript console can often be opened in a browser by pressing F12.
+
+*The canvas element
+"The canvas element provides scripts with a resolution-dependent bitmap canvas, which can be used for rendering graphs, game graphics, or other visual images on the fly."
+
+The canvas has been designed for pixel-based graphics, while SVG (Scalable Vector Graphics, another W3C standard) is for vector-based graphics.
+
+http://www.creativebloq.com/design-tools/data-visualization-712402 Data visualization.
+
+Supports 3D graphics with packages such as 
+http://www.babylonjs.com/ BabylonJS
+and 
+http://threejs.org/ ThreeJS.
+
+Good resources:
+<ul>
+http://www.html5canvastutorials.com/
+http://tutorials.jenkov.com/html5-canvas/index.html
+http://joshondesign.com/p/books/canvasdeepdive/title.html
+http://briangrinstead.com/canvasslides
+</ul>
+
+*Accessibility
+http://www.creativebloq.com/web-design/canvas-element-accessibility-41514740
+
+http://www.w3.org/html/wg/wiki/AddedElementCanvas
+
+*Canvas cheatsheet
+https://simon.html5.org/dump/html5-canvas-cheat-sheet.html
+
+*The canvas coordinate system
+X axis is horizontal, directed to the right
+
+Y axis is vertical, directed downwards
+
+(0 , 0) is in the top left corner
+
+*Basic example
+http://jsbin.com/susica/1/edit?html,output
+
+Only access elements when the DOM is ready: It's a good practice to have a init function, as we cannot access the elements of the page before the page has been loaded entirely and before the DOM is ready.
+
+Summary:
+<ul>
+Declare the canvas
+Get a reference to the canvas in a JavaScript variable
+Get the context for drawing in that canvas
+Specify some drawing properties
+Draw some shapes
+</ul>
+
+*Drawing Principles
+<ul>
+The "stroke" means "wireframe" or "outlined", it is a prefix for setting properties or calling methods that will affect wireframe shapes, "fill" is a prefix for filled shapes.
+To set the properties of wireframe shapes use ctx.strokeStyle= ..., for filled shapes use ctx.fillStyle=... So far the values we have used are colors, expressed as strings. Example: ctx.strokeStyle  = 'blue';
+To draw a wireframe rectangle use ctx.strokeRect(x, y, width, height), to draw a filled rectangle use ctx.fillRect(x, y, width, height);
+To set the line width of wireframe shapes, use the ctx.lineWidth property. Example ctx.lineWidth = 10; ctx.strokeRect(0, 0, 100, 100);  will draw a 100x100 rectangle in wireframe mode, with an outline width of 10 pixels.
+To draw a text message use ctx.strokeText(message, x, y) or ctx.fillText(message, x, y), for wireframe text or filled text respectively.
+To set the character font use the ctx.font property; the value is a font in CSS syntax, for example:  ctx.font = 'italic 20pt Calibri';
+</ul>
+
+*Changing the coordinate system
+http://jsbin.com/vinuqa/1/edit
+
+Wrap in a function:
+http://jsbin.com/vinuqa/2/edit
+
+http://jsbin.com/vinuqa/3/edit Draw a monster.
+
+http://jsbin.com/yuhamu/2/edit Moving the monster.
+
+http://jsbin.com/yuhamu/3/edit Rotating the monster.
+
+BEWARE: all drawings to come will be in the modified coordinate system!
+
+*Saving and restoring the context
+There are two methods for saving and restoring the context properties: ctx.save() and ctx.restore().
+
+Best practice: save the context at the beginning of any function that changes the context, restore it at the end of the function!
+
+http://jsbin.com/moporu/2/edit
+
+*Project ideas
+<ul>
+Project 1 (easy): Make a small drawing by just using rectangles and text  (a car, a monster, a head, or whatever you like).
+Project 2: Make an histogram (bar charts made of filled rectangles) as an array of integer values such as: var data = {1, 12, 20, 14, 13, 9, 5}, for example.
+Project 3 (harder, for those who know JavaScript and a little bit of math): Try to draw a human shaped robot using different 2D transforms (translate, rotate). Build a hierarchic skeleton (if we rotate the arm, the forearm and the hand should follow). This can be done by having the function that draws an arm save the context, move the coordinate system, call another function that draws the forearm, that saves the context, move the coordinate system to the end of the arm, call the function that draws the hand, etc. By consecutively calling functions from one another, with each function that saves the context -- moves the coordinate system -- calls another function -- restores the context, we can build a hierarchy of coordinate systems.
+</ul>
+
+**Immediate drawing mode: rectangles, text and images
+As soon as the ctx.strokeRect(x, y, width, height) or the ctx.fillRect(x, y, width, height) method is called, a rectangle is indeed drawn immediately in the canvas. 
+
+http://jsbin.com/jiqiko/1/edit Example with rectangles.
+
+*Drawing text
+The canvas API provides two main methods for drawing text: ctx.strokeText(message, x, y) and ctx.fillText(message, x, y).
+
+http://jsbin.com/cutoja/2/edit Example with text.
+
+The font can be set like so: context.font = "italic bold 36px Arial";
+
+http://jsbin.com/zixeve/2/edit Text example with maxWidth.
+
+The ctx.measureText() method can be used to get the current width in pixels of a given text.
+
+http://jsbin.com/mitugi/edit Changing text baseline.
+
+http://jsbin.com/acudif/3/edit Horizontal alignment.
+
+*Drawing images
+Load images in the background, wait for them to be loaded before drawing!
+
+http://jsbin.com/wifeka/1/edit Example with onload function.
+
+<yellow>drawImage(img, sx, sy, sw, sh, dx, dy, dw, dh): for drawing sub-images, (sx, sy, sw, sh) define the source rectangle, while dx, dy, dw, sh define the target rectangle. If these rectangles don't have the same size, the source sub-image is resized.</span>
+
+http://jsbin.com/pusafe/2/edit Resizing images.
+
+Best practice: only draw an image that is fully loaded, use the onload callback! 
+http://jsbin.com/faqedu/4/edit Like this.
+
+*Drawing images from a video stream
+http://jsbin.com/dajena/3/edit The drawImage(...) function can take a video element as its first parameter. WARNING: starts loading video.
+
+*Project ideas
+<ul>
+Project 1 (easy): Make a funny application by mixing all the things seen so far: images, colors, texts, video...
+Project 2: Write a small application triggering a screenshot from the Webcam.
+Project 3 (a bit harder, need to know how to use CSS positioning and the CSS z-index property): Try to position a canvas on top of a video element and draw shapes on top of the video.
+Project 4 (follow-up of project 3): Play two videos in loop mode at the same time, and draw the current image of the video 2 in the canvas on top of video 1, in a smaller size.
+</ul>
+
+<yellow>
+**Path drawing mode: lines, circles, arcs and curves
+Path mode = fill a buffer then execute all buffered orders at once to enable optimization and parallelism.
+
+http://jsbin.com/zanizu/5/edit Example drawing 1000 rectangles by first storing them in memory and then drawing all at once.
+
+Summary of Path mode principles:
+<ul>
+Call drawing methods that work in path mode, for example call ctx.rect(...) instead of ctx.strokeRect(...) or ctx.fillRect(...)
+Call ctx.stroke() or ctx.fill() to draw the buffer's contents,
+Beware that the buffer is never emptied, two consecutive calls to ctx.stroke() will draw the buffer contents twice! Instead, use ctx.beginPath() to empty it if needed.
+It is possible to empty the buffer by calling ctx.beginPath().
+Path drawing is faster than immediate drawing (parallelization is possible).
+</ul>
+
+*Warning
+Drawing arcs is usually done through a higher level package rather than drawing the arcs one at a time by hand, see the following examples as references and do not try to memorize them.
+
+*Lines
+http://jsbin.com/zugale/1/edit Draw a grid.
+
+http://jsbin.com/zetupi/4/edit Comparison to immediate drawing.
+
+http://jsbin.com/lefoze/2/edit Disconnected lines.
+
+Important: If you do not want to draw parts of the same path several times, you need to draw two different paths, using the ctx.beginPath() method, as shown in the next example.
+
+http://jsbin.com/niceqo/2/edit
+
+http://jsbin.com/faxago/1/edit
+
+*Arrows
+http://jsbin.com/qekuqotumu/1/edit
+
+http://www.dbp-consulting.com/tutorials/canvas/CanvasArrow.html
+
+*Closing a path
+http://jsbin.com/jocina/1/edit
+
+*Arcs
+http://www.html5canvastutorials.com/tutorials/html5-canvas-arcs/
+
+http://jsbin.com/tikite/1/edit
+
+http://jsbin.com/gazuba/2/edit
+
+Project idea: make a small program that draws a smiling head.
+
+*Rounded rectangles
+http://www.dbp-consulting.com/tutorials/canvas/CanvasArcTo.html
+
+http://jsbin.com/bocomu/1/edit
+
+http://jsbin.com/kuqalu/1/edit
+
+http://jsbin.com/kuqalu/edit?html,console,output
+
+*Quadratic curves
+http://www.html5canvastutorials.com/tutorials/html5-canvas-quadratic-curves/
+
+http://jsbin.com/vefivu/1/edit
+
+http://jsbin.com/sibuse/1/edit
+
+http://jsbin.com/xaraqo/3/edit Curved arrow.
+
+*Bezier curves
+http://blogs.sitepointstatic.com/examples/tech/canvas-curves/bezier-curve.html
+
+http://www.html5canvastutorials.com/tutorials/html5-canvas-bezier-curves/
+
+http://lib.ivank.net/?p=demos&d=bezier
+
+http://vimeo.com/106757336 Video tutorial.
+
+http://jsbin.com/hodawa/2/edit
+
+http://jsbin.com/wifowa/1/edit
+
+http://www.victoriakirst.com/beziertool/ Interactive bezier tool.
+
+*Project ideas
+<ul>
+Project 1 (easy): Create a small monster using rectangles, arcs, lines, etc. Just drawing a monster head will do the work. Start with something simple: a circle for the head, two squares for the eyes, a line for the mouth, etc., then set some colors and line widths.
+Project 2: Same as above but make use of patterns.
+Project 3 (harder): Try to draw the current image of a video played in background, hidden using CSS, as the animated background of the canvas.
+Project 4 (follow-up of project 3): You can also use the trick with the video to create animated textures for the eyes, skin, etc.
+</ul>
+</span>
+
+**Colors, gradients, patterns, shadows, etc.
+http://www.w3.org/TR/css3-color/ You can use the same syntax for colors that is supported by CSS3.
+
+http://jsbin.com/duwaxa/3/edit Drawing transparent rectangles.
+
+*Gradients
+http://jsbin.com/ruguxi/2/edit Gradient example.
+
+The concept of linear gradient is seen as an "invisible" rectangle in which a set of colors are interpolated along a line.
+
+http://jsbin.com/ruguxi/4/edit Changing gradient direction.
+
+http://jsbin.com/baluxa/3/edit Chopping up the gradient rectangle.
+
+http://jsbin.com/dekiji/2/edit Like previous but with a loop.
+
+http://jsbin.com/dekiji/4/edit Gradient wireframes.
+
+http://jsbin.com/ruvuta/1/edit Narrow gradient. Try making it wide.
+
+http://jsbin.com/dekiji/6/edit Many small gradient rectangles.
+
+http://jsbin.com/zefogoneko/1/edit Sharper transitions.
+
+http://jsbin.com/mijoni/2/edit Radial rainbow gradient.
+
+http://jsbin.com/fufelef/1/edit?html Asymetric.
+
+*Painting with patterns
+http://jsbin.com/qezojo/1/edit
+
+http://jsbin.com/befiti/3/edit Repeating, try: repeat-x, repeat-y or no-repeat in the createPattern function.
+
+<red>
+*Multiple image loader
+http://jsbin.com/fufiyu/6/edit For drawing with multiple patterns.
+</span>
+
+*Shadows
+http://jsbin.com/wivubi/3/edit
+
+http://jsbin.com/gokemu/1/edit Unwanted shadow.
+
+http://jsbin.com/kedobi/2/edit Hiding unwanted shadows.
+
+*Styling lines
+http://jsbin.com/dacuco/2/edit Line thickness.
+
+http://jsbin.com/yaliya/2/edit Line end caps.
+
+http://jsbin.com/dozida/2/edit Corners.
+
+http://jsbin.com/bokusa/3/edit Limiting corner length in narrow angles.
+
+*Project ideas
+<ul>
+Project 1 (easy): Take any of the previous proposed projects, and improve them with shadows, gradients, patterns, etc.
+Project 2 (medium): Come up with your own artistic creation.
+Project 3 (hard): Try to use the multiple image loader showed in the course, in one of your projects.
+</ul>

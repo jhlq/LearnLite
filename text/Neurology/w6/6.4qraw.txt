@@ -1,0 +1,62 @@
+Question 1 (1/1 point)
+
+Which signal can be observed with extracellular electrophysiological recordings in vivo?
+Somatic membrane potential at the soma
+Calcium dynamics in a single neuron
+Action potential firing Action potential firing - correct
+Dendritic membrane potential
+
+Explanation
+
+Since the recording electrode in this configuration is located "extracellularly" we can only observe changes in potentials in the extracellular field. Action potentials are massive membrane potential fluctuations, which are driven by strong transmembrane currents over a very short time scale. The flux of sodium and potassium ions in the extracellular space can be detected with a nearby electrode. Therefore it is possible to record these 'spike' events (action potentials) extracellularly.
+You have used 1 of 1 submissions
+Question 2 (1/1 point)
+
+What are the advantages of in vivo whole-cell recordings compared to typical extracellular recording methods?
+Subthreshold membrane potential fluctuations can be recorded
+Cells can be filled with dye through the recording pipette for anatomical identification
+Membrane potential can be changed by injecting currents
+All of the above All of the above - correct
+
+Explanation
+
+With in vivo whole-recordings, we gain access to the inside of the cell and can observe subthreshold as well as suprathreshold membrane potential events. A large part of the membrane potential fluctuations are driven by synaptic inputs, which are typically small in amplitude. These events can be resolved with the whole-cell recording technique. Through the whole-cell recording technique, one can therefore begin to investigate the neuronal computation transforming synptic input into action potential output. Injecting currents allows perturbations of single cell function to be made, and also helps in the biophysical analysis of conductances. Dye filling of the recorded neurons is also important to distinguish cell-types and brain locations of the recorded neurons.
+
+However, in vivo whole-cell recordings are technically difficult to obtain, and extracellular measurements are much easier to carry out. The robustness of extracellular recordings has allowed high density recording electrodes to become useful tools in neuroscience.
+You have used 1 of 1 submissions
+Question 3 (1/1 point)
+
+What pattern of membrane potential fluctuations in excitatory layer 2/3 neurons dominates during the quiet resting state in mouse primary somatosensory cortex?
+Slow fluctuations (0.1-0.5 Hz), with amplitude of ~50 mV, highly synchronised in nearby neurons
+Slow fluctuations (1-5 Hz), with amplitude of ~10 mV, highly synchronised in nearby neurons Slow fluctuations (1-5 Hz), with amplitude of ~10 mV, highly synchronised in nearby neurons - correct
+Fast fluctuations (10-50 Hz), with amplitude of ~10 mV, highly synchronised in nearby neurons
+Fast fluctuations (10-50 Hz), with amplitude of ~2 mV, desynchronised in nearby neurons
+
+Explanation
+
+When the mouse is in a quiet state, the membrane potential of layer 2/3 pyramidal neurons often fluctuates on relatively long time scales (hundreds of milliseconds) with an amplitude of ~10 mV. These slow membrane potential changes are highly correlated in nearby neurons, but nonetheless their action potential firing is usually poorly correlated.
+You have used 1 of 1 submissions
+Question 4 (1/1 point)
+
+Which statement about combining electrophysiology and imaging is true ?
+Combining electrophysiology with imaging allows recordings from genetically-defined neuron types Combining electrophysiology with imaging allows recordings from genetically-defined neuron types - correct
+Electrophysiology needs the insertion of electrodes and this prevents optical imaging
+Electrophysiology and imaging have different time scales and are thus incompatible
+Imaging needs photons, and the photons interfere with and prohibit electrophysiogical measurements
+
+Explanation
+
+Electrophysiological measurements can readily be combined with imaging techniques, and their combination is extremely powerful to address many questions in cellular neuroscience, including obtaining electrophysiological measurements from genetically-defined neuron types expressing fluorescent proteins.
+You have used 1 of 1 submissions
+Question 5 (1/1 point)
+
+Layer 2/3 neocortical GABAergic neurons :
+represent ~10% of the layer 2/3 neuronal population, and fire at ~10 times higher rates than excitatory pyramidal neurons represent ~10% of the layer 2/3 neuronal population, and fire at ~10 times higher rates than excitatory pyramidal neurons - correct
+represent ~50% of the layer 2/3 neuronal population, and fire at similar rates to excitatory pyramidal neurons
+represent ~90% of the layer 2/3 neuronal population, and fire ~10 times as infrequently as excitatory pyramidal neurons
+represent ~10% of the layer 2/3 neuronal population, and fire ~10 times as infrequently as excitatory pyramidal neurons
+
+Explanation
+
+Layer 2/3 neocortical GABAergic neurons represent roughly 10% of the layer 2/3 neuronal population, and fire at ~10 times higher rates than excitatory pyramidal neurons, which make up 90% of the layer 2/3 neuronal population. The time-averaged total number of action potentials in excitatory neurons is therefore about the same as the total in the much smaller number of GABAergic neurons.
+You have used 1 of 1 submissions

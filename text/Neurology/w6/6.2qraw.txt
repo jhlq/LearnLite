@@ -1,0 +1,66 @@
+Question 1 (1/1 point)
+
+Which statement about the relation between man and mouse is correct?
+There is little genetic similarity between man and mouse
+Reptiles are genetically closer to man than mouse
+The human genome has approximately ten times more genes than the mouse genome
+Approximately 99% of genes coding for proteins have homologs comparing man and mouse Approximately 99% of genes coding for proteins have homologs comparing man and mouse - correct
+
+Explanation
+
+In the context of evolution, mouse and man are close to each other, compared to man vs birds / reptiles. In terms of the genes that code for proteins, about 99 percent of genes that are found in man have homologs in mouse.
+You have used 1 of 1 submissions
+Question 2 (1/1 point)
+
+Size is the most obvious difference between the brain of a mouse and that of a man. What are their relative sizes?
+Mouse: length ~1 cm, volume ~1 ml; Man: length ~100 cm, volume ~1000 l
+Mouse: length ~1 cm, volume ~1 ml; Man: length ~10 cm, volume ~1 l Mouse: length ~1 cm, volume ~1 ml; Man: length ~10 cm, volume ~1 l - correct
+Mouse: length ~0.1 cm, volume ~0.001 ml; Man: length ~10 cm, volume ~1 l
+Mouse: length ~0.1 cm, volume ~0.001 ml; Man: length ~100 cm, volume ~1000 l
+
+Explanation
+
+The mouse brain has a length of ~1 cm, and thus a volume of ~1 cm^3 = ~1 ml. The human brain has a length of ~10 cm, and thus a volume of ~10 x 10 x 10 = ~1000 cm^3 = ~1 l.
+You have used 1 of 1 submissions
+Question 3 (1/1 point)
+
+What would be a very rough estimate for the total number of neurons in man and mouse?
+100 thousand for mouse and 100 million for man
+100 million for mouse and 100 billion for man 100 million for mouse and 100 billion for man - correct
+100 thousand for mouse and 1 million for man
+100 thousand for mouse and 100 billion for man
+
+Explanation
+
+A typical mouse brain is ~1 cm, weighs ~1 gram, and has ~100 million neurons present in it. If the human brain is roughly 1000 times larger, then we would expect 100 billion neurons in the human brain.
+You have used 1 of 1 submissions
+Question 4 (1/1 point)
+
+Imagine that each neuron in the brain synaptically connects to 1,000 other neurons. Using the rough numbers of neurons from the question above, what would be the ratio of the numbers of synapses comparing man and mouse?
+Man would have 1 million times more synapses than a mouse
+Man would have 1 thousand times more synapses than a mouse Man would have 1 thousand times more synapses than a mouse - correct
+Man would have 1 billion times more synapses than a mouse
+Man and mouse would have the same number of synapses
+
+Explanation
+
+If man's brain is a thousand times larger than the mouse brain, and the neurons in man and mouse have similar connectivity with 1,000 other neurons, then man's brain would have 1 thousand times more synapses.
+
+Man: 100,000,000,000 * 1,000 = 10^14
+
+Mouse: 100,000,000 * 1,000 = 10^11
+
+The ratio of the number of different patterns of connectivity is however much larger.
+You have used 1 of 1 submissions
+Question 5 (1/1 point)
+
+Which neural circuits are similar in man and mouse?
+Visual, tactile, gustatory and auditory information flow through the thalamus to the neocortex
+Neocortex sends long-range excitatory glutamatergic signals to other brain areas
+Cerebellar circuits help fine-scale sensorimotor coordination.
+All of the above. All of the above. - correct
+
+Explanation
+
+The overall organising principles of man and mouse brain appear to have many similarities.
+You have used 1 of 1 submissions

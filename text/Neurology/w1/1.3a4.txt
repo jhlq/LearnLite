@@ -1,0 +1,1 @@
+Transporters can use energy (ATP, or coupled transport of ions with different equilibrium potentials) in order to move ions against their electro-chemical gradient.

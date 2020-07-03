@@ -1,0 +1,1 @@
+When measured in somatic current-clamp recordings, the amplitude distribution of uEPSPs is found to have a near 'log-normal' distribution. Most uEPSPs have an amplitude of a few hundred microvolts, but large amplitude (1-10 mV) uEPSPs are found between some pairs of neurons, albeit only in a small minority of the connected pairs of neurons.

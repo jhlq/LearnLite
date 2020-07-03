@@ -1,0 +1,1 @@
+Large spine-heads have a length scale of ~1 um. They thus have a volume of ~1 um^3. This correspends to 10^-18 m^3 = 10^-15 l = 1 fl. Most spines are considerably smaller than 1 femtoliter.

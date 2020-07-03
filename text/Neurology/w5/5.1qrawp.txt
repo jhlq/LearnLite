@@ -1,0 +1,60 @@
+ Question 1 (1/1 point)
+
+Which of the following statements about the neurotransmitter GABA is correct?
+GABA is synthesized in a single enzymatic step, in which the GAD enzyme produces GABA from acetylcholine
+GABA is packaged into synaptic vesicles through the VGAT transporter GABA is packaged into synaptic vesicles through the VGAT transporter - correct
+The concentration of GABA inside a synaptic vesicle is about 100 nM
+GABA is the main inhibitory neurotransmitter in the spinal cord, but not in the brain
+</ul>
+Explanatio
+
+The GABA neurotransmitter is synthesized in a single enzymatic step, where glutamate is treated by the GAD enzyme producing GABA. The GABA neurotransmitter is packaged into synaptic vesicles through a protein called the vesicular GABA transporter (VGAT). The concentration of GABA neurotransmitter inside a vesicle is about 100 mM (not 100 nM). GABA is the most important inhibitory neurotransmitter in the brain, whereas in the spinal cord and the brainstem the main inhibitory neurotransmitter is glycine.
+12345
+Question 2 (1/1 point)
+
+Which of the following statements is not correct:
+GABAergic neurons make synapses at specific dendritic locations
+GABA acts upon postsynaptic neurons to prevent them from firing action potentials
+GABAergic inhibition counteracts glutamatergic excitation in neuronal networks of the brain
+Most neurons in the brain are GABAergic in order to maintain the balance between excitation and inhibiton Most neurons in the brain are GABAergic in order to maintain the balance between excitation and inhibiton - correct
+</ul>
+Explanatio
+
+Most synapses in the brain are glutamatergic, accounting for about 80% of the total number synapses. If there were only glutamatergic excitation in the neuronal networks of the brain, then there would be excessive activity and all the neurons would be continuously active. Therefore, there is a need for inhibition to balance the excitation, which is provided by GABAergic neurons. GABA acts upon postsynaptic neurons preventing them from firing action potentials. GABAergic neurons have high specificity in terms of function and location of synapses in the neuronal network.
+12345
+Question 3 (1/1 point)
+
+There are two major classes of GABA receptors, GABA-A receptors and GABA-B receptors. How do these two classes of GABA receptors inhibit neuronal activity?
+GABA-A receptors selectively conduct K+, and GABA-B receptors activate selective Cl- conductances via G-proteins
+GABA-A and GABA-B receptors both conduct Cl- and K+
+GABA-A receptors selectively conduct Na+, and GABA-B receptors selectively conduct Cl-
+GABA-A receptors selectively conduct Cl-, and GABA-B receptors activate selective K+ conducances via G-proteins GABA-A receptors selectively conduct Cl-, and GABA-B receptors activate selective K+ conducances via G-proteins - correct
+</ul>
+Explanatio
+
+GABA acts by binding to GABA-A receptors, which are ionotropic channels permeable to Cl-. GABA-B receptors, which are metabotropic, act via G-proteins to open K+ conductances. Both chloride and potassium conductances reduce the probability of action potential firing in the postsynaptic neuron and GABA is therefore an inhibitory neurotransmitter. In addition, GABA-B also inhibits voltage-gated calcium channels.
+12345
+Question 4 (1/1 point)
+
+Which of the following statements about Cl- concentration is not correct:
+The concentration of Cl- in the cytosol of a mature neuron is about 50 mM The concentration of Cl- in the cytosol of a mature neuron is about 50 mM - correct
+The concentration of Cl- in the extracellular space is about 120 mM
+The KCC2 transporter is important for maintaining chloride concentrations within the neuron low
+In early development, chloride concentration is high (~30 mM) in the cytosol of a neuron
+</ul>
+Explanatio
+
+The concentration of Cl- inside the cytosol of a neuron is about 5 mM, and the concentration of Cl- in the extracellular space is about 120 mM. The KCC2 transporter is important for maintaining the chloride concentrations within the cell low. However, in early development, chloride concentration is very high, about 30 mM in the cytosol of a neuron.
+12345
+Question 5 (1/1 point)
+
+GABA-A mediated postsynaptic conductances:
+have approximately the same time course as GABA-B mediated postsynaptic conductances
+are faster in onset and shorter in duration than GABA-B mediated postsynaptic conductances are faster in onset and shorter in duration than GABA-B mediated postsynaptic conductances - correct
+are faster in onset and longer in duration than GABA-B mediated postsynaptic conductances
+are slower in onset and longer in duration than GABA-B mediated postsynaptic conductances
+</ul>
+Explanatio
+
+GABA-B receptors, which are metabotropic, first have to activate G-proteins before the associated ion channels can be opened. This takes more time than directly opening the ion channel of the GABA-A receptor, which is a ligand-gated ion channel, thus opening within milliseconds. Once activated, the GABA-B receptor causes a long-lasting postsynaptic conductance (several hundred milliseconds), whereas the GABA-A mediated conductance only lasts tens of milliseconds.
+12345 

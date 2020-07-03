@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>LearnLite: HTML5
+ Graphics</title>
+<link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+<body>
+	<nav>
+	<a href="../index.html">Home.</a>
+	<a href="index.html">Index of /html5/.</a>
+	<a href="introduction.html">Introduction.</a>
+	<a href="basics.html">Basics.</a>
+	<a href="multimedia.html">Multimedia.</a>
+	<a href="graphics.html">Graphics.</a>
+	<a href="animation.html">Animation.</a>
+	</nav>
+
+<h1>Graphics</h1>
+
+<h2>Basics of HTML5 canvas</h2>
+
+<h3>Javascript</h3>
+
+<a href="http://www.codecademy.com/tracks/javascript"> Introduction for beginners.</a>
+
+<a href="https://developer.mozilla.org/en-US/docs/JavaScript/Guide">https://developer.mozilla.org/en-US/docs/JavaScript/Guide</a>
+
+<a href="http://teamtreehouse.com/library/websites/javascript-foundations%C2%A0">http://teamtreehouse.com/library/websites/javascript-foundations%C2%A0</a>
+
+<a href="http://jsbin.com/ahahoc/1/edit?html,console,output"> Minimal example.</a>
+<p>The javascript console can often be opened in a browser by pressing F12.</p>
+
+<h3>The canvas element</h3>
+<p>"The canvas element provides scripts with a resolution-dependent bitmap canvas, which can be used for rendering graphs, game graphics, or other visual images on the fly."</p>
+<p>The canvas has been designed for pixel-based graphics, while SVG (Scalable Vector Graphics, another W3C standard) is for vector-based graphics.</p>
+
+<a href="http://www.creativebloq.com/design-tools/data-visualization-712402"> Data visualization.</a>
+<p>Supports 3D graphics with packages such as 
+<a href="http://www.babylonjs.com/"> BabylonJS</a>
+and 
+<a href="http://threejs.org/"> ThreeJS.</a></p>
+<p>Good resources:
+<ul><li><a href="http://www.html5canvastutorials.com/">http://www.html5canvastutorials.com/</a>
+</li>
+<li>
+<a href="http://tutorials.jenkov.com/html5-canvas/index.html">http://tutorials.jenkov.com/html5-canvas/index.html</a>
+</li>
+<li>
+<a href="http://joshondesign.com/p/books/canvasdeepdive/title.html">http://joshondesign.com/p/books/canvasdeepdive/title.html</a>
+</li>
+<li>
+<a href="http://briangrinstead.com/canvasslides">http://briangrinstead.com/canvasslides</a>
+</li>
+</ul></p>
+
+<h3>Accessibility</h3>
+
+<a href="http://www.creativebloq.com/web-design/canvas-element-accessibility-41514740">http://www.creativebloq.com/web-design/canvas-element-accessibility-41514740</a>
+
+<a href="http://www.w3.org/html/wg/wiki/AddedElementCanvas">http://www.w3.org/html/wg/wiki/AddedElementCanvas</a>
+
+<h3>Canvas cheatsheet</h3>
+
+<a href="https://simon.html5.org/dump/html5-canvas-cheat-sheet.html">https://simon.html5.org/dump/html5-canvas-cheat-sheet.html</a>
+
+<h3>The canvas coordinate system</h3>
+<p>X axis is horizontal, directed to the right</p>
+<p>Y axis is vertical, directed downwards</p>
+<p>(0 , 0) is in the top left corner</p>
+
+<h3>Basic example</h3>
+
+<a href="http://jsbin.com/susica/1/edit?html,output">http://jsbin.com/susica/1/edit?html,output</a>
+<p>Only access elements when the DOM is ready: It's a good practice to have a init function, as we cannot access the elements of the page before the page has been loaded entirely and before the DOM is ready.</p>
+<p>Summary:
+<ul><li>Declare the canvas
+</li>
+<li>
+Get a reference to the canvas in a JavaScript variable
+</li>
+<li>
+Get the context for drawing in that canvas
+</li>
+<li>
+Specify some drawing properties
+</li>
+<li>
+Draw some shapes
+</li>
+</ul></p>
+
+<h3>Drawing Principles</h3>
+
+<ul><li>The "stroke" means "wireframe" or "outlined", it is a prefix for setting properties or calling methods that will affect wireframe shapes, "fill" is a prefix for filled shapes.
+</li>
+<li>
+To set the properties of wireframe shapes use ctx.strokeStyle= ..., for filled shapes use ctx.fillStyle=... So far the values we have used are colors, expressed as strings. Example: ctx.strokeStyle  = 'blue';
+</li>
+<li>
+To draw a wireframe rectangle use ctx.strokeRect(x, y, width, height), to draw a filled rectangle use ctx.fillRect(x, y, width, height);
+</li>
+<li>
+To set the line width of wireframe shapes, use the ctx.lineWidth property. Example ctx.lineWidth = 10; ctx.strokeRect(0, 0, 100, 100);  will draw a 100x100 rectangle in wireframe mode, with an outline width of 10 pixels.
+</li>
+<li>
+To draw a text message use ctx.strokeText(message, x, y) or ctx.fillText(message, x, y), for wireframe text or filled text respectively.
+</li>
+<li>
+To set the character font use the ctx.font property; the value is a font in CSS syntax, for example:  ctx.font = 'italic 20pt Calibri';
+</li>
+</ul>
+
+<h3>Changing the coordinate system</h3>
+
+<a href="http://jsbin.com/vinuqa/1/edit">http://jsbin.com/vinuqa/1/edit</a>
+<p>Wrap in a function:
+<a href="http://jsbin.com/vinuqa/2/edit">http://jsbin.com/vinuqa/2/edit</a></p>
+
+<a href="http://jsbin.com/vinuqa/3/edit"> Draw a monster.</a>
+
+<a href="http://jsbin.com/yuhamu/2/edit"> Moving the monster.</a>
+
+<a href="http://jsbin.com/yuhamu/3/edit"> Rotating the monster.</a>
+<p>BEWARE: all drawings to come will be in the modified coordinate system!</p>
+
+<h3>Saving and restoring the context</h3>
+<p>There are two methods for saving and restoring the context properties: ctx.save() and ctx.restore().</p>
+<p>Best practice: save the context at the beginning of any function that changes the context, restore it at the end of the function!</p>
+
+<a href="http://jsbin.com/moporu/2/edit">http://jsbin.com/moporu/2/edit</a>
+
+<h3>Project ideas</h3>
+
+<ul><li>Project 1 (easy): Make a small drawing by just using rectangles and text  (a car, a monster, a head, or whatever you like).
+</li>
+<li>
+Project 2: Make an histogram (bar charts made of filled rectangles) as an array of integer values such as: var data = {1, 12, 20, 14, 13, 9, 5}, for example.
+</li>
+<li>
+Project 3 (harder, for those who know JavaScript and a little bit of math): Try to draw a human shaped robot using different 2D transforms (translate, rotate). Build a hierarchic skeleton (if we rotate the arm, the forearm and the hand should follow). This can be done by having the function that draws an arm save the context, move the coordinate system, call another function that draws the forearm, that saves the context, move the coordinate system to the end of the arm, call the function that draws the hand, etc. By consecutively calling functions from one another, with each function that saves the context -- moves the coordinate system -- calls another function -- restores the context, we can build a hierarchy of coordinate systems.
+</li>
+</ul>
+
+<h2>Immediate drawing mode: rectangles, text and images</h2>
+<p>As soon as the ctx.strokeRect(x, y, width, height) or the ctx.fillRect(x, y, width, height) method is called, a rectangle is indeed drawn immediately in the canvas. </p>
+
+<a href="http://jsbin.com/jiqiko/1/edit"> Example with rectangles.</a>
+
+<h3>Drawing text</h3>
+<p>The canvas API provides two main methods for drawing text: ctx.strokeText(message, x, y) and ctx.fillText(message, x, y).</p>
+
+<a href="http://jsbin.com/cutoja/2/edit"> Example with text.</a>
+<p>The font can be set like so: context.font = "italic bold 36px Arial";</p>
+
+<a href="http://jsbin.com/zixeve/2/edit"> Text example with maxWidth.</a>
+<p>The ctx.measureText() method can be used to get the current width in pixels of a given text.</p>
+
+<a href="http://jsbin.com/mitugi/edit"> Changing text baseline.</a>
+
+<a href="http://jsbin.com/acudif/3/edit"> Horizontal alignment.</a>
+
+<h3>Drawing images</h3>
+<p>Load images in the background, wait for them to be loaded before drawing!</p>
+
+<a href="http://jsbin.com/wifeka/1/edit"> Example with onload function.</a>
+
+<span class="medium">drawImage(img, sx, sy, sw, sh, dx, dy, dw, dh): for drawing sub-images, (sx, sy, sw, sh) define the source rectangle, while dx, dy, dw, sh define the target rectangle. If these rectangles don't have the same size, the source sub-image is resized.</span>
+
+<a href="http://jsbin.com/pusafe/2/edit"> Resizing images.</a>
+<p>Best practice: only draw an image that is fully loaded, use the onload callback! 
+<a href="http://jsbin.com/faqedu/4/edit"> Like this.</a></p>
+
+<h3>Drawing images from a video stream</h3>
+
+<a href="http://jsbin.com/dajena/3/edit"> The drawImage(...) function can take a video element as its first parameter. WARNING: starts loading video.</a>
+
+<h3>Project ideas</h3>
+
+<ul><li>Project 1 (easy): Make a funny application by mixing all the things seen so far: images, colors, texts, video...
+</li>
+<li>
+Project 2: Write a small application triggering a screenshot from the Webcam.
+</li>
+<li>
+Project 3 (a bit harder, need to know how to use CSS positioning and the CSS z-index property): Try to position a canvas on top of a video element and draw shapes on top of the video.
+</li>
+<li>
+Project 4 (follow-up of project 3): Play two videos in loop mode at the same time, and draw the current image of the video 2 in the canvas on top of video 1, in a smaller size.
+</li>
+</ul>
+
+<span class="medium">
+<h2>Path drawing mode: lines, circles, arcs and curves</h2>
+<p>Path mode = fill a buffer then execute all buffered orders at once to enable optimization and parallelism.</p>
+
+<a href="http://jsbin.com/zanizu/5/edit"> Example drawing 1000 rectangles by first storing them in memory and then drawing all at once.</a>
+<p>Summary of Path mode principles:
+<ul><li>Call drawing methods that work in path mode, for example call ctx.rect(...) instead of ctx.strokeRect(...) or ctx.fillRect(...)
+</li>
+<li>
+Call ctx.stroke() or ctx.fill() to draw the buffer's contents,
+</li>
+<li>
+Beware that the buffer is never emptied, two consecutive calls to ctx.stroke() will draw the buffer contents twice! Instead, use ctx.beginPath() to empty it if needed.
+</li>
+<li>
+It is possible to empty the buffer by calling ctx.beginPath().
+</li>
+<li>
+Path drawing is faster than immediate drawing (parallelization is possible).
+</li>
+</ul></p>
+
+<h3>Warning</h3>
+<p>Drawing arcs is usually done through a higher level package rather than drawing the arcs one at a time by hand, see the following examples as references and do not try to memorize them.</p>
+
+<h3>Lines</h3>
+
+<a href="http://jsbin.com/zugale/1/edit"> Draw a grid.</a>
+
+<a href="http://jsbin.com/zetupi/4/edit"> Comparison to immediate drawing.</a>
+
+<a href="http://jsbin.com/lefoze/2/edit"> Disconnected lines.</a>
+<p>Important: If you do not want to draw parts of the same path several times, you need to draw two different paths, using the ctx.beginPath() method, as shown in the next example.</p>
+
+<a href="http://jsbin.com/niceqo/2/edit">http://jsbin.com/niceqo/2/edit</a>
+
+<a href="http://jsbin.com/faxago/1/edit">http://jsbin.com/faxago/1/edit</a>
+
+<h3>Arrows</h3>
+
+<a href="http://jsbin.com/qekuqotumu/1/edit">http://jsbin.com/qekuqotumu/1/edit</a>
+
+<a href="http://www.dbp-consulting.com/tutorials/canvas/CanvasArrow.html">http://www.dbp-consulting.com/tutorials/canvas/CanvasArrow.html</a>
+
+<h3>Closing a path</h3>
+
+<a href="http://jsbin.com/jocina/1/edit">http://jsbin.com/jocina/1/edit</a>
+
+<h3>Arcs</h3>
+
+<a href="http://www.html5canvastutorials.com/tutorials/html5-canvas-arcs/">http://www.html5canvastutorials.com/tutorials/html5-canvas-arcs/</a>
+
+<a href="http://jsbin.com/tikite/1/edit">http://jsbin.com/tikite/1/edit</a>
+
+<a href="http://jsbin.com/gazuba/2/edit">http://jsbin.com/gazuba/2/edit</a>
+<p>Project idea: make a small program that draws a smiling head.</p>
+
+<h3>Rounded rectangles</h3>
+
+<a href="http://www.dbp-consulting.com/tutorials/canvas/CanvasArcTo.html">http://www.dbp-consulting.com/tutorials/canvas/CanvasArcTo.html</a>
+
+<a href="http://jsbin.com/bocomu/1/edit">http://jsbin.com/bocomu/1/edit</a>
+
+<a href="http://jsbin.com/kuqalu/1/edit">http://jsbin.com/kuqalu/1/edit</a>
+
+<a href="http://jsbin.com/kuqalu/edit?html,console,output">http://jsbin.com/kuqalu/edit?html,console,output</a>
+
+<h3>Quadratic curves</h3>
+
+<a href="http://www.html5canvastutorials.com/tutorials/html5-canvas-quadratic-curves/">http://www.html5canvastutorials.com/tutorials/html5-canvas-quadratic-curves/</a>
+
+<a href="http://jsbin.com/vefivu/1/edit">http://jsbin.com/vefivu/1/edit</a>
+
+<a href="http://jsbin.com/sibuse/1/edit">http://jsbin.com/sibuse/1/edit</a>
+
+<a href="http://jsbin.com/xaraqo/3/edit"> Curved arrow.</a>
+
+<h3>Bezier curves</h3>
+
+<a href="http://blogs.sitepointstatic.com/examples/tech/canvas-curves/bezier-curve.html">http://blogs.sitepointstatic.com/examples/tech/canvas-curves/bezier-curve.html</a>
+
+<a href="http://www.html5canvastutorials.com/tutorials/html5-canvas-bezier-curves/">http://www.html5canvastutorials.com/tutorials/html5-canvas-bezier-curves/</a>
+
+<a href="http://lib.ivank.net/?p=demos&d=bezier">http://lib.ivank.net/?p=demos&d=bezier</a>
+
+<a href="http://vimeo.com/106757336"> Video tutorial.</a>
+
+<a href="http://jsbin.com/hodawa/2/edit">http://jsbin.com/hodawa/2/edit</a>
+
+<a href="http://jsbin.com/wifowa/1/edit">http://jsbin.com/wifowa/1/edit</a>
+
+<a href="http://www.victoriakirst.com/beziertool/"> Interactive bezier tool.</a>
+
+<h3>Project ideas</h3>
+
+<ul><li>Project 1 (easy): Create a small monster using rectangles, arcs, lines, etc. Just drawing a monster head will do the work. Start with something simple: a circle for the head, two squares for the eyes, a line for the mouth, etc., then set some colors and line widths.
+</li>
+<li>
+Project 2: Same as above but make use of patterns.
+</li>
+<li>
+Project 3 (harder): Try to draw the current image of a video played in background, hidden using CSS, as the animated background of the canvas.
+</li>
+<li>
+Project 4 (follow-up of project 3): You can also use the trick with the video to create animated textures for the eyes, skin, etc.
+</li>
+</ul>
+</span>
+
+<h2>Colors, gradients, patterns, shadows, etc.</h2>
+
+<a href="http://www.w3.org/TR/css3-color/"> You can use the same syntax for colors that is supported by CSS3.</a>
+
+<a href="http://jsbin.com/duwaxa/3/edit"> Drawing transparent rectangles.</a>
+
+<h3>Gradients</h3>
+
+<a href="http://jsbin.com/ruguxi/2/edit"> Gradient example.</a>
+<p>The concept of linear gradient is seen as an "invisible" rectangle in which a set of colors are interpolated along a line.</p>
+
+<a href="http://jsbin.com/ruguxi/4/edit"> Changing gradient direction.</a>
+
+<a href="http://jsbin.com/baluxa/3/edit"> Chopping up the gradient rectangle.</a>
+
+<a href="http://jsbin.com/dekiji/2/edit"> Like previous but with a loop.</a>
+
+<a href="http://jsbin.com/dekiji/4/edit"> Gradient wireframes.</a>
+
+<a href="http://jsbin.com/ruvuta/1/edit"> Narrow gradient. Try making it wide.</a>
+
+<a href="http://jsbin.com/dekiji/6/edit"> Many small gradient rectangles.</a>
+
+<a href="http://jsbin.com/zefogoneko/1/edit"> Sharper transitions.</a>
+
+<a href="http://jsbin.com/mijoni/2/edit"> Radial rainbow gradient.</a>
+
+<a href="http://jsbin.com/fufelef/1/edit?html"> Asymetric.</a>
+
+<h3>Painting with patterns</h3>
+
+<a href="http://jsbin.com/qezojo/1/edit">http://jsbin.com/qezojo/1/edit</a>
+
+<a href="http://jsbin.com/befiti/3/edit"> Repeating, try: repeat-x, repeat-y or no-repeat in the createPattern function.</a>
+
+<span class="hard">
+<h3>Multiple image loader</h3>
+
+<a href="http://jsbin.com/fufiyu/6/edit"> For drawing with multiple patterns.</a>
+</span>
+
+<h3>Shadows</h3>
+
+<a href="http://jsbin.com/wivubi/3/edit">http://jsbin.com/wivubi/3/edit</a>
+
+<a href="http://jsbin.com/gokemu/1/edit"> Unwanted shadow.</a>
+
+<a href="http://jsbin.com/kedobi/2/edit"> Hiding unwanted shadows.</a>
+
+<h3>Styling lines</h3>
+
+<a href="http://jsbin.com/dacuco/2/edit"> Line thickness.</a>
+
+<a href="http://jsbin.com/yaliya/2/edit"> Line end caps.</a>
+
+<a href="http://jsbin.com/dozida/2/edit"> Corners.</a>
+
+<a href="http://jsbin.com/bokusa/3/edit"> Limiting corner length in narrow angles.</a>
+
+<h3>Project ideas</h3>
+
+<ul><li>Project 1 (easy): Take any of the previous proposed projects, and improve them with shadows, gradients, patterns, etc.
+</li>
+<li>
+Project 2 (medium): Come up with your own artistic creation.
+</li>
+<li>
+Project 3 (hard): Try to use the multiple image loader showed in the course, in one of your projects.
+</li>
+</ul>
+
+<footer>
+	<nav>
+	<a href="../index.html">Home.</a>
+	<a href="index.html">Index of /html5/.</a>
+	<a href="introduction.html">Introduction.</a>
+	<a href="basics.html">Basics.</a>
+	<a href="multimedia.html">Multimedia.</a>
+	<a href="graphics.html">Graphics.</a>
+	<a href="animation.html">Animation.</a>
+	</nav>
+
+</footer>
+</body>
+</html>

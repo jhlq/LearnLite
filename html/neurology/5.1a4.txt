@@ -1,0 +1,1 @@
+The concentration of Cl- inside the cytosol of a neuron is about 5 mM, and the concentration of Cl- in the extracellular space is about 120 mM. The KCC2 transporter is important for maintaining the chloride concentrations within the cell low. However, in early development, chloride concentration is very high, about 30 mM in the cytosol of a neuron.

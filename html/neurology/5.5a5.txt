@@ -1,0 +1,1 @@
+Neurogliaform cells release GABA into the extracellular space, thereby mediating volume transmission activating GABA-B receptors to drive slow IPSPs.

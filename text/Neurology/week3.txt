@@ -1,0 +1,218 @@
+***Week 3
+**Important concepts
+*1. Synaptic transmission
+<ul>
+Vesicle: Container inside cells.
+Exocytosis: Expulsion of intracellular molecules contained in a vesicle.
+Quantal: Not continuous, ice is quantal, water is not.
+Synaptic: Relating to synapses, the sites where messages are conveyed between cells.
+Junction: A place where two things meet.
+</ul>
+
+*2. Neurotransmitter release
+<ul>
+Cytosolic: Water-soluble components of cell cytoplasm
+Bouton: Neuronal component that connects to other neurons.
+Protein complex: Proteins arranged in a structure.
+</ul>
+
+*3. Presynaptic dynamics
+<ul>
+Facilitation: Amplification.
+Post-tetanic: After repetitive pulses.
+</ul>
+
+*4. Presynaptic modulation
+<ul>
+Metabotropic: Receptor that acts through a secondary messenger.
+Ionotropic: Opens or closes channels.
+Plasticity: Ability to change.
+</ul>
+
+*5. Electron microscopy
+<ul>
+Polymerize: Combine several molecules.
+Vacuum: Absence of matter.
+</ul>
+
+**Resources
+*Plain text
+<ul>
+neurology/3.1.txt
+neurology/3.2.txt
+neurology/3.3.txt
+neurology/3.4.txt
+neurology/3.5.txt
+</ul>
+
+*PDF
+<ul>
+neurology/3.1.pdf 3.1 (8 MB)
+neurology/3.2.pdf 3.2 (2 MB)
+neurology/3.3.pdf 3.3 (2 MB)
+neurology/3.4.pdf 3.4 (3 MB)
+neurology/3.5.pdf 3.5 (5 MB)
+</ul>
+
+*Videos
+<ul>
+neurology/3.1-5PhbmrW1jT4.3gp 3.1 (12.2 MB)
+neurology/3.2-tSZ1q7YAQlY.3gp 3.2 (9.5 MB)
+neurology/3.3-cGJIVp3WX7U.3gp 3.3 (9.1 MB)
+neurology/3.4-64PVekpDXM8.3gp 3.4 (10 MB)
+neurology/3.5-2asCsDAkwHY.3gp 3.5 (17.2 MB)
+</ul>
+
+**Questions
+*Question 3.1.1 
+What are the main excitatory and inhibitory neurotransmitters in the mammalian brain respectively?
+<ul>
+Arginine and GABAzine
+Dopamine and Glycine
+Glutamate and GABA 
+Acetylcholine and Oxytocin
+</ul>
+
+*Question 3.1.2 
+What is meant by quantal release of neurotransmitter?
+<ul>
+All-or-none exocytosis of a synaptic vesicle 
+Release based on quantum mechanics
+All-or-none action potential firing
+All-or-none activation of presynaptic ion channels
+</ul>
+
+*Question 3.1.3 
+What is the approximate diameter of a synaptic vesicle?
+<ul>
+4 nm
+40 nm 
+400 nm
+4 um
+</ul>
+
+*Question 3.1.4 
+Neurons mainly communicate with each other at specialised junctions called synapses, with the presynaptic bouton containing many synaptic vesicles. What is the approximate length scale of a typical synapse in the central nervous system (i.e. approximate diameter of the synaptic contact area)?
+<ul>
+5 um
+500 nm 
+50 nm
+50 um
+</ul>
+
+*Question 3.1.5 
+What is meant by volume transmission?
+<ul>
+Exocytosis of a large volume of synaptic vesicles
+Signals about the loudness of a sound
+Regulation of the amount of neurotransmitter release
+Exocytosis of neurotransmitter-filled vesicles into the extracellular space 
+</ul>
+
+*Question 3.2.2 
+What is the dependence of neurotransmitter release upon calcium concentration?
+<ul>
+The release rate has a linear relationship with calcium concentration
+The release rate goes as the fourth power of the calcium concentration
+The release rates depends exponentially on calcium concentration within the physiological range 
+The release rate is independent of the calcium concentration
+</ul>
+
+*Question 3.2.3 
+Which proteins form the SNARE complex?
+<ul>
+Synaptotagmin and voltage-gated calcium channels
+Synaptobrevin, SNAP-25 and syntaxin 
+Voltage-gated sodium and potassium channels
+Rab3a, MUNC18 and synaptophysin
+</ul>
+
+*Question 3.2.4 
+How does calcium drive neurotransmitter release?
+<ul>
+Calcium swells up boutons and synaptic vesicles fuse with the presynaptic membrane
+Calcium interacts with charged phospholipid head-groups altering membrane properties allowing vesicle fusion
+Caclium binds to syntaxin which leads to phosphorylation of synaptotagmin causing vesicle release
+Binds to synaptotagmin, interacting with the SNARE complex, to cause vesicle fusion 
+</ul>
+
+*Question 3.2.5 
+After the release of neurotransmitter, synaptic vesicles undergo what process to be able to release neurotransmitter again in the "kiss-and-run" cycle?
+<ul>
+Stay in the same spot and refill with neurotransmitter to be able release again
+Undergo fast active transport to the cell soma to be refilled with neurotransmitter
+Closure of the fusion pore, diffusion away from presynaptic membrane and refilling with neurotransmitter 
+Undergo clathrin mediated endocytosis and fusion with golgi apparatus
+</ul>
+
+*Question 3.3.2 
+Which of the following statements about short-term synaptic plasticity is not correct:
+<ul>
+Short-term synaptic plasticity mechanisms predominantly occur in the presynaptic bouton
+Short-term synaptic plasticity mechanisms always increase the strength of synaptic connections 
+Presynaptic efficacy depends on the recent history of synaptic activity
+Short-term synaptic plasticity typically changes the neurotransmitter release probability
+</ul>
+
+*Question 3.3.3 
+What mechanism is thought to underlie short-term syanptic facilitation?
+<ul>
+Facilitation results from the accumulation of Ca2+ within the presynaptic terminal 
+Facilitation results from the accumulation of Ca2+ within the postsynaptic terminal
+Facilitation results from the increased efflux of Ca2+ from the presynaptic terminal
+Facilitation results from the accumulation of synaptic vesicles within the presynaptic terminal
+</ul>
+
+*Question 3.3.4 
+What mechanism contributes importantly to short-term synaptic depression?
+<ul>
+Broadening of the action potential waveform during repetitive firing
+Short-term depression results from the depletion of vesicles in the presynaptic terminal 
+Calcium-dependent inactivation of synaptotagmin
+Short-term depression results from the depletion of Ca2+ in the presynaptic terminal
+</ul>
+
+*Question 3.3.5 
+Which of the following statements about post-tetanic potentiation is not correct:
+<ul>
+Post-tetanic potentiation lasts about 1 minute
+Post-tetanic potentiation can be evoked at some synapses by a 100 Hz train of action potentials
+Post-tetanic potentiation results from calcium activation of protein kinase C
+Post-tetanic potentiation depends upon correlated presynaptic and postsynaptic activity 
+</ul>
+
+*Question 3.4.2 
+A metabotropic receptor typically:
+<ul>
+is a membrane protein with seven transmembrane regions signalling via a GTP-binding protein 
+is a membrane protein with six transmembrane regions forming an ion channel pore
+is an intracellar protein signalling via kinase activity
+is a membrane protein with a single transmembrane region signalling via the extracellular matrix
+</ul>
+
+*Question 3.4.3 
+Metabotropic receptors are characterized by:
+<ul>
+faster activation and shorter duration of activity than ionotropic receptors
+faster activation but longer duration of activity than ionotropic receptors
+slower activation but shorter duration of activity than ionotropic receptors
+slower activation and longer duration of activity than ionotropic receptors 
+</ul>
+
+*Question 3.4.4 
+Which of the following statements about presynaptic inhibition in the mammalian brain is false?
+<ul>
+Presynaptic inhibition can be mediated by GABA acting on metabotropic GABA receptors on the presynaptic membrane
+Presynaptic inhibition is typically mediated by inhibition of Ca2+ channels or vesicle release machinery
+Presynaptic inhibition is typically mediated by axo-axonic GABAergic synapses directly innervating axonal boutons 
+Presynaptic inhibition reduces the release probability of synaptic vesicles from the presynaptic bouton
+</ul>
+
+*Question 3.4.5 
+What happens to short-term synaptic plasticity during presynaptic inhibition by a neuromodulator?
+<ul>
+Presynaptic inhibition typically reduces depression and thus increases facilitation
+Presynaptic inhibition typically increases depression and thus decreases facilitation
+Presynaptic inhibition converts short-term depression into long-term depression
+Presynaptic inhibition typically increases depression and thus increases facilitation 
+</ul>

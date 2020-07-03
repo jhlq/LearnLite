@@ -1,0 +1,60 @@
+Question 1 (1/1 point)
+
+Which of the following compounds is not a GABA receptor blocker?
+picrotoxin
+bicuculline
+gabazine
+CNQX CNQX - correct
+
+Explanation
+
+GABA receptor antagonists are drugs which inhibit the action of GABA. Examples of GABA-A receptor antagonists include bicuculline, picrotoxin and gabazine. CNQX is an AMPA receptor antagonist.
+You have used 1 of 1 submissions
+Question 2 (1/1 point)
+
+Which of the following statements about the action of benzodiazepines is correct?
+Benzodiazepines act upon all GABA-A receptors
+Benzodiazepines act upon all GABA-B receptors
+Benzodiazepines act upon specific subtypes of GABA-A receptors Benzodiazepines act upon specific subtypes of GABA-A receptors - correct
+Benzodiazepines act upon specific subtypes of GABA-B receptors
+
+Explanation
+
+Benzodiazepines act upon specific subtypes of GABA-A receptors.
+You have used 1 of 1 submissions
+Question 3 (1/1 point)
+
+Which of the following statements about the mechanism of action of benzodiazepines is not correct?
+Benzodiazepines do not activate GABA-A receptors by themselves, but they only potentiate GABA-evoked currents
+Benzodiazepines increase the affinity of GABA to GABA-A receptor
+Benzodiazepines are GABA-A receptor antagonists Benzodiazepines are GABA-A receptor antagonists - correct
+Benzodiazepines act on GABA-A receptors containing the a1, a2, a3 or a5 subunits, but not the a4 and a6 subunits
+
+Explanation
+
+Benzodiazepines do not directly activate GABA-A receptors on their own, but only potentiate GABA-evoked currents. In particular, they increase the affinity of GABA-A receptors for binding GABA. Benzodiazepines potentiate GABA-A receptors containing the a1, a2, a3 or a5 subunits, but have no effect on a4 and a6 subunits.
+You have used 1 of 1 submissions
+Question 4 (1/1 point)
+
+How do benzodiazepines affect mouse behaviour?
+Benzodiazepines induce a sedative effect (sleep) and an anxiolytic effect (anti-anxiety) by acting on the same types of GABA-A receptors
+Benzodiazepines induce an anxiolytic effect, which is largely mediated by GABA-B receptors
+Benzodiazepines induce a sedative effect (sleep), which is largely mediated by GABA-A-a1 receptors Benzodiazepines induce a sedative effect (sleep), which is largely mediated by GABA-A-a1 receptors - correct
+Benzodiazepines induce an anxiogenic effect (increased anxiety), which is mediated by GABA-A-a2 receptors
+
+Explanation
+
+In mice, benzodiazepines induce a sedative effect (sleep), which is mediated by the GABA-A-a1 receptor. Also, they can induce an anxiolytic effect (anti-anxiety), which is mediated by the GABA-A-a2 receptor.
+You have used 1 of 1 submissions
+Question 5 (1/1 point)
+
+Why might someone be prescribed benzodiazepenes by their doctor?
+To reduce anxiety
+To promote sleep or sedation
+As an anticonvulsant to prevent epileptic seizures
+All of the above are valid All of the above are valid - correct
+
+Explanation
+
+Benzodiazepines induce a sedative effect (sleep), and an anxiolytic effect (anti-anxiety). Because they enhance inhibition, they are also useful in preventing epileptic seizures, which are caused by uncontrolled overexcitation of neuronal networks.
+You have used 1 of 1 submissions

@@ -1,0 +1,1 @@
+Two-photon excitation imaging of fluorescence provides ~1 um resolution in the living brain. Typically high resolution can be obtained in X and Y dimensions (a few hundreds of nanometers). In the z direction, the resolution is considerably worse (a few microns).

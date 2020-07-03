@@ -1,0 +1,60 @@
+ Question 1 (1/1 point)
+
+How does an action potential evoke a rise in cytosolic calcium concentration in a presynaptic bouton?
+Voltage-gated sodium channels are also permeable to calcium
+The membrane potential change causes release of calcium from intracellular calcium stores
+The depolarisation of the action potential opens voltage-gated calcium channels The depolarisation of the action potential opens voltage-gated calcium channels - correct
+Through activation of the sodium-calcium exchanger
+
+Explanation
+
+There is a high concentration of voltage-gated calcium channels in the presynaptic bouton. As the membrane potential depolarises beyond ~-40 mV, voltage-gated calcium channels become activated. The influx of calcium through those channels increases the calcium concentration in the immediate vicinity of the synaptic vesicles, thus driving vesicle fusion.
+You have used 1 of 1 submissions
+Question 2 (1 point possible)
+
+What is the dependence of neurotransmitter release upon calcium concentration?
+The release rate has a linear relationship with calcium concentration
+The release rate goes as the fourth power of the calcium concentration
+The release rates depends exponentially on calcium concentration within the physiological range The release rates depends exponentially on calcium concentration within the physiological range - incorrect
+The release rate is independent of the calcium concentration
+
+Explanation
+
+Increases in calcium concentration in the synaptic bouton drives neurotransmitter release. At the resting cytosolic calcium concentration of around 100 nM the release rate is very small, but with increased calcium concentrations the release rate increases dramatically. The synaptic vesicle release rate depends upon the fourth power of the calcium concentration.
+You have used 1 of 1 submissions
+Question 3 (1/1 point)
+
+Which proteins form the SNARE complex?
+Synaptotagmin and voltage-gated calcium channels
+Synaptobrevin, SNAP-25 and syntaxin Synaptobrevin, SNAP-25 and syntaxin - correct
+Voltage-gated sodium and potassium channels
+Rab3a, MUNC18 and synaptophysin
+
+Explanation
+
+The synaptic vesicle with a diameter of around 40 nanometers is brought into close apposition with the plasma membrane through the action of three important proteins that form the SNARE complex. It is composed of synaptobrevin which is a so-called vesicular SNARE; syntaxin, which is a plasma membrane SNARE; and SNAP-25 that's closely associated to syntaxin.
+You have used 1 of 1 submissions
+Question 4 (1/1 point)
+
+How does calcium drive neurotransmitter release?
+Calcium swells up boutons and synaptic vesicles fuse with the presynaptic membrane
+Calcium interacts with charged phospholipid head-groups altering membrane properties allowing vesicle fusion
+Caclium binds to syntaxin which leads to phosphorylation of synaptotagmin causing vesicle release
+Binds to synaptotagmin, interacting with the SNARE complex, to cause vesicle fusion Binds to synaptotagmin, interacting with the SNARE complex, to cause vesicle fusion - correct
+
+Explanation
+
+Calcium binds to synaptotagmin allowing primed vesicles to fuse with the plasma membrane, releasing neurotransmitter into the synaptic cleft.
+You have used 1 of 1 submissions
+Question 5 (1/1 point)
+
+After the release of neurotransmitter, synaptic vesicles undergo what process to be able to release neurotransmitter again in the "kiss-and-run" cycle?
+Stay in the same spot and refill with neurotransmitter to be able release again
+Undergo fast active transport to the cell soma to be refilled with neurotransmitter
+Closure of the fusion pore, diffusion away from presynaptic membrane and refilling with neurotransmitter Closure of the fusion pore, diffusion away from presynaptic membrane and refilling with neurotransmitter - correct
+Undergo clathrin mediated endocytosis and fusion with golgi apparatus
+
+Explanation
+
+In "kiss-and-run" exocytosis, after the neurotransmitter contents have diffused into the synaptic cleft, the fusion pore closes. The empty vesicle then moves aside a few nanometers from the plasma membrane, refuels with neurotransmitter and then re-docks.
+You have used 1 of 1 submissions 

@@ -1,0 +1,60 @@
+Question 1 (1/1 point)
+
+According to the study of Gustavsson et al. (2011), how many people suffered from brain disorders in Europe in 2010?
+Less than 3 million
+50 million
+100 million
+More than 150 million More than 150 million - correct
+</ul>
+Explanatio
+
+Number of people who suffered from brain disorders in 2010 across 30 European countries was estimated to be more than 150 million. This means that over a quarter of the population of Europe (~500 million people) were in some way affected.
+12345
+Question 2 (1/1 point)
+
+What are the early clinical symptoms of Parkinson's disease?
+Tonic seizures with high fever
+Forgetting conversations or appointments, routinely misplacing possessions
+Bradykinesia, tremor, rigidity, difficulty in walking Bradykinesia, tremor, rigidity, difficulty in walking - correct
+Double vision or blurring vision, fatigue, problems with bowel and bladder function
+</ul>
+Explanatio
+
+Early symptoms of Parkinson's disease include bradykinesia, difficulty in walking, shaking and rigidity. These motor symptoms gradually get worse as the disease progresses and at later times other symptoms occur such as dementia and depression.
+12345
+Question 3 (1/1 point)
+
+What is thought to cause these symptoms of Parkinson's disease?
+Degeneration of glutamatergic neurons in sensorimotor cortex
+Degeneration of dopaminergic neurons in substantia nigra pars compacta Degeneration of dopaminergic neurons in substantia nigra pars compacta - correct
+Degeneration of astrocytes in hippocampus CA1 region
+Degeneration of Purkinje cells in cerebellar cortex
+</ul>
+Explanatio
+
+The symptoms of Parkinson's disease appear to be caused by the degeneration of dopaminergic neurons in the substantia nigra pars compacta (SNc).
+12345
+Question 4 (1/1 point)
+
+L-DOPA is an effective first treatment for the symptoms of Parkinson's disease. However, for some patients L-DOPA gradually becomes less effective and is associated with serious side-effects. As a further treatment for the symptoms of Parkinson's disease, deep brain stimulation might be considered. Which statement is true about deep brain stimulation?
+Deep brain stimulation is an experimental therapy, with mixed results, and not in general available as a treatment, but only as part of clinical trials
+Implantation of electrodes in human brains is unethical and not allowed in Europe
+More than 100,000 people across the world have already been implanted with deep brain stimulation electrodes with overall good results More than 100,000 people across the world have already been implanted with deep brain stimulation electrodes with overall good results - correct
+Many millions of Parkinson's patients have already been implanted with deep brain stimulation electrodes and this is now a standard therapy
+</ul>
+Explanatio
+
+More than 100,000 people have already been implanted with deep brain stimulation electrodes with overall good results. The method is gradually being adopted by more hospitals across the world as an important form of treatment for the symptoms of Parkinson's disease. In addition, it appears that there may be other targets for deep brain stimulation that might help alleviate symptoms of other brain diseases, like depression for example.
+12345
+Question 5 (1/1 point)
+
+Which region of the human brain is typically targeted by deep brain stimulation to alleviate symptoms of Parkinson's disease?
+Cerebellum
+Striatum
+Hippocampus
+Subthalamic nucleus Subthalamic nucleus - correct
+</ul>
+Explanatio
+
+Deep brain stimulation consists of bilateral implantation of electrical stimulation electrodes in the subthalamic nucleus (STN).
+12345

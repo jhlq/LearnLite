@@ -1,0 +1,1 @@
+The fast-spiking GABAergic neurons in the neocortex express different types of potassium channels, which cause a faster repolarization of the membrane potential after firing an action potential. This allows the voltage-gated sodium channels to deinactivate more rapidly, decreasing the refractory period and thus allowing the cell to fire the next action potential sooner.

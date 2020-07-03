@@ -1,0 +1,62 @@
+Question 1 (1/1 point)
+
+What neurotransmitter do motor neurons release at the neuromuscular juction?
+Acetylcholine Acetylcholine - correct
+Glutamate
+Dopamine
+Glycine
+</ul>
+Explanatio
+
+Motor neurons in vertebrates are cholinergic, which means that they release the neurotransmitter acetylcholine from synaptic vesicles at the neuromuscular junction.
+12345
+Question 2 (1/1 point)
+
+Increases in cytosolic calcium concentration in muscle cells cause contraction. How do these calcium signals come about in skeletal muscle?
+Nicotinic receptors are activated postsynaptically causing an influx of cations into the muscle and action potential firing in the muscle. The action potentials propagate across the muscle cells activating voltage-gated calcium channels, which induce a rise in cytosolic calcium concentration. Nicotinic receptors are activated postsynaptically causing an influx of cations into the muscle and action potential firing in the muscle. The action potentials propagate across the muscle cells activating voltage-gated calcium channels, which induce a rise in cytosolic calcium concentration. - correct
+Nicotinic receptors are activated postsynaptically causing an influx of cations into the muscle. Some of these cations are calcium ions and these drive muscle contraction.
+The action potential invading the synaptic boutons of the motor neuron causes an increase in cytosolic calcium concentration which diffuses into the muscle
+Motor neurons secrete a growth factor which induces calcium signals
+</ul>
+Explanatio
+
+Muscles are innervated by motor neurons. At the neuromuscular junction, the neurotransmitter acetylcholine activates postsynaptic ligand-gated ion channels, which are called nicotinic acetylcholine receptors. This causes an influx of cations, most importantly sodium ions, which in turn causes a postsynaptic depolarization of the muscle. The muscle gets depolarized and fires an action potential, which propagates along the muscle cell and throughout the complex membrane invaginations of the T-tubules. The depolarisation activates voltage-gated calcium channels, which signal through a protein-protein interaction with ryanodine receptors to activate calcium release from intracellular calcium stores (the sarcoplasmic reticulum).
+12345
+Question 3 (1 point possible)
+
+A muscle is controlled by a group of motor neurons termed the "motor pool". How can we map the premotor neurons of a given "motor pool"?
+Injecting anatomical anterograde tracers into different areas of the brainstem and following the axonal trajectories
+Injecting anterograde transynaptic viral tracers into brainstem, and following the subsequent spread of virus to motor neurons
+Injecting retrograde transynaptic viral tracers into muscles, first infecting motor neurons and subsequently spreading to their presynaptic inputs
+Injecting anterotrograde transynaptic viral tracers into muscles, first to infect motor neurons and subsequent spread to their presynaptic inputs expressing a complement factor Injecting anterotrograde transynaptic viral tracers into muscles, first to infect motor neurons and subsequent spread to their presynaptic inputs expressing a complement factor - correct
+</ul>
+Explanatio
+
+To speciﬁcally label premotor neurons, genetically engineered monosynaptic rabies virus lacking glycoprotein G can be injected into muscle to infect the innervating motor neurons. The rabies virus in the motor neurons expressing rabies G is trans-complemented and can then cross one synapse retrogradely to infect premotor neurons.
+12345
+Question 4 (1/1 point)
+
+Why is motor control critical for sensory perception?
+We move our eyes and heads, and therefore what our eyes see depends upon movements
+We move our hands and body, and therefore what we feel depends upon movements
+We sniff in order to enhance odor perception
+All of the above All of the above - correct
+</ul>
+Explanatio
+
+Our movements make a profound influence upon the incoming flow of sensory information. A key factor in determining the incoming visual input is where we are looking. What we sense with our skin touch receptors depends upon our movements. More air streams past the nasal epithelium when we sniff enhancing the total number of odorant molecules. Sniffing may also give rise to specific sampling of a given volume of air at the time of the sniff.
+12345
+Question 5 (1/1 point)
+
+Why might one propose that the motor function of whisker sensory cortex (wS1) is a negative feedback motor command, while the motor function of whisker motor cortex (wM1) is a motor command to enhance sensory input?
+Stimulation of wS1 drives sustained whisker protraction, while stimulation of wM1 drives rhythmic whisker protraction
+Stimulation of wS1 drives rhythmic whisker protraction, while stimulation of wM1 drives sustained whisker retraction
+Stimulation of wS1 drives sustained whisker retraction, while stimulation of wM1 drives sustained whisker protraction
+Stimulation of wS1 drives sustained whisker retraction, while stimulation of wM1 drives rhythmic whisker protraction Stimulation of wS1 drives sustained whisker retraction, while stimulation of wM1 drives rhythmic whisker protraction - correct
+</ul>
+Explanatio
+
+Optogenetic ChR2 stimulation of excitatory neurons in the primary whisker somatosensory cortex causes the contralateral whiskers to move backwards (retraction), and remain retracted for as long as the stimulus is delivered. If we imagine a whisker impinging upon a surface as the mouse advances towards an object, then the retraction of the whisker will tend to reduce whisker-object contact and thus reduce the bending of whiskers, giving rise to smaller sensory signals (which may be more refined). The motor activity associated with S1 driving whisker retraction could thus be viewed as a negative feedback signal.
+
+Stimulation of whisker motor cortex (wM1) causes the contralateral whiskers to move forwards rhythmically (exploratory rhythmic protraction). An exploring mouse will scan the space immediately surrounding its snout by rhythmically moving its whiskers backwards and forwards. If there is an objected located in the trajectory of the whiskers, it will cause the whiskers to bend, generating forces in the whisker follicle and driving action potential firing in sensory neurons. Stimulation of wM1 might therefore enhance the flow of incoming sensory whisker information.
+12345

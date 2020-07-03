@@ -1,0 +1,1 @@
+To speciﬁcally label premotor neurons, genetically engineered monosynaptic rabies virus lacking glycoprotein G can be injected into muscle to infect the innervating motor neurons. The rabies virus in the motor neurons expressing rabies G is trans-complemented and can then cross one synapse retrogradely to infect premotor neurons.

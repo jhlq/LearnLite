@@ -1,0 +1,75 @@
+***Neurology
+These notes are based on 
+https://www.edx.org/course/cellular-mechanisms-brain-function-epflx-brainx-0 a edX course.
+
+Videos and pdfs no longer hosted locally.
+
+Video file names contain their youtube tag, to watch 1.1-hI3Epqe6CGM.3gp at higher resolution go to: 
+http://www.youtube.com/watch?v=hI3Epqe6CGM
+
+Question answers are available in files named according to section and question number, to access the answer to for example question 5 in section 1.3 lookup the file /neurology/1.3a5.txt
+
+**Outline
+The course Cellular Mechanisms of Brain Function aims for a mechanistic description of mammalian brain function at the level of individual nerve cells and their synaptic interactions.
+
+The function of the brain is to govern behavior, and the aim of this course is to causally link biophysical mechanisms with simple behaviors studied in mice. The brain processes information through the concerted activity of many neurons, which communicate with each other through synapses organised in highly dynamic networks. The first goal of the course is to gain a detailed understanding of the structure and function of the fundamental building blocks of the mammalian brain, its synapses and neurons (Weeks 1-3). The second goal is to understand neuronal networks, with specific emphasis on the interactions of excitatory glutamatergic and inhibitory GABAergic neurons (Weeks 4 and 5). The third goal is to place neuronal network function in the context of sensory processing ultimately leading to behavioral decisions and motor output (Weeks 6 and 7).
+
+Each week of the course a new set of five videos will be released. Each video is typically ~20 minutes in duration (ranging ~15-30 minutes). You should watch these videos and then complete the associated quiz questions. There are 5-7 quiz questions for each video (except '1.1 Introduction' and '7.5 Concluding remarks'). These quiz questions are labeled as 'Homework'. The quiz questions are multiple choice questions and correct answers count towards passing the course (60% of the total score). The quiz questions associated with each video should take no more than ~5 minutes to do on average. In addition to the quiz questions accompanying each video, there will also be a final exam, which you can do in Week 7 or 8. This will also be mutiple choice questions. The final exam will take ~45 minutes to complete. The final exam will contribute 40% of the total points awarded. To pass the course you must get 50% (or more) in the total points. 
+
+*Week 1
+<ul>
+1.1 Introduction
+1.2 The cell membrane
+1.3 Ion channels
+1.4 Membrane potential
+1.5 Cable properties
+</ul>
+*Week 2
+<ul>
+2.1 Voltage-gated channels
+2.2 Voltage-gating kinetics
+2.3 The action potential
+2.4 Action potential propagation
+2.5 Whole-cell recordings
+</ul>
+*Week 3
+<ul>
+3.1 Synaptic transmission
+3.2 Neurotransmitter release
+3.3 Presynaptic dynamics
+3.4 Presynaptic modulation
+3.5 Electron microscopy
+</ul>
+*Week 4
+<ul>
+4.1 Glutamate receptors
+4.2 Postsynaptic potentials
+4.3 Glutamatergic circuits
+4.4 Synaptic plasticity
+4.5 Dendritic spines
+</ul>
+*Week 5
+<ul>
+5.1 GABAergic inhibition
+5.2 Inhibitory synaptic conductances
+5.3 Benzodiazepines
+5.4 GABAergic projections
+5.5 Neocortical inhibition
+</ul>
+*Week 6
+<ul>
+6.1 Brain function and behavior
+6.2 Man and mouse
+6.3 Imaging the brain in action
+6.4 In vivo electrophysiology
+6.5 Controlling brain function
+</ul>
+*Week 7
+<ul>
+7.1 Sensorimotor interactions
+7.2 Sensory perception
+7.3 Learning
+7.4 Brain dysfunction
+7.5 Concluding remarks
+</ul>
+*Final exam

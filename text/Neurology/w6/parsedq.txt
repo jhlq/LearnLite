@@ -1,0 +1,215 @@
+*Question 6.1.1 
+In order to investigate the causal mechanisms of brain function and behavior we need to:
+<ul>
+Correlate the activity of specific cells with behavior
+Perturb the activity of specific cells during behavior
+Quantitatively model the causal interactions driving brain function and behavior
+All of the above steps are essential for linking brain function and behavior 
+</ul>
+
+*Question 6.1.2 
+What methods investigate cellular mechanisms of brain function?
+<ul>
+Electroencephalography (EEG) and magnetoencephalography (MEG)
+Whole-cell electrophysiology and high-resolution optical imaging 
+Positron emission tomography (PET)
+functional magnetic resonance imaging (BOLD fMRI)
+</ul>
+
+*Question 6.1.3 
+An observer measures the neuronal activity of a number of neurons and finds that some specific neurons reliably fire action potentials just before a mouse licks a water spout during task performance. The observer concludes that these neurons might contribute to driving licking behavior. What further experiments are necessary to test whether the activity of these specific neurons is necessary and sufficient?
+<ul>
+Stimulation of the specific cells to test for necessity, and inactivation of the specific cells to test for sufficiency
+Stimulation of the specific cells to test for necessity and sufficiency
+Inactivation of the specific cells to test for necessity, and stimulation of the specific cells to test for sufficiency 
+Inactivation of the specific cells to test for necessity and sufficiency
+</ul>
+
+*Question 6.1.4 
+Why did Karl Popper propose that scientific hypotheses can only be falsified and they can never be proved correct?
+<ul>
+Some experimental data might be consistent with a hypothesis, but perhaps further experiments will contradict the hypothesis 
+Experimental data are always inconsistent
+Experiments are carried out by experimentalists
+Hypotheses are always wrong
+</ul>
+
+*Question 6.2.1 
+Which statement about the relation between man and mouse is correct?
+<ul>
+There is little genetic similarity between man and mouse
+Reptiles are genetically closer to man than mouse
+The human genome has approximately ten times more genes than the mouse genome
+Approximately 99% of genes coding for proteins have homologs comparing man and mouse 
+</ul>
+
+*Question 6.2.2 
+Size is the most obvious difference between the brain of a mouse and that of a man. What are their relative sizes?
+<ul>
+Mouse: length ~1 cm, volume ~1 ml; Man: length ~100 cm, volume ~1000 l
+Mouse: length ~1 cm, volume ~1 ml; Man: length ~10 cm, volume ~1 l 
+Mouse: length ~0.1 cm, volume ~0.001 ml; Man: length ~10 cm, volume ~1 l
+Mouse: length ~0.1 cm, volume ~0.001 ml; Man: length ~100 cm, volume ~1000 l
+</ul>
+
+*Question 6.2.3 
+What would be a very rough estimate for the total number of neurons in man and mouse?
+<ul>
+100 thousand for mouse and 100 million for man
+100 million for mouse and 100 billion for man 
+100 thousand for mouse and 1 million for man
+100 thousand for mouse and 100 billion for man
+</ul>
+
+*Question 6.2.4 
+Imagine that each neuron in the brain synaptically connects to 1,000 other neurons. Using the rough numbers of neurons from the question above, what would be the ratio of the numbers of synapses comparing man and mouse?
+<ul>
+Man would have 1 million times more synapses than a mouse
+Man would have 1 thousand times more synapses than a mouse 
+Man would have 1 billion times more synapses than a mouse
+Man and mouse would have the same number of synapses
+</ul>
+
+*Question 6.2.5 
+Which neural circuits are similar in man and mouse?
+<ul>
+Visual, tactile, gustatory and auditory information flow through the thalamus to the neocortex
+Neocortex sends long-range excitatory glutamatergic signals to other brain areas
+Cerebellar circuits help fine-scale sensorimotor coordination.
+All of the above. 
+</ul>
+
+*Question 6.3.1 
+Approximately how deep in the living brain is it possible to optically image with cellular resolution in a non-invasive manner?
+<ul>
+~1 um
+~30 um
+~1 mm 
+~3 cm
+</ul>
+
+*Question 6.3.2 
+If a fluorescent voltage sensor was present on all neuronal membranes, what spatiotemporal resolution of cortical neuronal activity might one hope to achieve through wide-field epifluorescence imaging in vivo?
+<ul>
+~100 um and ~1 ms
+~10 um and ~100 ms
+~1 um and ~10 us
+Only depends on your camera resolution 
+</ul>
+
+*Question 6.3.3 
+Which of the following statements about two-photon excitation is not correct?
+<ul>
+The probability of two-photon excitation depends on the square of the photon density
+Two-photon excitation occurs equally within the entire excitation light cone 
+Emitted fluorescent photons mainly originate from the focal plane
+Long wavelength light (near infrared) is used excite the fluorophore
+</ul>
+
+*Question 6.3.4 
+What is the approximate resolution of two-photon microscopy in the living brain?
+<ul>
+About 1 um 
+About 30 nm
+About 30 um
+About 1 cm
+</ul>
+
+*Question 6.3.5 
+Typically pulsed femtosecond infrared lasers are used to excite two-photon fluorescence. What would be the expected increase in two-photon fluorescence if the same sample was excited by 100 MHz laser pulses each lasting 100 fs compared to a continuous emission laser with the same average power?
+<ul>
+100,000,000
+100 
+10^10
+100,000
+</ul>
+
+*Question 6.4.1 
+Which signal can be observed with extracellular electrophysiological recordings in vivo?
+<ul>
+Somatic membrane potential at the soma
+Calcium dynamics in a single neuron
+Action potential firing 
+Dendritic membrane potential
+</ul>
+
+*Question 6.4.2 
+What are the advantages of in vivo whole-cell recordings compared to typical extracellular recording methods?
+<ul>
+Subthreshold membrane potential fluctuations can be recorded
+Cells can be filled with dye through the recording pipette for anatomical identification
+Membrane potential can be changed by injecting currents
+All of the above 
+</ul>
+
+*Question 6.4.3 
+What pattern of membrane potential fluctuations in excitatory layer 2/3 neurons dominates during the quiet resting state in mouse primary somatosensory cortex?
+<ul>
+Slow fluctuations (0.1-0.5 Hz), with amplitude of ~50 mV, highly synchronised in nearby neurons
+Slow fluctuations (1-5 Hz), with amplitude of ~10 mV, highly synchronised in nearby neurons 
+Fast fluctuations (10-50 Hz), with amplitude of ~10 mV, highly synchronised in nearby neurons
+Fast fluctuations (10-50 Hz), with amplitude of ~2 mV, desynchronised in nearby neurons
+</ul>
+
+*Question 6.4.4 
+Which statement about combining electrophysiology and imaging is true ?
+<ul>
+Combining electrophysiology with imaging allows recordings from genetically-defined neuron types 
+Electrophysiology needs the insertion of electrodes and this prevents optical imaging
+Electrophysiology and imaging have different time scales and are thus incompatible
+Imaging needs photons, and the photons interfere with and prohibit electrophysiogical measurements
+</ul>
+
+*Question 6.4.5 
+Layer 2/3 neocortical GABAergic neurons :
+<ul>
+represent ~10% of the layer 2/3 neuronal population, and fire at ~10 times higher rates than excitatory pyramidal neurons 
+represent ~50% of the layer 2/3 neuronal population, and fire at similar rates to excitatory pyramidal neurons
+represent ~90% of the layer 2/3 neuronal population, and fire ~10 times as infrequently as excitatory pyramidal neurons
+represent ~10% of the layer 2/3 neuronal population, and fire ~10 times as infrequently as excitatory pyramidal neurons
+</ul>
+
+*Question 6.5.1 
+With what tool one can do cell-type specific, temporally-controlled brain stimulation?
+<ul>
+Microstimulation
+Optogenetics 
+Deep brain stimulation
+Glutamate uncage
+</ul>
+
+*Question 6.5.2 
+What is channelrhodopsin-2 (ChR2)?
+<ul>
+ChR2 is a light-sensitive G-protein coupled receptor
+ChR2 is a light-sensitive cation channel 
+ChR2 is a light-sensitive anion channel
+ChR2 is a light-sensitive tyrosine kinase
+</ul>
+
+*Question 6.5.3 
+What happens if we express channelrhodopsin-2 (ChR2) in excitatory neurons of mouse whisker motor cortex (wM1) and excite with blue light?
+<ul>
+Mouse closes its eyes
+Mouse starts rythmic exploratory whisking 
+Mouse begins grooming its whisker pad
+Nothing happens
+</ul>
+
+*Question 6.5.4 
+Which approach fails to reversibly inhibit activity in a local region of the mouse brain?
+<ul>
+Expressing channelrhodopsin-2 (ChR2) in inhibitory neurons and thereby driving local inhibition
+Expressing halorhodopsin (NpHR) in excitatory neurons to optically hyperpolarise them
+Expressing archaerhodopsin (Arch) in excitatory neurons to optically hyperpolarise them
+Making a lesion in the brain 
+</ul>
+
+*Question 6.5.5 
+Why might a light-gated anion channel be better at inhibiting neuronal activity than the light-driven transporters halorhodopsin (NpHR) or archaerhodopsin (Arch)?
+<ul>
+Channels can move more ions per second than transporters
+Channels do not induce shunting inhibition
+Channels have higher ionic selectivity
+All of the above 
+</ul>

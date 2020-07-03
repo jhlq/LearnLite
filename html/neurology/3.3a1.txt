@@ -1,0 +1,1 @@
+Short-term synaptic depression and facilitation are typically observed on the time-scale from 10 ms to 1000 ms.

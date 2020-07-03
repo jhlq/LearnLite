@@ -1,0 +1,60 @@
+Question 1 (1/1 point)
+
+Approximately how deep in the living brain is it possible to optically image with cellular resolution in a non-invasive manner?
+~1 um
+~30 um
+~1 mm ~1 mm - correct
+~3 cm
+</ul>
+Explanatio
+
+The brain absorbs and scatters light. Without using invasive surgery or endoscopy, it has so far not been possible to optically image with ~um resolution deeper than ~1 mm in the living mammalian brain. This corresponds roughly to the thickness of the mouse neocortex.
+12345
+Question 2 (1 point possible)
+
+If a fluorescent voltage sensor was present on all neuronal membranes, what spatiotemporal resolution of cortical neuronal activity might one hope to achieve through wide-field epifluorescence imaging in vivo?
+~100 um and ~1 ms
+~10 um and ~100 ms
+~1 um and ~10 us
+Only depends on your camera resolution Only depends on your camera resolution - correct
+</ul>
+Explanatio
+
+Neuronal arborisations typically span more than 100 um. Given the scattering of light and the size of neurons, it is not reasonabe to expect to resolve spatial signals localised on a length scale smaller than ~100 um. Neuronal activity typically works on the milliscond timescale (an action potential is ~1 millisecond in duration and synaptic potentials are tens ~10 ms in duration). It therefore seems reasonable to hope for ~1 ms time-resolution.
+12345
+Question 3 (1/1 point)
+
+Which of the following statements about two-photon excitation is not correct?
+The probability of two-photon excitation depends on the square of the photon density
+Two-photon excitation occurs equally within the entire excitation light cone Two-photon excitation occurs equally within the entire excitation light cone - correct
+Emitted fluorescent photons mainly originate from the focal plane
+Long wavelength light (near infrared) is used excite the fluorophore
+</ul>
+Explanatio
+
+The concept of two-photon excitation is based on the idea that two photons of comparably lower energy than needed for single-photon excitation can also excite a fluorophore. Each photon carries approximately half the energy necessary to excite the molecule. An excitation results in the subsequent emission of a fluorescence photon, typically at a higher energy than either of the two excitatory photons. The probability of the near-simultaneous absorption of two photons is low, and depends on the square of the photon density. As a consequence, two-photon excitation occurs only in the small volume where the laser beam is focused, and not in the entire light cone. Therefore, all the emitted fluorescence photons originate from this volume, thus providing useful signal. Additionally, the localisation of excitation induces less photodamage to the tissue, which is crucial for long-term imaging.
+12345
+Question 4 (1/1 point)
+
+What is the approximate resolution of two-photon microscopy in the living brain?
+About 1 um About 1 um - correct
+About 30 nm
+About 30 um
+About 1 cm
+</ul>
+Explanatio
+
+Two-photon excitation imaging of fluorescence provides ~1 um resolution in the living brain. Typically high resolution can be obtained in X and Y dimensions (a few hundreds of nanometers). In the z direction, the resolution is considerably worse (a few microns).
+12345
+Question 5 (1 point possible)
+
+Typically pulsed femtosecond infrared lasers are used to excite two-photon fluorescence. What would be the expected increase in two-photon fluorescence if the same sample was excited by 100 MHz laser pulses each lasting 100 fs compared to a continuous emission laser with the same average power?
+100,000,000
+100 100 - correct
+10^10
+100,000
+</ul>
+Explanatio
+
+If we imagine that the continuous power output laser gives rise to a certain amount of fluorescence, then the pulsed laser (100 fs @ 100 MHz) will result in 100,000 times as much fluorescence. Two-photon fluorescence depends upon the square of the photon density in time and space. If the the time-averaged power is the same but divided into brief pulses, then the peak powers are much higher in the pulsed case. The 100 fs pulses that occur every 10 ns, result in excitation photons being compressed into 0.001% of the total time, giving rise to 100,000 times larger peak powers. Because the fluorescence depends upon the square of the photon density, the fluorescence is 10^10 times larger. However, it only occurs 0.001% of the total time, and thus the average fluoresence increase resulting from this pulsed laser is 100,000 times compared to a continuous laser with the same average power output.
+12345

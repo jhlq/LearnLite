@@ -1,0 +1,1 @@
+ChR2 is a light-sensitive cation channel. Light is absorbed by covalently bound retinal, generating a structural change in the ChR2 protein conformation, increasing its open probability.

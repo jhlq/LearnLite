@@ -1,0 +1,129 @@
+
+***Animation
+**Principles
+<ul>
+Clear the canvas.
+Draw.
+Alter the drawers.
+Repeat.
+</ul>
+
+Step 1 could be avoided if you redraw the whole canvas content during step 2.
+
+Before html5 animations were done with setInterval/setTimeOut functions. Now best practice is to use requestAnimationFrame. Comparison of methods: 
+http://jsbin.com/feqije/edit?html,output 
+
+The old way is hard to debug and can become jammed since it will call again regardless of what happened in the previous call. The timing is also not very exact.
+
+BEST PRACTICE: AVOID using setInterval and setTimeout for animating in a canvas, 
+except for trivial cases  (change a color every second).
+
+With requestAnimationFrame(animationLoop) timing is very precise at 60 FPS (Frames Per Second) and the animation also runs more efficiently.
+
+http://jsbin.com/jixuju/4/edit
+
+*Suggested projects
+<ul>
+Project 1 (easy): You created a monster, or a small drawing during Week 3: now please animate it! For example, make it move horizontally on the screen and bounce when it hits a vertical border.
+Project 2 (easy): Change the color of your drawing every 0.5s. Professionals would do that using the timeStamp parameter passed to the function called by requestAnimationFrame, and do some computations, etc. But this is for advanced users. Others will simply use requestAnimationFrame for the smooth shape movements at 60 frames/s (using translate, rotate and increments, as shown in the course), and will use setInterval, for example for calling another function every 0.5s, or every second, that could change a color, a speed, etc.
+Project 3 (easy): Run several animations at the same time (beware not to clear the canvas in all of them during each animation loop, one clear is enough). You can also have multiple calls to setInterval. Try and learn from experience. Then discuss your findings in the forum. 
+Project 4 (easy): Implement motion blur for free! Instead of using clearRect(...) for clearing the canvas content, please comment this line and replace it by drawing a filled rectangle of the size of the canvas, that has some transparency. Use the following two lines, for example: <br>ctx.fillStyle = "rgba(0, 240, 240, 0.2)";<br>ctx.fillRect (0, 0, width, height); 
+</ul>
+
+**User interaction
+In JavaScript, we treat events made by users as an input, and we manipulate the DOM structure as an output. The events are called DOM events, and we use the DOM JavaScript API to create event handlers.
+
+3 ways to handle events:
+<ul>
+Declare event handlers in the HTML code: not recommended, there should be a cleaner separation of the javascript code.
+Add an event handler to an HTML element in JavaScript: fine but limited to a single listener.
+Register a callback to the event listener with the addEventListener method: document.getElementById('someDiv').addEventListener('click', fun(event));
+</ul>
+
+Example with the third way: 
+http://jsbin.com/korele/edit?html,console,output
+
+*Keys
+http://www.asquare.net/javascript/tests/KeyCode.html
+
+http://css-tricks.com/snippets/javascript/javascript-keycodes/
+
+http://jsbin.com/voviva/2/edit
+
+As above but with focus feature:
+http://jsbin.com/cohide/2/edit
+
+Move the monster: 
+http://jsbin.com/qorupi/edit
+
+As above but with better focus feature:
+http://jsbin.com/johaco/edit
+
+*Mouse events
+<ul>
+mouseleave
+mouseout
+mouseover
+mousedown
+mouseup
+mouseclick
+mousemove
+</ul>
+
+How to get correct mouse coordinates:
+http://jsbin.com/miduqu/3/edit
+
+Adding button presses:
+http://jsbin.com/miduqu/2/edit
+
+Moving the monster:
+http://jsbin.com/pedihokoyu/1/edit
+
+Draw:
+http://jsbin.com/bijusa/3/edit
+
+More drawing:
+http://jsbin.com/lavexi/3/edit
+
+*Canvas
+Changing width or height properties erases content:
+http://jsbin.com/tukave/2/edit
+
+Changing % size with CSS does not change resolution:
+<ul>
+http://jsbin.com/luvuhe/4/edit
+http://jsbin.com/pajifo/2/edit
+</ul>
+
+GOOD PRACTICE: never use CSS percentages on a canvas width or height!
+
+This is the trick in order to have a really responsive canvas:
+<ul>
+embed it in a <div> or in any parent container,
+Use CSS with percentages on the width and the height CSS properties of the parent,
+Use a resize listener on the  parent of the canvas,
+Change the width and height properties of the canvas from the JavaScript resize listener function (content will be erased),
+Redraw the content, scaled accordingly to the size of the parent.
+</ul>
+
+Like so:
+<ul>
+http://jsbin.com/tubufo/2/edit
+http://jsbin.com/xoqipo/3/edit
+</ul>
+
+*Suggested projects
+<ul>
+Project 1 (easy): Make one of your drawings move in all directions (left, right up, down, then diagonals) using the arrow keys.
+Project 2 (a bit harder): Make an animated chart. When the page is loaded, the chart "grows" until the chart bars reach  their "normal" value. Another variant is to use animated colors or shadows in your chart.
+Project 3 (a bit harder): Make your monster follow the mouse + open its mouth and change color when we click on a mouse button. If you manage to make it scream, it's even better (use a hidden audio element and call play(), advanced users may give a look at the howler.js JavaScript library that loads sound samples in memory and plays them on demand). 
+Project 4 (advanced): On the Web, look for JavaScript functions for detecting collisions (circle/circle or rectangle/rectangle), and try to make a small game where your monster must "eat" some balls that bounce on the screen. Every 5s new balls appear on the canvas. Make your monster go towards the mouse pointer. You can use var angle = Math.atan2(dy, dx); in order to compute the monster angle, dx and dy = difference between the monster and mouse positions.
+Project 5 (easy to intermediate): Put into practice what you've learned about the responsive canvas and develop an example of your own. The difficulty may vary depending on the things that are drawn or animated.
+</ul>
+
+**Advanced examples
+Collision detection:
+http://jsbin.com/bemebi/11/edit
+
+Sprite animation:
+http://output.jsbin.com/qumiso/5

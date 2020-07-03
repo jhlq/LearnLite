@@ -1,0 +1,11 @@
+The reversal potential can be calculated by using the Nernst equation.
+
+Calcium ions carry a charge of +2 (the variable 'z' in the Nernst equation).
+
+From the Nernst equation for calcium, the reversal potential is:
+
+(61.5 / 2) x log (2 x 10^-3 / 1 x 10^-6)
+
+30.75 x log (2000)
+
+101.5 mV

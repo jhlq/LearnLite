@@ -1,0 +1,1 @@
+The PV-expressing fast-spiking basket cells target soma and proximal dendrites. Fast-spiking axo-axonic cells (also known as chandelier cells) can also express parvalbumin, and inhibit the axon initial segment of the postsynaptic cell, but these cells are not 'basket cells'.

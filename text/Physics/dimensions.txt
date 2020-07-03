@@ -1,0 +1,16 @@
+*Imagining higher dimensions.
+Creating a mental representation of four dimensional spacetime is straightforward, it is possible also for five, eleven or even arbitrary number of dimensions.
+
+One dimension is a line, or discretely a set of ordered points. Let us take 3 circularly connected points and make a mental representation: Take a neuron N1 and connect it to a second neuron N2 connected to N3 then connect N3 to N1. Now here are 3 points on which we can travel in two directions, ie, a mental representation of dimension one.
+
+Two dimensions is a plane, or a ordered set of sets of ordered points. We need an additional direction for our neurons, this can be accomplished with two additional "lines" of 3 neurons where each Nx (x∈[1,2,3]) of line L1 is connected to Nx of L2 and so on.
+
+Three dimensions can be represented as a cube of neurons. A third parameter is added: the plane P. N, L and P all take three values so we have a total of 27 neurons, (P1,L3,N2) is the neuron in the third line of the first plane.
+
+Four dimensions can be represented as 3 cubes of neurons where every neuron of every cube is connected to the corresponding neuron in the other two cubes. If we name the cubes time then at each time one can take a step in 3D or to another time. We have constructed a line of time, a time-line!
+
+Five dimensions are created by repeating step two with time lines instead of ordinary lines. At each time in the first time-line T1 connect every neuron (Px,Ly,Nz) to the corresponding (Px,Ly,Nz) in T2 at the same time, and so on. Now we have a time-plane, imagine waves within.
+
+Six dimensions is a cube from stacks of time-planes. Or a 3D cube of neurons where each neuron has internal 3D structure.  
+
+Arbitrary dimensions can be imagined by taking a neuron cube and assigning to it a internal recursion number R where R=1 corresponds to the 6D cube above. Taking R=2 we get a 9D cube since there are 9 directions we can traverse: We have three dimensions in the "biggest" (size is relative, try to construct the dimensions circularly so that the dimension smaller than the smallest dimension is the largest dimension, making size a function of viewpoint) cube and we can hop along the three dimensions of each neuron in that cube AND we can hop in the three dimensions of each minineuron of those neurons. Now try visualizing R=3! R-cubes can be arranged in lines and planes as usual.

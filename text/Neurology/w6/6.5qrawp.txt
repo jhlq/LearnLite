@@ -1,0 +1,60 @@
+Question 1 (1/1 point)
+
+With what tool one can do cell-type specific, temporally-controlled brain stimulation?
+Microstimulation
+Optogenetics Optogenetics - correct
+Deep brain stimulation
+Glutamate uncage
+</ul>
+Explanatio
+
+Optogenetics allows researchers to deal with causal interventions in the mammalian brain through genetically expressing actuators that control neuronal activity. One can use powerful mouse genetics and decide which cells to stimulate or to inhibit. Moreover, these actuators are under optical control, and can be turned on and off with millisecond temporal resolution.
+12345
+Question 2 (1/1 point)
+
+What is channelrhodopsin-2 (ChR2)?
+ChR2 is a light-sensitive G-protein coupled receptor
+ChR2 is a light-sensitive cation channel ChR2 is a light-sensitive cation channel - correct
+ChR2 is a light-sensitive anion channel
+ChR2 is a light-sensitive tyrosine kinase
+</ul>
+Explanatio
+
+ChR2 is a light-sensitive cation channel. Light is absorbed by covalently bound retinal, generating a structural change in the ChR2 protein conformation, increasing its open probability.
+12345
+Question 3 (1/1 point)
+
+What happens if we express channelrhodopsin-2 (ChR2) in excitatory neurons of mouse whisker motor cortex (wM1) and excite with blue light?
+Mouse closes its eyes
+Mouse starts rythmic exploratory whisking Mouse starts rythmic exploratory whisking - correct
+Mouse begins grooming its whisker pad
+Nothing happens
+</ul>
+Explanatio
+
+Blue light stimulates the motor cortex, and ~30 ms later, the mouse begins to move its whiskers in an exploratory way, rythmically scanning its immediate environment.
+12345
+Question 4 (1/1 point)
+
+Which approach fails to reversibly inhibit activity in a local region of the mouse brain?
+Expressing channelrhodopsin-2 (ChR2) in inhibitory neurons and thereby driving local inhibition
+Expressing halorhodopsin (NpHR) in excitatory neurons to optically hyperpolarise them
+Expressing archaerhodopsin (Arch) in excitatory neurons to optically hyperpolarise them
+Making a lesion in the brain Making a lesion in the brain - correct
+</ul>
+Explanatio
+
+Lesions are irreversible and have limited spatial precision.
+12345
+Question 5 (1 point possible)
+
+Why might a light-gated anion channel be better at inhibiting neuronal activity than the light-driven transporters halorhodopsin (NpHR) or archaerhodopsin (Arch)?
+Channels can move more ions per second than transporters
+Channels do not induce shunting inhibition
+Channels have higher ionic selectivity
+All of the above All of the above - correct
+</ul>
+Explanatio
+
+Channels can move more ions per second than transporters. Channels would induce shunting inhibition, and this would further enhance inhibition. Channels do not in general have higher ion selectivity than transporters.
+12345

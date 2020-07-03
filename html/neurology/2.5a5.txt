@@ -1,0 +1,5 @@
+The potassium reversal potential is given by the Nernst equation:
+
+Ek = 61.1 log(2.5 / 139) = -106.6 mV
+
+Note temperature dependence.

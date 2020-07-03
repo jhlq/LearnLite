@@ -1,0 +1,11 @@
+***Physics
+These pages are geared for practical knowledge through computational resources, specifically we will use the Equations package: 
+https://github.com/jhlq/Equations.jl
+
+Quantum gravity is a focus.
+
+**Contents
+<ul>
+dimensions.html Imagining higher dimensions.
+gravity.html Imagining warped spacetime.
+</ul>

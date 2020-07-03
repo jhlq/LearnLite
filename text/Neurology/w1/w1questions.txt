@@ -1,0 +1,119 @@
+Question 1 (1 point possible)
+
+In a phospholipid bilayer the lipids have
+their hydrophobic heads facing inward
+their hydrophilic tails facing outward
+their hydrophilic heads facing inward
+their hydrophobic tails facing inward
+4
+
+
+Explanation
+
+The cell membrane is composed of phospholipids, which are organized into two layers (a bilayer), with the fatty acid chains in each layer pointing towards the center of the membrane. The nonpolar regions of the molecules (hydrophobic) face the interior of the bilayer, where they are shielded from water. On the other hand, the polar regions of the molecules (hydrophilic) face outward where they interact with the water inside and outside of the cell.
+
+Question 2 (1 point possible)
+
+The phospholipid bilayer
+is highly permeable to water molecules
+is impermeable to ions and charged molecules
+is impermeable to gases and small uncharged molecules
+is permeable to ions and charged molecules
+2
+Explanation
+
+The phospholipid bilayer of the cell membrane is highly impermeable to ions and charged molecules. The membrane is highly permeable to small non-polar uncharged molecules, like gases (oxygen, carbon dioxide,nitrogen). The permeability of the membrane to polar (water soluble) molecules is very low. The transport of most molecules and ions across the plasma membrane is enabled by specific membrane proteins, which are embedded into the cell membrane.
+Question 3 (1 point possible)
+
+How thick is the cell membrane?
+0.5 nm
+5 nm
+50 nm
+500 nm
+2
+
+
+Explanation
+
+The cell membrane is composed of a phospholipid bilayer that is approximately 5 nanometers in thickness.
+
+Question 4 (1 point possible)
+
+The phospholipid bilayer of the cell membrane can be represented as which electrical component?
+Resistor
+Inductor
+Conductor
+Capacitor
+4
+
+
+Explanation
+
+The cell membrane is impermeable to ions, but is so thin that charges can interact through the electric field. The cell membrane is therefore a dielectric and acts as a capacitor.
+
+Question 5 (1 point possible)
+
+What would be the approximate surface area of spherical cell with a 10 µm radius?
+10 µm^2
+100 µm^2
+1000 µm^2
+1 mm^2
+3
+
+
+Explanation
+
+The surface area of a sphere is 4πr^2 = 4 x 3 x 100 = ~1000 µm^2
+
+Question 6 
+
+What would be the approximate capacitance of such a cell?
+10 fF
+10 pF
+10 nF
+10 µF
+2
+
+
+Explanation
+
+The lipid cell membrane has a specific capacitance of ~1 µF/cm^2. For convenience we can convert this constant into units per µm^2. The specific capacitance of the cell membrane is ~10 fF/µm^2. For a cell with a surface area of 1000 µm^2, this gives 10 fF/µm^2 x 1000 µm^2 = 10 pF.
+
+
+Question 7 
+
+Approximately how many positively charged ions would need to move from the outside to the inside of this cell in order to change the membrane potential by +70 mV?
+4 hundred
+6 thousand
+4 million
+8 billion 
+3
+
+Explanation
+
+C = 10 pF
+
+e = 1.6 x 10^-19 C
+
+In order to calculate the number of the ions, first we need to know how much charge would need to change the membrane potential by 70 mv:
+
+Q = C x V
+
+= 10 x 10^-12 F x 70 x 10^-3 V
+
+= 0.7 pC -> the charge
+
+For the number of ions:
+
+Q = Number of ions x e
+
+Q = 0.7 pC
+
+e = 1.6 x 10^-19 C
+
+Q/e -> gives the number of ions
+
+Q/e = 0.7 x 10^-12 C / 1.6 x 10^-19 C
+
+Q/e = ~4 million ions
+

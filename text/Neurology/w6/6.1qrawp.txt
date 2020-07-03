@@ -1,0 +1,48 @@
+Question 1 (1/1 point)
+
+In order to investigate the causal mechanisms of brain function and behavior we need to:
+Correlate the activity of specific cells with behavior
+Perturb the activity of specific cells during behavior
+Quantitatively model the causal interactions driving brain function and behavior
+All of the above steps are essential for linking brain function and behavior All of the above steps are essential for linking brain function and behavior - correct
+</ul>
+Explanatio
+
+In order to investigate the causal mechanisms of brain function and behavior, there are three important steps that we need to make. First, we need to measure in detail the activity of specific cells, and correlate this with behavior. Then, in order to reach causality, we need to perturb the activity of specific cells within the brain during behavior. Finally, we need to quantitatively model the causal interactions driving brain function and behavior.
+12345
+Question 2 (1/1 point)
+
+What methods investigate cellular mechanisms of brain function?
+Electroencephalography (EEG) and magnetoencephalography (MEG)
+Whole-cell electrophysiology and high-resolution optical imaging Whole-cell electrophysiology and high-resolution optical imaging - correct
+Positron emission tomography (PET)
+functional magnetic resonance imaging (BOLD fMRI)
+</ul>
+Explanatio
+
+Individual cells have small length scales (microns) and require high-resolution measuring techniques in order to resolve their individual activities in the living mammalian brain. EEG and MEG signals are measured outside of the brain and cannot distinguish the activity of different cells. fMRI and PET typically have spatial resolutions in the millimeter range and thus also fail to resolve cellular activity. Small tipped electrodes, like whole-cell pipettes and many other types of extracellular electrodes, resolve the activity of individual neurons. High resolution-optical techniques also resolve structure and function on the micron scale and can thus provide cellular information.
+12345
+Question 3 (1/1 point)
+
+An observer measures the neuronal activity of a number of neurons and finds that some specific neurons reliably fire action potentials just before a mouse licks a water spout during task performance. The observer concludes that these neurons might contribute to driving licking behavior. What further experiments are necessary to test whether the activity of these specific neurons is necessary and sufficient?
+Stimulation of the specific cells to test for necessity, and inactivation of the specific cells to test for sufficiency
+Stimulation of the specific cells to test for necessity and sufficiency
+Inactivation of the specific cells to test for necessity, and stimulation of the specific cells to test for sufficiency Inactivation of the specific cells to test for necessity, and stimulation of the specific cells to test for sufficiency - correct
+Inactivation of the specific cells to test for necessity and sufficiency
+</ul>
+Explanatio
+
+In order to test for sufficiency, it is essential to directly stimulate of the specific cells to see if this is sufficient in itself to drive licking. In order to test for necessity, it is essential to remove the specific activity, by specific inactivation of the neurons, during the behavioral task to see if it prevents licking.
+12345
+Question 4 (1/1 point)
+
+Why did Karl Popper propose that scientific hypotheses can only be falsified and they can never be proved correct?
+Some experimental data might be consistent with a hypothesis, but perhaps further experiments will contradict the hypothesis Some experimental data might be consistent with a hypothesis, but perhaps further experiments will contradict the hypothesis - correct
+Experimental data are always inconsistent
+Experiments are carried out by experimentalists
+Hypotheses are always wrong
+</ul>
+Explanatio
+
+The main problem with testing hypotheses is the incompleteness of the obtained data. Some experimental data might be consistent with a hypothesis, but perhaps further experiments will contradict the hypothesis. There are always more experiments to do! Scientific progress is therefore a continuous process of updating our best hypotheses and subjecting them to rigorous experimental tesing.
+12345

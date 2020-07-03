@@ -1,0 +1,51 @@
+***Introduction
+
+Examples will be presented via JS Bin (
+http://jsbin.com/
+), feel free to modify and base work on the examples.
+
+**Accessibility
+
+Website developers should take users with the following into consideration:
+<ul>
+Screen reader technology that vocalizes content
+Weak internet connection
+Mobile or old browsers
+Low literacy
+No mouse
+</ul>
+
+Ensure that each page has a descriptive title and every image an alt text. See more checks here: 
+http://www.w3.org/WAI/eval/preliminary.html
+
+**Course contents
+<ul>
+HTML5 structuring elements
+Multimedia API
+Canvasdrawing
+Accessible forms
+</ul>
+
+*Suggested readings
+<ul>
+http://www.w3.org/WAI/intro/people-use-web/Overview.html
+http://www.w3.org/WAI/tutorials/
+http://www.w3.org/WAI/
+</ul>
+
+**Internationalization
+
+The acronym i18n is used for internationalization since there are 18 letters between the i and the n. The standard encoding to use is UTF8, it is good practice to declare encoding and charset. If your website is in several languages have translated links to switch easily findable. Here are some additional tips: 
+http://www.w3.org/International/quicktips/
+
+*Suggested readings
+<ul>
+http://www.w3.org/International/questions/qa-what-is-encoding
+http://www.w3.org/International/tutorials/tutorial-char-enc/Overview
+http://www.w3.org/International/getting-started/language
+http://www.w3.org/International/articles/language-tags/
+http://www.w3.org/International/questions/qa-lang-priorities
+http://www.w3.org/International/questions/qa-choosing-language-tags
+http://www.w3.org/International/techniques/authoring-html-dynamic
+</ul>
+

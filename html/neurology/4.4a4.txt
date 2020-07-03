@@ -1,0 +1,1 @@
+Changes in synaptic efficacy induced by LTP can last for many hours, and even for many days when recorded in vivo.

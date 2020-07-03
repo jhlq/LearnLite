@@ -1,0 +1,1 @@
+GABAergic inhibition is a fast process, but it's much slower than AMPA-mediated excitation. The GABA-A conductance is five to ten times slower than the AMPA conductance of the glutamatergic synapses. The GABA-A conductance lasts about 10-20 ms, while AMPA conductance may last only 2 ms.

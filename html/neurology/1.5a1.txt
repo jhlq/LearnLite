@@ -1,0 +1,1 @@
+The length of a dendrite from the cell body (soma) to the tip typically ranges from ~100 µm to a few mm. The radius of a dendrite typically ranges from a few hundred nanometers to a few micrometers.

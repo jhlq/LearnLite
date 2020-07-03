@@ -1,0 +1,60 @@
+Question 1 (1/1 point)
+
+What are the main excitatory and inhibitory neurotransmitters in the mammalian brain respectively?
+Arginine and GABAzine
+Dopamine and Glycine
+Glutamate and GABA Glutamate and GABA - correct
+Acetylcholine and Oxytocin
+</ul>
+Explanatio
+
+The most important two neurotransmitters in the central nervous system are glutamate and gamma-aminobutyric acid (GABA). Glutamate is excitatory, driving the postsynaptic neuron towards ~0 mV membrane potential. GABA is inhibitory, driving the postsynaptic membrane potential towards ~-75 mV.
+12345
+Question 2 (1/1 point)
+
+What is meant by quantal release of neurotransmitter?
+All-or-none exocytosis of a synaptic vesicle All-or-none exocytosis of a synaptic vesicle - correct
+Release based on quantum mechanics
+All-or-none action potential firing
+All-or-none activation of presynaptic ion channels
+</ul>
+Explanatio
+
+Calcium influx into the presynaptic bouton evoked by an action potential, drives fusion of synaptic vesicles with the presynaptic membrane. This is typically an all-or-none event with a single vesicle being released or no vesicle being released. Each synaptic vesicle is filled with a high concentration of neurotransmitter and the exocytosis of a synaptic vesicle therefore causes the release of a quantum a neurotransmitter.
+12345
+Question 3 (1/1 point)
+
+What is the approximate diameter of a synaptic vesicle?
+4 nm
+40 nm 40 nm - correct
+400 nm
+4 um
+</ul>
+Explanatio
+
+A synaptic vesicle has a diameter of ~40 nm. It has a lipid bilayer membrane and the inside is packaged with a high concentration of neurotransmitter.
+12345
+Question 4 (1/1 point)
+
+Neurons mainly communicate with each other at specialised juntions called synapses, with the presynaptic bouton containing many synaptic vesicles. What is the approximate length scale of a typical synapse in the central nervous system (i.e. approximate diameter of the synaptic contact area)?
+5 um
+500 nm 500 nm - correct
+50 nm
+50 um
+</ul>
+Explanatio
+
+Synapses in the mammalian brain are typically smaller than 1 micron, mostly between 200 to 500 nm.
+12345
+Question 5 (1/1 point)
+
+What is meant by volume transmission?
+Exocytosis of a large volume of synaptic vesicles
+Signals about the loudness of a sound
+Regulation of the amount of neurotransmitter release
+Exocytosis of neurotransmitter-filled vesicles into the extracellular space Exocytosis of neurotransmitter-filled vesicles into the extracellular space - correct
+</ul>
+Explanatio
+
+Most neuronal communication occurs at specialsed junctions called synapses, but neurotransmitters can also be released into the extracellular space, where they can diffuse long distances acting upon many different cells. Volume transmission gains specificity from the localisation of the neurotransmitter receptors.
+12345 

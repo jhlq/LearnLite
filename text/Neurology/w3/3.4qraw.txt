@@ -1,0 +1,61 @@
+ Question 1 (1/1 point)
+
+Which statement about presynaptic neuromodulation in the mammalian brain is not true:
+Presynaptic neuromodulation typically results from activation of metabotropic receptors in the presynaptic membrane
+Presynaptic neuromodulation causes changes in neurotransmitter release
+Presynaptic neuromodulation can be caused by acetylcholine, serotonin, glutamate and GABA (amongst many others)
+Presynaptic neuromodulation typically results from activation of ionotropic receptors in the presynaptic membrane Presynaptic neuromodulation typically results from activation of ionotropic receptors in the presynaptic membrane - correct
+
+Explanation
+
+In the mammalian brain, presynaptic neuromodulation typically results from the activation of metabotropic receptors for many different types of neurotransmitters (including acetylcholine, serotonin, glutamate and GABA). Ionotropic receptors are not usually involved (although there is evidence that presynaptic NMDA receptors can play a regulatory role, and in the spinal cord there are direct GABAergic synapses on presynaptic terminals).
+You have used 1 of 1 submissions
+Question 2 (1/1 point)
+
+A metabotropic receptor typically:
+is a membrane protein with seven transmembrane regions signalling via a GTP-binding protein is a membrane protein with seven transmembrane regions signalling via a GTP-binding protein - correct
+is a membrane protein with six transmembrane regions forming an ion channel pore
+is an intracellar protein signalling via kinase activity
+is a membrane protein with a single transmembrane region signalling via the extracellular matrix
+
+Explanation
+
+Metabotropic receptors are membrane proteins with seven transmembrane alpha helices. They are coupled to GTP-binding proteins and when the neurotransmitter binds to the receptor, the GTP-binding protein is activated and diffuses away from the receptor to evoke downstream signalling in the cell.
+You have used 1 of 1 submissions
+Question 3 (1/1 point)
+
+Metabotropic receptors are characterized by:
+faster activation and shorter duration of activity than ionotropic receptors
+faster activation but longer duration of activity than ionotropic receptors
+slower activation but shorter duration of activity than ionotropic receptors
+slower activation and longer duration of activity than ionotropic receptors slower activation and longer duration of activity than ionotropic receptors - correct
+
+Explanation
+
+Because of the mutliple signalling steps involved, metabotropic receptors are characterized by slower activation and longer duration of activation than ionotropic receptors.
+
+You have used 1 of 1 submissions
+Question 4 (1/1 point)
+
+Which of the following statements about presynaptic inhibition in the mammalian brain is false?
+Presynaptic inhibition can be mediated by GABA acting on metabotropic GABA receptors on the presynaptic membrane
+Presynaptic inhibition is typically mediated by inhibition of Ca2+ channels or vesicle release machinery
+Presynaptic inhibition is typically mediated by axo-axonic GABAergic synapses directly innervating axonal boutons Presynaptic inhibition is typically mediated by axo-axonic GABAergic synapses directly innervating axonal boutons - correct
+Presynaptic inhibition reduces the release probability of synaptic vesicles from the presynaptic bouton
+
+Explanation
+
+Presynaptic inhibition can be mediated by many different types of metabotropic receptors (including GABA receptors), which often inhibit calcium channels or the exocytotic release machinery. This causes a decrease in neurotransmitter release probability. In the mammalian brain, presynaptic inhibition is not mediated by axo-axonic synapses, which are only thought to exist in the spinal cord.
+You have used 1 of 1 submissions
+Question 5 (1 point possible)
+
+What happens to short-term synaptic plasticity during presynaptic inhibition by a neuromodulator?
+Presynaptic inhibition typically reduces depression and thus increases facilitation
+Presynaptic inhibition typically increases depression and thus decreases facilitation
+Presynaptic inhibition converts short-term depression into long-term depression
+Presynaptic inhibition typically increases depression and thus increases facilitation Presynaptic inhibition typically increases depression and thus increases facilitation - incorrect
+
+Explanation
+
+Presynaptic inhibition causes a decrease in the probability of releasing synaptic vesicles. The first effect is therefore to reduce the efficacy of synaptic transmission evoked by single action potentials. However, during repetitive action potential firing, there is an interesting interaction with the mechanisms of short-term plasticity. Because the first action potential releases less neurotransmitter during presynaptic inhibition, there are more release-ready vesicles remaining than normally when the second action potential in a train arrives. Thus there will be less synaptic depression and facilitation can occur.
+You have used 1 of 1 submissions

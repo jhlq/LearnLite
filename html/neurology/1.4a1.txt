@@ -1,0 +1,1 @@
+Ions diffuse across ion channels under the influence of both electrical potentials and concentration gradients. There is no net current flow when the electrical potential across the cell membrane equals the reversal potential given by the Nernst equation for a single type of permeating ion or by the Goldmann-Hodgkin-Katz equation for multiple permeating ion species.

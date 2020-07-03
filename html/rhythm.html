@@ -1,0 +1,171 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>LearnLite</title>
+<script src="thunder.js"></script>
+<script>
+	Th.init();
+
+	var ThDemo={
+		sineFunc:function(si, len,  frq, chn, opt) {
+			var fad=Math.min(1,(opt.sustain || 1)*(len-si)/len); // used to fade out, to avoid an abrupt chop off of the wave, which causes a click.
+			return Math.floor(fad*128*256*(
+				Math.sin(2.0 * Math.PI * frq * si  / 44100)
+				));			
+		}
+	};
+	ThDemo.soundComplex=function() {
+		var fn1=function(si, len,  frq, chn, opt) {
+			var fad=(len-si)/len; 
+			return Math.floor(fad*128*256*(
+				Math.sin(2.0 * Math.PI * opt.detune*frq * si  / 44100)
+				));		
+			};				 
+		Th.Sound.create("SoundComplex",fn1,{detune:1.009}).play();
+	}
+</script>
+</head>
+
+<body>
+	<h1>Rhythm!</h1>
+
+Left arrow: <br>BPM: <input type="number" id="bpm1" value="60"> <input type="range" id="range1" value="100" style="background:#ff00ff;"> <input type="checkbox" id="c1">  
+<br>
+Down arrow: <br>BPM: <input type="number" id="bpm2" value="50"> <input type="range" id="range2" value="100" style="background:#ff00ff;"> <input type="checkbox" id="c2"> 
+<br>
+Right arrow: <br>BPM: <input type="number" id="bpm3" value="40"> <input type="range" id="range3" value="100" style="background:#ff00ff;"> <input type="checkbox" id="c3"> 
+<br>
+<button onclick="move()">Start a 60 seconds session!</button><br>
+<button onclick="rytm()">Play the correct rhythm for 60 seconds!</button><br>
+<button onclick="stop()">Stop either/both!</button><br><br>
+Score: <p id="score">0</p>
+Max: <p id="max"></p>
+
+
+<input type="hidden" id="id1" value="" >
+<input type="hidden" id="id2" value="" >
+<script>
+document.onkeydown=function(evt){
+	evt=evt||window.event;
+	//alert('Pressed button '+evt.keyCode);
+	if (evt.keyCode==37){ //left arrow
+		var c1 = document.getElementById("c1");
+		if (!c1.checked){
+			s=parseInt(document.getElementById("score").innerHTML);
+			s=s+parseInt(document.getElementById("range1").value);
+			document.getElementById("score").innerHTML = s;
+			c1.checked=true;
+		}
+	} else if (evt.keyCode==40){ //down arrow
+		var c2 = document.getElementById("c2");
+		if (!c2.checked){
+			s=parseInt(document.getElementById("score").innerHTML);
+			s=s+parseInt(document.getElementById("range2").value);
+			document.getElementById("score").innerHTML = s;
+			c2.checked=true;
+		}
+	} else if (evt.keyCode==39){ //right arrow
+		var c3 = document.getElementById("c3");
+		if (!c3.checked){
+			s=parseInt(document.getElementById("score").innerHTML);
+			s=s+parseInt(document.getElementById("range3").value);
+			document.getElementById("score").innerHTML = s;
+			c3.checked=true;
+		}
+	}
+}
+function move() {
+	document.getElementById("c1").checked=false;
+	document.getElementById("c2").checked=false;
+	document.getElementById("c3").checked=false;
+	document.getElementById("score").innerHTML=0;
+	var hz1 = document.getElementById("bpm1").value/60;
+	var hz2 = document.getElementById("bpm2").value/60;
+	var hz3 = document.getElementById("bpm3").value/60;
+	document.getElementById("max").innerHTML = hz1*60*100+hz2*60*100+hz3*60*100+300;
+	var d = new Date();
+	var t = d.getTime();
+	var now=d.getTime();
+	var dt = now-t;
+	var id = setInterval(frame, 10);
+	document.getElementById("id1").value=id;
+	function frame() {
+		if (dt >= 60*1000) {
+			clearInterval(id);
+		} else {
+			var d = new Date();
+			dt=d.getTime()-t;
+			val1=Math.round(150*Math.abs(Math.cos(hz1*dt/1000*3.14)))-50;
+			val2=Math.round(150*Math.abs(Math.cos(hz2*dt/1000*3.14)))-50;
+			val3=Math.round(150*Math.abs(Math.cos(hz3*dt/1000*3.14)))-50;
+			document.getElementById("range1").value=val1;
+			document.getElementById("range2").value=val2;
+			document.getElementById("range3").value=val3;
+			var c1 = document.getElementById("c1");
+			if (val1<0 && c1.checked){
+				c1.checked=false;
+			}
+			var c2 = document.getElementById("c2");
+			if (val2<0 && c2.checked){
+				c2.checked=false;
+			}
+			var c3 = document.getElementById("c3");
+			if (val3<0 && c3.checked){
+				c3.checked=false;
+			}
+		}
+	}
+}
+function rytm(){
+	var hz1 = document.getElementById("bpm1").value/60;
+	var hz2 = document.getElementById("bpm2").value/60;
+	var hz3 = document.getElementById("bpm3").value/60;
+	//Th.Sound.create("SoundSine",ThDemo.sineFunc).play();
+	var d = new Date();
+	var t = d.getTime();
+	var now=d.getTime();
+	var dt = now-t;
+	var id = setInterval(frame2, 10);
+	document.getElementById("id2").value=id;
+	function frame2() {
+		if (dt >= 60*1000) {
+			clearInterval(id);
+		} else {
+			var d = new Date();
+			dt=d.getTime()-t;
+			val1=Math.abs(Math.cos(hz1*dt/1000*3.14));
+			val2=Math.abs(Math.cos(hz2*dt/1000*3.14));
+			val3=Math.abs(Math.cos(hz3*dt/1000*3.14));
+			var c1 = document.getElementById("c1");
+			if (val1>0.99 && !c1.checked){
+				Th.Inst.create("soundComplex",ThDemo.sineFunc).getSound("A").play();
+				c1.checked=true;
+			} else if (val1<0.3 && c1.checked){
+				c1.checked=false;
+			}
+			var c2 = document.getElementById("c2");
+			if (val2>0.99 && !c2.checked){
+				Th.Inst.create("soundComplex",ThDemo.sineFunc).getSound("C").play();
+				c2.checked=true;
+			} else if (val2<0.3 && c2.checked){
+				c2.checked=false;
+			}
+			var c3 = document.getElementById("c3");
+			if (val3>0.99 && !c3.checked){
+				Th.Inst.create("soundComplex",ThDemo.sineFunc).getSound("E").play();
+				c3.checked=true;
+			} else if (val3<0.3 && c3.checked){
+				c3.checked=false;
+			}
+		}
+	}
+}
+function stop(){
+	clearInterval(document.getElementById('id1').value);
+	clearInterval(document.getElementById('id2').value);
+//	ThDemo.soundComplex();
+//	Th.Inst.create("soundComplex",ThDemo.sineFunc).getSound("A").play();
+}
+</script>
+</body>
+</html>

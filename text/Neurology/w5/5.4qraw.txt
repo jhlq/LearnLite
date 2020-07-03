@@ -1,0 +1,60 @@
+Question 1 (1 point possible)
+
+What neuronal circuit mediates feedback inhibition in the thalamus?
+Inhibitory thalamic projection neurons inhibit excitatory nucleus reticularis (NRT) neurons Inhibitory thalamic projection neurons inhibit excitatory nucleus reticularis (NRT) neurons - incorrect
+Cortical glutamatergic excitation drives neurons in NRT, which innervate the principal thalamic nuclei
+Glutamatergic thalamic projection neurons excite GABAergic NRT neurons which inhibit the thalamic projection neurons
+Striatal GABAergic neurons reciprocally innervate the main thalamic nuclei
+
+Explanation
+
+An incoming sensory signal causes glutamateric excitation of thalamic projection neurons. The thalamic projection neurons are glutamatergic and excite neurons in the cortex and in the nucleus reticularis (NRT). NRT neurons are inihibtory GABAergic neurons, which reciprocally innervate the main thalamic nuclei. That means that the axon of the NRT neurons comes back and innervates the area from where it received excitation (and typically also other regions). Therefore, there is a feedback inhibition right onto the cells that initially were excited.
+You have used 1 of 1 submissions
+Question 2 (1/1 point)
+
+Why might feedback inhibition be useful to the brain ?
+Feedback inhibition prevents run-away excitation
+Feedback inhibition can help select the most important strong excitatory inputs, while filtering out smaller signals
+Feedback inhibition can help sharpen spatiotemporal receptive fields
+All of the above All of the above - correct
+
+Explanation
+
+Feedback inhibition provides a graded amount of inhibition depending upon the level of excitation. It thus balances excitation, and prevents over-excitation. Feedback inhibition also helps select strong inputs, because the cells receiving weaker excitation will be inhibited by the slightly delayed feedback inhibition. This in turn contributes to the sharpening of neuronal receptive fields, because the cells can only fire if they are strongly excited within a short-time interval, otherwise feedback inhibition will prevent action potential firing.
+You have used 1 of 1 submissions
+Question 3 (1/1 point)
+
+Where do GABAergic striatal projection neurons innervate?
+Cerebellum
+Substantia nigra (SNr) Substantia nigra (SNr) - correct
+Olfactory bulb
+Barrel cortex
+
+Explanation
+
+The striatum sends axons and innervates an area of the brain called the substantia nigra. The striatum does not directly innervate cerebellum, olfactory bulb or barrel cortex.
+You have used 1 of 1 submissions
+Question 4 (1/1 point)
+
+Which statement about dopamine is not correct?
+Dopaminergic innervation of striatum is prominent
+Symptoms of Parkinson's disease likely result importantly from degeneration of dopamine neurons
+Dopamine acts on D1 and D2 receptors expressed on different cell-types in the striatum
+Dopamine acts on ionotropic dopamine receptors in the striatum Dopamine acts on ionotropic dopamine receptors in the striatum - correct
+
+Explanation
+
+There are no mammalian ionotropic dopamine receptors. All dopamine signalling is mediated via G-protein coupled receptors.
+You have used 1 of 1 submissions
+Question 5 (1/1 point)
+
+What are the output neurons of the cerebellar cortex and which neurotransmitter do they release?
+Pyramidal neurons / Glutamate
+Pyramidal neurons / GABA
+Purkinje cells / Glutamate
+Purkinje cells / GABA Purkinje cells / GABA - correct
+
+Explanation
+
+The output neurons of the cerebellar cortex are Purkinje cells and they are GABAergic. They inhibit the deep cerebellar nuclei.
+You have used 1 of 1 submissions

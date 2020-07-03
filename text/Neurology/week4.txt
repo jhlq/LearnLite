@@ -1,0 +1,288 @@
+***Week 4
+**Important concepts
+*1. Glutamate receptors
+<ul>
+Agonist: Activator of receptors.
+Antagonist: Blocker of receptors.
+Desensitization: Decreased response of a receptor after several activations.
+Ligand-gated: Activation depends on a molecular attachment at the side.
+</ul>
+
+*2. Postsynaptic potentials
+<ul>
+EPSC: Excitatory postsynaptic current
+EPSP: Excitatory postsynaptic potential
+</ul>
+
+*3. Glutamatergic circuits
+<ul>
+Tactile: Relating to touch.
+</ul>
+
+*4. Synaptic plasticity
+<ul>
+Plasticity: Ability to change.
+LTP: Long term potentiation, increase in transmission probability.
+LTD: Long term depression, decrease in transmission probability.
+</ul>
+
+*5. Dendritic spines
+<ul>
+Motile: Able to move.
+Filament: Threadlike structure.
+Unit fl: Femtolitre, femto is 10^-15 
+</ul>
+
+**Resources
+*Plain text
+<ul>
+neurology/4.1.txt
+neurology/4.2.txt
+neurology/4.3.txt
+neurology/4.4.txt
+neurology/4.5.txt
+</ul>
+
+*PDF
+<ul>
+neurology/4.1.pdf 4.1 (3 MB)
+neurology/4.2.pdf 4.2 (3 MB)
+neurology/4.3.pdf 4.3 (6 MB)
+neurology/4.4.pdf 4.4 (2 MB)
+neurology/4.5.pdf 4.5 (7 MB)
+</ul>
+
+*Videos
+<ul>
+neurology/4.1-o1p7yDHvIeU.3gp 4.1 (13 MB)
+neurology/4.2-JT0mviEsc2Q.3gp 4.2 (15 MB)
+neurology/4.3-SMOf1UZMxg4.3gp 4.3 (14 MB)
+neurology/4.4-EWIBpZz3f9I.3gp 4.4 (12 MB)
+neurology/4.5-xsOiIs4K66c.3gp 4.5 (10 MB)
+</ul>
+
+**Questions
+*Question 4.1.1 
+Why is glutamate considered the most important excitatory neurotransmitter in the mammalian brain?
+<ul>
+Most synapses use glutamate as the neurotransmitter
+Ionotropic glutamate receptors have a reversal potential of ~0 mV
+Activation of glutamate receptors in most neurons causes depolarisation and increases action potential firing
+All of the above 
+</ul>
+
+*Question 4.1.2 
+Which statement about AMPA and/or NMDA receptors is incorrect?
+<ul>
+Both AMPA and NMDA receptors are permeable to sodium and potassium ions
+NMDA receptors need glycine / D-serine to get activated
+Both AMPA and NMDA receptors have a reversal potential of ~0 mV
+AMPA and NMDA receptors have the same single channel conductance of ~5 pS 
+</ul>
+
+*Question 4.1.3 
+Which statement correctly describes the time-course of AMPA and NMDA receptor activation after a pulse of glutamate?
+<ul>
+AMPA receptors are much slower than NMDA receptors
+NMDA receptors are one-or-two orders of magnitude slower than AMPA receptors 
+There is no time-course difference between the two receptors.
+AMPA receptors act faster in the presence of D-Serine
+</ul>
+
+*Question 4.1.4 
+NMDA receptors are voltage-dependent under physiological conditions. Why?
+<ul>
+S4 voltage-sensing domain, like that of voltage-gated sodium channels
+Intracellular polyamines block the ion channel pore
+Calcium ions increase open probability
+Magnesium ions cause a voltage-dependent block 
+</ul>
+
+*Question 4.1.5 
+Glutamate receptors are encoded by many different genes. Which statement about mammalian glutamate receptor diversity is not true?
+<ul>
+There are three important gene families of ionotropic glutamate receptors (AMPA, Kainate, NMDA)
+Some mammalian ionotropic glutamate receptors are chloride channels 
+NMDA receptors composed of NR1 and NR2A subunits are fast compared to other types of NMDA receptors
+AMPA receptors lacking the GluA2 subunit are calcium permeable and inwardly rectifying
+</ul>
+
+*Question 4.2.1 
+At single synapses, glutamatergic excitatory postsynaptic potentials (EPSPs) are typically driven by which conductance/s?
+<ul>
+pure AMPA conductance 
+pure NMDA conductance
+mixed NMDA and AMPA conductances
+metabotropic glutamate receptors
+</ul>
+
+*Question 4.2.2 
+In which recording mode can we measure EPSPs and/or EPSCs?
+<ul>
+Both can be measured in the voltage-clamp configuration 
+Both can be measured in the current-clamp configuration
+Current-clamp for EPSPs, voltage-clamp for EPSCs
+Dynamic clamp is necessary to measure EPSCs
+</ul>
+
+*Question 4.2.3 
+Why do EPSPs decay more slowly than the EPSCs?
+<ul>
+Because of the amplifier gives slower feedback currents during the EPSP decay period
+After an EPSP, the membrane potential discharges with the membrane time constant. In EPSCs the membrane potential is clamped, therefore there is no discharge, decay time is only dependent on the ion-channel kinetics. 
+In EPSPs there are more synapses involved than the EPSCs, therefore the time course is much longer in EPSPs.
+During an EPSC, the presynaptic terminal stops releasing neurotransmitter much earlier than during an EPSP. This causes a shorter time constant of decay for EPSCs.
+</ul>
+
+*Question 4.2.4 
+A unitary EPSP (uEPSP) is a postsynaptic membrane potential response evoked by a single presynaptic action potential in one neuron. What is the most important determinant of trial-to-trial variability of the amplitude of uEPSPs?
+<ul>
+Probabilistic nature of synaptic transmission
+Action potential propagation failures 
+Highly localised temperature fluctuations
+Measurement noise
+</ul>
+
+*Question 4.2.5 
+Why does the time-course of an EPSP differ depending upon where it is measured across the neuronal arborisation?
+<ul>
+There is much more glutamate released in the region of dendrites than the soma
+EPSPs spread across dendrites being filtered by their cable properties 
+There are less NMDA receptors in the soma
+EPSPs don't spread, and only generate local changes in membrane potential
+</ul>
+
+*Question 4.3.1 
+Why is glutamate important for sensory perception?
+<ul>
+Glutamate is a flavor enhancer (MSG), thus enhancing taste perception
+Glutamatergic synaptic circuits are involved in signalling all sensory information from periphery to cortex 
+Glutamate helps the myelination of long axons which makes the signalling process more efficient
+Glutamate contributes to sensory perception indirectly by modulating GABAergic signalling
+</ul>
+
+*Question 4.3.2 
+Which statement below correctly describes the synaptic stations for tactile and/or visual sensory signals to reach the neocortex?
+<ul>
+Tactile information is signalled directly from brainstem to the neocortex
+Visual information is signalled to the visual cortex directly from the retina
+Both tactile and visual sensory information are signalled through separate pathways in the thalamus to the neocortex 
+Tactile and visual information is combined through convergent synapses in the thalamus before being signalled to the cortex
+</ul>
+
+*Question 4.3.3 
+The neocortex can be divided into layers. Which statement below is incorrect?
+<ul>
+Layer 1 has few excitatory neurons
+Excitatory pyramidal neurons dominate in layers 2, 3, 5 and 6
+Thalamic innervation of layer 4 is a prominent feature of primary sensory cortices 
+Layer 5 pyramidal neurons have dendrites confined to layer 5
+</ul>
+
+*Question 4.3.4 
+Sensory information is processed in part by local microcircuits of synaptically-connected excitatory glutamatergic neurons in primary sensory cortices. Which statement below is not true?
+<ul>
+Excitatory neurons are sparsely connected to each other with a probability of ~10 %
+Excitatory layer 4 neurons recieve relatively little excitatory input from other cortical layers
+Excitatory layer 4 neurons release glutamate onto postsynaptically connected neurons that are found in all cortical layers 2-6
+Excitatory layer 5 neurons only receive excitatory input from other layer 5 neurons 
+</ul>
+
+*Question 4.3.5 
+Which statement below best describes the uEPSP amplitude distribution (as measured in the soma across different pairs of neurons) found within local cortical microcircuits of synaptically-connected excitatory glutamatergic neurons?
+<ul>
+uEPSPs typically have an amplitude of 1 mV
+Most uEPSPs have an amplitude of less than 0.5 mV and a small fraction of uEPSPs are larger than 1 mV in amplitude 
+Most uEPSPs have an amplitude of more than 1 mV and a small fraction of uEPSPs are smaller than 0.5 mV in amplitude
+uEPSPs typically have an amplitude of 0.1 mV
+</ul>
+
+*Question 4.4.1 
+Which of the following is not required for postsynaptic long-term potentiation (LTP)?
+<ul>
+NMDA receptor activation
+Postsynaptic cytosolic Ca2+ increase
+Activation of protein kinase CaMKII
+Activation of protein phosphatase calcineurin 
+</ul>
+
+*Question 4.4.2 
+Postsynaptic long-term potentiation (LTP) mainly occurs through changes in:
+<ul>
+the presynaptic specialisation causing enhanced neurotransmitter release
+the number of voltage-gated calcium channels in the postsynaptic membrane
+the postsynaptic leak conductance
+the number of AMPA receptors in the postsynaptic density 
+</ul>
+
+*Question 4.4.3 
+Why is postsynaptic long-term potentiation (LTP) considered as an associative form of synaptic plasticity?
+<ul>
+Both presynaptic and postsynaptic neurons need to be excited simultaneously
+Postsynaptic depolarisation is needed to relieve the magnesium block of NMDA receptors while glutamate is released from presynaptic boutons
+The correlated activity of the presynaptic and postsynaptic neurons causes the strength of their synaptic connections to increase and the neurons thus become more tightly associated
+All of the above 
+</ul>
+
+*Question 4.4.4 
+Changes in synaptic efficacy after induction of long-term plasticity can be very long-lasting, meaning that it can last for:
+<ul>
+many milliseconds
+many seconds
+many minutes
+many hours 
+</ul>
+
+*Question 4.4.5 
+Which of the following statements about spike-timing dependent plasticity (STDP) is correct?
+<ul>
+When the presynaptic cell repeatedly fires an action potential 10 s before the postsynaptic cell fires an action potential, then an increase in the EPSP amplitude occurs
+When the postsynaptic cell repeatedly fires an action potential 30 ms before the presynaptic cell fires an action potential, then a reduction in the EPSP amplitude occurs
+When the postsynaptic cell repeatedly fires an action potential 50 ms before the presynaptic cell fires an action potential, then a increase in the EPSP amplitude occurs
+When the presynaptic cell repeatedly fires an action potential 10 ms before the postsynaptic cell fires an action potential, then an reduction in the EPSP amplitude occurs 
+</ul>
+
+*Question 4.5.1 
+In mature neocortical pyramidal cells (and many other cell-types of the mammalian brain), the main place where glutamatergic synapses are found is:
+<ul>
+On parent dendrites
+On dendritic spines 
+On axonal boutons
+On axon initial segments
+</ul>
+
+*Question 4.5.2 
+What would be a typical length of a dendritic spine?
+<ul>
+0.1 nm
+10 nm
+1 um 
+10 um
+</ul>
+
+*Question 4.5.3 
+What would be a typical volume of a large spine-head?
+<ul>
+1 ul
+1 nl
+1 pl
+1 fl 
+</ul>
+
+*Question 4.5.4 
+Which of the following statements regarding the function of dendritic spines is not correct?
+<ul>
+Ca2+ signals can be localised to a single dendritic spine
+Localised Ca2+ signals in single spines are likely to be important for synapse specific plasticity
+Spines are rigid unchanging structures 
+The electrical resistance of some spine necks may be so large that the membrane potential in the spine head can differ substantially from the parent dendrite.
+</ul>
+
+*Question 4.5.5 
+Dendritic spines are highly motile structures due to
+<ul>
+Actin filaments 
+Microtubules
+Spine apparatus
+CaMKII
+</ul>

@@ -1,0 +1,1 @@
+Short-term plasticity can either strengthen (facilitate) or weaken (depress) the efficacy of a synapse. Short-term plasticity typically changes the probability of an action potential evoking release of neurotransmitter, a presynaptic mechanism.

@@ -1,0 +1,5 @@
+The intracellular concentration of chloride is ~5 mM.
+
+The extracellular concentration of chloride is ~120 mM.
+
+Chloride ions make up the vast majority of the extracellular anions.

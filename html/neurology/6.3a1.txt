@@ -1,0 +1,1 @@
+The brain absorbs and scatters light. Without using invasive surgery or endoscopy, it has so far not been possible to optically image with ~um resolution deeper than ~1 mm in the living mammalian brain. This corresponds roughly to the thickness of the mouse neocortex.

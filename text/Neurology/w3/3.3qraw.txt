@@ -1,0 +1,60 @@
+ Question 1 (1/1 point)
+
+What is the approximate time-scale of short-term synaptic depression and facilitation?
+~50 ns
+~50 us
+~50 ms ~50 ms - correct
+~50 s
+
+Explanation
+
+Short-term synaptic depression and facilitation are typically observed on the time-scale from 10 ms to 1000 ms.
+You have used 1 of 1 submissions
+Question 2 (1/1 point)
+
+Which of the following statements about short-term synaptic plasticity is not correct:
+Short-term synaptic plasticity mechanisms predominantly occur in the presynaptic bouton
+Short-term synaptic plasticity mechanisms always increase the strength of synaptic connections Short-term synaptic plasticity mechanisms always increase the strength of synaptic connections - correct
+Presynaptic efficacy depends on the recent history of synaptic activity
+Short-term synaptic plasticity typically changes the neurotransmitter release probability
+
+Explanation
+
+Short-term plasticity can either strengthen (facilitate) or weaken (depress) the efficacy of a synapse. Short-term plasticity typically changes the probability of an action potential evoking release of neurotransmitter, a presynaptic mechanism.
+You have used 1 of 1 submissions
+Question 3 (1/1 point)
+
+What mechanism is thought to underlie short-term syanptic facilitation?
+Facilitation results from the accumulation of Ca2+ within the presynaptic terminal Facilitation results from the accumulation of Ca2+ within the presynaptic terminal - correct
+Facilitation results from the accumulation of Ca2+ within the postsynaptic terminal
+Facilitation results from the increased efflux of Ca2+ from the presynaptic terminal
+Facilitation results from the accumulation of synaptic vesicles within the presynaptic terminal
+
+Explanation
+
+Short-term facilitation results from the accumulation of Ca2+ within the presynaptic terminal during high frequency action potential firing. The calcium influx from a recent action potential can cause saturation of calcium buffers and thus the next action potential can evoke a larger peak calcium concentration in the presynaptic bouton. Because neurotransmitter release depends steeply upon calcium concentration, this drives higher release rates.
+You have used 1 of 1 submissions
+Question 4 (1/1 point)
+
+What mechanism contributes importantly to short-term synaptic depression?
+Broadening of the action potential waveform during repetitive firing
+Short-term depression results from the depletion of vesicles in the presynaptic terminal Short-term depression results from the depletion of vesicles in the presynaptic terminal - correct
+Calcium-dependent inactivation of synaptotagmin
+Short-term depression results from the depletion of Ca2+ in the presynaptic terminal
+
+Explanation
+
+Short-term depression results, at least in part, from the depletion of release-ready synaptic vesicles in the presynaptic bouton. During repetitive action potential firing, synaptic vesicles are released and it takes time for new synaptic vesicles to dock and become release-ready. The number of available vesicles for release therefore decreases, causing a drop in release probability.
+You have used 1 of 1 submissions
+Question 5 (1/1 point)
+
+Which of the following statements about post-tetanic potentiation is not correct:
+Post-tetanic potentiation lasts about 1 minute
+Post-tetanic potentiation can be evoked at some synapses by a 100 Hz train of action potentials
+Post-tetanic potentiation results from calcium activation of protein kinase C
+Post-tetanic potentiation depends upon correlated presynaptic and postsynaptic activity Post-tetanic potentiation depends upon correlated presynaptic and postsynaptic activity - correct
+
+Explanation
+
+Post-tetanic potentiation can be induced at some synapses in the mammalian brain by a brief (1 s) 100 Hz train of presynaptic action potentials. The calcium influx activates protein kinase C, which phosphorylates MUNC18 and increases neurotransmitter release probability for ~1 minute. Post-tetanic potentiation only depends upon presynaptic firing and is independent of postsynaptic activity.
+You have used 1 of 1 submissions 

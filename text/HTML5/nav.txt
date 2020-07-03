@@ -1,0 +1,9 @@
+	<nav>
+	<a href="../index.html">Home.</a>
+	<a href="index.html">Index of /html5/.</a>
+	<a href="introduction.html">Introduction.</a>
+	<a href="basics.html">Basics.</a>
+	<a href="multimedia.html">Multimedia.</a>
+	<a href="graphics.html">Graphics.</a>
+	<a href="animation.html">Animation.</a>
+	</nav>

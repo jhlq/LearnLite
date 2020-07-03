@@ -1,0 +1,1 @@
+GABA-A synaptic input causes hyperpolarizing inhibition when the membrane potential is depolarized relative to the Cl- reversal potential.

@@ -1,0 +1,26 @@
+2. The cell membrane
+Lipid: Fatty acids and oils, insoluble in water.
+Hydrophobic: Avoids water.
+Hydrophilic: Attracts water.
+Capacitor: A structure with a gap over which a potential develops.
+Capacitance: Ability to store electric charge.
+
+3. Ion channels
+Proteins: Building blocks of life.
+Helix: Spiral.
+Pore: Tunnel.
+Gradient: Rate of change.
+
+4. Membrane potential
+Flux: Flow through a surface.
+Diffusion: The spread of one medium in another.
+Hyperpolarization: The cell potential decreases.
+Depolarization: The cell potential increases.
+Nernst equilibrium equation: E_ion = RT/(zF) log([ion]_out/[ion]_in) where E_ion is the reversal potential, R is the Avogadro gas constant, T the temperature in Kelvin, z the ions charge, F the Faraday constant, log the base 10 logarithm, [ion] is the ion concentration outside and inside the cell.
+
+5. Cable properties
+Dendrites: Branches of a neuron that receives impulses.
+Attenuation: Gradual decrease.
+Soma: The cell cody.
+Axons: Branches of a neuron that sends impulses.
+Arborisation: Branching.

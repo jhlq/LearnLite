@@ -1,0 +1,1 @@
+The surface area of a sphere is 4πr^2 = 4 x 3 x 100 = ~1000 µm^2

@@ -1,0 +1,250 @@
+
+*Question 1.2.1 
+In a phospholipid bilayer the lipids have
+
+<ul>
+ their hydrophobic heads facing inward
+their hydrophilic tails facing outward
+their hydrophilic heads facing inward
+their hydrophobic tails facing inward 
+</ul>
+
+*Question 1.2.2 
+The phospholipid bilayer
+
+<ul>
+ is highly permeable to water molecules
+is impermeable to ions and charged molecules 
+is impermeable to gases and small uncharged molecules
+is permeable to ions and charged molecules
+</ul>
+
+*Question 1.2.3 
+How thick is the cell membrane?
+
+<ul>
+ 0.5 nm
+5 nm 
+50 nm
+500 nm
+</ul>
+
+*Question 1.2.4 
+The phospholipid bilayer of the cell membrane can be represented as which electrical component?
+
+<ul>
+ Resistor
+Inductor
+Conductor
+Capacitor 
+</ul>
+
+*Question 1.2.5 
+What would be the approximate surface area of spherical cell with a 10 µm radius?
+
+<ul>
+ 10 µm^2
+100 µm^2
+1000 µm^2
+1 mm^2
+</ul>
+
+*Question 1.2.6 
+What would be the approximate capacitance of such a cell?
+
+<ul>
+ 10 fF
+10 pF 
+10 nF
+10 µF
+</ul>
+
+*Question 1.2.7 
+Approximately how many positively charged ions would need to move from the outside to the inside of this cell in order to change the membrane potential by +70 mV?
+
+<ul>
+ 4 hundred
+6 thousand
+4 million 
+8 billion
+</ul>
+
+*Question 1.3.1 
+Ion channels are made of what?
+
+<ul>
+ Lipids
+Nucleic acids
+Carbon nanotubes
+Proteins 
+</ul>
+
+*Question 1.3.2 
+What structural feature of an ion channel spans the lipid membrane?
+
+<ul>
+ Alpha helix 
+Beta sheet
+Coiled coil domains
+N-terminal domain
+</ul>
+
+*Question 1.3.3 
+The ion channel pore is largely composed of what?
+
+<ul>
+ Air
+Water 
+Lipids
+Metal
+</ul>
+
+*Question 1.3.4 
+Which statement about transporters (as opposed to ion channels) is not true?
+
+<ul>
+ Transporters move ions at slower rates than ion channels
+Transporters passively transport ions along the electro-chemical gradient 
+Transporters can work against the electro-chemical gradient
+Transporters do not have an aqueous pore
+</ul>
+
+*Question 1.3.5 
+Which of the following statements is not true
+
+<ul>
+ Ion channels are characterized by gating and selectivity
+Ion channels can flip from open (conducting) to closed (non-conducting) states on the microsecond timescale
+Changing the open probability of ion channels is an important way to regulate transmembrane current flow
+Single ion channels can have unitary conductances of 10 nS 
+</ul>
+
+*Question 1.3.6 
+Which of the following statements is not true?
+
+<ul>
+ Selectivity is a preference of ion channels to conduct a specific ion
+The degree of selectivity can vary between different ion channels
+The degree of ion selectivity is the same for all ion channels 
+There are many types of non-selective channels
+</ul>
+
+*Question 1.4.1 
+Ion flux through an ion channel is a passive process driven by electrochemical diffusion. Which statement is true?
+
+<ul>
+ There is no current flow if the ion concentrations are equal on both sides of the membrane.
+There is no current flow if the electrical potential is equal on both sides of the membrane.
+The electrical potential is more important than the concentration gradient.
+For any given concentration of ions there is an electrical potential that prevents net current flow. 
+</ul>
+
+*Question 1.4.2 
+What happens to a neuron which has a resting membrane potential of -70 mV, if potassium channels increase their open probability?
+
+<ul>
+ Hyperpolarization 
+Depolarization
+Repolarization
+Nothing
+</ul>
+
+*Question 1.4.3 
+The equilibrium potential
+
+<ul>
+ of a given ion across a membrane is the potential at which there is no net movement of that ion across the membrane due to electrochemical forces
+of K+ across a typical nerve cell membrane is close to the resting potential of most neurons
+of a given ion across a membrane is a function of the concentration of that ion on both sides of the membrane
+all of the above are correct 
+</ul>
+
+*Question 1.4.4 
+What are the approximate intracellular and extracellular concentrations of potassium for most mammalian neurons?
+
+<ul>
+ Intracellular 150 mM and Extracellular 5 mM 
+Intracellular 5 mM and Extracellular 150 mM
+Intracellular 50 mM and Extracellular 100 mM
+Intracellular 100 mM and Extracellular 50 mM
+</ul>
+
+*Question 1.4.5 
+What are the approximate intracellular and extracellular concentrations of chloride for most mammalian neurons?
+
+<ul>
+ Intracellular 120 mM and Extracellular 5 mM
+Intracellular 5 mM and Extracellular 120 mM 
+Intracellular 25 mM and Extracellular 100 mM
+Intracellular 100 mM and Extracellular 25 mM
+</ul>
+
+*Question 1.4.6 
+Calculate the reversal potential of a calcium selective conductance at 37 Celsius if the intracellular calcium concentration is 1 uM and the extracellular calcium concentration is 2 mM.
+
+<ul>
+ -90.0 mV
+-103.5 mV
+101.5 mV 
+203.0 mV
+</ul>
+
+*Question 1.5.1 
+What are the approximate dimensions of dendrites of typical neurons in the mammalian brain?
+
+<ul>
+ Length ~500 µm and Diameter ~1 µ
+Length ~10 µm and Diameter ~10 nm
+Length ~500 µm and Diameter ~10 nm
+Length ~10 µm and Diameter ~1 µm
+</ul>
+
+*Question 1.5.2 
+What directly determines the membrane potential at any given time and location in a neuron?
+
+<ul>
+ Transmembrane current flux
+Distribution of charges across the membrane 
+Axial current flow
+Concentration of ions
+</ul>
+
+*Question 1.5.3 
+What do we learn about a dendrite if we know it's "length constant"?
+
+<ul>
+ Thickness of the dendrite
+Axial resistance of the dendrite
+Spatial attenuation of voltage along the dendrites at steady state 
+Length of the dendrite
+</ul>
+
+*Question 1.5.4 
+If we inject a subthreshold current pulse into the soma, what would we observe in recordings of membrane potential at the soma and at a distal dendrite?
+
+<ul>
+ The membrane potential changes would be faster and larger in the dendrite.
+The membrane potential changes would be slower and smaller in the dendrite. 
+The membrane potential changes would be identical in the soma and dendrite.
+It is not possible to evaluate without more information.
+</ul>
+
+*Question 1.5.5 
+When studying the cable properties of two different dendrites, what does it mean that Dendrite 1 has a smaller time constant than Dendrite 2?
+
+<ul>
+ For a given current pulse injection, Dendrite 2 needs less time to reach steady state membrane potential than Dendrite 1
+For a given current pulse injection, Dendrite 1 needs less time to reach steady state membrane potential than Dendrite 2 
+Dendrite 2 has a lower membrane resistance than Dendrite 1
+Dendrite 2 has a lower membrane capacitance than Dendrite 1
+</ul>
+
+*Question 1.5.6 
+When studying the cable properties of two different axons, what does it mean that Axon 1 has a smaller length constant than Axon 2?
+
+<ul>
+ Axon 2 needs less time to reach a given membrane potential than Axon 1
+Axon 1 needs less time to reach a given membrane potential than Axon 2
+In Axon 2 a change in membrane potential decays more rapidly with distance than in Axon 1
+In Axon 2 a change in membrane potential decays less with distance than in Axon 1 
+</ul>

@@ -1,0 +1,1 @@
+The voltage-gated potassium conductance is delayed and long lasting, without inactivation. The voltage-dependent activation of the potassium channels is therefore very different from the kinetics of the sodium channels.

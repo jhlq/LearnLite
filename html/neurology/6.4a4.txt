@@ -1,0 +1,1 @@
+Electrophysiological measurements can readily be combined with imaging techniques, and their combination is extremely powerful to address many questions in cellular neuroscience, including obtaining electrophysiological measurements from genetically-defined neuron types expressing fluorescent proteins.

@@ -1,0 +1,1 @@
+Increases in calcium concentration in the synaptic bouton drives neurotransmitter release. At the resting cytosolic calcium concentration of around 100 nM the release rate is very small, but with increased calcium concentrations the release rate increases dramatically. The synaptic vesicle release rate depends upon the fourth power of the calcium concentration.

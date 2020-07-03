@@ -1,0 +1,1 @@
+For many cells, the excitatory glutamatergic inputs that arrive across the dendritic arborization do not come directly on the main parent dendrites. The main place where glutamatergic synapses are found in mature neocortical pyramidal neurons (and many other mammalian cell-types) is on dendritic spines.

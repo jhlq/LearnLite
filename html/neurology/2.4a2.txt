@@ -1,0 +1,1 @@
+Action potentials are thought to be initiated at the axon initial segment under most conditions. The axon initial segment has a very high density of voltage-gated sodium channels. This means that this is the point in the neuron that has the lowest voltage activation threshold for the action potential.

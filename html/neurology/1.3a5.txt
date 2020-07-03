@@ -1,0 +1,1 @@
+Single ion channels typically have a conductance ~10 pS. That means a single ion channel in its open state can conduct an ionic current of 1 pA if there is an electrical driving force of 100 mV. Single channel conductance varies widely across different types of ion channels, ranging ~0.1-100 pS.

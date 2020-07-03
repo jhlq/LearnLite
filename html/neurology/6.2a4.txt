@@ -1,0 +1,7 @@
+If man's brain is a thousand times larger than the mouse brain, and the neurons in man and mouse have similar connectivity with 1,000 other neurons, then man's brain would have 1 thousand times more synapses.
+
+Man: 100,000,000,000 * 1,000 = 10^14
+
+Mouse: 100,000,000 * 1,000 = 10^11
+
+The ratio of the number of different patterns of connectivity is however much larger.

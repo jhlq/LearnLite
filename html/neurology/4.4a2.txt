@@ -1,0 +1,1 @@
+Long-term potentiation (LTP) mainly occurs through recruitment of additional AMPA receptors into the postsynaptic density. The larger number of AMPA receptors causes larger postsynaptic conductances in response to the same amount of released glutamate. EPSP amplitude is therefore enhanced by LTP.

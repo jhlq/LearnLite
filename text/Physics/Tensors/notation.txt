@@ -1,0 +1,13 @@
+Tensor(a,i)*Tensor(b,i)=Tensor(a,1)*Tensor(b,1)+Tensor(a,2)*Tensor(b,2)+Tensor(a,3)*Tensor(b,3)
+
+Alt=ϵ
+
+cp=@equ Tensor(c,i)=Alt([i,j,k])*Tensor(a,j)*Tensor(b,k) #cross product
+cp&@equs(a=[1,2,3], b=[50,40,70]) #has(eq,Tensor),simplify(eq,Tensor),indslist(eq.rhs)
+
+A=Sqrt(Alt(i,j,k)*Tensor(a,j)*Tensor(b,k)*Alt(i,m,n)*Tensor(a,m)*Tensor(b,n))/2
+
+Tensor(M,[i,j])=Tensor(a,i)*Tensor(b,j)
+Transpose(Tensor(M,[i,j]))=Tensor(M,[j,i])
+
+det(M)=Alt(i,j,k)*Tensor(M,[i,1])*Tensor(M,[j,2])*Tensor(M,[k,3])=Alt([i,j,k])*Alt([r,s,t])*Tensor(M,[i,r])*Tensor(M,[j,s])*Tensor(M,[k,t])

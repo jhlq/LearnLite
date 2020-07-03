@@ -1,0 +1,5 @@
+The intracellular concentration of potassium is ~150 mM.
+
+The extracellular concentration of potassium is ~5 mM.
+
+Potassium ions make up the vast majority of the intracellular cations.

@@ -1,0 +1,1 @@
+The open probability is the fraction of time that an ion channel is in the open state. The open probability of many ion channels is highly regulated and this is also how membrane potential exerts its influence upon voltage-gated channels.

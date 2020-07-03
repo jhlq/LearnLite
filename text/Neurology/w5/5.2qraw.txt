@@ -1,0 +1,60 @@
+Question 1 (1/1 point)
+
+The reversal potential of the GABA-A receptor Cl- conductance is typically about:
+0 mV
+-35 mV
+-55 mV
+-75 mV -75 mV - correct
+
+Explanation
+
+The reversal potential of GABA-A receptor Cl- conductance is about -75 mV. The intracellular chloride concentration is low (5-10 mM) and the extracellular chloride concentration is high (~120 mM).
+You have used 1 of 1 submissions
+Question 2 (1 point possible)
+
+Which of the following statements about the time course of inhibitory conductances mediated by GABA-A receptors is correct?
+GABA-A inhibition is fast, and short lasting compared AMPA-mediated excitation GABA-A inhibition is fast, and short lasting compared AMPA-mediated excitation - incorrect
+GABA-A inhibition is fast, but it’s much slower than AMPA-mediated excitation
+GABA-A inhibition has almost the same duration as AMPA-mediated excitation
+GABAergic inhibition is a slow process, but it's much faster than AMPA-mediated excitation
+
+Explanation
+
+GABAergic inhibition is a fast process, but it's much slower than AMPA-mediated excitation. The GABA-A conductance is five to ten times slower than the AMPA conductance of the glutamatergic synapses. The GABA-A conductance lasts about 10-20 ms, while AMPA conductance may last only 2 ms.
+You have used 1 of 1 submissions
+Question 3 (1 point possible)
+
+Which of the following statements regarding IPSPs and/or IPSCs is not correct?
+The time course of the synaptic current is the same as the time course of the synaptic conductance The time course of the synaptic current is the same as the time course of the synaptic conductance - incorrect
+IPSPs have longer durations that IPSCs
+If the membrane potential is at the chloride reversal potential, then there is no GABA-A-mediated synaptic conductance
+An IPSC typically lasts ~10 ms
+
+Explanation
+
+If the membrane potential is at the chloride reversal potential, then there is no GABA-A-mediated synaptic current, but the conductance is still there.
+You have used 1 of 1 submissions
+Question 4 (1/1 point)
+
+Which of the following statements regarding hyperpolarising inhibition is correct?
+GABA-A synaptic input causes hyperpolarising inhibition when the membrane potential is depolarised relative to the Cl- reversal potential GABA-A synaptic input causes hyperpolarising inhibition when the membrane potential is depolarised relative to the Cl- reversal potential - correct
+GABA-A synaptic input causes hyperpolarising inhibition when the membrane potential is hyperpolarized relative to the Cl- reversal potential
+GABA-A synaptic input causes hyperpolarising inhibition when the membrane potential is at the Cl- reversal potential
+GABA-B synaptic input causes hyperpolarising inhibition when the membrane potential is hyperpolarised relative to the K+ reversal potential
+
+Explanation
+
+GABA-A synaptic input causes hyperpolarizing inhibition when the membrane potential is depolarized relative to the Cl- reversal potential.
+You have used 1 of 1 submissions
+Question 5 (1 point possible)
+
+Which of the following statements regarding shunting inhibition is correct?
+GABA-A synaptic input causes shunting inhibition due to increased input resistance of the soma GABA-A synaptic input causes shunting inhibition due to increased input resistance of the soma - incorrect
+GABA-A synaptic input causes shunting inhibition due to increased membrane time constant
+GABA-A synaptic input causes shunting inhibition due to increased axial resistance
+GABA-A synaptic input causes shunting inhibition due to decreased membrane resistance
+
+Explanation
+
+Even if the membrane potential is actually close to the reversal potential of Cl-, GABA-A mediated inhibition can still make a significant impact on the integration of excitatory synaptic inputs. GABA-A Cl- conductance will increase membrane conductance and thus decrease the membrane resistance. Excitatory synaptic input arriving across the dendritic arborisations will thus be subjected to more leaky dendrites and a more leaky soma, thus causing smaller changes in membrane potential.
+You have used 1 of 1 submissions

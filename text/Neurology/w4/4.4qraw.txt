@@ -1,0 +1,60 @@
+Question 1 (1/1 point)
+
+Which of the following is not required for postsynaptic long-term potentiation (LTP)?
+NMDA receptor activation
+Postsynaptic cytosolic Ca2+ increase
+Activation of protein kinase CaMKII
+Activation of protein phosphatase calcineurin Activation of protein phosphatase calcineurin - correct
+
+Explanation
+
+LTP induction requires the activation of NMDA recepotrs, giving rise to an increase in cytosolic Ca2+ in the postsynapse and the activation of protein kinase CaMKII. The activation of the protein phosphatase calcineurin is required for LTD induction, but not for LTP induction.
+You have used 1 of 1 submissions
+Question 2 (1/1 point)
+
+Postsynaptic long-term potentiation (LTP) mainly occurs through changes in:
+the presynaptic specialisation causing enhanced neurotransmitter release
+the number of voltage-gated calcium channels in the postsynaptic membrane
+the postsynaptic leak conductance
+the number of AMPA receptors in the postsynaptic density the number of AMPA receptors in the postsynaptic density - correct
+
+Explanation
+
+Long-term potentiation (LTP) mainly occurs through recruitment of additional AMPA receptors into the postsynaptic density. The larger number of AMPA receptors causes larger postsynaptic conductances in response to the same amount of released glutamate. EPSP amplitude is therefore enhanced by LTP.
+You have used 1 of 1 submissions
+Question 3 (1/1 point)
+
+Why is postsynaptic long-term potentiation (LTP) considered as an associative form of synaptic plasticity?
+Both presynaptic and postsynaptic neurons need to be excited simultaneously
+Postsynaptic depolarisation is needed to relieve the magnesium block of NMDA receptors while glutamate is released from presynaptic boutons
+The correlated activity of the presynaptic and postsynaptic neurons causes the strength of their synaptic connections to increase and the neurons thus become more tightly associated
+All of the above All of the above - correct
+
+Explanation
+
+Some forms of synaptic plasticity (like LTP) require the correlated, simultaneous activity of presynaptic and postsynaptic neurons. The strengthening of their connections is thus an associative plasticity. Other forms of synaptic plasticity only depend upon the pattern of activity of the either the presynaptic or the postsynaptic activity (but not their correlated activity). Such forms of plasticity are therefore not associative.
+You have used 1 of 1 submissions
+Question 4 (1/1 point)
+
+Changes in synaptic efficacy after induction of long-term plasticity can be very long-lasting, meaning that it can last for:
+many milliseconds
+many seconds
+many minutes
+many hours many hours - correct
+
+Explanation
+
+Changes in synaptic efficacy induced by LTP can last for many hours, and even for many days when recorded in vivo.
+You have used 1 of 1 submissions
+Question 5 (1 point possible)
+
+Which of the following statements about spike-timing dependent plasticity (STDP) is correct?
+When the presynaptic cell repeatedly fires an action potential 10 s before the postsynaptic cell fires an action potential, then an increase in the EPSP amplitude occurs
+When the postsynaptic cell repeatedly fires an action potential 30 ms before the presynaptic cell fires an action potential, then a reduction in the EPSP amplitude occurs
+When the postsynaptic cell repeatedly fires an action potential 50 ms before the presynaptic cell fires an action potential, then a increase in the EPSP amplitude occurs
+When the presynaptic cell repeatedly fires an action potential 10 ms before the postsynaptic cell fires an action potential, then an reduction in the EPSP amplitude occurs When the presynaptic cell repeatedly fires an action potential 10 ms before the postsynaptic cell fires an action potential, then an reduction in the EPSP amplitude occurs - incorrect
+
+Explanation
+
+In STDP, if the postsynaptic cell often fires an action potential ~10-100 ms before the presynaptic cell fires an action potential, then a reduction in the EPSP amplitude occurs through long-term synaptic plasticity. On the other hand, if the presynaptic cell often fires an action potential 10-50 ms before the postsynaptic cell fires an action potential, then an increase in the EPSP amplitude occurs through long-term synaptic plasticity.
+You have used 1 of 1 submissions

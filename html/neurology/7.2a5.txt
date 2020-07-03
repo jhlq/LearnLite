@@ -1,0 +1,1 @@
+In the whisker detection task of Sachidhanandam et al. (2013), an early sensory response in S1 reliably encodes the sensory stimulus, and a late component codes subjective percept as reported by licking motor output.

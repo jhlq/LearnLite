@@ -1,0 +1,5 @@
+	<nav>
+	<a href="../index.html">Learn index.</a>
+	<a href="index.html">Local index.</a>
+	<a href="practices.html">Practices.</a>
+	</nav>

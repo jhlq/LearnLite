@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>LearnLite: HTML5
+ Multimedia</title>
+<link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+<body>
+	<nav>
+	<a href="../index.html">Home.</a>
+	<a href="index.html">Index of /html5/.</a>
+	<a href="introduction.html">Introduction.</a>
+	<a href="basics.html">Basics.</a>
+	<a href="multimedia.html">Multimedia.</a>
+	<a href="graphics.html">Graphics.</a>
+	<a href="animation.html">Animation.</a>
+	</nav>
+
+<h1>HTML5 Multimedia</h1>
+
+<h2>The &lt;video&gt; element</h2>
+<p>The video element replaces embedded flash objects. Example: 
+<a href="http://jsbin.com/hobeke/1/edit?html,output">http://jsbin.com/hobeke/1/edit?html,output</a></p>
+<p>It is part of the DOM and can be influenced with javascript and CSS.</p>
+
+<span class="medium"> Videos from sites like youtube cannot be directly embedded because of commercial reasons, instead use a iframe: https://www.youtube.com/watch?v=ZH1XOsv8Oyo </span>
+<p>Good practice: add text that is displayed in place of the video when the browser does not support the &lt;video&gt; element.</p>
+
+<h3>Codecs</h3>
+<p>The recommended codec is H264/mp4. <span class="medium">For more compatibility provide several versions of your video with different encodings.</span></p>
+
+<h3>Suggested readings</h3>
+
+<ul><li><a href="http://www.jwplayer.com/html5/">http://www.jwplayer.com/html5/</a>
+</li>
+<li>
+<a href="https://developer.apple.com/library/safari/documentation/AudioVideo/Conceptual/Using_HTML5_Audio_Video/ControllingMediaWithJavaScript/ControllingMediaWithJavaScript.html">https://developer.apple.com/library/safari/documentation/AudioVideo/Conceptual/Using_HTML5_Audio_Video/ControllingMediaWithJavaScript/ControllingMediaWithJavaScript.html</a>
+</li>
+</ul>
+
+<h2>The &lt;audio&gt; element</h2>
+<p>Very similiar to the video element. Example: http://jsbin.com/gazoye/8/edit?html,output</p>
+
+<span class="medium">Supports sound effects: http://www.w3.org/TR/webaudio/ </span>
+<p>Good practice: propose to download the audio file if the &lt;audio&gt; element is not supported.</p>
+
+<h2>Attributes of &lt;audio&gt; and &lt;video&gt;</h2>
+
+<span class="easy">Attributes can be added like so: &lt;video preload="none"&gt; </span>
+<p>Good practice: use preload="none" to avoid unexpected data charges.</p>
+<p>Other attributes:</p>
+
+<ul><li>src: source of content.
+</li>
+<li>
+controls: if this attribute is present, the browser displays its own controls for audio playback and volume.
+</li>
+<li>
+autoplay: tells the browser to start playing the audio stream automatically as soon as the page is ready, please read details in the above table.
+</li>
+<li>
+loop:  indicates to play the audio stream in loop mode (start again when finished).
+</li>
+</ul>
+
+<div class="yellow">
+<h2>Examples</h2>
+
+<ul><li><a href="http://jsbin.com/razigi/15/edit"> Styling with CSS.</a>
+</li>
+<li>
+<a href="http://jsbin.com/tinoku/3/edit"> Resize and rotate.</a>
+</li>
+<li>
+Fullscreen (WARNING, starts loading video immediately): http://jsbin.com/yoquli/2/edit http://jsbin.com/yurinu/4/edit
+</li>
+<li>
+<a href="http://www.w3.org/2010/05/video/mediaevents.html"> Events and properties.</a>
+</li>
+<li>
+<a href="http://jsbin.com/temupe/1/edit"> Custom controls</a>
+</li>
+<li>
+<a href="http://jsbin.com/nefijo/5/edit"> Playlist </a>
+</li>
+<li>
+<a href="http://output.jsbin.com/fezome/5"> Transformable video.</a>
+</li>
+<li>
+<a href="http://jsbin.com/etinat/12/edit"> Tracking events.</a>
+</li>
+<li>
+<a href="http://jsbin.com/johiza/1/edit"> Buffering.</a>
+</li>
+<li>
+<a href="http://www.w3.org/2010/Talks/0430-www2010-plh/video-player.xhtml"> Custom SVG controls.</a>
+</li>
+<li>
+<a href="http://jsbin.com/cumaho/3/edit"> Custom video player.</a>
+</li>
+</ul>
+</div>
+
+<h2>Projects</h2>
+
+<ul><li>Project 1 (very easy): try to find the "enhanced HTML5 video players" described in the course and try to use one of them to play a video + use some of the possible customizations: add a logo, choose a theme, etc.
+</li>
+<li>
+Project 2 (easy): try to write a video or an audio player with some custom buttons for play/stop/etc. Add to your custom player a mean to play several videos one after another - what we call a playlist -, etc.
+</li>
+<li>
+Project 3 (with JavaScript knowledge): try to play a video file or an audio file with an external synchronization. Use the progress event and the currentTime property from the audio and video objects you can manipulate with the JavaScript API described in the course. For example, please display some text aside the video, and/or display a wikipedia page in an iframe, and/or display a google map if you know how to do it.
+</li>
+</ul>
+
+<h2>Subtitles</h2>
+<p>The new HTML5 &lt;track&gt; element is useful for adding closed captions, subtitles, descriptions, and metadata to your videos.</p>
+<p>Subtitles are for words whereas closed captions are for general sounds.</p>
+<p>.vtt files cannot be linked with a file:// URL.</p>
+
+<a href="http://jsbin.com/luyazi/2/edit?html,output">http://jsbin.com/luyazi/2/edit?html,output</a>
+
+<div class="yellow">
+External resources:
+<ul><li><a href="http://www.w3.org/TR/html5/embedded-content-0.html#the-track-element">http://www.w3.org/TR/html5/embedded-content-0.html#the-track-element</a>
+</li>
+<li>
+<a href="http://dev.w3.org/html5/webvtt/">http://dev.w3.org/html5/webvtt/</a>
+</li>
+<li>
+<a href="http://www.longtailvideo.com/html5/scripting/">http://www.longtailvideo.com/html5/scripting/</a>
+</li>
+<li>
+<a href="http://www.storiesinflight.com/js_videosub/#code">http://www.storiesinflight.com/js_videosub/#code</a>
+</li>
+<li>
+<a href="http://demosthenes.info/blog/584/Creating-And-Validating-WebVTT-Subtitles">http://demosthenes.info/blog/584/Creating-And-Validating-WebVTT-Subtitles</a>
+</li>
+<li>
+<a href="http://html5videoguide.net/presentations/WebVTT/#title-slide">http://html5videoguide.net/presentations/WebVTT/#title-slide</a>
+</li>
+</ul>
+</div>
+<p>The WebVTT format is used for subtitles.</p>
+
+<a href="http://dev.w3.org/html5/webvtt/">http://dev.w3.org/html5/webvtt/</a>
+
+<a href="https://developer.mozilla.org/fr/docs/Web/API/Web_Video_Text_Tracks_Format">https://developer.mozilla.org/fr/docs/Web/API/Web_Video_Text_Tracks_Format</a>
+<p>yellow: Opensource software for video encoding: https://handbrake.fr/</p>
+
+<a href="http://www.universalsubtitles.org/">http://www.universalsubtitles.org/</a>
+<p>Subtitles can be styled: http://jsbin.com/lopudu/5/edit?html,output</p>
+<p>Extract from .vtt file:</p>
+
+<code>
+00:00:06.000 --&gt; 00:00:10.000 line:5%<br>
+This cue is positioned at the top of the video<br>
+00:00:11.000 --&gt; 00:00:15.000 position:5% align:start<br>
+This cue is positioned at the left side of the video.<br>
+00:00:16.000 --&gt; 00:00:20.000 position:95% align:end<br>
+And this one ate the right side.
+</code>
+<p>To read the whole file find the link in the lopudu5 example above.</p>
+<p>Use &lt;v Name&gt; to color code subtitles according to speaker.</p>
+
+<div class="yellow">
+
+<a href="https://developer.mozilla.org/fr/docs/Web/API/Web_Video_Text_Tracks_Format">https://developer.mozilla.org/fr/docs/Web/API/Web_Video_Text_Tracks_Format</a>
+<p>Chapters can be defined by setting kind="chapters" in the track element.</p>
+<p>A jacascript API is associated with the track element, with it one can navigate the video or modify page content based on video progress.</p>
+
+<a href="http://simpl.info/track/map/index.html"> Example with map that syncs to video (WARNING: starts loading instantly).</a>
+<p>This example shows how we manage to render music scores in real time as the video plays: http://youtu.be/JyNSyL-MmFI</p>
+
+</div>
+
+<h3>Project ideas</h3>
+
+<ul><li>Project 1 (very easy): Add some subtitles of your own on one of your videos. Share your step by step experience. This will be a valuable resource for your classmates.
+</li>
+<li>
+Project 2 (easy): Try to style some of the subtitles, set their position, etc.
+</li>
+<li>
+Project 3 (with JavaScript knowledge): Try to write a karaoke player with a small list of songs we can choose from.
+</li>
+</ul>
+
+<section class="yellow">
+<h2>Enchanced media players</h2>
+
+<h3>Video</h3>
+
+<a href="http://www.streamingmedia.com/Articles/Editorial/Featured-Articles/How-to-Create-Interactive-HTML5-Video-97461.aspx">http://www.streamingmedia.com/Articles/Editorial/Featured-Articles/How-to-Create-Interactive-HTML5-Video-97461.aspx</a>
+
+<a href="http://www.iheni.com/accessible-media-player-resources/">http://www.iheni.com/accessible-media-player-resources/</a>
+<p>Using a plain video element should be the default choice as the video element is more flexible and consumes less of the users resources.</p>
+
+<h3>Audio</h3>
+
+<a href="http://smashinghub.com/10-best-html5-audio-players.htm">http://smashinghub.com/10-best-html5-audio-players.htm</a>
+
+<a href="http://kolber.github.io/audiojs/">http://kolber.github.io/audiojs/</a>
+
+<a href="http://www.peakplayer.com/">http://www.peakplayer.com/</a>
+
+<h3>Optional projects</h3>
+<p>Project 1 (very easy): prepare a Web page somewhere that uses some of the enhanced players, and write some explanations on how you created the page (JavaScript files to include, options to choose from, etc.)</p>
+<p>Project 2 (more work): make a video of yourself that explains how you made the video, added subtitles, chose the player, hosted the files, etc.</p>
+
+<h2>The getUserMedia API</h2>
+
+<h3>Webcam</h3>
+
+<a href="http://www.w3.org/TR/mediacapture-streams/">http://www.w3.org/TR/mediacapture-streams/</a>
+<p>Set the src of a video element to the video stream coming from the webcam.</p>
+
+<a href="http://jsbin.com/vovuweyogu/1/edit">http://jsbin.com/vovuweyogu/1/edit</a>
+
+<a href="http://jsbin.com/gehitu/1/edit"> Starting and stopping.</a>
+
+<a href="http://jsbin.com/gehitu/8/edit"> CSS effects.</a>
+
+<a href="http://jsbin.com/gehitu/6/edit"> Snapshot.</a>
+
+<a href="https://dev.opera.com/articles/playing-with-html5-video-and-getusermedia/">https://dev.opera.com/articles/playing-with-html5-video-and-getusermedia/</a>
+
+<a href="http://html5-demos.appspot.com/static/getusermedia/photobooth.html">http://html5-demos.appspot.com/static/getusermedia/photobooth.html</a>
+
+<a href="http://neave.com/webcam/html5/">http://neave.com/webcam/html5/</a>
+
+<a href="http://paint.gexsoft.com/">http://paint.gexsoft.com/</a>
+
+<h3>Microphone</h3>
+
+<a href="https://webaudiodemos.appspot.com/">https://webaudiodemos.appspot.com/</a>
+
+</section>
+
+<footer>
+	<nav>
+	<a href="../index.html">Home.</a>
+	<a href="index.html">Index of /html5/.</a>
+	<a href="introduction.html">Introduction.</a>
+	<a href="basics.html">Basics.</a>
+	<a href="multimedia.html">Multimedia.</a>
+	<a href="graphics.html">Graphics.</a>
+	<a href="animation.html">Animation.</a>
+	</nav>
+
+</footer>
+</body>
+</html>

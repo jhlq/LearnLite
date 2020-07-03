@@ -1,0 +1,60 @@
+Question 1 (1/1 point)
+
+Which of the following statements about reward-based learning is not correct?
+In reward-based learning we learn that in a specific stimulus context we should perform a specific motor output that will then lead to a reward
+In reward-based learning an animal needs to learn to transform sensory inputs into useful motor outputs
+Reward-based learning likely strengthens the synaptic circuits linking a specific sensory input with the motor circuits driving the rewarded motor output
+All learning relies upon reward signals All learning relies upon reward signals - correct
+</ul>
+Explanatio
+
+In reward-based learning the idea is to learn that in a specific stimulus context we should perform a specific motor output that will then lead to a reward. In this type of learning the animal needs to learn to transform sensory inputs into meaningful motor outputs. Reward-based learning likely strengthens the synaptic circuits linking the specific sensory input and the rewarded motor output. However, not all learning relies upon reward signals - there are many other forms of learning in the brain.
+12345
+Question 2 (1/1 point)
+
+Which statement about the activity of midbrain dopaminergic neurons is not true?
+Dopamine neurons transiently increase their firing when an unexpected reward is delivered
+Dopamine neurons transiently increase their firing when a cue is presented that predicts future reward
+Dopamine neurons transiently decrease firing rate when an expected reward is delivered Dopamine neurons transiently decrease firing rate when an expected reward is delivered - correct
+Dopamine is thought to signal reward prediction error and is therefore a useful learning signal
+</ul>
+Explanatio
+
+Dopamine is thought to signal reward prediction error and is therefore a useful learning signal. If a reward is correctly predicted, there is nothing to learn, the brain already knows what is going on and there is no need to change behavioral strategy. Dopamine firing rates increase transiently at the time when things get better than expected, and the dopamine signal might therefore be useful to tell the brain that it should try to figure out what led to the improvement. Unexpected reward or unexpected sensory cues that predict upcoming reward are good at increasing firing rates in dopaminergic neurons.
+12345
+Question 3 (1/1 point)
+
+Where do the midbrain dopaminergic neurons of the substantia nigra pars compacta (SNc) prominently innervate?
+Hippocampus
+Amygdala
+Striatum Striatum - correct
+Olfactory bulb
+</ul>
+Explanatio
+
+Dopaminergic neurons in the SNc project most strongly to the striatum. The striatum is a relatively large brain area, which can be divided into the dorsal and the ventral striatum (also called nucleus accumbens). The midbrain dopaminergic neurons can be divided into two groups: those located in ventral tegmental area (VTA) that heavily innervate nucleus accumbens and frontal cortex, and those located in SNc that innervate dorsal striatum.
+12345
+Question 4 (1/1 point)
+
+Which of the following statements about striatal projection neurons is correct?
+D1R-expressing projection neurons directly inhibit the substantia nigra reticulata (SNr) (direct pathway), resulting in disinhibition of brainstem motor nuclei ('go' signal) D1R-expressing projection neurons directly inhibit the substantia nigra reticulata (SNr) (direct pathway), resulting in disinhibition of brainstem motor nuclei ('go' signal) - correct
+D1R-expressing striatal projection neurons directly inhibit the substantia nigra reticulata (SNr) (direct pathway), resulting in inhibition of brainstem motor nuclei ('no go' signal)
+D2R-expressing striatal projection neurons directly inhibit the external globus pallidus (GPe), which in turn innervates the SNr (indirect pathway), resulting in disinhibition of brainstem motor nuclei ('go' signal)
+D2R-expressing striatal projection neurons directly inhibit the substantia nigra reticulata (SNr) (direct pathway), resulting in disinhibition of brainstem motor nuclei ('go' signal)
+</ul>
+Explanatio
+
+The striatum contains at least two types of GABAergic striatal projection neurons, which can be differentiated not only in terms of the type of dopamine receptor they express, but also in terms of their apparent function. In particular, D1R- and D2R-expressing striatal projection neurons exert opposing effects upon the SNr. The direct pathway, which involves D1R-expressing projection neurons, directly innervates and inhibits SNr. On the other hand, the indirect pathway that involves D2R-expressing projection neurons, innervates and inhibits the GPe, which in turn inhibits SNr. Therefore, the more inhibition that GPe receives from the D2 striatal projection neurons, the less inhibition it sends to the SNR. Thus, the indirect striatal projection neurons induce a disinhibitory effect that leads to an increase of the SNr firing. SNr contains tonically active GABAergic neurons, that at least in part serve to inhibit motor ouput. Inhibiting SNr, therefore allows motor output, forming a 'go' sigal. Disinhibition of SNr, will contribute to stronger suppression motor output, forming a 'no go' signal.
+12345
+Question 5 (1/1 point)
+
+Which of the following statements about the action of dopamine is not correct?
+Dopamine appears to potentiate cortical input onto the direct pathway striatal projection neurons through the activation of D1 receptors (strengthens direct pathway)
+Dopamine appears to depress cortical input onto the indirect pathway striatal projection neurons through the activation of D2 receptors (weakens indirect pathway)
+Dopamine acts on D1 receptors to promote the insertion of both AMPA and NMDA receptors onto the postsynaptic membranes of direct striatal projection neurons
+Dopamine acts on D2 receptors to promote calcium entry into indirect striatal projection neurons Dopamine acts on D2 receptors to promote calcium entry into indirect striatal projection neurons - correct
+</ul>
+Explanatio
+
+A large amount of glutamatergic input in the striatum comes from the neocortex. Dopamine seems to have two opposing actions on cortical input to the striatum. The action of dopamine in the context of the glutamatergic synapses is on the D1 receptors to promote the insertion of both AMPA and NMDA receptors onto the postsynaptic membranes. D1 receptor activation appears to be essential for promoting long-term potentiation, and cortical input onto the D1 striatal projection neurons appears to be potentiated by the action of dopamine. Therefore, a strengthening of the direct pathway occurs in the presence of reward. On the other hand, the activation of D2 receptors from dopamine seems to be involved in the opposite type of synaptic plasticity. In particular, activation of D2 receptors prevents calcium entry through the NMDA receptor, inducing long-term depression at the synapse. Thus, dopamine acting upon D2 receptors suppresses cortical input to the striatum and gives rise to long-term depression onto the indirect striatal projection neurons.
+12345

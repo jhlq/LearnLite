@@ -1,0 +1,1 @@
+The most important two neurotransmitters in the central nervous system are glutamate and gamma-aminobutyric acid (GABA). Glutamate is excitatory, driving the postsynaptic neuron towards ~0 mV membrane potential. GABA is inhibitory, driving the postsynaptic membrane potential towards ~-75 mV.

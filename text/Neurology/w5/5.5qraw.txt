@@ -1,0 +1,60 @@
+Question 1 (1/1 point)
+
+Which statement about neocortical GABAergic neurons is incorrect?
+Neocortical GABAergic neurons prominently inhibit sub-cortical nuclei Neocortical GABAergic neurons prominently inhibit sub-cortical nuclei - correct
+Some subtypes of neocortical GABAergic neurons inhibit other neocortical GABAergic neurons
+Neocortical GABAergic neurons represent about 10-20% of the total number of cortical neurons
+Most neocortical GABAergic neurons are local interneurons and don't have long-range axonal projections
+
+Explanation
+
+Neocortical GABAergic neurons largely regulate the activity of the local microcircuits in which they are embedded. They usually don't have long-range axonal projections, therefore it is impossible for them to inhibit sub-cortical regions directly.
+You have used 1 of 1 submissions
+Question 2 (1/1 point)
+
+Which one below is not a neocortical GABAergic neuron?
+Parvalbumin-expressing (PV)
+Somatostatin-expressing (Sst)
+Vasoactive intestinal peptide-expressing (VIP)
+Purkinje cells Purkinje cells - correct
+
+Explanation
+
+The Purkinje cells are located in the cerebellar cortex and they are GABAergic projection neurons. They are not located in the neocortex.
+You have used 1 of 1 submissions
+Question 3 (1/1 point)
+
+Parvalbumin-expressing (PV) basket cells innervate which part of postsynaptic target neurons?
+Distal dendrites
+Soma and proximal dendrites Soma and proximal dendrites - correct
+Gap junctions
+Axon initial segment
+
+Explanation
+
+The PV-expressing fast-spiking basket cells target soma and proximal dendrites. Fast-spiking axo-axonic cells (also known as chandelier cells) can also express parvalbumin, and inhibit the axon initial segment of the postsynaptic cell, but these cells are not 'basket cells'.
+You have used 1 of 1 submissions
+Question 4 (1/1 point)
+
+Where do neocortical somatostatin-expressing GABAergic neurons (Sst) prominently innervate excitatory pyramidal neurons?
+Distal dendrites Distal dendrites - correct
+Basal dendrites
+Nodes of Ranvier
+Soma
+
+Explanation
+
+Somatostatin-expressing (Sst) GABAergic neurons of the cortex strongly innervate distal dendrites of excitatory pyramidal neurons. These neurons are also termed 'Martinotti' cells.
+You have used 1 of 1 submissions
+Question 5 (1/1 point)
+
+Which neocortical GABAergic neuron sub-type is thought to signal mainly by volume transmisson?
+Somatostatin-expressing GABAergic neurons (Sst)
+Parvalbumin-expressing GABAergic neurons (PV)
+Neurogliaform GABAergic neurons Neurogliaform GABAergic neurons - correct
+Vasoactive intestinal peptide-expressing GABAergic neurons (VIP)
+
+Explanation
+
+Neurogliaform cells release GABA into the extracellular space, thereby mediating volume transmission activating GABA-B receptors to drive slow IPSPs.
+You have used 1 of 1 submissions
