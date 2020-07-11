@@ -1,0 +1,159 @@
+About JavaScript and Node.js. Notes for a course at Linnaeus University: https://coursepress.gitbook.io/1dv021/
+
+The course features videos and 
+https://eloquentjavascript.net/ the online book Eloquent JavaScript.
+ The book JavaScript: The Good Parts is a recommended resource.
+
+A few guides in setting up the environment with Git prepares for the exercises.
+
+*Introduction
+
+Goals:
+
+<ul>
+Types and structures of data.
+Expressions, statements and conditionals.
+Functions.
+Objects and arrays.
+Bug hunting.
+Code version management.
+Code quality.
+Analyzing problems to find suitable designs.
+</ul>
+
+Chapters 1 to 12 of https://eloquentjavascript.net/ are used.
+
+There are two examinations/parts with associated practice tasks.
+
+Learning is not a spectator sport, if you don't actually try to solve problems you wont learn.
+
+"Don't be afraid to ask questions. Don't be afraid to ask for help when you need it. I do that every day. Asking for help isn't a sign of weakness, it's a sign of strength. It shows you have the courage to admit when you don't know something, and then allows you to learn something new."
+ --Barak Obama
+
+Part 1:
+
+<ul>
+5 weeks.
+Values, types and operators.
+Expressions, statements and variables.
+Conditionals and functions.
+Arrays and objects.
+Chapters 1-5.
+</ul>
+
+Part 2:
+
+<ul>
+4 weeks.
+Objects: properties, methods, prototypes.
+Objects: inheritance, overshadowing, polymorphism.
+Bugs, error handling and regular expressions.
+Modules.
+Chapters 6-12.
+</ul>
+
+Development environment:
+
+<ul>
+IDE like Visual Studio Code or Geany.
+https://nodejs.org/ Node.js (application environment)
+https://www.npmjs.com/ npm (package manager)
+https://git-scm.com/ Git (version control)
+https://mochajs.org/ Mocha (testing framework)
+https://standardjs.com/ JavaScript Standard Style
+</ul>
+
+*Lecture 1
+
+Keywords: history, datatypes, Number, String, Boolean, Object, typeof, arithmetic, logic, expressions, statements, variables, keywords, reserved words, functions.
+
+JavaScript 1.0 was launched 1995 to validate forms before sending them to the server.
+
+Node.js is an open source platform used to run JavaScript code on a server.
+
+You should know why 00101010 is 42 (aka the answer to everything).
+
+A binary number can be interpreted as various types.
+
+Primitives: Undefined, Null, Boolean, Number, Symbol and String.
+
+Every value must be a primitive or an Object.
+
+typeof 42   // 'number'
+
+Functions are objects.
+
+4.712e7   // exponentials (4.712 * 10^7 = 47120000)
+
+13%5   // remainder (3 since 2*5+3=13)
+
+4+(1+2)*3   // first parentheses then multiplication then addition, 13
+
+Special numbers: infinity, -infinity, NaN (Not a Number)
+
+The course standard prohibits " for string, use '
+
+Use \n for new lines: 'Line one\ntwo.'
+
+Boolean operations: <, >, <=, >=, ==, !=, === (includes type), !== (includes type), && (AND), || (OR), ! (NOT)
+
+Variables are declared with let or var, var is for backwards compatibility, let is almost always better since variables wont leak to other scopes.
+
+Use descriptive variable names. Don't use odd symbols. Use camelCasing. A tip is to append your initials to your variables, even if code works perfectly in Firefox another browser or package can have defined some system variables that get overwritten if you use ordinary variable names.
+
+Forbidden names:
+
+<ul>
+await
+delete
+import
+this
+break
+do
+in
+throw
+case
+else
+instanceof
+typeof
+catch
+export
+newtry
+class
+extends
+</ul>
+
+<ul>
+let
+var
+const
+finally
+return
+void
+continue
+for
+static
+while
+debugger
+function
+super
+with
+default
+if
+switch
+yield
+</ul>
+
+<ul>
+enum
+interface
+private
+public
+implements
+package
+protected
+</ul>
+
+Try console.log and Math.min(2,1,3)
+
+Functions can be declared with 'let f=function(){return 1}' or 'function f(){return 1}'. If return is missing undefined is returned.
