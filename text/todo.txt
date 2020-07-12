@@ -1,2 +1,7 @@
 Multiline link list entries
 Tooltips
+fix style.css
+open external links in new tab?
+different style for internal links
+
+split file on \n\n, check each entry: for opword; wrap each non excluded entry in <p>

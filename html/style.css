@@ -10,8 +10,14 @@ span.hard {
 section.yellow {
     background-color: yellow;
 }
+div.green {
+    background-color: lightgreen;
+}
 div.yellow {
     background-color: yellow;
+}
+div.red {
+    background-color: red;
 }
 
 header, 

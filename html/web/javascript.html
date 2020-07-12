@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>LearnLite: Web development, JavaScript lectures</title>
+<link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+<body>
+<nav>
+	<a href="../index.html">Home.</a>
+	<a href="index.html">Index.</a>
+	<a href="javascript.html">JavaScript lectures.</a>
+</nav>
+<h1>Foundational programming</h1>
+<p>Notes for a course at Linnaeus University about JavaScript and Node.js: https://coursepress.gitbook.io/1dv021/</p>
+<p>The course features videos and 
+<a href="https://eloquentjavascript.net/"> the online book Eloquent JavaScript.</a>
+ The book JavaScript: The Good Parts is a recommended resource.</p>
+<p>A few guides in setting up the environment with Git prepares for the exercises.</p>
+<p>The course does not endorse semicolons however
+<a href="https://google.github.io/styleguide/javascriptguide.xml#Semicolons"> the Google JavaScript style guide</a>
+ says "Always use semicolons. Relying on implicit insertion can cause subtle, hard to debug problems."</p>
+<p>A potential problem is illustrated by the following which tries to call c(d+e):
+<code><br>
+a = b + c <br>
+(d + e).print()<br>
+</code>
+<h1>Introduction</h1></p>
+<p>Goals:</p>
+
+<ul><li>Types and structures of data.
+</li>
+<li>
+Expressions, statements and conditionals.
+</li>
+<li>
+Functions.
+</li>
+<li>
+Objects and arrays.
+</li>
+<li>
+Bug hunting.
+</li>
+<li>
+Code version management.
+</li>
+<li>
+Code quality.
+</li>
+<li>
+Analyzing problems to find suitable designs.
+</li>
+</ul>
+<p>Chapters 1 to 12 of https://eloquentjavascript.net/ are used.</p>
+<p>There are two examinations/parts with associated practice tasks.</p>
+<p>Learning is not a spectator sport, if you don't actually try to solve problems you wont learn.</p>
+<p>"Don't be afraid to ask questions. Don't be afraid to ask for help when you need it. I do that every day. Asking for help isn't a sign of weakness, it's a sign of strength. It shows you have the courage to admit when you don't know something, and then allows you to learn something new."
+ --Barack Obama</p>
+<p>Part 1:</p>
+
+<ul><li>5 weeks.
+</li>
+<li>
+Values, types and operators.
+</li>
+<li>
+Expressions, statements and variables.
+</li>
+<li>
+Conditionals and functions.
+</li>
+<li>
+Arrays and objects.
+</li>
+<li>
+Chapters 1-5.
+</li>
+</ul>
+<p>Part 2:</p>
+
+<ul><li>4 weeks.
+</li>
+<li>
+Objects: properties, methods, prototypes.
+</li>
+<li>
+Objects: inheritance, overshadowing, polymorphism.
+</li>
+<li>
+Bugs, error handling and regular expressions.
+</li>
+<li>
+Modules.
+</li>
+<li>
+Chapters 6-12.
+</li>
+</ul>
+<p>Development environment:</p>
+
+<ul><li>IDE like Visual Studio Code or Geany.
+</li>
+<li>
+<a href="https://nodejs.org/"> Node.js (application environment)</a>
+</li>
+<li>
+<a href="https://www.npmjs.com/"> npm (package manager)</a>
+</li>
+<li>
+<a href="https://git-scm.com/"> Git (version control)</a>
+</li>
+<li>
+<a href="https://mochajs.org/"> Mocha (testing framework)</a>
+</li>
+<li>
+<a href="https://standardjs.com/"> JavaScript Standard Style</a>
+</li>
+</ul>
+<h1>Lecture 1</h1>
+<p>Keywords: history, datatypes, Number, String, Boolean, Object, typeof, arithmetic, logic, expressions, statements, variables, keywords, reserved words, functions.</p>
+<p>JavaScript 1.0 was launched 1995 to validate forms before sending them to the server.</p>
+<p>Node.js is an open source platform used to run JavaScript code on a server.</p>
+<p>You should know why 00101010 is 42 (aka the answer to everything).</p>
+<p>A binary number can be interpreted as various types.</p>
+<p>Primitives: Undefined, Null, Boolean, Number, Symbol and String.</p>
+<p>Every value must be a primitive or an Object.</p>
+<p>typeof 42   // 'number'</p>
+<p>Functions are objects.</p>
+<p>4.712e7   // exponentials (4.712 * 10^7 = 47120000)</p>
+<p>13%5   // remainder (3 since 2*5+3=13)</p>
+<p>4+(1+2)*3   // first parentheses then multiplication then addition, 13</p>
+<p>Special numbers: infinity, -infinity, NaN (Not a Number)</p>
+<p>The course standard prohibits " for string, use '</p>
+<p>Use \n for new lines: 'Line one\ntwo.'</p>
+<p>Boolean operations: &lt;, &gt;, &lt;=, &gt;=, ==, !=, === (includes type), !== (includes type), && (AND), || (OR), ! (NOT)</p>
+<p>Variables are declared with let or var, var is for backwards compatibility, let is almost always better since variables wont leak to other scopes.</p>
+<p>Use descriptive variable names. Don't use odd symbols. Use camelCasing. A tip is to append your initials to your variables, even if code works perfectly in Firefox another browser or package can have defined some system variables that get overwritten if you use ordinary variable names.</p>
+<p>Forbidden names:</p>
+
+<ul><li>await
+</li>
+<li>
+delete
+</li>
+<li>
+import
+</li>
+<li>
+this
+</li>
+<li>
+break
+</li>
+<li>
+do
+</li>
+<li>
+in
+</li>
+<li>
+throw
+</li>
+<li>
+case
+</li>
+<li>
+else
+</li>
+<li>
+instanceof
+</li>
+<li>
+typeof
+</li>
+<li>
+catch
+</li>
+<li>
+export
+</li>
+<li>
+newtry
+</li>
+<li>
+class
+</li>
+<li>
+extends
+</li>
+</ul>
+
+<ul><li>let
+</li>
+<li>
+var
+</li>
+<li>
+const
+</li>
+<li>
+finally
+</li>
+<li>
+return
+</li>
+<li>
+void
+</li>
+<li>
+continue
+</li>
+<li>
+for
+</li>
+<li>
+static
+</li>
+<li>
+while
+</li>
+<li>
+debugger
+</li>
+<li>
+function
+</li>
+<li>
+super
+</li>
+<li>
+with
+</li>
+<li>
+default
+</li>
+<li>
+if
+</li>
+<li>
+switch
+</li>
+<li>
+yield
+</li>
+</ul>
+
+<ul><li>enum
+</li>
+<li>
+interface
+</li>
+<li>
+private
+</li>
+<li>
+public
+</li>
+<li>
+implements
+</li>
+<li>
+package
+</li>
+<li>
+protected
+</li>
+</ul>
+<p>Try console.log and Math.min(2,1,3)</p>
+<p>Functions can be declared with 'let f=function(){return 1}' or 'function f(){return 1}'. If return is missing undefined is returned.
+<h1>Lecture 2</h1></p>
+<p>Control structures: if (else)(else if), switch, a?1:0, while, do...while, for, recursion (a function calling itself is a likely apocalyptic cause)</p>
+<p>for (let i = 0; i &lt; 10; i++) { }</p>
+<p>Use break to exit a loop, continue to skip to next iteration.</p>
+<p>Comments are made with // or, with caution, /* */. Commenting out blocks of code is not recommended for the long term, conditioning out with if (false) prevents code rot but still leaves confusing bloat.
+<h1>Lecture 3</h1></p>
+<p>Some functions are built in: console.log('Hej hopp!'); let result = Math.floor(3.14)</p>
+<p>Functions are required to not repeat code, DRY (Don't Repeat Yourself) coding is crucial. It is good to have at least one test for every function as this also serves as documentation, writing tests before the code has proven benefits such as increased modularity (see Test Driven Development).</p>
+<p>Math.random() returns a value from 0 to 1.</p>
+<p>const sayHello = function (name) { return 'Hello '+name }</p>
+<p>Scopes are intricate, in short a variable declared inside a function is not accessible outside it.</p>
+<p>For better and silent upstream toxin worse JavaScript simply ignores function calls with the wrong amount of arguments, resulting in weird undefined or NaN values showing up in unexpected places much later.</p>
+<p>A function can be passed as an argument.</p>
+<p>Closure: a function returns a nested function with access to the local scope.
+<h1>Lecture 4</h1></p>
+<p>Arrays start with index 0 and while they can hold values of multiple types this should be avoided.</p>
+<p>An array arr is defined simply as [1,2,3], the number of elements is stored in a.length, arr[1]==2.</p>
+<p>for (let i = 0; i &lt; arr.length; i++) { }</p>
+
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array"> Mozillas Array reference page.</a>
+<p>An array variable only holds a reference to the array so if you set b=a and change b a will also be changed. To deepcopy an array with simple types (no functions) you can do b=JSON.parse(JSON.stringify(arr))</p>
+<p>Push (append) a random number from 0 to 9 like so: arr.push(Math.floor(Math.random() * 10))</p>
+<p>A function that takes an array and modifies it modifies the original array, it is necessary to clearly indicate which functions potentially modify their arguments to avoid silent data corruption.</p>
+<p>To copy an array you can do c=arr.slice(). Note that unlike the JSON method above if arr contains nested arrays they will still be the same memory object in c.</p>
+<p>With arr.sort() elements are sorted through string conversion, ie 10 comes before 2. To custom sort pass a function like so: arr.sort(function (a, b) { return a - b })</p>
+<p>arr.forEach(function (value) { console.log(value) });</p>
+<p>let sum = arr.reduce(function (a, b) { return a + b }, 0)</p>
+<p>Remember to declare variables like sum with eg let or they will leak to global scope, strict mode prevents this.</p>
+<p>arr.filter(function (a) { return a % 2 === 0 });</p>
+<p>arr.map(function (a) { return a * 2 });
+<h1>Lecture 5</h1></p>
+<p>Objects are declared like so: let obj = { a: 'some', b: 1 }</p>
+<p>Object variables hold references like for arrays.</p>
+<p>An empty object can be declared like {} (or new Object()) and fields added like so: obj.c='here'</p>
+<p>Object.create(Object.prototype[, properties]) is another option.</p>
+<p>Object properties are accessed with obj.a or obj['b']</p>
+<p>for (let propertyName in obj) { console.log(propertyName + ': ' + obj[propertyName]) }</p>
+<p>Object.keys(obj) gives an array with the property names.</p>
+<p>Use throw to abort with error: if (!Array.isArray(arr)) { throw new TypeError(`arr doesn't refer to an array.`) }</p>
+
+<code><br>
+try {<br>
+&nbsp;&nbsp;bar(foo)<br>
+} catch (e) {<br>
+&nbsp;&nbsp;console.error(e.message)<br>
+}<br>
+</code>
+<h1>Lecture 6</h1>
+
+<code><br>
+const die = {<br>
+&nbsp;&nbsp;faceValue: undefined,<br>
+&nbsp;&nbsp;roll: function () {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;this.faceValue = Math.floor(Math.random() * 6) + 1<br>
+&nbsp;&nbsp;}<br>
+}<br>
+</code>
+<p>The this keyword should be used sparingly as it can suddenly point to something unexpected, for example in callbacks. Check out the bind and call/apply functions.</p>
+<p>Default argument values can be specified like so: function (greet = 'Hej!')</p>
+<p>If you need many dices create a Factory: a function that creates a die object and then returns it; or a Constructor invoked with new.</p>
+
+<code><br>
+function Die () {<br>
+&nbsp;&nbsp;this.faceValue = undefined<br>
+&nbsp;&nbsp;this.roll = function () {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;this.faceValue = Math.floor(Math.random() * 6) + 1<br>
+&nbsp;&nbsp;}<br>
+}<br>
+const die = new Die()<br>
+console.log(Object.getOwnPropertyNames(die)) // OUTPUT: [ 'faceValue', 'roll' ]<br>
+</code>
+<p>Constructors accept parameters like ordinary functions.</p>
+<p>To avoid duplicating the roll function in every Die object declare it as a prototype:
+<code><br>
+function Die () {<br>
+&nbsp;&nbsp;this.faceValue = undefined<br>
+}<br>
+Die.prototype.roll = function () {<br>
+&nbsp;&nbsp;this.faceValue = Math.floor(Math.random() * 6) + 1<br>
+}<br>
+const die = new Die()<br>
+</code></p>
+<p>The class syntax can be used since ECMAScript 2015:
+<code><br>
+class Die {<br>
+&nbsp;&nbsp;constructor () {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;this.faceValue = undefined<br>
+&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;roll () {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;this.faceValue = Math.floor(Math.random() * 6) + 1<br>
+&nbsp;&nbsp;}<br>
+}<br>
+const die = new Die()<br>
+</code></p>
+
+<div class="yellow">
+The designpattern OLOO (Object Linked to Other Objects) is an advanced alternative:
+<code><br>
+const Person = {<br>
+&nbsp;&nbsp;talk: function () {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;console.log('Jag, ' + this.name + ', är ' + this.age + ' år.')<br>
+&nbsp;&nbsp;}<br>
+}<br>
+const createPerson = function (name, age) {<br>
+&nbsp;&nbsp;return Object.create(Person, {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;'name': {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value: name,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;writable: true,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;enumerable: true,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;configurable: true<br>
+&nbsp;&nbsp;&nbsp;&nbsp;},<br>
+&nbsp;&nbsp;&nbsp;&nbsp;'age': {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value: age,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;writable: true,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;enumerable: true,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;configurable: true<br>
+&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;})<br>
+}<br>
+</code>
+</div>
+<h1>Lecture 7</h1>
+<p>Introducing Node.js modules.</p>
+<p>Define a rectangle constructor function in a separate file and end with module.exports=Rectangle then:
+<code><br>
+const Rectangle = require('./src/Rectangle')<br>
+const rectangle = new Rectangle()<br>
+</code></p>
+<p>Object instances have a __proto__ reference to the constructors prototype.</p>
+<p>Variables set with this are public whereas if you let set a value in the constructor it is private and only accessible through the functions (such as getters/setters).</p>
+
+<code><br>
+function Die () {<br>
+&nbsp;&nbsp;this._faceValue = undefined // semi-private property<br>
+}<br>
+Object.defineProperty(Die.prototype, 'faceValue', {<br>
+&nbsp;&nbsp;get: function () {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;return this._faceValue<br>
+&nbsp;&nbsp;}<br>
+})<br>
+</code>
+<p>Try adding a set: function to the above code that only allows certain numbers.</p>
+<p>Private variables can have annoying side effects, sure it prevents users from making dumb mistakes but if you know what you are doing it is a pain to not be allowed to do it.</p>
+
+<code><br>
+class Die {<br>
+&nbsp;&nbsp;constructor () {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;this._faceValue = undefined<br>
+&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;get faceValue () {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;return this._faceValue<br>
+&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;roll () {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;this._faceValue = Math.floor(Math.random() * 6) + 1<br>
+&nbsp;&nbsp;}<br>
+}<br>
+</code>
+
+<div class="yellow">
+<code><br>
+const _faceValue = new WeakMap()<br>
+class Die {<br>
+&nbsp;&nbsp;constructor () {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;_faceValue.set(this, undefined)<br>
+&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;get faceValue () {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;return _faceValue.get(this)<br>
+&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;set faceValue (value) {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;const numberValue = Number(value)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;if (!Number.isInteger(numberValue) || numberValue &lt; 1 || numberValue &gt; 6) {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;throw new Error('faceValue must be set to an integer between 1 and 6.')<br>
+&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;_faceValue.set(this, value)<br>
+&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;roll () {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;this.faceValue = Math.floor(Math.random() * 6) + 1<br>
+&nbsp;&nbsp;}<br>
+}<br>
+</code>
+</div>
+
+<div class="red">
+<code><br>
+class Die {<br>
+&nbsp;&nbsp;#faceValue // private class field/class property, stage 3 proposal ES2019<br>
+&nbsp;&nbsp;constructor () {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;this.roll()<br>
+&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;get faceValue () {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;return this.#faceValue<br>
+&nbsp;&nbsp;}<br>
+...<br>
+</code>
+</div>
+<p>Inheritance prevents code repetition.</p>
+
+<code><br>
+function Student (name, age, isCampus) {<br>
+&nbsp;&nbsp;Person.call(this, name, age) // call the constructor for Person (defined elsewhere)<br>
+&nbsp;&nbsp;this.isCampus = isCampus<br>
+}<br>
+Student.prototype = Object.create(Person.prototype) // inherits prototype from Person<br>
+Student.prototype.constructor =&nbsp;&nbsp;Student // restores constructor to Student<br>
+Student.prototype.toString = function() { // overshadows the method in Person.prototype<br>
+&nbsp;&nbsp;return 'Jag, ' + this.name + ', läser på ' +<br>
+&nbsp;&nbsp;&nbsp;&nbsp;(this.isCampus ? 'campus' : 'distans') + ' och är ' +&nbsp;&nbsp;this.age + ' år.'<br>
+}<br>
+</code>
+
+<code><br>
+class Student extends Person {<br>
+&nbsp;&nbsp;constructor (name, age, isCampus) {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;super(name, age) // call constructor for Person<br>
+&nbsp;&nbsp;&nbsp;&nbsp;this.isCampus = isCampus<br>
+&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;toString() { // overshadows the method in Person<br>
+&nbsp;&nbsp;&nbsp;&nbsp;return 'Jag, ' + this.name + ', läser på ' +<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(this.isCampus ? 'campus' : 'distans') + ' och är ' +&nbsp;&nbsp;this.age + ' år.'<br>
+&nbsp;&nbsp;}<br>
+}<br>
+</code>
+<p>Do obj instanceof Constructor to check if the constructor helped create the object.</p>
+
+<div class="red">
+<code><br>
+const personBase = {<br>
+&nbsp;&nbsp;toString: function () {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;return `Jag, ${this.name}, är ${this.age} år.`<br>
+&nbsp;&nbsp;}<br>
+}<br>
+let createPerson = function (name, age) {<br>
+&nbsp;&nbsp;return Object.create(personBase, {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;age: {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value: age,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;writable: true, configurable: true, enumerable: true<br>
+&nbsp;&nbsp;&nbsp;&nbsp;},<br>
+&nbsp;&nbsp;&nbsp;&nbsp;name: {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value: name,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;writable: true, configurable: true, enumerable: true<br>
+&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;})<br>
+}<br>
+let createStudent = function (name, age, isCampus) {<br>
+&nbsp;&nbsp;let obj = Object.create(createPerson(name, age), {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;isCampus: {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value: isCampus,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;writable: true, configurable: true, enumerable: true<br>
+&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;})<br>
+&nbsp;&nbsp;obj.toString = function () {<br>
+...<br>
+</code>
+</div>
+<h1>Lecture 8</h1>
+<p>Code should be easy to read, easy to understand, easy to maintain and easy to collaborate on.</p>
+<p>Modules contain objects that contain functions.</p>
+<p>A module contains code for some task that may be needed in several places, easy reusability is therefore a key goal. A big tangled nest of stuff that does everything together may work but when something breaks you have to pick it all apart. Instead of mixing logic with UI we can have specific files, with only console code, that are easy to plug into different graphical frameworks. Robust test coverage can also be developed better.</p>
+<p>Node.js handles modules with their own implementation of CommonJS. The clientside uses ECMAScript Modules (ES Modules).</p>
+<p>Functions not assigned to module.exports are private within the module. Functions can be assigned there directly: module.exports.fun = function () {}</p>
+<p>An object with the functions can be assigned to module.exports, or a constructor. For the module root to be a constructor upon import one can NOT assign module.exports.Constructor=Constructor, it has to be on the root: module.exports = Constructor</p>
+<p>Import with relative path: const greetings = require('./src/greetings')</p>
+<p>The import path has to start with ./ or ../ or / or be a core module or be in the node_modules catalogue.</p>
+<p>If the path isn't a valid file Node.js tries adding .js then .json and finally .node.</p>
+<p>Regular expressions are essential due to their ability to update code with advanced search and replace operations. Take time to get familiar with them, at first it will look extremely cryptic: /^[1-9]\d{2} ?\d{2}$/.test(value)</p>
+<p>Examining new RegExp('^[1-9]\d{2} ?\d{2}$') we find ^ is start of string, [1-9] is any number except zero exactly once, \d{2} is any number twice, ? is nothing or a space and $ is end of string.</p>
+<p>Squaring an array:
+<code><br>
+// imperative<br>
+let arr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]<br>
+for (let i = 0; i &lt; arr.length; i += 1) {<br>
+&nbsp;&nbsp;arr[i] = Math.pow(arr[i], 2)<br>
+}<br>
+// declarative with anonymous function expression<br>
+let sqrArr = arr.map(function(num) {<br>
+&nbsp;&nbsp;return Math.pow(num, 2)<br>
+})<br>
+// declarative with arrow function (lambda expression)<br>
+sqrArr = arr.map(num => Math.pow(num, 2))<br>
+</code>
+Note that arrow functions cannot be used as prototypes (because of peculiarities with this).</p>
+
+<a href="http://kangax.github.io/compat-table/esnext/"> Proposals for the ECMAScript standard.</a>
+
+<br><br><br>
+<footer>
+<nav>
+	<a href="../index.html">Home.</a>
+	<a href="index.html">Index.</a>
+	<a href="javascript.html">JavaScript lectures.</a>
+</nav>
+</footer>
+</body>
+</html>

@@ -28,20 +28,27 @@ end
 
 function process(fname,title)
 	text=read("$fname.txt",String)
+	text=replace(text, "< " => "&lt; ")
+	text=replace(text, " >" => " &gt;")
+	codeloc=something(findfirst("\n<code>", text), 0:-1)
+	while !isempty(collect(codeloc))
+		codeend=something(findfirst("</code>",text[codeloc[end]:end]), 0:-1).+(codeloc[end]-1)
+		codetext=text[codeloc[2]:codeend[1]]
+		codetext=replace(codetext, "\n" => "<br>\n")
+		codetext=replace(codetext, "  " => "&nbsp;&nbsp;")
+		text=text[1:codeloc[1]]*codetext*text[codeend[2]:end]
+		codeloc=something(findfirst("\n<code>", text[codeloc[end]:end]), 0:-1).+codeloc[end-1]
+	end
 	linkloc=something(findfirst("\nhttp", text), 0:-1)
 	while !isempty(collect(linkloc))
-#		println(text[linkloc])
 		linkend=skipto(text[linkloc[end]:end],' ')
 		lineend=skipto(text[linkloc[end]:end],'\n')
-		#println("$(linkloc[1]),$linkend,$lineend")
 		if linkend==0 #why does it become 0..?
 			linkend=lineend
 		end
 		linkend=min(linkend,lineend)
 		linkloc=linkloc[2]:linkloc[end]+linkend-2
 		link=text[linkloc]
-		#println(link)
-		#println("ll: $linkloc,le: $lineend, linkend")
 		if text[linkloc[1]-1]=='\n' && lineend>linkend
 			linktextloc=linkloc[end]+1:linkloc[4]+lineend-2
 			linktext=text[linktextloc]
@@ -54,7 +61,6 @@ function process(fname,title)
 			text=text[1:linkloc[1]-1]*htmltext*text[linkloc[end]+1:end]
 		end
 		linkloc=something(findfirst("\nhttp",text[linkloc[1]+l:end]), 0:-1).+(linkloc[1]+l-1)
-		#println(htmltext)
 	end
 	hloc=something(findfirst("*", text), 0:-1)
 	while !isempty(collect(hloc))
@@ -65,7 +71,7 @@ function process(fname,title)
 		htext=text[hstart:hstart+lineend-2]
 		htmltext="<h$hn>$htext</h$hn>\n"
 		text=text[1:hloc1-1]*htmltext*text[hstart+lineend-1:end]
-		hloc=something(findfirst("*", text), 0:-1)
+		hloc=something(findfirst("\n*", text), 0:-1)
 	end
 	hloc=something(findfirst("\n#",text), 0:-1)
 	while !isempty(collect(hloc))
@@ -76,37 +82,29 @@ function process(fname,title)
 		htext=text[hstart:hstart+lineend-2]
 		htmltext="<h$(hn+3)>$htext</h$(hn+3)>\n"
 		text=text[1:hloc1-1]*htmltext*text[hstart+lineend-1:end]
-		#print(text[hstart-15:hstart+100])
 		hloc=something(findfirst("\n#",text), 0:-1)
 	end
 	imgloc=something(findfirst("\nimg: ",text), 0:-1)
 	while !isempty(collect(imgloc))
 		lineend=skipto(text[imgloc[end]:end],'\n')
 		htmltext="""<img src="$(text[imgloc[end]+1:imgloc[end]+lineend-2])" alt="$(text[imgloc[end]+1:imgloc[end]+lineend-2])">"""
-#		println(htmltext)
 		text=text[1:imgloc[1]]*"\n"*htmltext*"\n"*"\n"*text[imgloc[end]+lineend-1:end]
 		imgloc=something(findfirst("\nimg:",text), 0:-1)
 		break
 	end
 	ulloc=something(findfirst("<ul>",text), 0:-1)
 	while !isempty(collect(ulloc))
-		#println(text[ulloc[1]:ulloc[end]+3])
 		tulloc=something(findfirst("</ul>",text[ulloc[end]:end]), 0:-1).+(ulloc[end]-1)
 		list=text[ulloc[end]+2:tulloc[1]-2]
 		listarray=makelistarray(list*"\n ")
-		#show(list);println("\n\n\n")
-		#show(listarray);println("\n\n\n")
 		htmltext=""
 		for li in listarray
 			htmltext*="<li>$li</li>\n"
 		end
 		text=text[1:ulloc[end]]*htmltext*text[tulloc[1]:end]
 		ulloc=something(findfirst("<ul>",text[tulloc[end]:end]), 0:-1).+(tulloc[end]-1)
-		#println(text[ulloc])
 	end
-	while occursin("\n\n\n",text)
-		text=replace(text,"\n\n\n" => "\n\n")
-	end
+	text=replace(text,"\n\n\n" => "\n\n")
 	nnloc=something(findfirst("\n\n",text), 0:-1)
 	while !isempty(collect(nnloc))
 		nnnloc=something(findfirst("\n\n",text[nnloc[end]:end]), 0:-1).+(nnloc[end]-1)
@@ -128,44 +126,47 @@ function process(fname,title)
 		text=text[1:medloc[1]]*htmltext*text[nloc[1]:end]
 		medloc=something(findfirst("\nyellow:",text[medloc[end]:end]), 0:-1)+medloc[end]-1
 	end
-	while occursin("<easy>",text)
-		text=replace(text,"<easy>" => """<span class="easy">""")
-	end
-	while occursin("<green>",text)
-		text=replace(text,"<green>" => """<span class="easy">""")
-	end
-	while occursin("<yellow>",text)
-		text=replace(text,"<yellow>" => """<span class="medium">""")
-	end
-	while occursin("<red>",text)
-		text=replace(text,"<red>" => """<span class="hard">""")
-	end
+	text=replace(text,"<easy>" => """<div class="easy">""")
+	text=replace(text,"<green>" => """<div class="green">""")
+	text=replace(text,"<yellow>" => """<div class="yellow">""")
+	text=replace(text,"<red>" => """<div class="red">""")
 	nav=read("nav.txt",String)
 	dir=read("title.txt",String)
+	dir=dir[1:end-1]
 	doc="""<!DOCTYPE html>
 	<html lang="en">
 	<head>
 	  <meta charset="utf-8">
-	  <title>LearnLite: $dir $title</title>
+	  <title>LearnLite: $dir, $title</title>
 	<link rel="stylesheet" type="text/css" href="../style.css">
 	</head>
 	<body>
 	$nav
 	$text
+	<br><br><br>
 	<footer>
 	$nav
 	</footer>
 	</body>
 	</html>"""
-
-	f=open("$fname.html","w")
+	f=open("pppout/$fname.html","w")
 	write(f,doc)
 	close(f)
-#	print(text)
 end
 
 pagestoprocess=readdlm("pages.txt",'/')
-for pi in 1:size(pagestoprocess,1)
-	process(pagestoprocess[pi,1],pagestoprocess[pi,2])
+nav="""<nav>
+	<a href="../index.html">Home.</a>
+"""
+for pai in 1:size(pagestoprocess,1)
+	global nav*="""	<a href="$(pagestoprocess[pai,1]).html">$(pagestoprocess[pai,2]).</a>\n"""
 end
-
+nav*="</nav>"
+f=open("nav.txt","w")
+write(f,nav)
+close(f)
+isdir("pppout") ? nothing : mkdir("pppout")
+for pai in 1:size(pagestoprocess,1)
+	process(pagestoprocess[pai,1],pagestoprocess[pai,2])
+end
+rm("nav.txt")

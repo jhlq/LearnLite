@@ -1,6 +1,6 @@
-***Basic programming
+***Foundational programming
 
-About JavaScript and Node.js. Notes for a course at Linnaeus University: https://coursepress.gitbook.io/1dv021/
+Notes for a course at Linnaeus University about JavaScript and Node.js: https://coursepress.gitbook.io/1dv021/
 
 The course features videos and 
 https://eloquentjavascript.net/ the online book Eloquent JavaScript.
@@ -107,7 +107,7 @@ The course standard prohibits " for string, use '
 
 Use \n for new lines: 'Line one\ntwo.'
 
-Boolean operations: <, >, <=, >=, ==, !=, === (includes type), !== (includes type), && (AND), || (OR), ! (NOT)
+Boolean operations: &lt;, >, &lt;=, >=, ==, !=, === (includes type), !== (includes type), && (AND), || (OR), ! (NOT)
 
 Variables are declared with let or var, var is for backwards compatibility, let is almost always better since variables wont leak to other scopes.
 
@@ -247,10 +247,10 @@ Object.keys(obj) gives an array with the property names.
 Use throw to abort with error: if (!Array.isArray(arr)) { throw new TypeError(`arr doesn't refer to an array.`) }
 
 <code>
-try {<br>
-  bar(foo)<br>
-} catch (e) {<br>
-  console.error(e.message)<br>
+try {
+  bar(foo)
+} catch (e) {
+  console.error(e.message)
 }
 </code>
 
@@ -399,7 +399,7 @@ class Die {
   }
 }
 </code>
-</yellow>
+</div>
 
 <red>
 <code>
@@ -413,7 +413,7 @@ class Die {
   }
 ...
 </code>
-</red>
+</div>
 
 Inheritance prevents code repetition.
 
