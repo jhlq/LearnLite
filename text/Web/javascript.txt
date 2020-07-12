@@ -334,3 +334,144 @@ const createPerson = function (name, age) {
 }
 </code>
 </div>
+
+*Lecture 7
+Introducing Node.js modules.
+
+Define a rectangle constructor function in a separate file and end with module.exports=Rectangle then:
+<code>
+const Rectangle = require('./src/Rectangle')
+const rectangle = new Rectangle()
+</code>
+
+Object instances have a __proto__ reference to the constructors prototype.
+
+Variables set with this are public whereas if you let set a value in the constructor it is private and only accessible through the functions (such as getters/setters).
+
+<code>
+function Die () {
+  this._faceValue = undefined // semi-private property
+}
+Object.defineProperty(Die.prototype, 'faceValue', {
+  get: function () {
+    return this._faceValue
+  }
+})
+</code>
+
+Try adding a set: function to the above code that only allows certain numbers.
+
+Private variables can have annoying side effects, sure it prevents users from making dumb mistakes but if you know what you are doing it is a pain to not be allowed to do it.
+
+<code>
+class Die {
+  constructor () {
+    this._faceValue = undefined
+  }
+  get faceValue () {
+    return this._faceValue
+  }
+  roll () {
+    this._faceValue = Math.floor(Math.random() * 6) + 1
+  }
+}
+</code>
+
+<yellow>
+<code>
+const _faceValue = new WeakMap()
+class Die {
+  constructor () {
+    _faceValue.set(this, undefined)
+  }
+  get faceValue () {
+    return _faceValue.get(this)
+  }
+  set faceValue (value) {
+    const numberValue = Number(value)
+    if (!Number.isInteger(numberValue) || numberValue < 1 || numberValue > 6) {
+      throw new Error('faceValue must be set to an integer between 1 and 6.')
+    }
+    _faceValue.set(this, value)
+  }
+  roll () {
+    this.faceValue = Math.floor(Math.random() * 6) + 1
+  }
+}
+</code>
+</yellow>
+
+<red>
+<code>
+class Die {
+  #faceValue // private class field/class property, stage 3 proposal ES2019
+  constructor () {
+    this.roll()
+  }
+  get faceValue () {
+    return this.#faceValue
+  }
+...
+</code>
+</red>
+
+Inheritance prevents code repetition.
+
+<code>
+function Student (name, age, isCampus) {
+  Person.call(this, name, age) // call the constructor for Person (defined elsewhere)
+  this.isCampus = isCampus
+}
+Student.prototype = Object.create(Person.prototype) // inherits prototype from Person
+Student.prototype.constructor =  Student // restores constructor to Student
+Student.prototype.toString = function() { // overshadows the method in Person.prototype
+  return 'Jag, ' + this.name + ', läser på ' +
+    (this.isCampus ? 'campus' : 'distans') + ' och är ' +  this.age + ' år.'
+}
+</code>
+
+<code>
+class Student extends Person {
+  constructor (name, age, isCampus) {
+    super(name, age) // call constructor for Person
+    this.isCampus = isCampus
+  }
+  toString() { // overshadows the method in Person
+    return 'Jag, ' + this.name + ', läser på ' +
+      (this.isCampus ? 'campus' : 'distans') + ' och är ' +  this.age + ' år.'
+  }
+}
+</code>
+
+Do obj instanceof Constructor to check if the constructor helped create the object.
+
+<red>
+<code>
+const personBase = {
+  toString: function () {
+    return `Jag, ${this.name}, är ${this.age} år.`
+  }
+}
+let createPerson = function (name, age) {
+  return Object.create(personBase, {
+    age: {
+      value: age,
+      writable: true, configurable: true, enumerable: true
+    },
+    name: {
+      value: name,
+      writable: true, configurable: true, enumerable: true
+    }
+  })
+}
+let createStudent = function (name, age, isCampus) {
+  let obj = Object.create(createPerson(name, age), {
+    isCampus: {
+      value: isCampus,
+      writable: true, configurable: true, enumerable: true
+    }
+  })
+  obj.toString = function () {
+...
+</code>
+</div>
