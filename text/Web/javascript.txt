@@ -253,3 +253,84 @@ try {<br>
   console.error(e.message)<br>
 }
 </code>
+
+*Lecture 6
+
+<code>
+const die = {
+  faceValue: undefined,
+  roll: function () {
+    this.faceValue = Math.floor(Math.random() * 6) + 1
+  }
+}
+</code>
+
+The this keyword should be used sparingly as it can suddenly point to something unexpected, for example in callbacks. Check out the bind and call/apply functions.
+
+Default argument values can be specified like so: function (greet = 'Hej!')
+
+If you need many dices create a Factory: a function that creates a die object and then returns it; or a Constructor invoked with new.
+
+<code>
+function Die () {
+  this.faceValue = undefined
+  this.roll = function () {
+    this.faceValue = Math.floor(Math.random() * 6) + 1
+  }
+}
+const die = new Die()
+console.log(Object.getOwnPropertyNames(die)) // OUTPUT: [ 'faceValue', 'roll' ]
+</code>
+
+Constructors accept parameters like ordinary functions.
+
+To avoid duplicating the roll function in every Die object declare it as a prototype:
+<code>
+function Die () {
+  this.faceValue = undefined
+}
+Die.prototype.roll = function () {
+  this.faceValue = Math.floor(Math.random() * 6) + 1
+}
+const die = new Die()
+</code>
+
+The class syntax can be used since ECMAScript 2015:
+<code>
+class Die {
+  constructor () {
+    this.faceValue = undefined
+  }
+  roll () {
+    this.faceValue = Math.floor(Math.random() * 6) + 1
+  }
+}
+const die = new Die()
+</code>
+
+<yellow>
+The designpattern OLOO (Object Linked to Other Objects) is an advanced alternative:
+<code>
+const Person = {
+  talk: function () {
+    console.log('Jag, ' + this.name + ', är ' + this.age + ' år.')
+  }
+}
+const createPerson = function (name, age) {
+  return Object.create(Person, {
+    'name': {
+      value: name,
+      writable: true,
+      enumerable: true,
+      configurable: true
+    },
+    'age': {
+      value: age,
+      writable: true,
+      enumerable: true,
+      configurable: true
+    }
+  })
+}
+</code>
+</div>
