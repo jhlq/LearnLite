@@ -1,3 +1,5 @@
+***Basic programming
+
 About JavaScript and Node.js. Notes for a course at Linnaeus University: https://coursepress.gitbook.io/1dv021/
 
 The course features videos and 
@@ -5,6 +7,16 @@ https://eloquentjavascript.net/ the online book Eloquent JavaScript.
  The book JavaScript: The Good Parts is a recommended resource.
 
 A few guides in setting up the environment with Git prepares for the exercises.
+
+The course does not endorse semicolons however
+https://google.github.io/styleguide/javascriptguide.xml#Semicolons the Google JavaScript style guide
+ says "Always use semicolons. Relying on implicit insertion can cause subtle, hard to debug problems."
+
+A potential problem is illustrated by the following which tries to call c(d+e):
+<code>
+a = b + c <br>
+(d + e).print()
+</code>
 
 *Introduction
 
@@ -186,4 +198,58 @@ A function can be passed as an argument.
 
 Closure: a function returns a nested function with access to the local scope.
 
+*Lecture 4
 
+Arrays start with index 0 and while they can hold values of multiple types this should be avoided.
+
+An array arr is defined simply as [1,2,3], the number of elements is stored in a.length, arr[1]==2.
+
+for (let i = 0; i < arr.length; i++) { }
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array Mozillas Array reference page.
+
+An array variable only holds a reference to the array so if you set b=a and change b a will also be changed. To deepcopy an array with simple types (no functions) you can do b=JSON.parse(JSON.stringify(arr))
+
+Push (append) a random number from 0 to 9 like so: arr.push(Math.floor(Math.random() * 10))
+
+A function that takes an array and modifies it modifies the original array, it is necessary to clearly indicate which functions potentially modify their arguments to avoid silent data corruption.
+
+To copy an array you can do c=arr.slice(). Note that unlike the JSON method above if arr contains nested arrays they will still be the same memory object in c.
+
+With arr.sort() elements are sorted through string conversion, ie 10 comes before 2. To custom sort pass a function like so: arr.sort(function (a, b) { return a - b })
+
+arr.forEach(function (value) { console.log(value) });
+
+let sum = arr.reduce(function (a, b) { return a + b }, 0)
+
+Remember to declare variables like sum with eg let or they will leak to global scope, strict mode prevents this.
+
+arr.filter(function (a) { return a % 2 === 0 });
+
+arr.map(function (a) { return a * 2 });
+
+*Lecture 5
+
+Objects are declared like so: let obj = { a: 'some', b: 1 }
+
+Object variables hold references like for arrays.
+
+An empty object can be declared like {} (or new Object()) and fields added like so: obj.c='here'
+
+Object.create(Object.prototype[, properties]) is another option.
+
+Object properties are accessed with obj.a or obj['b']
+
+for (let propertyName in obj) { console.log(propertyName + ': ' + obj[propertyName]) }
+
+Object.keys(obj) gives an array with the property names.
+
+Use throw to abort with error: if (!Array.isArray(arr)) { throw new TypeError(`arr doesn't refer to an array.`) }
+
+<code>
+try {<br>
+  bar(foo)<br>
+} catch (e) {<br>
+  console.error(e.message)<br>
+}
+</code>
