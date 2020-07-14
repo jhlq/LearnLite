@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>LearnLite: Web development, JavaScript lectures</title>
+	<meta charset="utf-8">
+	<title>LearnLite: Web development, JavaScript lectures</title>
 <link rel="stylesheet" type="text/css" href="../style.css">
 </head>
 <body>
@@ -10,22 +10,24 @@
 	<a href="../index.html">Home.</a>
 	<a href="index.html">Index.</a>
 	<a href="javascript.html">JavaScript lectures.</a>
+	<a href="design.html">Web technology.</a>
 </nav>
 <h1>Foundational programming</h1>
 <p>Notes for a course at Linnaeus University about JavaScript and Node.js: https://coursepress.gitbook.io/1dv021/</p>
 <p>The course features videos and 
-<a href="https://eloquentjavascript.net/"> the online book Eloquent JavaScript.</a>
+<a href="https://eloquentjavascript.net/" target="_blank"> the online book Eloquent JavaScript.</a>
  The book JavaScript: The Good Parts is a recommended resource.</p>
 <p>A few guides in setting up the environment with Git prepares for the exercises.</p>
 <p>The course does not endorse semicolons however
-<a href="https://google.github.io/styleguide/javascriptguide.xml#Semicolons"> the Google JavaScript style guide</a>
+<a href="https://google.github.io/styleguide/javascriptguide.xml#Semicolons" target="_blank"> the Google JavaScript style guide</a>
  says "Always use semicolons. Relying on implicit insertion can cause subtle, hard to debug problems."</p>
 <p>A potential problem is illustrated by the following which tries to call c(d+e):
 <code><br>
 a = b + c <br>
 (d + e).print()<br>
-</code>
-<h1>Introduction</h1></p>
+</code></p>
+
+<h2>Introduction</h2>
 <p>Goals:</p>
 
 <ul><li>Types and structures of data.
@@ -102,22 +104,23 @@ Chapters 6-12.
 <ul><li>IDE like Visual Studio Code or Geany.
 </li>
 <li>
-<a href="https://nodejs.org/"> Node.js (application environment)</a>
+<a href="https://nodejs.org/" target="_blank"> Node.js (application environment)</a>
 </li>
 <li>
-<a href="https://www.npmjs.com/"> npm (package manager)</a>
+<a href="https://www.npmjs.com/" target="_blank"> npm (package manager)</a>
 </li>
 <li>
-<a href="https://git-scm.com/"> Git (version control)</a>
+<a href="https://git-scm.com/" target="_blank"> Git (version control)</a>
 </li>
 <li>
-<a href="https://mochajs.org/"> Mocha (testing framework)</a>
+<a href="https://mochajs.org/" target="_blank"> Mocha (testing framework)</a>
 </li>
 <li>
-<a href="https://standardjs.com/"> JavaScript Standard Style</a>
+<a href="https://standardjs.com/" target="_blank"> JavaScript Standard Style</a>
 </li>
 </ul>
-<h1>Lecture 1</h1>
+
+<h2>Lecture 1</h2>
 <p>Keywords: history, datatypes, Number, String, Boolean, Object, typeof, arithmetic, logic, expressions, statements, variables, keywords, reserved words, functions.</p>
 <p>JavaScript 1.0 was launched 1995 to validate forms before sending them to the server.</p>
 <p>Node.js is an open source platform used to run JavaScript code on a server.</p>
@@ -267,13 +270,15 @@ protected
 </li>
 </ul>
 <p>Try console.log and Math.min(2,1,3)</p>
-<p>Functions can be declared with 'let f=function(){return 1}' or 'function f(){return 1}'. If return is missing undefined is returned.
-<h1>Lecture 2</h1></p>
+<p>Functions can be declared with 'let f=function(){return 1}' or 'function f(){return 1}'. If return is missing undefined is returned.</p>
+
+<h2>Lecture 2</h2>
 <p>Control structures: if (else)(else if), switch, a?1:0, while, do...while, for, recursion (a function calling itself is a likely apocalyptic cause)</p>
 <p>for (let i = 0; i &lt; 10; i++) { }</p>
 <p>Use break to exit a loop, continue to skip to next iteration.</p>
-<p>Comments are made with // or, with caution, /* */. Commenting out blocks of code is not recommended for the long term, conditioning out with if (false) prevents code rot but still leaves confusing bloat.
-<h1>Lecture 3</h1></p>
+<p>Comments are made with // or, with caution, /* */. Commenting out blocks of code is not recommended for the long term, conditioning out with if (false) prevents code rot but still leaves confusing bloat.</p>
+
+<h2>Lecture 3</h2>
 <p>Some functions are built in: console.log('Hej hopp!'); let result = Math.floor(3.14)</p>
 <p>Functions are required to not repeat code, DRY (Don't Repeat Yourself) coding is crucial. It is good to have at least one test for every function as this also serves as documentation, writing tests before the code has proven benefits such as increased modularity (see Test Driven Development).</p>
 <p>Math.random() returns a value from 0 to 1.</p>
@@ -281,13 +286,14 @@ protected
 <p>Scopes are intricate, in short a variable declared inside a function is not accessible outside it.</p>
 <p>For better and silent upstream toxin worse JavaScript simply ignores function calls with the wrong amount of arguments, resulting in weird undefined or NaN values showing up in unexpected places much later.</p>
 <p>A function can be passed as an argument.</p>
-<p>Closure: a function returns a nested function with access to the local scope.
-<h1>Lecture 4</h1></p>
+<p>Closure: a function returns a nested function with access to the local scope.</p>
+
+<h2>Lecture 4</h2>
 <p>Arrays start with index 0 and while they can hold values of multiple types this should be avoided.</p>
 <p>An array arr is defined simply as [1,2,3], the number of elements is stored in a.length, arr[1]==2.</p>
 <p>for (let i = 0; i &lt; arr.length; i++) { }</p>
 
-<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array"> Mozillas Array reference page.</a>
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array" target="_blank"> Mozillas Array reference page.</a>
 <p>An array variable only holds a reference to the array so if you set b=a and change b a will also be changed. To deepcopy an array with simple types (no functions) you can do b=JSON.parse(JSON.stringify(arr))</p>
 <p>Push (append) a random number from 0 to 9 like so: arr.push(Math.floor(Math.random() * 10))</p>
 <p>A function that takes an array and modifies it modifies the original array, it is necessary to clearly indicate which functions potentially modify their arguments to avoid silent data corruption.</p>
@@ -297,8 +303,9 @@ protected
 <p>let sum = arr.reduce(function (a, b) { return a + b }, 0)</p>
 <p>Remember to declare variables like sum with eg let or they will leak to global scope, strict mode prevents this.</p>
 <p>arr.filter(function (a) { return a % 2 === 0 });</p>
-<p>arr.map(function (a) { return a * 2 });
-<h1>Lecture 5</h1></p>
+<p>arr.map(function (a) { return a * 2 });</p>
+
+<h2>Lecture 5</h2>
 <p>Objects are declared like so: let obj = { a: 'some', b: 1 }</p>
 <p>Object variables hold references like for arrays.</p>
 <p>An empty object can be declared like {} (or new Object()) and fields added like so: obj.c='here'</p>
@@ -315,7 +322,8 @@ try {<br>
 &nbsp;&nbsp;console.error(e.message)<br>
 }<br>
 </code>
-<h1>Lecture 6</h1>
+
+<h2>Lecture 6</h2>
 
 <code><br>
 const die = {<br>
@@ -389,7 +397,8 @@ const createPerson = function (name, age) {<br>
 }<br>
 </code>
 </div>
-<h1>Lecture 7</h1>
+
+<h2>Lecture 7</h2>
 <p>Introducing Node.js modules.</p>
 <p>Define a rectangle constructor function in a separate file and end with module.exports=Rectangle then:
 <code><br>
@@ -522,7 +531,8 @@ let createStudent = function (name, age, isCampus) {<br>
 ...<br>
 </code>
 </div>
-<h1>Lecture 8</h1>
+
+<h2>Lecture 8</h2>
 <p>Code should be easy to read, easy to understand, easy to maintain and easy to collaborate on.</p>
 <p>Modules contain objects that contain functions.</p>
 <p>A module contains code for some task that may be needed in several places, easy reusability is therefore a key goal. A big tangled nest of stuff that does everything together may work but when something breaks you have to pick it all apart. Instead of mixing logic with UI we can have specific files, with only console code, that are easy to plug into different graphical frameworks. Robust test coverage can also be developed better.</p>
@@ -550,7 +560,7 @@ sqrArr = arr.map(num => Math.pow(num, 2))<br>
 </code>
 Note that arrow functions cannot be used as prototypes (because of peculiarities with this).</p>
 
-<a href="http://kangax.github.io/compat-table/esnext/"> Proposals for the ECMAScript standard.</a>
+<a href="http://kangax.github.io/compat-table/esnext/" target="_blank"> Proposals for the ECMAScript standard.</a>
 
 <br><br><br>
 <footer>
@@ -558,6 +568,7 @@ Note that arrow functions cannot be used as prototypes (because of peculiarities
 	<a href="../index.html">Home.</a>
 	<a href="index.html">Index.</a>
 	<a href="javascript.html">JavaScript lectures.</a>
+	<a href="design.html">Web technology.</a>
 </nav>
 </footer>
 </body>
