@@ -52,11 +52,11 @@ function process(fname,title)
 		if text[linkloc[1]-1]=='\n' && lineend>linkend
 			linktextloc=linkloc[end]+1:linkloc[4]+lineend-2
 			linktext=text[linktextloc]
-			htmltext="""<a href="$link">$linktext</a>"""
+			htmltext="""<a href="$link" target="_blank">$linktext</a>"""
 			l=length(htmltext)
 			text=text[1:linkloc[1]-1]*htmltext*text[linktextloc[end]+1:end]
 		else
-			htmltext="""<a href="$link">$link</a>"""
+			htmltext="""<a href="$link" target="_blank">$link</a>"""
 			l=length(htmltext)
 			text=text[1:linkloc[1]-1]*htmltext*text[linkloc[end]+1:end]
 		end
@@ -64,7 +64,7 @@ function process(fname,title)
 	end
 	hloc=something(findfirst("*", text), 0:-1)
 	while !isempty(collect(hloc))
-		hloc1=hloc[1]
+		hloc1=hloc[end]
 		hn=text[hloc1+1]=='*' ? (text[hloc1+2]=='*' ? 1 : 2) : 3
 		hstart=hloc1+4-hn
 		lineend=skipto(text[hstart:end],'\n')
@@ -136,8 +136,8 @@ function process(fname,title)
 	doc="""<!DOCTYPE html>
 	<html lang="en">
 	<head>
-	  <meta charset="utf-8">
-	  <title>LearnLite: $dir, $title</title>
+		<meta charset="utf-8">
+		<title>LearnLite: $dir, $title</title>
 	<link rel="stylesheet" type="text/css" href="../style.css">
 	</head>
 	<body>
