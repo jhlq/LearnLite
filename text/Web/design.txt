@@ -219,6 +219,37 @@ Chapters LWD 14-16, EUE 5.
 
 Task 3: requirements specification, structure, evaluation & testing, documentation.
 
+*Lecture
+
+CSS replaces the old methods of structuring pages with tables.
+
+http://medieteknik.lnu.se/1me321/forelasningar/f5/css-ex7.zip Examples with tabs.
+
+ <b>Structure plane</b>
+
+Shift from abstract issues of strategy and scope to conctrete factors of experience.
+
+What and how to be done? Organization and structure.
+
+Interaction design and information architecture is about understanding behaviour of people.
+
+Watch out for the curse of knowledge, when we know how it is supposed to work it can be hard to realize how someone who doesn't sees it.
+
+<ul>
+Gulf of execution: distance between user goals their achievement with the system.
+Gulf of evaluation: distance between the system representation and user goals.
+</ul>
+
+Information architecture is concerned with efficient navigational schemes.
+
+Determine groups of categories and their relations.
+
+Navigational structure can be circular.
+
+Information should not only be easy to find but if the desired item is not present this should be quickly evident.
+
+How to handle information belonging to multiple categories?
+
 **Week 6
 
 UI, responsive design.
