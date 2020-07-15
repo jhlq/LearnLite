@@ -3,5 +3,6 @@ Tooltips
 fix style.css
 next button
 different style for internal links
+navs for rhythm
 
 split file on \n\n, check each entry: for opword; wrap each non excluded entry in <p>

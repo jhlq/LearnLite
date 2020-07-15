@@ -132,6 +132,38 @@ Start task 3: analysis.
 
 Deadline task 1.
 
+*Lecture
+
+Block elements have their own line(s), inline elements don't. Block elements are not allowed inside inline elements.
+
+Block: div, h1-h6, p, ol, ul, header, nav, main, footer, article, section, aside
+
+Inline: span, a, img, b, i, strong
+
+Use id="name" to name tags.
+
+Global, local and contextual navigation.
+
+Imagine a user is dropped in the middle of your site, how easy is it to navigate around?
+
+Support: sticky navigation buttons, back-tracking bread crumbs, site map, search system, guide.
+
+Contextual links text should be descriptive.
+
+Labels: title, headers, link names, noun = content, verb = function.
+
+Icons look good but can be hard to interpret.
+
+ <b>Strategy plane</b>
+
+What do we want? What do our users want?
+
+Analyse purpose, goals and needs. Prepare for requirements specification.
+
+Who are the users? What goals do they have? What do we need to know about them?
+
+Analyse similar websites. Interview customer and users
+
 **Week 4
 
 Requirements specification, CSS, cascade, id, class.
