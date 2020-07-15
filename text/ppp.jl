@@ -1,5 +1,5 @@
 #Preprintprocessor
-using DelimitedFiles
+using DelimitedFiles, Dates
 function skipto(str,char)
 	for ci in 1:length(str)
 		#print(str[ci])
@@ -40,6 +40,9 @@ function process(fname,title)
 		codeloc=something(findfirst("\n<code>", text[codeloc[end]:end]), 0:-1).+codeloc[end-1]
 	end
 	linkloc=something(findfirst("\nhttp", text), 0:-1)
+	if isempty(collect(linkloc))
+		linkloc=something(findfirst("\n!link:", text), 0:-1)
+	end
 	while !isempty(collect(linkloc))
 		linkend=skipto(text[linkloc[end]:end],' ')
 		lineend=skipto(text[linkloc[end]:end],'\n')
@@ -50,17 +53,26 @@ function process(fname,title)
 		linkloc=linkloc[2]:linkloc[end]+linkend-2
 		link=text[linkloc]
 		if text[linkloc[1]-1]=='\n' && lineend>linkend
-			linktextloc=linkloc[end]+1:linkloc[4]+lineend-2
+			linktextloc=linkloc[end]+1:linkloc[4]+lineend-(link[1]=='!' ? 0 : 2)
 			linktext=text[linktextloc]
 			htmltext="""<a href="$link" target="_blank">$linktext</a>"""
+			if link[1]=='!'
+				htmltext="""<a href="$(link[7:end])">$linktext</a>"""
+			end
 			l=length(htmltext)
 			text=text[1:linkloc[1]-1]*htmltext*text[linktextloc[end]+1:end]
 		else
 			htmltext="""<a href="$link" target="_blank">$link</a>"""
+			if link[1]=='!'
+				htmltext="""<a href="$(link[7:end])">$(link[7:end])</a>"""
+			end
 			l=length(htmltext)
 			text=text[1:linkloc[1]-1]*htmltext*text[linkloc[end]+1:end]
 		end
 		linkloc=something(findfirst("\nhttp",text[linkloc[1]+l:end]), 0:-1).+(linkloc[1]+l-1)
+		if isempty(collect(linkloc))
+			linkloc=something(findfirst("\n!link:", text), 0:-1)
+		end
 	end
 	hloc=something(findfirst("*", text), 0:-1)
 	while !isempty(collect(hloc))
@@ -106,7 +118,15 @@ function process(fname,title)
 		text=text[1:ulloc[end]]*htmltext*text[tulloc[1]:end]
 		ulloc=something(findfirst("\n<ul>",text[tulloc[end]:end]), 0:-1).+(tulloc[end]-1)
 	end
-	text=replace(text,"\n\n\n" => "\n\n")
+	text=replace(text,"<easy>" => """<div class="easy">\n""")
+	text=replace(text,"<green>" => """<div class="green">\n""")
+	text=replace(text,"<yellow>" => """<div class="yellow">\n""")
+	text=replace(text,"<red>" => """<div class="red">\n""")
+	text=replace(text,"</div>" => "\n</div>")
+	text*='\n'
+	while occursin("\n\n\n",text)
+		text=replace(text,"\n\n\n" => "\n\n")
+	end
 	nnloc=something(findfirst("\n\n",text), 0:-1)
 	while !isempty(collect(nnloc))
 		nnnloc=something(findfirst("\n\n",text[nnloc[end]:end]), 0:-1).+(nnloc[end]-1)
@@ -114,7 +134,7 @@ function process(fname,title)
 			break
 		end
 		p=text[nnloc[end]+1:nnnloc[1]-1]
-		if p[1]!='<'
+		if p!="" && p[1]!='<'
 			htmltext="<p>$p</p>"
 			text=text[1:nnloc[1]]*htmltext*text[nnnloc[1]:end]
 		end
@@ -128,10 +148,6 @@ function process(fname,title)
 		text=text[1:medloc[1]]*htmltext*text[nloc[1]:end]
 		medloc=something(findfirst("\nyellow:",text[medloc[end]:end]), 0:-1)+medloc[end]-1
 	end
-	text=replace(text,"<easy>" => """<div class="easy">""")
-	text=replace(text,"<green>" => """<div class="green">""")
-	text=replace(text,"<yellow>" => """<div class="yellow">""")
-	text=replace(text,"<red>" => """<div class="red">""")
 	nav=read("nav.txt",String)
 	dir=read("title.txt",String)
 	dir=dir[1:end-1]
@@ -149,6 +165,7 @@ function process(fname,title)
 	<footer>
 	$nav
 	</footer>
+	<p><small>Updated on $(Dates.today()).</small></p>
 	</body>
 	</html>"""
 	f=open("pppout/$fname.html","w")

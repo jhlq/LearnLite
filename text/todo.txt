@@ -1,7 +1,7 @@
-Multiline link list entries
+Multiline (eg link) list entries
 Tooltips
 fix style.css
-open external links in new tab?
+next button
 different style for internal links
 
 split file on \n\n, check each entry: for opword; wrap each non excluded entry in <p>

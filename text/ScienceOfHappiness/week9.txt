@@ -53,10 +53,10 @@ Go somewhere new. You're more likely to feel awe in a novel environment where th
 
 Here are some more specific ideas for where to take an awe-inspiring walk:
 <ul>
-<li>Hike up a mountain with panoramic views</li>
-<li>Walk along a trail lined with tall trees</li>
-<li>Walk along the shore of an ocean, lake, river, or waterfall</li>
-<li>Walk outside on a clear night and look up at the stars</li>
+Hike up a mountain with panoramic views
+Walk along a trail lined with tall trees
+Walk along the shore of an ocean, lake, river, or waterfall
+Walk outside on a clear night and look up at the stars
 </ul>
 <ul>
 Walk to a place where you can watch a sunset or sunrise
@@ -147,7 +147,7 @@ Some scholars claim every engaging story has a structure called the dramatic arc
 **Finding your fit
 Which practices feel like a good fit?
 
-http://cdp.sagepub.com/content/22/1/57.short?rss=1&ssource=mfr Simple positive activities.
+http://cdp.sagepub.com/content/22/1/57.short?rss=1&amp;ssource=mfr Simple positive activities.
 
 http://www.sonjalyubomirsky.com/wp-content/themes/sonjalyubomirsky/papers/LLinpress.pdf Success of positive activity interventions.
 
