@@ -92,7 +92,9 @@ function process(fname,title)
 		imgloc=something(findfirst("\nimg:",text), 0:-1)
 		break
 	end
-	ulloc=something(findfirst("<ul>",text), 0:-1)
+	text=replace(text,"\n\n<ul>" => "\n<ul>")
+	text=replace(text,"\n<ul>" => "\n\n<ul>")
+	ulloc=something(findfirst("\n<ul>",text), 0:-1)
 	while !isempty(collect(ulloc))
 		tulloc=something(findfirst("</ul>",text[ulloc[end]:end]), 0:-1).+(ulloc[end]-1)
 		list=text[ulloc[end]+2:tulloc[1]-2]
@@ -102,7 +104,7 @@ function process(fname,title)
 			htmltext*="<li>$li</li>\n"
 		end
 		text=text[1:ulloc[end]]*htmltext*text[tulloc[1]:end]
-		ulloc=something(findfirst("<ul>",text[tulloc[end]:end]), 0:-1).+(tulloc[end]-1)
+		ulloc=something(findfirst("\n<ul>",text[tulloc[end]:end]), 0:-1).+(tulloc[end]-1)
 	end
 	text=replace(text,"\n\n\n" => "\n\n")
 	nnloc=something(findfirst("\n\n",text), 0:-1)
