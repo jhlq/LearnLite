@@ -120,3 +120,75 @@ Open graph for sharing
 https://www.docker.com/ Docker prevents pollution
 https://github.com/1dv022/jekyll-boilerplate
 </ul>
+
+**L2
+
+<ul>
+Statistics
+Compatibility
+Internals
+Devtools
+Script loading
+Sandboxing
+Pollution
+Webpack
+</ul>
+
+Chrome is the most used browser followed by Safari and then FireFox.
+
+http://caniuse.com/
+
+UI, rendering engine, js engine, network layer, cookies, web storage, cache.
+
+Rendering engines: Blink, Gecko, WebKit
+
+JavaScript engines: V8, SpiderMonkey, WebKit
+
+Load content in the background (XHR / WS)
+
+Sandboxing prevents JavaScript from:
+<ul>
+Reading the local file system.
+Access some APIs without permission.
+Communicate with third party servers, CORS (Cross Origin Resouce Sharing) solves this.
+Find out the correct color of a link.
+</ul>
+
+< script src="js/app.js" >< /script > (Avoid coding directly within script tags), 
+https://www.growingwiththeweb.com/2014/02/async-vs-defer-attributes.html add async or defer to modify loading behaviour.
+ Specify type="module" to use ESM.
+
+In the browser all variables are attached to the window object.
+
+ESM benefits:
+<ul>
+'use strict' is standard
+Provides variable scoping
+Evaluated only once
+Executed asynchronosly
+</ul>
+
+<code>
+import { a as b } from './foo.js'
+import { a } from './foo.js'
+import * as nspace from './foo.js'
+</code>
+
+<code>
+export class MyClass {
+	constructor(){
+
+	}
+}
+</code>
+
+Developer tools:
+<ul>
+Inspect the code
+Watch network traffic
+Debug JavaScript
+Track down memoryleaks and bottlenecks with timelines/profiling
+Console
+</ul>
+
+
