@@ -3,4 +3,5 @@
 **Contents
 <ul>
 <a href="javascript.html">JavaScript lectures.</a>
+<a href="design.html">Design.</a>
 </ul>

@@ -350,6 +350,6 @@ Media from other sources can be added with an iframe.
 
 **Week 9
 
-Task 3: website looks, evaluation % testing, documentation.
+Task 3: website looks, evaluation & testing, documentation.
 
 Deadline task 3.

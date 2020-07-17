@@ -166,15 +166,85 @@ Where to find testers?
 <p>Start task 3: analysis.</p>
 <p>Deadline task 1.</p>
 
+<h3>Lecture</h3>
+<p>Block elements have their own line(s), inline elements don't. Block elements are not allowed inside inline elements.</p>
+<p>Block: div, h1-h6, p, ol, ul, header, nav, main, footer, article, section, aside</p>
+<p>Inline: span, a, img, b, i, strong</p>
+<p>Use id="name" to name tags.</p>
+<p>Global, local and contextual navigation.</p>
+<p>Imagine a user is dropped in the middle of your site, how easy is it to navigate around?</p>
+<p>Support: sticky navigation buttons, back-tracking bread crumbs, site map, search system, guide.</p>
+<p>Contextual links text should be descriptive.</p>
+<p>Labels: title, headers, link names, noun = content, verb = function.</p>
+<p>Icons look good but can be hard to interpret.</p>
+<p> <b>Strategy plane</b></p>
+<p>What do we want? What do our users want?</p>
+<p>Analyse purpose, goals and needs. Prepare for requirements specification.</p>
+<p>Who are the users? What goals do they have? What do we need to know about them?</p>
+<p>Analyse similar websites. Interview customer and users</p>
+
 <h2>Week 4</h2>
 <p>Requirements specification, CSS, cascade, id, class.</p>
 <p>Chapters LWD 11-13, EUE 4.</p>
 <p>Task 3: analysis, requirements specification, documentation.</p>
 
+<h3>Lecture</h3>
+<p>h1 {color:red; font-­‐style:italic;}</p>
+<p>CSS can be linked in, put in a style tag in the document head or directly in a tag as a style attribute.</p>
+<p>For id="welcome": #welcome {background­‐color:#F60; border:4px solid #930;}</p>
+<p>For class="floatLeft": .floatLeft {float:left; height:200px;}</p>
+<p>nav a {border:1px solid #999;}</p>
+<p>nav ul li {display:inline;} (Note that changing a block element to display inline does not permit it to be inside a real inline element.)</p>
+<p>The box model margins overlap.</p>
+<p>1 em = height of normal sized font (~16px)</p>
+
+<ul><li>a:link
+</li>
+<li>
+a:visited
+</li>
+<li>
+a:hover
+</li>
+<li>
+a:active
+</li>
+</ul>
+
+<a href="http://jigsaw.w3.org/css-validator/#validate_by_upload" target="_blank">http://jigsaw.w3.org/css-validator/#validate_by_upload</a>
+<p> <b>Scope plane</b></p>
+<p>Define what you are building and what you are not building.</p>
+<p>What should users be able to do? What content should there be?</p>
+<p>Goals, needs and analysis lead to requirements specification. Begin abstract without implementation details.</p>
+<p>Requirements should be concrete, "that should do this" rather than "this should be easy".</p>
+<p>Graphical profile, style guide, accessibility</p>
+
 <h2>Week 5</h2>
 <p>Information architecture, interaction design, information design, structure, layout.</p>
 <p>Chapters LWD 14-16, EUE 5.</p>
-<p>Task 3: requirements specification, structure, evaluation & testing, documentation.</p>
+<p>Task 3: requirements specification, structure, evaluation &amp; testing, documentation.</p>
+
+<h3>Lecture</h3>
+<p>CSS replaces the old methods of structuring pages with tables.</p>
+
+<a href="http://medieteknik.lnu.se/1me321/forelasningar/f5/css-ex7.zip" target="_blank"> Examples with tabs (zip).</a>
+<p> <b>Structure plane</b></p>
+<p>Shift from abstract issues of strategy and scope to conctrete factors of experience.</p>
+<p>What and how to be done? Organization and structure.</p>
+<p>Interaction design and information architecture is about understanding behaviour of people.</p>
+<p>Watch out for the curse of knowledge, when we know how it is supposed to work it can be hard to realize how someone who doesn't sees it.</p>
+
+<ul><li>Gulf of execution: distance between user goals their achievement with the system.
+</li>
+<li>
+Gulf of evaluation: distance between the system representation and user goals.
+</li>
+</ul>
+<p>Information architecture is concerned with efficient navigational schemes.</p>
+<p>Determine groups of categories and their relations.</p>
+<p>Navigational structure can be circular.</p>
+<p>Information should not only be easy to find but if the desired item is not present this should be quickly evident.</p>
+<p>How to handle information belonging to multiple categories?</p>
 
 <h2>Week 6</h2>
 <p>UI, responsive design.</p>
@@ -182,20 +252,61 @@ Where to find testers?
 <p>Task 3: structure, navigation, layout, evaluation % testing, documentation.</p>
 <p>Deadline task 2.</p>
 
+<h3>Lecture</h3>
+<p>Responsive design adapts to screen size.</p>
+<p>Different css files can be loaded depending on screen max-width or with @media queries in a single file.</p>
+<p>Specify widths with percentages. Tag: &lt;meta    name="viewport" content="width=device-­‐width,    ini.al-­‐scale=1.0"&gt;</p>
+<p>Graceful degradation and progressive enchancement. Mobile first?</p>
+
+<a href="http://medieteknik.lnu.se/1me321/forelasningar/f6/css-ex10.zip" target="_blank"> Adaptive elephant website (zip).</a>
+<p> <b>Skeleton plane</b></p>
+<p>Interface design concerns how to do. Information design concerns how to understand.</p>
+<p>Navigations: global, local, contextual, supplementary, courtesy, site map.</p>
+<p>Metaphors can be used to communicate the design.</p>
+
 <h2>Week 7</h2>
 <p>Pictures, colors, font, style guide.</p>
 <p>Chapters LWD 7, 13, 23-24, EUE 7.</p>
 <p>Task 3: structure, navigation, layout, website looks, evaluation % testing, documentation.</p>
 
+<h3>Lecture</h3>
+<p>A byte is 8 bits. One byte encodes 16 numbers, 0000 (0) to 1111 (F).</p>
+<p>ASCII tables have 128 common characters and a plethora of extensions for various situations. UTF-8 standardized this jungle.</p>
+<p>U+00E6 can be written in html as &amp;#xE6;</p>
+
+<a href="https://www.joelonsoftware.com/2003/10/08/the-absolute-minimum-every-software-developer-absolutely-positively-must-know-about-unicode-and-character-sets-no-excuses/" target="_blank"> What every developer must know about Unicode and character sets, by the founder of stack overflow.</a>
+<p>Bitmaps have a fixed set of pixels whereas vector graphics scale.</p>
+<p>1 byte encodes 256 colors, a 200x150px picture becomes 30kb. 3 bytes encodes 16 million colors, the same picture becomes 90kb.</p>
+<p>CLUT (Color LookUp Table), RGB (Red, Green, Blue), CMYK (Cyan, Magenta, Yellow, Black), HSB (Hue, Saturation, Brightness).</p>
+<p>A dpi value encodes number of pixels per area.</p>
+<p>Images can be enlarged by replication or interpolation.</p>
+<p>Anti-aliasing blurs edges of, for example, text.</p>
+<p>The alpha channel specifies transparent areas.</p>
+<p>Pictures can be compressed by only storing changes in color.</p>
+<p>GIF: 1 byte for colors, supports transparency. JPEG: 3 bytes for colors, no transparency. PNG: variable number of colors, yes transparency.</p>
+<p> <b>Surface plane</b></p>
+<p>Fulfill the goals in a pleasing way. How should everything look?</p>
+<p>Align colors with identity. Matt for background and clear for accentuation.</p>
+<p>Should work for the color blind.</p>
+
 <h2>Week 8</h2>
 <p>Tables, forms, other media (sound, video, embedded external information).</p>
 <p>Chapters LWD 8-10, 18-19, EUE 8.</p>
-<p>Task 3: navigation, layout, website looks, evaluation % testing, documentation.</p>
+<p>Task 3: navigation, layout, website looks, evaluation &amp; testing, documentation.</p>
+
+<h3>Lecture</h3>
+<p>Position: static, relative, fixed, absolute, top, left, bottom, right.</p>
+<p>Hide elements with display: none / block or visibility: hidden / visible. Set position to static to expand into other content, absolute to show in a layer above.</p>
+<p>Elements can be shown only when a link has focus or by using target.</p>
+<p>Drop down menus can cause compatibility problems.</p>
+<p>In CSS3 ordering of elements can be changed.</p>
+<p>The audio tag plays mp3, wav and ogg where only mp3 works universally. The video tag plays mp4 and ogg where both have to be used for compatibility.</p>
+<p>Media from other sources can be added with an iframe.</p>
 
 <h2>Week 9</h2>
-<p>Task 3: website looks, evaluation % testing, documentation.</p>
+<p>Task 3: website looks, evaluation &amp; testing, documentation.</p>
+<p>Deadline task 3.</p>
 
-Deadline task 3.
 
 <br><br><br>
 <footer>
@@ -206,5 +317,6 @@ Deadline task 3.
 	<a href="design.html">Web technology.</a>
 </nav>
 </footer>
+<p><small>Updated on 2020-07-17.</small></p>
 </body>
 </html>
