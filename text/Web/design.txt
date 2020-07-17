@@ -288,6 +288,42 @@ Chapters LWD 7, 13, 23-24, EUE 7.
 
 Task 3: structure, navigation, layout, website looks, evaluation % testing, documentation.
 
+*Lecture
+
+A byte is 8 bits. One byte encodes 16 numbers, 0000 (0) to 1111 (F).
+
+ASCII tables have 128 common characters and a plethora of extensions for various situations. UTF-8 standardized this jungle.
+
+U+00E6 can be written in html as &amp;#xE6;
+
+https://www.joelonsoftware.com/2003/10/08/the-absolute-minimum-every-software-developer-absolutely-positively-must-know-about-unicode-and-character-sets-no-excuses/ What every developer must know about Unicode and character sets, by the founder of stack overflow.
+
+Bitmaps have a fixed set of pixels whereas vector graphics scale.
+
+1 byte encodes 256 colors, a 200x150px picture becomes 30kb. 3 bytes encodes 16 million colors, the same picture becomes 90kb.
+
+CLUT (Color LookUp Table), RGB (Red, Green, Blue), CMYK (Cyan, Magenta, Yellow, Black), HSB (Hue, Saturation, Brightness).
+
+A dpi value encodes number of pixels per area.
+
+Images can be enlarged by replication or interpolation.
+
+Anti-aliasing blurs edges of, for example, text.
+
+The alpha channel specifies transparent areas.
+
+Pictures can be compressed by only storing changes in color.
+
+GIF: 1 byte for colors, supports transparency. JPEG: 3 bytes for colors, no transparency. PNG: variable number of colors, yes transparency.
+
+ <b>Surface plane</b>
+
+Fulfill the goals in a pleasing way. How should everything look?
+
+Align colors with identity. Matt for background and clear for accentuation.
+
+Should work for the color blind.
+
 **Week 8
 
 Tables, forms, other media (sound, video, embedded external information).
