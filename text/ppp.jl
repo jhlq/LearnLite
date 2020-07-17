@@ -28,14 +28,16 @@ end
 
 function process(fname,title)
 	text=read("$fname.txt",String)
-	text=replace(text, "< " => "&lt; ")
-	text=replace(text, " >" => " &gt;")
-	text=replace(text, "& " => "&amp; ")
+	text=replace(text, "< " => "&lt;")
+	text=replace(text, " >" => "&gt;")
+	text=replace(text, "& " => "&amp;")
+	text=replace(text, "’" => "'")
 	codeloc=something(findfirst("\n<code>", text), 0:-1)
 	while !isempty(collect(codeloc))
 		codeend=something(findfirst("</code>",text[codeloc[end]:end]), 0:-1).+(codeloc[end]-1)
 		codetext=text[codeloc[2]:codeend[1]]
 		codetext=replace(codetext, "\n" => "<br>\n")
+		codetext=replace(codetext, "	" => "&nbsp;&nbsp;")
 		codetext=replace(codetext, "  " => "&nbsp;&nbsp;")
 		text=text[1:codeloc[1]]*codetext*text[codeend[2]:end]
 		codeloc=something(findfirst("\n<code>", text[codeloc[end]:end]), 0:-1).+codeloc[end-1]

@@ -32,7 +32,7 @@ Optionally Professional JavaScript for Web Developers, 4th Edition by Matt Frisb
 Tools:
 <ul>
 Git
-Visual Studio Code
+Visual Studio Code (or better IDE)
 Node.js (latest stable), npm
 Standard.js
 Webpack
@@ -41,4 +41,82 @@ Jekyll, Sass
 Gatsby.js
 </ul>
 
+**L1
 
+CSS preprocessors extend the CSS language.
+
+Preprocessors enable calculations, nesting, mixins and variables.
+
+The course default is sass, other options include less and stylus.
+
+Partials, @import and operators.
+
+https://sass-lang.com/guide
+
+@mixin defines a function used with @include
+
+@import "_partial";
+
+width: 300px / $width * 100%;
+
+Since line numbers in browser no longer match line numbers in source debugging gets harder. 
+https://adamsilver.io/articles/the-disadvantages-of-css-preprocessors/ It’s easy to add a CSS preprocessor to the tech stack. But, it’s not easy to remove it down the line, should we so choose.
+
+The .map files enable debugging.
+
+Static Site Generators take for example plain text and generate html code. 
+https://github.com/jhlq/LearnLite/blob/master/text/ppp.jl This website is built with a custom SSG written in Julia.
+
+https://davidwalsh.name/introduction-static-site-generators SSGs are simple and secure.
+
+<ul>
+Jekyll
+Gatsby.js
+Octopress
+GitBook
+Middleman
+Hugo
+</ul>
+
+Features:
+<ul>
+Partials for navigation etc
+Layouts
+Templates
+Markdown (md) support
+</ul>
+
+Import partials from _includes folder with: {% include head.html %}
+
+<code>
+< ul >
+	{% for post in site.posts %}
+		< li >
+			< a href="{{ post.url }}" >{{ post.title }}< /a >
+		< /li >
+	{% endfor %}
+< /ul >
+</code>
+
+In Jekyll Liquid is the templating engine
+
+Realtime content has to be brought in with JavaScript and user input handled with third party form receivers.
+
+Getting started:
+<ul>
+Install Jekyll. Requires Ruby, RubyGems and NodeJS.
+Create a new site: jekyll new myblog
+Edit the site
+Build: cd myblog; jekyll serve
+Goto localhost:4000
+</ul>
+
+First assignment:
+<ul>
+Create a static site using Jekyll and sass
+All CSS should be generated
+Comment functionality
+Open graph for sharing
+https://www.docker.com/ Docker prevents pollution
+https://github.com/1dv022/jekyll-boilerplate
+</ul>
