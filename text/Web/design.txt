@@ -330,7 +330,23 @@ Tables, forms, other media (sound, video, embedded external information).
 
 Chapters LWD 8-10, 18-19, EUE 8.
 
-Task 3: navigation, layout, website looks, evaluation % testing, documentation.
+Task 3: navigation, layout, website looks, evaluation & testing, documentation.
+
+*Lecture
+
+Position: static, relative, fixed, absolute, top, left, bottom, right.
+
+Hide elements with display: none / block or visibility: hidden / visible. Set position to static to expand into other content, absolute to show in a layer above.
+
+Elements can be shown only when a link has focus or by using target.
+
+Drop down menus can cause compatibility problems.
+
+In CSS3 ordering of elements can be changed.
+
+The audio tag plays mp3, wav and ogg where only mp3 works universally. The video tag plays mp4 and ogg where both have to be used for compatibility.
+
+Media from other sources can be added with an iframe.
 
 **Week 9
 
