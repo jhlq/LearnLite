@@ -191,4 +191,133 @@ Track down memoryleaks and bottlenecks with timelines/profiling
 Console
 </ul>
 
+**L3
 
+DOM:
+<ul>
+Traversing
+Selecting
+Manipulating
+Templates
+Custom elements
+Shadow DOM
+</ul>
+
+<ul>
+Event delegation
+Timers
+Event loop
+</ul>
+
+The Document Object Model is an API for the rendering engine.
+
+Traversing the DOM:
+<ul>
+firstChild
+firstElementChild
+parentNode
+lastChild
+lastElementChild
+nextElementSibling
+previousElementSibling
+childNodes
+children
+</ul>
+
+Select nodes:
+<ul>
+getElementById
+getElementsByTagName
+getElementsByClassName
+querySelector
+querySelectorAll
+</ul>
+
+let tags = document.querySelectorAll('p.tag')
+
+let pTagsArray = Array.from(pTagsNodeList)
+
+node.
+<ul>
+appendChild
+inserBefore
+replaceChild
+removeChild
+cloneNode
+</ul>
+
+<code>
+let newTag = document.createElement('p')
+let newText = document.createTextNode('Cool text!')
+newTag.appendChild(newText)
+document.querySelector('#main').appendChild(newTag)
+</code>
+
+Both textContent and innerHTML remove all children, textContent is more secure.
+
+getAttribute, setAttribute, removeAttribute
+
+node.style.color = '#AA5698'
+
+Avoid css in js except dynamic properties: movingElement.style.left = '${x}px'
+
+Use classes instead: node.classList.add('jschanged'), .remove, .toggle, .contains
+
+Clone template nodes.
+
+<code>
+class BartBoard extends window.HTMLElement {
+	constructor() {
+	    super()        
+	}
+
+	connectedCallback () { // Called when added to the document
+	    let text = this.hasAttribute('text') ? this.getAttribute('text') : ''
+	    this.textContent = Array(10).join(text)
+	} 
+}
+window.customElements.define('bart-board', BartBoard)
+</code>
+
+<yellow>
+<code>
+class BartBoard extends window.HTMLElement {
+	constructor() {
+	    super()        
+	}
+	connectedCallback () {
+	    this._updateRendering()
+	}
+
+	static get observedAttributes() {
+	    return ['text'];
+	}
+	attributeChangedCallback(name, oldValue, newValue) {
+	    this._updateRendering()
+	}
+
+	_updateRendering() {
+	    let text = this.hasAttribute('text') ? this.getAttribute('text') : ''
+	    this.textContent = Array(10).join(text)
+	}
+}
+<code>
+</div>
+
+<red>
+<code>
+class BartBoard extends window.HTMLElement {
+	constructor () {
+		super()
+		this.attachShadow({mode: 'open'})
+		this.shadowRoot.appendChild(template.content.cloneNode(true))
+	}
+	...
+	_updateRendering() {
+		let text = this.hasAttribute('text') ? this.getAttribute('text') : ''
+		this.shadowRoot.querySelector('#board-text').textContent = Array(10).join(text)
+}
+</code>
+</div>
+
+https://developers.google.com/web/fundamentals/web-components/
