@@ -223,7 +223,7 @@ Task 3: requirements specification, structure, evaluation & testing, documentati
 
 CSS replaces the old methods of structuring pages with tables.
 
-http://medieteknik.lnu.se/1me321/forelasningar/f5/css-ex7.zip Examples with tabs.
+http://medieteknik.lnu.se/1me321/forelasningar/f5/css-ex7.zip Examples with tabs (zip).
 
  <b>Structure plane</b>
 
@@ -259,6 +259,26 @@ Chapters 16-19, EUE 6.
 Task 3: structure, navigation, layout, evaluation % testing, documentation.
 
 Deadline task 2.
+
+*Lecture
+
+Responsive design adapts to screen size.
+
+Different css files can be loaded depending on screen max-width or with @media queries in a single file.
+
+Specify widths with percentages. Tag: &lt;meta    name="viewport" content="width=device-­‐width,    ini.al-­‐scale=1.0"&gt;
+
+Graceful degradation and progressive enchancement. Mobile first?
+
+http://medieteknik.lnu.se/1me321/forelasningar/f6/css-ex10.zip Adaptive elephant website (zip).
+
+ <b>Skeleton plane</b>
+
+Interface design concerns how to do. Information design concerns how to understand.
+
+Navigations: global, local, contextual, supplementary, courtesy, site map.
+
+Metaphors can be used to communicate the design.
 
 **Week 7
 
