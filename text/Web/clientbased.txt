@@ -1,0 +1,44 @@
+***Client based programming
+
+Notes for a course at Linnaeus University: https://coursepress.lnu.se/kurs/klientbaserad-webbprogrammering/
+
+**L0 Introduction
+
+3 parts:
+<ul>
+SSGs (Static Site Generators) and CSS preprocessors
+DOM, Async and storage (event-driven asynchronous programming)
+SPA (Single page applications)
+</ul>
+
+Describe the web browser (internal structure, security models, developer tools)
+
+JavaScript, HTML and CSS should be clearly separated.
+
+DOM (traversing, selecting, manipulating). Handling events.
+
+Ajax and JSON.
+
+SPAs with offline support and browser native APIs.
+
+Handling history in the browser.
+
+Literature: 
+<ul>
+http://eloquentjavascript.net/ Chapter 12-19, 22 of Eloquent JavaScript.
+Optionally Professional JavaScript for Web Developers, 4th Edition by Matt Frisbie
+</ul>
+
+Tools:
+<ul>
+Git
+Visual Studio Code
+Node.js (latest stable), npm
+Standard.js
+Webpack
+Docker
+Jekyll, Sass
+Gatsby.js
+</ul>
+
+
