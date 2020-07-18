@@ -428,7 +428,7 @@ POST /theserverpage/ HTTP/1.1
 Host: lnuserver.se
 Content-Length: 24
 
-user=Ellen&message=Hello
+user=Ellen& message=Hello
 </code>
 
 Put response handlers in event listeners:
@@ -506,5 +506,125 @@ CORS (Cross-Origin Resource Sharing) is for fetching data from other domains.
 A domain can set up to 50 cookies with max sizes 4096 bytes.
 
 window.localStorage.setItem('bgcolor', document.getElementById('bgcolor').value)
+
+**L6 Single Page Applications
+
+<ul>
+Server communication
+History
+Offline support
+SEO
+</ul>
+
+<code>
+http://www.test.com:8080/index.html?id=1432& name=Tim#anchor
+location.hash       // #anchor
+location.host       // www.test.com
+location.hostname   // www.test.com:8080
+location.href       // http://www.test.com:8080/index.html?id=1432& name=Tim#anchor
+location.pathname   // /index.html
+location.port       // 8080
+location.protocol   // http:
+location.search     // ?id=1432& name=Tim
+</code>
+
+<code>
+// Router
+window.addEventListener('hashchange', event => {
+	let hash = window.location.hash // #!/account/47435675
+	if(hash.substr(2,9) === '/account/'){
+	    let account = hash.substr(11) //47435675
+	    // Fetch account information from server
+	    // Display account information
+	}
+})
+</code>
+
+window.history.
+<ul>
+back()
+forward()
+go(-3)
+length
+</ul>
+
+<yellow>
+Pushstate:
+<code>
+let ul = document.querySelector('#links')
+
+ul.addEventListener('click', event => {
+  event.preventDefault()
+
+  let stateObj =  {
+    accountnbr: event.target.getAttribute('data-account'),
+    account: event.target.getAttribute('data-account-title')
+  }
+
+  window.history.pushState(stateObj, `Account information: ${stateObj.account}`,
+    `/account/${stateObj.accountnbr}`);
+
+  // Load accountinformation and show it
+  console.log(stateObj)
+})
+
+window.addEventListener('popstate', event => {
+  // When an old state is triggered.
+  console.log(`${event.state.account} with account number ${event.state.accountnbr}`)
+})
+
+var currentState = window.history.state
+</code>
+</div>
+
+<ul>
+AngularJS
+ember
+React
+</ul>
+
+XHR is not optimal for real time apps.
+
+<code>
+let socket = new window.WebSocket('ws://www.example.com/socketserver', 'charcords')
+let data = {x: 12, y: 14}
+
+socket.addEventListener('open', event => {
+  socket.send(JSON.stringify(data))
+})
+
+socket.addEventListener('message', event => {
+  console.log(event.data)
+})
+</code>
+
+Problems, how to
+<ul>
+know if the user is online?
+cache resources?
+inform the user?
+handle data?
+sync data?
+handle conflicts?
+</ul>
+
+https://github.hubspot.com/offline/docs/welcome/
+
+http://alistapart.com/article/application-cache-is-a-douchebag Application cache is deprecated.
+
+ServiceWorkers have their own queue and WorkerGlobalScopes.
+
+<ul>
+Require https
+Only permit asynchronous calls
+Uses promises
+Compatibility problems
+</ul>
+
+<ul>
+Register a service worker
+Listen for "install", cache resources
+Listen for "fetch"
+</ul>
 
 
