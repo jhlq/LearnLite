@@ -321,3 +321,55 @@ class BartBoard extends window.HTMLElement {
 </div>
 
 https://developers.google.com/web/fundamentals/web-components/
+
+**L4 Event driven programming
+
+<ul>
+Event delegation
+Timers
+Event loop
+Synthetic (custom) events
+</ul>
+
+<ul>
+Mouse
+Scrolling
+Keyboard
+Page loaded
+DOM changed
+Content loaded
+Custom
+</ul>
+
+a href="page.html" onclick="doSomething()"
+
+tag.addEventListener('click', buttonClicked)
+
+event.stopPropagation()
+
+Use 
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind .bind(this)
+ on addEventListener.
+
+If a loop variable is used in a function definition it will when called read the final value of the loop variable. Do .forEach( (a, i) => { } )
+
+event.preventDefault() or return false
+
+<code>
+let timer = setTimeout( () => {
+    console.log('At least 3 seconds passed..')
+}, 3000)
+clearTimeout(timer) // Stops the timer
+</code>
+
+<code>
+
+let signupEvent = new window.CustomEvent('signup', { detail: myInput.value  })
+myCustomElement.dispatchEvent(signupEvent) // This will "trigger"/dispatch the event
+let element = document.querySelector('#theCustomElement')
+element.addEventListener('signup', event => {
+    console.log(event.detail)
+})
+</code>
+
+
