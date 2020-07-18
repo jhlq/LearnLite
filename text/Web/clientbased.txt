@@ -363,7 +363,6 @@ clearTimeout(timer) // Stops the timer
 </code>
 
 <code>
-
 let signupEvent = new window.CustomEvent('signup', { detail: myInput.value  })
 myCustomElement.dispatchEvent(signupEvent) // This will "trigger"/dispatch the event
 let element = document.querySelector('#theCustomElement')
@@ -371,5 +370,141 @@ element.addEventListener('signup', event => {
     console.log(event.detail)
 })
 </code>
+
+**L5 Asynchronous programming
+
+<ul>
+JSON
+Queue and event loop
+Ajax: XMLHttpRequest, fetch
+await/async
+Promises
+WebStorage
+</ul>
+
+JavaScript Object Notation is a language independent subset of JavaScript with MIME application/json
+
+<code>
+[
+    {"name":"Bill","type":2,"alive":false},
+    {"name":"Sam","type":5,"alive":false},
+    {"name":"Jason","type":1,"alive":true}
+]
+</code>
+
+https://jsonlint.com/
+
+<code>
+let obj = {
+    name: 'Ellen',
+    age: 25,
+    city: 'Kalmar'
+}
+console.log(obj)
+obj = JSON.stringify(obj)
+console.log(obj)
+obj = JSON.parse(obj)
+console.log(obj)
+</code>
+
+Avoid blocking calls.
+
+HTTP methods: GET, POST, PUT, DELETE
+
+<ul>
+200 OK
+301 Moved permanently
+307 Temporary redirect
+400 Bad request
+401 Unauthorized
+403 Forbidden
+404 Not found
+500 Internal server error
+503 Service unavailable
+</ul>
+
+<code>
+POST /theserverpage/ HTTP/1.1
+Host: lnuserver.se
+Content-Length: 24
+
+user=Ellen&message=Hello
+</code>
+
+Put response handlers in event listeners:
+<code>
+let req = new window.XMLHttpRequest()
+req.addEventListener('load', function(){
+    console.log(req.responseText)
+})
+req.open('GET', 'data.json')
+req.send()
+</code>
+
+AJAX: Asynchronous JavaScript And XML
+
+<code>
+async getShow (id) {
+    let show = await window.fetch(`http://tv-api.se/shows/${id}`)
+    return show.json()
+}
+</code>
+
+<code>
+async searchUpdate (str) {
+    let res = await window.fetch(`http://tv-api.se/shows/?q=${str}`)
+
+    res = await res.json() // { searchString: "break", result: [24, 35]}
+
+    let showPromises = []
+    res.result.forEach(id => {
+      showPromises.push(this.getShow(id))
+    })
+    this.shows = []
+    this.shows = await Promise.all(showPromises)
+}
+</code>
+
+<yellow>
+<code>
+connectedCallback () {
+    this._searchButton.addEventListener('click', event => {
+      this.searchUpdate(this._input.value).then(() => this._updateRendering())
+    })
+}
+_updateRendering () {
+    this._ul.innerHTML = ''
+    this.shows.forEach(show => {
+    let li = document.createElement('li')
+    li.textContent = `${show.name} ${show.year}`
+    this._ul.appendChild(li)
+    })
+}
+</code>
+</div>
+
+<code>
+let res = await window.fetch("http://url-to-fetch.at/path", {
+    method: "POST",
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(data)
+})
+</code>
+
+Forms:
+<ul>
+Make it work without JS
+Try configs (method, action)
+form.addEventlistener("submit",...)
+Disable the submit-button
+</ul>
+
+CORS (Cross-Origin Resource Sharing) is for fetching data from other domains.
+
+A domain can set up to 50 cookies with max sizes 4096 bytes.
+
+window.localStorage.setItem('bgcolor', document.getElementById('bgcolor').value)
 
 
