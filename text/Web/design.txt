@@ -217,7 +217,7 @@ Information architecture, interaction design, information design, structure, lay
 
 Chapters LWD 14-16, EUE 5.
 
-Task 3: requirements specification, structure, evaluation & testing, documentation.
+Task 3: requirements specification, structure, evaluation &  testing, documentation.
 
 *Lecture
 
@@ -266,7 +266,7 @@ Responsive design adapts to screen size.
 
 Different css files can be loaded depending on screen max-width or with @media queries in a single file.
 
-Specify widths with percentages. Tag: &lt;meta    name="viewport" content="width=device-­‐width,    ini.al-­‐scale=1.0"&gt;
+Specify widths with percentages. Tag: &lt;meta name="viewport" content="width=device-­‐width, ini.al-­‐scale=1.0"&gt;
 
 Graceful degradation and progressive enchancement. Mobile first?
 
@@ -330,7 +330,7 @@ Tables, forms, other media (sound, video, embedded external information).
 
 Chapters LWD 8-10, 18-19, EUE 8.
 
-Task 3: navigation, layout, website looks, evaluation & testing, documentation.
+Task 3: navigation, layout, website looks, evaluation &  testing, documentation.
 
 *Lecture
 
@@ -350,6 +350,6 @@ Media from other sources can be added with an iframe.
 
 **Week 9
 
-Task 3: website looks, evaluation & testing, documentation.
+Task 3: website looks, evaluation &  testing, documentation.
 
 Deadline task 3.
