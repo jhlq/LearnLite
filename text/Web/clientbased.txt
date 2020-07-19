@@ -653,4 +653,98 @@ MacOS Screen reader
 NVDA
 </ul>
 
+*L8 APIs
 
+<ul>
+Web Workers
+HTML5 Canvas
+Web VR API (Gamepad API)
+Physical Web (BT-api)
+Web components
+WebRTC
+WebGL
+Web Assembly
+</ul>
+
+<code>
+let worker = new window.Worker('worker.js')
+let dataContainer = document.querySelector('#pn')
+
+worker.addEventListener('message', e => {
+  dataContainer.textContent = e.data
+})
+
+//worker.js
+let n = 1
+search: while(true) {
+	n += 1
+	for(let i = 2; i <= Math.sqrt(n); i += 1){
+		if (n % i === 0)
+			continue search
+	}
+	postMessage(n)
+}
+</code>
+
+Do animations with < canvas >
+
+https://webvr.info/
+
+<code>
+window.addEventListener('gamepadconnected', e => {
+    let index = e.gamepad.index
+    let id = e.gamepad.id
+    let nbrButtons = e.gamepad.buttons.length
+    let nbrAxes = e.gamepad.axes.length
+})
+</code>
+
+https://www.w3.org/TR/gamepad/
+
+Physical web beacons: 
+https://google.github.io/physical-web/
+
+https://webbluetoothcg.github.io/web-bluetooth/
+
+https://w3c.github.io/web-nfc/
+
+https://wicg.github.io/webusb/
+
+Web components:
+<ul>
+Custom elements
+Templates
+Shadow DOM
+ECMA Script Modules
+</ul>
+
+Web components polyfil: 
+https://www.polymer-project.org/
+
+WebRTC
+<ul>
+    MediaStream (getUserMedia())
+    MediaRecorder
+    RTCPeerConnection
+    RTCDataChannel
+</ul>
+
+https://webrtc.org/
+
+WebGL: 
+https://en.wikipedia.org/wiki/Three.js
+
+WASM: https://github.com/webassembly/
+
+https://github.com/w3c/webpayments/wiki Web Payments
+
+https://w3c.github.io/web-share/ Web Share API.
+
+<ul>
+    Geolocation API
+    Battery Status
+    Vibration
+    Clipboard
+    Ambient Light
+    Device Orientation
+</ul>
