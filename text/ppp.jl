@@ -26,7 +26,9 @@ function makelistarray(list)
 	return listarray
 end
 
-function process(fname,title)
+function process(pagestoprocess,pai)
+	fname=pagestoprocess[pai,1]
+	title=pagestoprocess[pai,2]
 	text=read("$fname.txt",String)
 	text=replace(text, "< " => "&lt;")
 	text=replace(text, " >" => "&gt;")
@@ -154,6 +156,10 @@ function process(fname,title)
 	nav=read("nav.txt",String)
 	dir=read("title.txt",String)
 	dir=dir[1:end-1]
+	next=""
+	if size(pagestoprocess)[1]>pai
+		next="""<a href="$(pagestoprocess[pai+1,1]).html" id="next">Next page.</a>\n"""
+	end
 	doc="""<!DOCTYPE html>
 	<html lang="en">
 	<head>
@@ -164,7 +170,7 @@ function process(fname,title)
 	<body>
 	$nav
 	$text
-	<br><br><br>
+	<br>$next<br><br>
 	<footer>
 	$nav
 	</footer>
@@ -189,6 +195,6 @@ write(f,nav)
 close(f)
 isdir("pppout") ? nothing : mkdir("pppout")
 for pai in 1:size(pagestoprocess,1)
-	process(pagestoprocess[pai,1],pagestoprocess[pai,2])
+	process(pagestoprocess,pai)
 end
 rm("nav.txt")
