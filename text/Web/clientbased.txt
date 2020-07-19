@@ -627,4 +627,30 @@ Listen for "install", cache resources
 Listen for "fetch"
 </ul>
 
+**L7 Optimization &  Accessibility
+
+Up to one in five people have some impairment.
+
+Ensure keyboard navigation is possible. Use interactive elements, aria-attributes and tabindex.
+
+Don't add unusual interactivity for example by adding a click listener to a header.
+
+Specify alt="image description"
+
+<ul>
+    WCAG - Web Content Accessability Guidelines
+    UAAG - User Agent Accessibility Guidelines
+    ATAG - Authoring Tool Accessibility Guidelines
+    ARIA - Accessible Rich Internet Applications
+https://www.w3.org/standards/webdesign/accessibility
+</ul>
+
+Try a screenreader!
+<ul>
+http://www.chromevox.com/
+JAWS
+MacOS Screen reader
+NVDA
+</ul>
+
 
