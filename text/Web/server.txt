@@ -179,4 +179,99 @@ Priority flags
 
 **Web Architecture
 
+<green>
+<code>
+const http = require('http')
+
+const server = http.createServer((req, res) => {
+  res.setHeader('Content-Type', 'text/plain')
+  res.end('hello, world\n')
+})
+
+server.listen(8000, () => console.log('Server running at http://localhost:8000/'))
+</code>
+</div>
+
+<code>
+http.createServer((req, res) => {
+  const path = req.url.replace(/\/?(?:\?.*)?$/, '').toLowerCase()
+
+  switch (path) {
+    case '':
+      res.setHeader('Content-Type', 'text/plain')
+      res.end('Homepage')
+      break
+
+    case '/about':
+      res.setHeader('Content-Type', 'text/plain')
+      res.end('About')
+      break
+
+    default:
+      res.setHeader('Content-Type', 'text/plain')
+      res.statusCode = 404
+      res.end('Not Found')
+      break
+  }
+}).listen(8000, () => console.log('Server running at http://localhost:8000/'))
+</code>
+
+MEAN full stack JavaScript: MongoDB, Express, Angular, Node.js
+
+Handlebars view engine.
+
+Backend frameworks:
+<ul>
+Express, https://expressjs.com/
+Meteor, https://www.meteor.com/
+Sails (built on Express), https://sailsjs.com/
+Feathers (built on Express), https://feathersjs.com/
+Fastify, https://www.fastify.io
+</ul>
+
+Express is inspired by Sinatra, a web application framework in Ruby, and intertwined with Connect, a pluggable Node module that can handle web requests (a.k.a. "middleware")
+
+<code>
+const express = require('express')
+const app = express()
+
+app.get('/', (req, res) => res.send('Homepage'))
+app.get('/about', (req, res) => res.send('About'))
+
+app.listen(8000, () => console.log('Server running at http://localhost:8000/'))
+</code>
+
+The directory structure can be
+<ul>
+app.js is the applications entry point.
+Routes are stored in separate modules under the routes/ directory.
+Controllers are stored under the controllers/ directory.
+View templates are stored under the views/ directory.
+Static files are stored under the public/ directory.
+</ul>
+https://gist.github.com/lancejpollard/1398757 or something else.
+
+<ul>
+express-hbs: Express handlebars template engine.
+moment: Manage dates.
+morgan: HTTP request logger.
+nodemon: Automatically restarts the application when file changes. 
+</ul>
+
+Middleware functions are functions that have access to the request object (req), the response object (res), and the next middleware function in the application’s request-response cycle.
+<ul>
+Application-level: app.use() and app.METHOD(), (req, res, next)).
+Router-level: same as application-level (use express.Router()).
+Error-handling: an error-handling middleware function has four parameters, (err, req, res, next)).
+Built-in: express.static, express.urlencoded
+Third-party: Add functionality.
+</ul>
+
+router.get and router.post and app.use('/home', require('./routes/homeRouter'))
+
+Controller functions render an HTML page using a template engine, res.render(view [, locals]) renders a view and sends the HTML string to the client.
+
+Template engines: Pug, Mustache, EJS and 
+https://handlebarsjs.com/ express-hbs
+
 
