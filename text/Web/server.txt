@@ -1,0 +1,127 @@
+***Server programming
+
+Notes for a course at Linnaeus University: https://coursepress.lnu.se/kurs/serverbaserad-webbprogrammering/
+
+**Introduction
+
+After the course you should be able to:
+<ul>
+Describe the task of a web server in different kinds of web applications.
+Describe the purpose of the HTTP­ protocol in different types of web applications and their pros and cons in this context.
+Use the Node.js platform and Express.js web application framework to build web applications.
+Develope a create, read, update, delete (CRUD) web application using MongoDB to manage data persistence.
+Describe and have a practical understanding of different security problems that can occur in web applications.
+Create web applications with, for the context, suitable architecture.
+Create server­-based real-time applications.
+Plan and perform the publishing of web applications created for the Node.js platform in the production environment.
+</ul>
+
+The course is divided into three parts
+<ul>
+Part 1: Node.js, web servers, HTTP
+Part 2: Backend web application, web security, web architecture
+Part 3: Real-time application, publishing, and production
+</ul>
+
+Recommended literature:
+<ul>
+Chapter 17 and 20 of Eliquent JavaScript
+Web Development with Node & Express, Ethan Brown
+</ul>
+
+<ul>
+Node.js, npm
+GitHub and GitLab!
+Visual Studio Code or other IDE of your choice
+Linting, ESLint
+JSDoc, Document This
+</ul>
+
+**The Node platform
+
+Node.js is not a web server nor a framework.
+
+V8, Google chrome javascript engine, an event loop, and a low-level I/O API (libuv)
+
+Small modules, doing one thing well, is the philosophy.
+
+https://nodejs.org/api/esm.html ECMAScript modules
+
+Single threaded event-driven architecture.
+
+Event-driven programming:
+<ul>
+Callbacks
+Promises
+Async/Await
+Event Emitters. Create your own events. Listen for multiple triggers of events
+</ul>
+
+Blocking or CPU-intensive code is not suitable for Node.js.
+
+https://nodejs.org/api/cluster.html The cluster module allows easy creation of child processes that all share server ports.
+
+npm install # installs all dependencies in package.json
+
+yarn is an alternative to npm.
+
+npm install mocha --save-dev
+
+https://www.gitignore.io/
+
+Use npx to execute a module (and install it temporarily)
+
+Semantic Versioning (semver) major.minor.patch. Use * for latest.
+
+The package-lock.json file describes the dependency tree and should be committed.
+
+**Web servers
+
+Different server services conventionally use certain ports.
+
+Web servers are software that handles and understands HTTP/HTTPS request/response. Listen default on port 80 (HTTP) or port 443 (HTTPS)
+
+<ul>
+Apache. The A in LAMP-stack (Linux, Apache, MySQL, PHP)
+Nginx. Uses an asynchronous event-driven approach to handling requests
+IIS for Windows server (Internet Information Services). .NET
+Apache Tomcat. A Java servlet, HTTP Connector, JSP engine. A Java servlet is a Java program that extends the capabilities of a server.
+Node.js. A platform! Create a web server through code (APIs)!
+</ul>
+
+Apache:
+<ul>
+Most used web server.
+Open source.
+Launched in 1995.
+Every request spawns a process stored in a thread pool.
+Dynamic Modules: mod_access, mod_auth, mod_rewrite
+.htaccess
+</ul>
+
+Nginx is a lightweight server commonly used as proxy or load balancer.
+
+<code>
+const http = require('http');
+const PORT = 8080;
+
+http.createServer((req, res) => {
+  res.writeHead(200);
+  res.end('Hello world\n');
+}).listen(PORT);
+</code>
+
+Different kind of servers in a web environment
+<ul>
+Reverse proxy. Acts as a firewall and hides the origin.
+Load balancer. Spread requests to several servers.
+Cache server
+Application server. Not limited to HTTP.
+Virtual hosting. Multiple domain names.
+</ul>
+
+Domain name servers (DNS) translate domain names to IPs like 194.47.110.87 and 2001:6b0:52:4000::5:5
+
+The browser sends a TCP/IP packet, the server sends back a reply for example on port 62365.
+
+
