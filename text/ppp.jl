@@ -139,7 +139,7 @@ function process(pagestoprocess,pai)
 			break
 		end
 		p=text[nnloc[end]+1:nnnloc[1]-1]
-		if p!="" && p[1]!='<'
+		if p!="" && (p[1]!='<' || p[2]=='a')
 			htmltext="<p>$p</p>"
 			text=text[1:nnloc[1]]*htmltext*text[nnnloc[1]:end]
 		end
