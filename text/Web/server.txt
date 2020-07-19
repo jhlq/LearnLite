@@ -124,4 +124,59 @@ Domain name servers (DNS) translate domain names to IPs like 194.47.110.87 and 2
 
 The browser sends a TCP/IP packet, the server sends back a reply for example on port 62365.
 
+**HTTP
+
+Stateless, securityless.
+
+Internet Engineering Task Force (IETF) and the World Wide Web Consortium (W3C)
+
+HTTP messages have headers.
+
+<ul>
+GET 	Get data; search result 	safe, idempotent
+POST 	Create data 	unsafe, not idempotent
+PUT 	Update data 	unsafe, idempotent
+PATCH 	Partial update of resource 	unsafe, not idempotent
+DELETE 	Delete a resource 	unsafe, idempotent
+HEAD 	Just get headers 	safe, idempotent
+OPTIONS 	Check what the server can do 	safe, idempotent
+</ul>
+
+Status codes:
+<ul>
+1xx - Informational. 101 Switching Protocols
+2xx - Successful. 200 OK, 201 Created, 204 No Content
+3xx - Redirection. 302 Found (follow "Location"), 304 Not Modified
+4xx - Client Error. 400 Bad request, 401 Unauthorized, 403 Forbidden
+5xx - Server Error. 500 Internal Server Error
+</ul>
+
+https://en.wikipedia.org/wiki/List_of_HTTP_header_fields
+
+https://http.cat/ Status code cats.
+
+The server should use gzip on text files  > 1-2 Kb
+
+Do not trust client ID, nor server ID, neither a human. Filter out crawlers in logs.
+
+Set-Cookie: PHPSESSID=1p0sptqdupf47lefnti1j1fg40 Path=/admin
+
+<ul>
+expires:Wed, 30 Jan 2019 14:00:00 GMT
+cache-control: public, max-age=86400
+cache-control: private, max-age=0, no-cache
+ETag
+</ul>
+
+HTTP/2
+<ul>
+Multiplexing - one single TCP connection for many request
+Server push (not as in Web Sockets)
+Data Compression of HTTP Headers
+Binary data streams
+Priority flags
+</ul>
+
+**Web Architecture
+
 
