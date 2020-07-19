@@ -10,7 +10,8 @@
 	<a href="../index.html">Home.</a>
 	<a href="index.html">Index.</a>
 	<a href="javascript.html">JavaScript lectures.</a>
-	<a href="design.html">Web technology.</a>
+	<a href="design.html">Design.</a>
+	<a href="clientbased.html">Client based programming.</a>
 </nav>
 <h1>Foundational programming</h1>
 <p>Notes for a course at Linnaeus University about JavaScript and Node.js: https://coursepress.gitbook.io/1dv021/</p>
@@ -136,7 +137,7 @@ Chapters 6-12.
 <p>Special numbers: infinity, -infinity, NaN (Not a Number)</p>
 <p>The course standard prohibits " for string, use '</p>
 <p>Use \n for new lines: 'Line one\ntwo.'</p>
-<p>Boolean operations: &lt;, &gt;, &lt;=, &gt;=, ==, !=, === (includes type), !== (includes type), &&amp; (AND), || (OR), ! (NOT)</p>
+<p>Boolean operations: &lt;, &gt;, &lt;=, &gt;=, ==, !=, === (includes type), !== (includes type), &amp;&amp; (AND), || (OR), ! (NOT)</p>
 <p>Variables are declared with let or var, var is for backwards compatibility, let is almost always better since variables wont leak to other scopes.</p>
 <p>Use descriptive variable names. Don't use odd symbols. Use camelCasing. A tip is to append your initials to your variables, even if code works perfectly in Firefox another browser or package can have defined some system variables that get overwritten if you use ordinary variable names.</p>
 <p>Forbidden names:</p>
@@ -274,7 +275,7 @@ protected
 
 <h2>Lecture 2</h2>
 <p>Control structures: if (else)(else if), switch, a?1:0, while, do...while, for, recursion (a function calling itself is a likely apocalyptic cause)</p>
-<p>for (let i = 0; i &lt; 10; i++) { }</p>
+<p>for (let i = 0; i &lt;10; i++) { }</p>
 <p>Use break to exit a loop, continue to skip to next iteration.</p>
 <p>Comments are made with // or, with caution, /* */. Commenting out blocks of code is not recommended for the long term, conditioning out with if (false) prevents code rot but still leaves confusing bloat.</p>
 
@@ -291,9 +292,8 @@ protected
 <h2>Lecture 4</h2>
 <p>Arrays start with index 0 and while they can hold values of multiple types this should be avoided.</p>
 <p>An array arr is defined simply as [1,2,3], the number of elements is stored in a.length, arr[1]==2.</p>
-<p>for (let i = 0; i &lt; arr.length; i++) { }</p>
-
-<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array" target="_blank"> Mozillas Array reference page.</a>
+<p>for (let i = 0; i &lt;arr.length; i++) { }</p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array" target="_blank"> Mozillas Array reference page.</a></p>
 <p>An array variable only holds a reference to the array so if you set b=a and change b a will also be changed. To deepcopy an array with simple types (no functions) you can do b=JSON.parse(JSON.stringify(arr))</p>
 <p>Push (append) a random number from 0 to 9 like so: arr.push(Math.floor(Math.random() * 10))</p>
 <p>A function that takes an array and modifies it modifies the original array, it is necessary to clearly indicate which functions potentially modify their arguments to avoid silent data corruption.</p>
@@ -449,7 +449,7 @@ class Die {<br>
 &nbsp;&nbsp;}<br>
 &nbsp;&nbsp;set faceValue (value) {<br>
 &nbsp;&nbsp;&nbsp;&nbsp;const numberValue = Number(value)<br>
-&nbsp;&nbsp;&nbsp;&nbsp;if (!Number.isInteger(numberValue) || numberValue &lt; 1 || numberValue &gt; 6) {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;if (!Number.isInteger(numberValue) || numberValue &lt;1 || numberValue&gt; 6) {<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;throw new Error('faceValue must be set to an integer between 1 and 6.')<br>
 &nbsp;&nbsp;&nbsp;&nbsp;}<br>
 &nbsp;&nbsp;&nbsp;&nbsp;_faceValue.set(this, value)<br>
@@ -555,7 +555,7 @@ let createStudent = function (name, age, isCampus) {<br>
 <code><br>
 // imperative<br>
 let arr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]<br>
-for (let i = 0; i &lt; arr.length; i += 1) {<br>
+for (let i = 0; i &lt;arr.length; i += 1) {<br>
 &nbsp;&nbsp;arr[i] = Math.pow(arr[i], 2)<br>
 }<br>
 // declarative with anonymous function expression<br>
@@ -566,19 +566,20 @@ let sqrArr = arr.map(function(num) {<br>
 sqrArr = arr.map(num => Math.pow(num, 2))<br>
 </code>
 Note that arrow functions cannot be used as prototypes (because of peculiarities with this).</p>
+<p><a href="http://kangax.github.io/compat-table/esnext/" target="_blank"> Proposals for the ECMAScript standard.</a></p>
 
-<a href="http://kangax.github.io/compat-table/esnext/" target="_blank"> Proposals for the ECMAScript standard.</a>
 
-
-<br><br><br>
+<br><a href="design.html" id="next">Next page.</a>
+<br><br>
 <footer>
 <nav>
 	<a href="../index.html">Home.</a>
 	<a href="index.html">Index.</a>
 	<a href="javascript.html">JavaScript lectures.</a>
-	<a href="design.html">Web technology.</a>
+	<a href="design.html">Design.</a>
+	<a href="clientbased.html">Client based programming.</a>
 </nav>
 </footer>
-<p><small>Updated on 2020-07-17.</small></p>
+<p><small>Updated on 2020-07-19.</small></p>
 </body>
 </html>

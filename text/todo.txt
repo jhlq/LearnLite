@@ -1,8 +1,6 @@
 Multiline (eg link) list entries
 Tooltips
-fix style.css
-next button
+Dry style.css. Red too red.
+next-link button styling
 different style for internal links
-navs for rhythm
-
-split file on \n\n, check each entry: for opword; wrap each non excluded entry in <p>
+Colors not perfectly aligned

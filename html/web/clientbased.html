@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>LearnLite: Web development, Client based programming</title>
+<link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+<body>
+<nav>
+	<a href="../index.html">Home.</a>
+	<a href="index.html">Index.</a>
+	<a href="javascript.html">JavaScript lectures.</a>
+	<a href="design.html">Design.</a>
+	<a href="clientbased.html">Client based programming.</a>
+</nav>
+<h1>Client based programming</h1>
+<p>Notes for a course at Linnaeus University: https://coursepress.lnu.se/kurs/klientbaserad-webbprogrammering/</p>
+
+<h2>L0 Introduction</h2>
+<p>3 parts:</p>
+
+<ul><li>SSGs (Static Site Generators) and CSS preprocessors
+</li>
+<li>
+DOM, Async and storage (event-driven asynchronous programming)
+</li>
+<li>
+SPA (Single page applications)
+</li>
+</ul>
+<p>Describe the web browser (internal structure, security models, developer tools)</p>
+<p>JavaScript, HTML and CSS should be clearly separated.</p>
+<p>DOM (traversing, selecting, manipulating). Handling events.</p>
+<p>Ajax and JSON.</p>
+<p>SPAs with offline support and browser native APIs.</p>
+<p>Handling history in the browser.</p>
+<p>Literature: </p>
+
+<ul><li><a href="http://eloquentjavascript.net/" target="_blank"> Chapter 12-19, 22 of Eloquent JavaScript.</a>
+</li>
+<li>
+Optionally Professional JavaScript for Web Developers, 4th Edition by Matt Frisbie
+</li>
+</ul>
+<p>Tools:</p>
+
+<ul><li>Git
+</li>
+<li>
+Visual Studio Code (or better IDE)
+</li>
+<li>
+Node.js (latest stable), npm
+</li>
+<li>
+Standard.js
+</li>
+<li>
+Webpack
+</li>
+<li>
+Docker
+</li>
+<li>
+Jekyll, Sass
+</li>
+<li>
+Gatsby.js
+</li>
+</ul>
+
+<h2>L1 SSG and CSS preprocessors</h2>
+<p>CSS preprocessors extend the CSS language.</p>
+<p>Preprocessors enable calculations, nesting, mixins and variables.</p>
+<p>The course default is sass, other options include less and stylus.</p>
+<p>Partials, @import and operators.</p>
+<p><a href="https://sass-lang.com/guide" target="_blank">https://sass-lang.com/guide</a></p>
+<p>@mixin defines a function used with @include</p>
+<p>@import "_partial";</p>
+<p>width: 300px / $width * 100%;</p>
+<p>Since line numbers in browser no longer match line numbers in source debugging gets harder. 
+<a href="https://adamsilver.io/articles/the-disadvantages-of-css-preprocessors/" target="_blank"> It's easy to add a CSS preprocessor to the tech stack. But, it's not easy to remove it down the line, should we so choose.</a></p>
+<p>The .map files enable debugging.</p>
+<p>Static Site Generators take for example plain text and generate html code. 
+<a href="https://github.com/jhlq/LearnLite/blob/master/text/ppp.jl" target="_blank"> This website is built with a custom SSG written in Julia.</a></p>
+<p><a href="https://davidwalsh.name/introduction-static-site-generators" target="_blank"> SSGs are simple and secure.</a></p>
+
+<ul><li>Jekyll
+</li>
+<li>
+Gatsby.js
+</li>
+<li>
+Octopress
+</li>
+<li>
+GitBook
+</li>
+<li>
+Middleman
+</li>
+<li>
+Hugo
+</li>
+</ul>
+<p>Features:</p>
+
+<ul><li>Partials for navigation etc
+</li>
+<li>
+Layouts
+</li>
+<li>
+Templates
+</li>
+<li>
+Markdown (md) support
+</li>
+</ul>
+<p>Import partials from _includes folder with: {% include head.html %}</p>
+
+<code><br>
+&lt;ul&gt;<br>
+&nbsp;&nbsp;{% for post in site.posts %}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a href="{{ post.url }}"&gt;{{ post.title }}&lt;/a&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/li&gt;<br>
+&nbsp;&nbsp;{% endfor %}<br>
+&lt;/ul&gt;<br>
+</code>
+<p>In Jekyll Liquid is the templating engine</p>
+<p>Realtime content has to be brought in with JavaScript and user input handled with third party form receivers.</p>
+<p>Getting started:</p>
+
+<ul><li>Install Jekyll. Requires Ruby, RubyGems and NodeJS.
+</li>
+<li>
+Create a new site: jekyll new myblog
+</li>
+<li>
+Edit the site
+</li>
+<li>
+Build: cd myblog; jekyll serve
+</li>
+<li>
+Goto localhost:4000
+</li>
+</ul>
+<p>First assignment:</p>
+
+<ul><li>Create a static site using Jekyll and sass
+</li>
+<li>
+All CSS should be generated
+</li>
+<li>
+Comment functionality
+</li>
+<li>
+Open graph for sharing
+</li>
+<li>
+<a href="https://www.docker.com/" target="_blank"> Docker prevents pollution</a>
+</li>
+<li>
+<a href="https://github.com/1dv022/jekyll-boilerplate" target="_blank">https://github.com/1dv022/jekyll-boilerplate</a>
+</li>
+</ul>
+
+<h2>L2 Browser &amp; JavaScript</h2>
+
+<ul><li>Statistics
+</li>
+<li>
+Compatibility
+</li>
+<li>
+Internals
+</li>
+<li>
+Devtools
+</li>
+<li>
+Script loading
+</li>
+<li>
+Sandboxing
+</li>
+<li>
+Pollution
+</li>
+<li>
+Webpack
+</li>
+</ul>
+<p>Chrome is the most used browser followed by Safari and then FireFox.</p>
+<p><a href="http://caniuse.com/" target="_blank">http://caniuse.com/</a></p>
+<p>UI, rendering engine, js engine, network layer, cookies, web storage, cache.</p>
+<p>Rendering engines: Blink, Gecko, WebKit</p>
+<p>JavaScript engines: V8, SpiderMonkey, WebKit</p>
+<p>Load content in the background (XHR / WS)</p>
+<p>Sandboxing prevents JavaScript from:</p>
+
+<ul><li>Reading the local file system.
+</li>
+<li>
+Access some APIs without permission.
+</li>
+<li>
+Communicate with third party servers, CORS (Cross Origin Resouce Sharing) solves this.
+</li>
+<li>
+Find out the correct color of a link.
+</li>
+</ul>
+<p>&lt;script src="js/app.js"&gt;&lt;/script&gt; (Avoid coding directly within script tags), 
+<a href="https://www.growingwiththeweb.com/2014/02/async-vs-defer-attributes.html" target="_blank"> add async or defer to modify loading behaviour.</a>
+ Specify type="module" to use ESM.</p>
+<p>In the browser all variables are attached to the window object.</p>
+<p>ESM benefits:</p>
+
+<ul><li>'use strict' is standard
+</li>
+<li>
+Provides variable scoping
+</li>
+<li>
+Evaluated only once
+</li>
+<li>
+Executed asynchronosly
+</li>
+</ul>
+
+<code><br>
+import { a as b } from './foo.js'<br>
+import { a } from './foo.js'<br>
+import * as nspace from './foo.js'<br>
+</code>
+
+<code><br>
+export class MyClass {<br>
+&nbsp;&nbsp;constructor(){<br>
+<br>
+&nbsp;&nbsp;}<br>
+}<br>
+</code>
+<p>Developer tools:</p>
+
+<ul><li>Inspect the code
+</li>
+<li>
+Watch network traffic
+</li>
+<li>
+Debug JavaScript
+</li>
+<li>
+Track down memoryleaks and bottlenecks with timelines/profiling
+</li>
+<li>
+Console
+</li>
+</ul>
+
+<h2>L3 Document Object Model</h2>
+<p>DOM:</p>
+
+<ul><li>Traversing
+</li>
+<li>
+Selecting
+</li>
+<li>
+Manipulating
+</li>
+<li>
+Templates
+</li>
+<li>
+Custom elements
+</li>
+<li>
+Shadow DOM
+</li>
+</ul>
+
+<ul><li>Event delegation
+</li>
+<li>
+Timers
+</li>
+<li>
+Event loop
+</li>
+</ul>
+<p>The Document Object Model is an API for the rendering engine.</p>
+<p>Traversing the DOM:</p>
+
+<ul><li>firstChild
+</li>
+<li>
+firstElementChild
+</li>
+<li>
+parentNode
+</li>
+<li>
+lastChild
+</li>
+<li>
+lastElementChild
+</li>
+<li>
+nextElementSibling
+</li>
+<li>
+previousElementSibling
+</li>
+<li>
+childNodes
+</li>
+<li>
+children
+</li>
+</ul>
+<p>Select nodes:</p>
+
+<ul><li>getElementById
+</li>
+<li>
+getElementsByTagName
+</li>
+<li>
+getElementsByClassName
+</li>
+<li>
+querySelector
+</li>
+<li>
+querySelectorAll
+</li>
+</ul>
+<p>let tags = document.querySelectorAll('p.tag')</p>
+<p>let pTagsArray = Array.from(pTagsNodeList)</p>
+<p>node.</p>
+
+<ul><li>appendChild
+</li>
+<li>
+inserBefore
+</li>
+<li>
+replaceChild
+</li>
+<li>
+removeChild
+</li>
+<li>
+cloneNode
+</li>
+</ul>
+
+<code><br>
+let newTag = document.createElement('p')<br>
+let newText = document.createTextNode('Cool text!')<br>
+newTag.appendChild(newText)<br>
+document.querySelector('#main').appendChild(newTag)<br>
+</code>
+<p>Both textContent and innerHTML remove all children, textContent is more secure.</p>
+<p>getAttribute, setAttribute, removeAttribute</p>
+<p>node.style.color = '#AA5698'</p>
+<p>Avoid css in js except dynamic properties: movingElement.style.left = '${x}px'</p>
+<p>Use classes instead: node.classList.add('jschanged'), .remove, .toggle, .contains</p>
+<p>Clone template nodes.</p>
+
+<code><br>
+class BartBoard extends window.HTMLElement {<br>
+&nbsp;&nbsp;constructor() {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;super()&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;}<br>
+<br>
+&nbsp;&nbsp;connectedCallback () { // Called when added to the document<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let text = this.hasAttribute('text') ? this.getAttribute('text') : ''<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.textContent = Array(10).join(text)<br>
+&nbsp;&nbsp;} <br>
+}<br>
+window.customElements.define('bart-board', BartBoard)<br>
+</code>
+
+<div class="yellow">
+
+<code><br>
+class BartBoard extends window.HTMLElement {<br>
+&nbsp;&nbsp;constructor() {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;super()&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;connectedCallback () {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this._updateRendering()<br>
+&nbsp;&nbsp;}<br>
+<br>
+&nbsp;&nbsp;static get observedAttributes() {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return ['text'];<br>
+&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;attributeChangedCallback(name, oldValue, newValue) {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this._updateRendering()<br>
+&nbsp;&nbsp;}<br>
+<br>
+&nbsp;&nbsp;_updateRendering() {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let text = this.hasAttribute('text') ? this.getAttribute('text') : ''<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.textContent = Array(10).join(text)<br>
+&nbsp;&nbsp;}<br>
+}<br>
+</code>
+
+</div>
+
+<div class="red">
+
+<code><br>
+class BartBoard extends window.HTMLElement {<br>
+&nbsp;&nbsp;constructor () {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;super()<br>
+&nbsp;&nbsp;&nbsp;&nbsp;this.attachShadow({mode: 'open'})<br>
+&nbsp;&nbsp;&nbsp;&nbsp;this.shadowRoot.appendChild(template.content.cloneNode(true))<br>
+&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;...<br>
+&nbsp;&nbsp;_updateRendering() {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;let text = this.hasAttribute('text') ? this.getAttribute('text') : ''<br>
+&nbsp;&nbsp;&nbsp;&nbsp;this.shadowRoot.querySelector('#board-text').textContent = Array(10).join(text)<br>
+}<br>
+</code>
+
+</div>
+<p><a href="https://developers.google.com/web/fundamentals/web-components/" target="_blank">https://developers.google.com/web/fundamentals/web-components/</a></p>
+
+<h2>L4 Event driven programming</h2>
+
+<ul><li>Event delegation
+</li>
+<li>
+Timers
+</li>
+<li>
+Event loop
+</li>
+<li>
+Synthetic (custom) events
+</li>
+</ul>
+
+<ul><li>Mouse
+</li>
+<li>
+Scrolling
+</li>
+<li>
+Keyboard
+</li>
+<li>
+Page loaded
+</li>
+<li>
+DOM changed
+</li>
+<li>
+Content loaded
+</li>
+<li>
+Custom
+</li>
+</ul>
+<p>a href="page.html" onclick="doSomething()"</p>
+<p>tag.addEventListener('click', buttonClicked)</p>
+<p>event.stopPropagation()</p>
+<p>Use 
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind" target="_blank"> .bind(this)</a>
+ on addEventListener.</p>
+<p>If a loop variable is used in a function definition it will when called read the final value of the loop variable. Do .forEach( (a, i) => { } )</p>
+<p>event.preventDefault() or return false</p>
+
+<code><br>
+let timer = setTimeout( () => {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;console.log('At least 3 seconds passed..')<br>
+}, 3000)<br>
+clearTimeout(timer) // Stops the timer<br>
+</code>
+
+<code><br>
+let signupEvent = new window.CustomEvent('signup', { detail: myInput.value&nbsp;&nbsp;})<br>
+myCustomElement.dispatchEvent(signupEvent) // This will "trigger"/dispatch the event<br>
+let element = document.querySelector('#theCustomElement')<br>
+element.addEventListener('signup', event => {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;console.log(event.detail)<br>
+})<br>
+</code>
+
+<h2>L5 Asynchronous programming</h2>
+
+<ul><li>JSON
+</li>
+<li>
+Queue and event loop
+</li>
+<li>
+Ajax: XMLHttpRequest, fetch
+</li>
+<li>
+await/async
+</li>
+<li>
+Promises
+</li>
+<li>
+WebStorage
+</li>
+</ul>
+<p>JavaScript Object Notation is a language independent subset of JavaScript with MIME application/json</p>
+
+<code><br>
+[<br>
+&nbsp;&nbsp;&nbsp;&nbsp;{"name":"Bill","type":2,"alive":false},<br>
+&nbsp;&nbsp;&nbsp;&nbsp;{"name":"Sam","type":5,"alive":false},<br>
+&nbsp;&nbsp;&nbsp;&nbsp;{"name":"Jason","type":1,"alive":true}<br>
+]<br>
+</code>
+<p><a href="https://jsonlint.com/" target="_blank">https://jsonlint.com/</a></p>
+
+<code><br>
+let obj = {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;name: 'Ellen',<br>
+&nbsp;&nbsp;&nbsp;&nbsp;age: 25,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;city: 'Kalmar'<br>
+}<br>
+console.log(obj)<br>
+obj = JSON.stringify(obj)<br>
+console.log(obj)<br>
+obj = JSON.parse(obj)<br>
+console.log(obj)<br>
+</code>
+<p>Avoid blocking calls.</p>
+<p>HTTP methods: GET, POST, PUT, DELETE</p>
+
+<ul><li>200 OK
+</li>
+<li>
+301 Moved permanently
+</li>
+<li>
+307 Temporary redirect
+</li>
+<li>
+400 Bad request
+</li>
+<li>
+401 Unauthorized
+</li>
+<li>
+403 Forbidden
+</li>
+<li>
+404 Not found
+</li>
+<li>
+500 Internal server error
+</li>
+<li>
+503 Service unavailable
+</li>
+</ul>
+
+<code><br>
+POST /theserverpage/ HTTP/1.1<br>
+Host: lnuserver.se<br>
+Content-Length: 24<br>
+<br>
+user=Ellen&amp;message=Hello<br>
+</code>
+<p>Put response handlers in event listeners:
+<code><br>
+let req = new window.XMLHttpRequest()<br>
+req.addEventListener('load', function(){<br>
+&nbsp;&nbsp;&nbsp;&nbsp;console.log(req.responseText)<br>
+})<br>
+req.open('GET', 'data.json')<br>
+req.send()<br>
+</code></p>
+<p>AJAX: Asynchronous JavaScript And XML</p>
+
+<code><br>
+async getShow (id) {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;let show = await window.fetch(`http://tv-api.se/shows/${id}`)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;return show.json()<br>
+}<br>
+</code>
+
+<code><br>
+async searchUpdate (str) {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;let res = await window.fetch(`http://tv-api.se/shows/?q=${str}`)<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;res = await res.json() // { searchString: "break", result: [24, 35]}<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;let showPromises = []<br>
+&nbsp;&nbsp;&nbsp;&nbsp;res.result.forEach(id => {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;showPromises.push(this.getShow(id))<br>
+&nbsp;&nbsp;&nbsp;&nbsp;})<br>
+&nbsp;&nbsp;&nbsp;&nbsp;this.shows = []<br>
+&nbsp;&nbsp;&nbsp;&nbsp;this.shows = await Promise.all(showPromises)<br>
+}<br>
+</code>
+
+<div class="yellow">
+
+<code><br>
+connectedCallback () {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;this._searchButton.addEventListener('click', event => {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.searchUpdate(this._input.value).then(() => this._updateRendering())<br>
+&nbsp;&nbsp;&nbsp;&nbsp;})<br>
+}<br>
+_updateRendering () {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;this._ul.innerHTML = ''<br>
+&nbsp;&nbsp;&nbsp;&nbsp;this.shows.forEach(show => {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;let li = document.createElement('li')<br>
+&nbsp;&nbsp;&nbsp;&nbsp;li.textContent = `${show.name} ${show.year}`<br>
+&nbsp;&nbsp;&nbsp;&nbsp;this._ul.appendChild(li)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;})<br>
+}<br>
+</code>
+
+</div>
+
+<code><br>
+let res = await window.fetch("http://url-to-fetch.at/path", {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;method: "POST",<br>
+&nbsp;&nbsp;&nbsp;&nbsp;headers: {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'Content-Type': 'application/json'<br>
+&nbsp;&nbsp;&nbsp;&nbsp;},<br>
+&nbsp;&nbsp;&nbsp;&nbsp;body: JSON.stringify(data)<br>
+})<br>
+</code>
+<p>Forms:</p>
+
+<ul><li>Make it work without JS
+</li>
+<li>
+Try configs (method, action)
+</li>
+<li>
+form.addEventlistener("submit",...)
+</li>
+<li>
+Disable the submit-button
+</li>
+</ul>
+<p>CORS (Cross-Origin Resource Sharing) is for fetching data from other domains.</p>
+<p>A domain can set up to 50 cookies with max sizes 4096 bytes.</p>
+<p>window.localStorage.setItem('bgcolor', document.getElementById('bgcolor').value)</p>
+
+<h2>L6 Single Page Applications</h2>
+
+<ul><li>Server communication
+</li>
+<li>
+History
+</li>
+<li>
+Offline support
+</li>
+<li>
+SEO
+</li>
+</ul>
+
+<code><br>
+<a href="http://www.test.com:8080/index.html?id=1432&amp;name=Tim#anchor<br>" target="_blank">http://www.test.com:8080/index.html?id=1432&amp;name=Tim#anchor<br></a>
+location.hash&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // #anchor<br>
+location.host&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // www.test.com<br>
+location.hostname&nbsp;&nbsp; // www.test.com:8080<br>
+location.href&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // http://www.test.com:8080/index.html?id=1432&amp;name=Tim#anchor<br>
+location.pathname&nbsp;&nbsp; // /index.html<br>
+location.port&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // 8080<br>
+location.protocol&nbsp;&nbsp; // http:<br>
+location.search&nbsp;&nbsp;&nbsp;&nbsp; // ?id=1432&amp;name=Tim<br>
+</code>
+
+<code><br>
+// Router<br>
+window.addEventListener('hashchange', event => {<br>
+&nbsp;&nbsp;let hash = window.location.hash // #!/account/47435675<br>
+&nbsp;&nbsp;if(hash.substr(2,9) === '/account/'){<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let account = hash.substr(11) //47435675<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Fetch account information from server<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Display account information<br>
+&nbsp;&nbsp;}<br>
+})<br>
+</code>
+<p>window.history.</p>
+
+<ul><li>back()
+</li>
+<li>
+forward()
+</li>
+<li>
+go(-3)
+</li>
+<li>
+length
+</li>
+</ul>
+
+<div class="yellow">
+<p>Pushstate:
+<code><br>
+let ul = document.querySelector('#links')<br>
+<br>
+ul.addEventListener('click', event => {<br>
+&nbsp;&nbsp;event.preventDefault()<br>
+<br>
+&nbsp;&nbsp;let stateObj =&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;accountnbr: event.target.getAttribute('data-account'),<br>
+&nbsp;&nbsp;&nbsp;&nbsp;account: event.target.getAttribute('data-account-title')<br>
+&nbsp;&nbsp;}<br>
+<br>
+&nbsp;&nbsp;window.history.pushState(stateObj, `Account information: ${stateObj.account}`,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;`/account/${stateObj.accountnbr}`);<br>
+<br>
+&nbsp;&nbsp;// Load accountinformation and show it<br>
+&nbsp;&nbsp;console.log(stateObj)<br>
+})<br>
+<br>
+window.addEventListener('popstate', event => {<br>
+&nbsp;&nbsp;// When an old state is triggered.<br>
+&nbsp;&nbsp;console.log(`${event.state.account} with account number ${event.state.accountnbr}`)<br>
+})<br>
+<br>
+var currentState = window.history.state<br>
+</code></p>
+
+</div>
+
+<ul><li>AngularJS
+</li>
+<li>
+ember
+</li>
+<li>
+React
+</li>
+</ul>
+<p>XHR is not optimal for real time apps.</p>
+
+<code><br>
+let socket = new window.WebSocket('ws://www.example.com/socketserver', 'charcords')<br>
+let data = {x: 12, y: 14}<br>
+<br>
+socket.addEventListener('open', event => {<br>
+&nbsp;&nbsp;socket.send(JSON.stringify(data))<br>
+})<br>
+<br>
+socket.addEventListener('message', event => {<br>
+&nbsp;&nbsp;console.log(event.data)<br>
+})<br>
+</code>
+<p>Problems, how to</p>
+
+<ul><li>know if the user is online?
+</li>
+<li>
+cache resources?
+</li>
+<li>
+inform the user?
+</li>
+<li>
+handle data?
+</li>
+<li>
+sync data?
+</li>
+<li>
+handle conflicts?
+</li>
+</ul>
+<p><a href="https://github.hubspot.com/offline/docs/welcome/" target="_blank">https://github.hubspot.com/offline/docs/welcome/</a></p>
+<p><a href="http://alistapart.com/article/application-cache-is-a-douchebag" target="_blank"> Application cache is deprecated.</a></p>
+<p>ServiceWorkers have their own queue and WorkerGlobalScopes.</p>
+
+<ul><li>Require https
+</li>
+<li>
+Only permit asynchronous calls
+</li>
+<li>
+Uses promises
+</li>
+<li>
+Compatibility problems
+</li>
+</ul>
+
+<ul><li>Register a service worker
+</li>
+<li>
+Listen for "install", cache resources
+</li>
+<li>
+Listen for "fetch"
+</li>
+</ul>
+
+<h2>L7 Optimization &amp; Accessibility</h2>
+<p>Up to one in five people have some impairment.</p>
+<p>Ensure keyboard navigation is possible. Use interactive elements, aria-attributes and tabindex.</p>
+<p>Don't add unusual interactivity for example by adding a click listener to a header.</p>
+<p>Specify alt="image description"</p>
+
+<ul><li>    WCAG - Web Content Accessability Guidelines
+</li>
+<li>
+    UAAG - User Agent Accessibility Guidelines
+</li>
+<li>
+    ATAG - Authoring Tool Accessibility Guidelines
+</li>
+<li>
+    ARIA - Accessible Rich Internet Applications
+</li>
+<li>
+<a href="https://www.w3.org/standards/webdesign/accessibility" target="_blank">https://www.w3.org/standards/webdesign/accessibility</a>
+</li>
+</ul>
+<p>Try a screenreader!</p>
+
+<ul><li><a href="http://www.chromevox.com/" target="_blank">http://www.chromevox.com/</a>
+</li>
+<li>
+JAWS
+</li>
+<li>
+MacOS Screen reader
+</li>
+<li>
+NVDA
+</li>
+</ul>
+
+<h3>L8 APIs</h3>
+
+<ul><li>Web Workers
+</li>
+<li>
+HTML5 Canvas
+</li>
+<li>
+Web VR API (Gamepad API)
+</li>
+<li>
+Physical Web (BT-api)
+</li>
+<li>
+Web components
+</li>
+<li>
+WebRTC
+</li>
+<li>
+WebGL
+</li>
+<li>
+Web Assembly
+</li>
+</ul>
+
+<code><br>
+let worker = new window.Worker('worker.js')<br>
+let dataContainer = document.querySelector('#pn')<br>
+<br>
+worker.addEventListener('message', e => {<br>
+&nbsp;&nbsp;dataContainer.textContent = e.data<br>
+})<br>
+<br>
+//worker.js<br>
+let n = 1<br>
+search: while(true) {<br>
+&nbsp;&nbsp;n += 1<br>
+&nbsp;&nbsp;for(let i = 2; i <= Math.sqrt(n); i += 1){<br>
+&nbsp;&nbsp;&nbsp;&nbsp;if (n % i === 0)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;continue search<br>
+&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;postMessage(n)<br>
+}<br>
+</code>
+<p>Do animations with &lt;canvas&gt;</p>
+<p><a href="https://webvr.info/" target="_blank">https://webvr.info/</a></p>
+
+<code><br>
+window.addEventListener('gamepadconnected', e => {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;let index = e.gamepad.index<br>
+&nbsp;&nbsp;&nbsp;&nbsp;let id = e.gamepad.id<br>
+&nbsp;&nbsp;&nbsp;&nbsp;let nbrButtons = e.gamepad.buttons.length<br>
+&nbsp;&nbsp;&nbsp;&nbsp;let nbrAxes = e.gamepad.axes.length<br>
+})<br>
+</code>
+<p><a href="https://www.w3.org/TR/gamepad/" target="_blank">https://www.w3.org/TR/gamepad/</a></p>
+<p>Physical web beacons: 
+<a href="https://google.github.io/physical-web/" target="_blank">https://google.github.io/physical-web/</a></p>
+<p><a href="https://webbluetoothcg.github.io/web-bluetooth/" target="_blank">https://webbluetoothcg.github.io/web-bluetooth/</a></p>
+<p><a href="https://w3c.github.io/web-nfc/" target="_blank">https://w3c.github.io/web-nfc/</a></p>
+<p><a href="https://wicg.github.io/webusb/" target="_blank">https://wicg.github.io/webusb/</a></p>
+<p>Web components:</p>
+
+<ul><li>Custom elements
+</li>
+<li>
+Templates
+</li>
+<li>
+Shadow DOM
+</li>
+<li>
+ECMA Script Modules
+</li>
+</ul>
+<p>Web components polyfil: 
+<a href="https://www.polymer-project.org/" target="_blank">https://www.polymer-project.org/</a></p>
+<p>WebRTC</p>
+
+<ul><li>    MediaStream (getUserMedia())
+</li>
+<li>
+    MediaRecorder
+</li>
+<li>
+    RTCPeerConnection
+</li>
+<li>
+    RTCDataChannel
+</li>
+</ul>
+<p><a href="https://webrtc.org/" target="_blank">https://webrtc.org/</a></p>
+<p>WebGL: 
+<a href="https://en.wikipedia.org/wiki/Three.js" target="_blank">https://en.wikipedia.org/wiki/Three.js</a></p>
+<p>WASM: https://github.com/webassembly/</p>
+<p><a href="https://github.com/w3c/webpayments/wiki" target="_blank"> Web Payments</a></p>
+<p><a href="https://w3c.github.io/web-share/" target="_blank"> Web Share API.</a></p>
+
+<ul><li>    Geolocation API
+</li>
+<li>
+    Battery Status
+</li>
+<li>
+    Vibration
+</li>
+<li>
+    Clipboard
+</li>
+<li>
+    Ambient Light
+</li>
+<li>
+    Device Orientation
+</li>
+</ul>
+
+
+<br><br><br>
+<footer>
+<nav>
+	<a href="../index.html">Home.</a>
+	<a href="index.html">Index.</a>
+	<a href="javascript.html">JavaScript lectures.</a>
+	<a href="design.html">Design.</a>
+	<a href="clientbased.html">Client based programming.</a>
+</nav>
+</footer>
+<p><small>Updated on 2020-07-19.</small></p>
+</body>
+</html>
