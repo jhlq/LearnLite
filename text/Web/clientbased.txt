@@ -41,7 +41,7 @@ Jekyll, Sass
 Gatsby.js
 </ul>
 
-**L1
+**L1 SSG and CSS preprocessors
 
 CSS preprocessors extend the CSS language.
 
@@ -121,7 +121,7 @@ https://www.docker.com/ Docker prevents pollution
 https://github.com/1dv022/jekyll-boilerplate
 </ul>
 
-**L2
+**L2 Browser &  JavaScript
 
 <ul>
 Statistics
@@ -191,7 +191,7 @@ Track down memoryleaks and bottlenecks with timelines/profiling
 Console
 </ul>
 
-**L3
+**L3 Document Object Model
 
 DOM:
 <ul>
@@ -301,7 +301,7 @@ class BartBoard extends window.HTMLElement {
 	    this.textContent = Array(10).join(text)
 	}
 }
-<code>
+</code>
 </div>
 
 <red>
