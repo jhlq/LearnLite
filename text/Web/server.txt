@@ -498,7 +498,49 @@ Only the part with the private key can decrypt
 
 https://excess-xss.com/ A good article about different types of XSS attacks
 
-OWASP, The Open Web Application Security Project, produces (every three year) a report presenting the 10 most common attacks against web application. This is a must read for every web developer. You should read the report to point A10 (page 16). You can download the report here: 
-https://www.owasp.org/images/7/72/OWASP_Top_10-2017_%28en%29.pdf.pdf
+OWASP, The Open Web Application Security Project, produces (every three year) a report presenting the 10 most common attacks against web application. This is a must read for every web developer. You should read the report to point A10 (page 16). 
 
+**Real-time
 
+<ul>
+Hard – missing a deadline is a total system failure.
+Firm – infrequent deadline misses are tolerable, but may degrade the system's quality of service. The usefulness of a result is zero after its deadline.
+Soft – the usefulness of a result degrades after its deadline, thereby degrading the system's quality of service.
+</ul>
+
+Web of things: Devices communicating in realtime
+
+Examination 3: Create an application that checks issues in your repository. Fetch issue with Web API, monitor events with web hooks. OAuth.
+
+"Flash Player has been deprecated and has an official end-of-life at the end of 2020"
+
+Comet (umbrella term): Persistent HTTP connections, Domain sharding, Long-lived hidden iframe, XHR long polling, XHR streaming.
+
+Server-sent events: Not implemented by microsoft.
+
+Go WebSockets!
+
+https://stackoverflow.com/questions/41198368/long-polling-vs-websocket-when-expecting-one-time-response-from-server-side Long polling is mostly only for compatibility with old browsers.
+
+Websockets connect on HTTP(S), Upgrade to ws:// or wss://
+
+https://gist.github.com/subudeepak/9897212#websockets---security-overview Use Content Security Policy
+
+<ul>
+https://socket.io/
+https://www.npmjs.com/package/ws
+https://blog.bitsrc.io/8-node-js-web-socket-libraries-for-2018-818e7e5b67cf
+</ul>
+
+Challenges with web sockets:
+<ul>
+Browser support, fallback strategies.
+Concurrency, synchronization, fault tolerance.
+Offline, Queue-strategies
+</ul>
+
+P2P (peer to peer): http://www.html5rocks.com/en/tutorials/webrtc/basics/
+
+Web hooks, server to server: tell me when event A happens.
+
+https://www.leggetter.co.uk/2015/12/18/real-time-data-fundamentals.html Real time fundamentals blog series.
