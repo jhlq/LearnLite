@@ -430,4 +430,75 @@ userSchema.statics.authenticate = async function (username, password) {
 
 When defining a route you can provide multiple callbacks. You can use this mechanism to authorize the requested resource.
 
+**Web Security
+
+<ul>
+OWASP (WSTG)
+XSS, CSRF, Injection
+TLS Certificates
+Denial of Service (DOS, DDOS)
+</ul>
+
+The application must always assume that all input is potentially malicious
+
+https://owasp.org/ Open Web Application Security Project
+
+https://github.com/OWASP/wstg/tree/master/document Web Security Testing Guide (WSTG)
+
+XSS, Cross-Site Scripting. The attacker get the application to send unsanitized data (code) to client. Attackers can execute script on client to: Steal cookies (Session hijacking) and do key logging or phishing (Fake login)
+
+Always validate/sanitize user submitted text, FIEO (filter input, escape output), encode characters like <  and  > etc.
+
+https://github.com/YahooArchive/xss-filters
+
+https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP Content Security Policy (CSP)
+
+https://github.com/helmetjs/helmet Helmet helps you secure your Express apps by setting various HTTP headers. It's not a silver bullet, but it can help!
+
+CSRF, Cross-Site Request Forgery (pronounced sea-surf). Forces a client to make an unwanted request to a web application in which the user currently is authenticated.
+
+Protect with Synchronized Token pattern (STP)
+<ul>
+Check that the request is made by our client
+Include a token in forms (and/or in meta tag)
+Must be unique for each request
+</ul>
+
+<code>
+< form action="/account" method="post" >
+  < input type="hidden" name="_csrf" value="HvtsC1Ka-yq1Q2KPAu_Yh_H8F4vJEYfMIlBQ" / >
+< /form >
+</code>
+
+https://github.com/expressjs/csurf
+
+https://caniuse.com/#feat=same-site-cookie-attribute Same-site cookie (new)
+
+Injections: Manipulate the query to the database through HTTP requests
+
+Handle all input as strings
+
+Third party modules can be security issues, npm audit scans for vulnerabilities and automatically runs with npm install. Snyk.io has more features.
+
+TLS(SSL) + HTTP = HTTPS. Always use HTTPS in production.
+
+https://letsencrypt.org/
+
+In development we can create our own self-signed certificate
+
+Domain Validation (DV), Organization Validation (OV), Extended Validation (EV)
+
+Asymmetric (public-key encryption)
+<ul>
+A public key is used to encrypt a messages
+A private key is used to decrypt the message
+The part that only have the public key can only encrypt the message
+Only the part with the private key can decrypt
+</ul>
+
+https://excess-xss.com/ A good article about different types of XSS attacks
+
+OWASP, The Open Web Application Security Project, produces (every three year) a report presenting the 10 most common attacks against web application. This is a must read for every web developer. You should read the report to point A10 (page 16). You can download the report here: 
+https://www.owasp.org/images/7/72/OWASP_Top_10-2017_%28en%29.pdf.pdf
+
 
