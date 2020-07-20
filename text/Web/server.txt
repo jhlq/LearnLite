@@ -365,4 +365,69 @@ Whenever you redirect someone on your website it is a good idea to use a flash m
 
 req.session.flash = { type: 'success', text: 'The requested action was completed.' }
 
+**Access Control
+
+Authentication and authorization.
+
+Use cookie session id (stored on server), JWT (not stored) or a third-party like OpenId Connect or SAML.
+
+If authorization fails 403 is the default status code however for security one can reply with 404 (or 418) to hide the fact that the server has the requested resource.
+
+Passwords should be stored in an hashed format using strong cryptographic algorithms (Argon2, bcrypt, scrypt). Prevent rainbow table attacks with salt.
+
+It is not sufficient to simply hide the delete button at the client from a user that are not allowed to delete something at the server. It is safer to prevent access by default and override any requests that do not require permission.
+
+Salt and hash password using 
+https://www.npmjs.com/package/bcryptjs bcryptjs.
+
+Applying the principle of separation of concerns is a good idea by adding 
+https://mongoosejs.com/docs/api.html#schema_Schema-static static methods
+ to the Mongoose schema to register users.
+
+<code>
+const userSchema = new mongoose.Schema({
+	username: {
+		type: String,
+		required: true,
+		unique: true
+	},
+	password: {
+		type: String,
+		required: true,
+		minlength: [10, 'The password must contain 10 characters.']
+	}
+}, {
+	timestamps: true,
+	versionKey: false
+})
+</code>
+
+Using a pre hook you can execute code after the validation and before the data is written to the database. You must call .pre before compiling the model:
+<code>
+userSchema.pre('save', async function () {
+	this.password = await bcrypt.hash(this.password, 8)
+})
+</code>
+8 is the cost: 2^8 iterations of the key derivation function are used (some recommend a cost of 12 or more).
+
+<ul>
+The user submits a login form and the credentials are compared with the data in the database.
+Create a new session cookie, store user data in session store, and redirect.
+If the authentication fails show a custom flash error message or send the status code 401 Unauthorized.
+Applying the principle of separation of concerns is a good idea by adding static methods to the Mongoose schema to authenticate users.
+Do not forget to give the user a possibility to log off!
+</ul>
+
+<code>
+userSchema.statics.authenticate = async function (username, password) {
+	const user = await this.findOne({ username })
+	if (!user || !(await bcrypt.compare(password, user.password))) {
+		throw new Error('Invalid login attempt.')
+	}
+	return user
+}
+</code>
+
+When defining a route you can provide multiple callbacks. You can use this mechanism to authorize the requested resource.
+
 
