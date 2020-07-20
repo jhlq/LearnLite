@@ -2,18 +2,19 @@
 using DelimitedFiles, Dates
 function skipto(str,char)
 	for ci in 1:length(str)
-		#print(str[ci])
 		try
 			if str[ci]==char
 				return ci
 			end
 		catch er
-			#error("There was a problem reading this at index $ci: $(str[ci-1])")
+			@warn("There was a problem reading $str at index $ci, previous index has: $(str[ci-1])")
 		end	
 	end
 	return 0
 end
 function makelistarray(list)
+	return split(list,'\n')
+#-.-
 	listarray=AbstractString[]
 	n1=skipto(list,'\n')
 	push!(listarray,list[1:n1])
@@ -119,7 +120,7 @@ function process(pagestoprocess,pai)
 	while !isempty(collect(ulloc))
 		tulloc=something(findfirst("</ul>",text[ulloc[end]:end]), 0:-1).+(ulloc[end]-1)
 		list=text[ulloc[end]+2:tulloc[1]-2]
-		listarray=makelistarray(list*"\n ")
+		listarray=makelistarray(list)
 		htmltext=""
 		for li in listarray
 			htmltext*="<li>$li</li>\n"

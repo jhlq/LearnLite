@@ -506,7 +506,7 @@ OWASP, The Open Web Application Security Project, produces (every three year) a 
 <ul>
 Hard – missing a deadline is a total system failure.
 Firm – infrequent deadline misses are tolerable, but may degrade the system's quality of service. The usefulness of a result is zero after its deadline.
-Soft - the usefulness of a result degrades after its deadline, thereby degrading the system's quality of service.
+Soft – the usefulness of a result degrades after its deadline, thereby degrading the system's quality of service.
 </ul>
 
 Web of things: Devices communicating in realtime
