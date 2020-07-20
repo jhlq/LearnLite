@@ -544,3 +544,27 @@ P2P (peer to peer): http://www.html5rocks.com/en/tutorials/webrtc/basics/
 Web hooks, server to server: tell me when event A happens.
 
 https://www.leggetter.co.uk/2015/12/18/real-time-data-fundamentals.html Real time fundamentals blog series.
+
+**Production
+
+https://github.com/1dv023/syllabus/blob/master/lectures/06/production_nodejs.md Bringing your node.js web application to production
+
+https://github.com/1dv023/syllabus/blob/master/lectures/06/Production.md Bringing your work to the people
+
+https://github.com/CS-LNU-Learning-Objects/linux
+
+Process manager PM2
+
+<code>
+#!/bin/bash
+
+echo "Generating self-signed certificates..."
+mkdir -p ./config/sslcerts
+openssl genrsa -out ./config/sslcerts/key.pem 4096
+openssl req -new -key ./config/sslcerts/key.pem -out ./config/sslcerts/csr.pem
+openssl x509 -req -days 365 -in ./config/sslcerts/csr.pem -signkey ./config/sslcerts/key.pem -out ./config/sslcerts/cert.pem
+rm ./config/sslcerts/csr.pem
+chmod 600 ./config/sslcerts/key.pem ./config/sslcerts/cert.pem
+</code>
+
+https://www.digitalocean.com/community/tutorials/how-to-set-up-automatic-deployment-with-git-with-a-vps How To Set Up Automatic Deployment with Git with a VPS
