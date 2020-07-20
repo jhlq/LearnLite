@@ -274,4 +274,95 @@ Controller functions render an HTML page using a template engine, res.render(vie
 Template engines: Pug, Mustache, EJS and 
 https://handlebarsjs.com/ express-hbs
 
+**Persistent data
+
+MongoDB and Mongoose. Web sessions and flash messages.
+
+Create, read, update and delete (CRUD) are the four basic function of persistent storage.
+
+How to store application data at the server side?
+<ul>
+Data stored in the memory is non-persistent (data is erased when the power is turned off).
+Filesystem persistence?    Hard to work with, performance, doesn't scale well.
+Database persistence?    Oracle, SQL Server, MySQL, MariaDB, PostgreSQL,    MongoDB
+Cloud persistence?    mongodb.com (DBaaS, Database-as-a-Service), AWS, Azure, Google Cloud
+
+Relational database management systems (RDBMS) organizes data into tables with columns and rows with Structured Query Language (SQL).
+
+NoSQL databases like MongoDB and Firebase are like big maps where incomplete documents can be easily stored and extended during development without time consuming database migrations.
+
+MongoDB is open-source and derives from the word humongous. Stores JSON-like documents.
+
+<ul>
+https://www.mongodb.com/cloud/atlas MongoDB Atlas is a cloud database service.
+https://mongoosejs.com/docs/index.html Mongoose is an Object Data Modeling (ODM) library for MongoDB and Node.js.
+https://docs.atlas.mongodb.com/getting-started/
+</ul>
+
+The mongoose.connect method returns a Promise, mongodb+srv://<dbuser>:<password>@<cluster>.mongodb.net/<name>?retryWrites=true&w=majority, listen for connection events: connected, error, disconnected.
+
+Close the Mongoose connection when the Node process ends.
+
+<code>
+const shoeSchema = new mongoose.Schema({
+  name: { type: String, required: true},
+  size: { type: Number, required: true, min: 15, max: 47 }
+})
+</code>
+
+The lowercase name of the collection will automatically be the plural version of the model's name.
+<code>
+const Shoe = new mongoose.model('Shoe', shoeSchema)
+const myShoe = new Shoe();
+</code>
+
+The module (Task.js) resides in the models directory.
+
+<ul>
+/tasks
+/tasks/:id
+/tasks/new
+/tasks/create
+/tasks/:id/edit
+/tasks/:id/update
+/tasks/:id/remove
+/tasks/:id/delete
+</ul>
+
+<code>
+router.get('/:id/edit', tasksController.edit)
+router.post'/:id/update', tasksController.update)
+</code>
+
+The captured values are populated in the req.params object, with the name of the route parameter specified in the path as their respective keys.
+
+<code>
+const task = new Task({
+	description: req.body.description,
+	done: req.body.done
+})
+await task.save()
+</code>
+
+Use Task.find, and pass an empty object, to find all documents in a collection. It's good practice to transform the documents into anonymous objects before passing the data to the view.
+
+Use Task.updateOne (deleteOne) with { _id: req.body.id } to update a document in the database.
+
+A session cookie keeps users logged in.
+
+https://jwt.io Secure JSON Web Token
+
+Redis is an in-memory database alternative to MongoDB.
+
+The default server-side session storage MemoryStorage is not for production.
+
+Session variables are just properties of the request object's session property: req.session.name = 'Ada'
+
+To avoid "double posting" if a form page is refreshed return a redirect command instead of a view directly, 
+https://en.wikipedia.org/wiki/Post/Redirect/Get the Post/Redirect/Get (PRG) pattern.
+
+Whenever you redirect someone on your website it is a good idea to use a flash message to let them know that what they just did worked or not. The flash message should survive only a round trip. Use a session variable to save the message and delete the message on the next request.
+
+req.session.flash = { type: 'success', text: 'The requested action was completed.' }
+
 
