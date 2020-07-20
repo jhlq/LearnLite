@@ -12,6 +12,7 @@
 	<a href="javascript.html">JavaScript lectures.</a>
 	<a href="design.html">Design.</a>
 	<a href="clientbased.html">Client based programming.</a>
+	<a href="server.html">Server programming.</a>
 </nav>
 <h1>Foundational programming</h1>
 <p>Notes for a course at Linnaeus University about JavaScript and Node.js: https://coursepress.gitbook.io/1dv021/</p>
@@ -24,9 +25,9 @@
  says "Always use semicolons. Relying on implicit insertion can cause subtle, hard to debug problems."</p>
 <p>A potential problem is illustrated by the following which tries to call c(d+e):
 <code><br>
-a = b + c <br>
-(d + e).print()<br>
-</code></p>
+ a = b + c <br>
+ (d + e).print()<br>
+ </code></p>
 
 <h2>Introduction</h2>
 <p>Goals:</p>
@@ -315,87 +316,87 @@ protected
 <p>Object.keys(obj) gives an array with the property names.</p>
 <p>Use throw to abort with error: if (!Array.isArray(arr)) { throw new TypeError(`arr doesn't refer to an array.`) }</p>
 
-<code><br>
-try {<br>
-&nbsp;&nbsp;bar(foo)<br>
-} catch (e) {<br>
-&nbsp;&nbsp;console.error(e.message)<br>
-}<br>
-</code>
+<code>
+ try {<br>
+ &nbsp;&nbsp;bar(foo)<br>
+ } catch (e) {<br>
+ &nbsp;&nbsp;console.error(e.message)<br>
+ }<br>
+ </code>
 
 <h2>Lecture 6</h2>
 
-<code><br>
-const die = {<br>
-&nbsp;&nbsp;faceValue: undefined,<br>
-&nbsp;&nbsp;roll: function () {<br>
-&nbsp;&nbsp;&nbsp;&nbsp;this.faceValue = Math.floor(Math.random() * 6) + 1<br>
-&nbsp;&nbsp;}<br>
-}<br>
-</code>
+<code>
+ const die = {<br>
+ &nbsp;&nbsp;faceValue: undefined,<br>
+ &nbsp;&nbsp;roll: function () {<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;this.faceValue = Math.floor(Math.random() * 6) + 1<br>
+ &nbsp;&nbsp;}<br>
+ }<br>
+ </code>
 <p>The this keyword should be used sparingly as it can suddenly point to something unexpected, for example in callbacks. Check out the bind and call/apply functions.</p>
 <p>Default argument values can be specified like so: function (greet = 'Hej!')</p>
 <p>If you need many dices create a Factory: a function that creates a die object and then returns it; or a Constructor invoked with new.</p>
 
-<code><br>
-function Die () {<br>
-&nbsp;&nbsp;this.faceValue = undefined<br>
-&nbsp;&nbsp;this.roll = function () {<br>
-&nbsp;&nbsp;&nbsp;&nbsp;this.faceValue = Math.floor(Math.random() * 6) + 1<br>
-&nbsp;&nbsp;}<br>
-}<br>
-const die = new Die()<br>
-console.log(Object.getOwnPropertyNames(die)) // OUTPUT: [ 'faceValue', 'roll' ]<br>
-</code>
+<code>
+ function Die () {<br>
+ &nbsp;&nbsp;this.faceValue = undefined<br>
+ &nbsp;&nbsp;this.roll = function () {<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;this.faceValue = Math.floor(Math.random() * 6) + 1<br>
+ &nbsp;&nbsp;}<br>
+ }<br>
+ const die = new Die()<br>
+ console.log(Object.getOwnPropertyNames(die)) // OUTPUT: [ 'faceValue', 'roll' ]<br>
+ </code>
 <p>Constructors accept parameters like ordinary functions.</p>
 <p>To avoid duplicating the roll function in every Die object declare it as a prototype:
 <code><br>
-function Die () {<br>
-&nbsp;&nbsp;this.faceValue = undefined<br>
-}<br>
-Die.prototype.roll = function () {<br>
-&nbsp;&nbsp;this.faceValue = Math.floor(Math.random() * 6) + 1<br>
-}<br>
-const die = new Die()<br>
-</code></p>
+ function Die () {<br>
+ &nbsp;&nbsp;this.faceValue = undefined<br>
+ }<br>
+ Die.prototype.roll = function () {<br>
+ &nbsp;&nbsp;this.faceValue = Math.floor(Math.random() * 6) + 1<br>
+ }<br>
+ const die = new Die()<br>
+ </code></p>
 <p>The class syntax can be used since ECMAScript 2015:
 <code><br>
-class Die {<br>
-&nbsp;&nbsp;constructor () {<br>
-&nbsp;&nbsp;&nbsp;&nbsp;this.faceValue = undefined<br>
-&nbsp;&nbsp;}<br>
-&nbsp;&nbsp;roll () {<br>
-&nbsp;&nbsp;&nbsp;&nbsp;this.faceValue = Math.floor(Math.random() * 6) + 1<br>
-&nbsp;&nbsp;}<br>
-}<br>
-const die = new Die()<br>
-</code></p>
+ class Die {<br>
+ &nbsp;&nbsp;constructor () {<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;this.faceValue = undefined<br>
+ &nbsp;&nbsp;}<br>
+ &nbsp;&nbsp;roll () {<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;this.faceValue = Math.floor(Math.random() * 6) + 1<br>
+ &nbsp;&nbsp;}<br>
+ }<br>
+ const die = new Die()<br>
+ </code></p>
 
 <div class="yellow">
 <p>The designpattern OLOO (Object Linked to Other Objects) is an advanced alternative:
 <code><br>
-const Person = {<br>
-&nbsp;&nbsp;talk: function () {<br>
-&nbsp;&nbsp;&nbsp;&nbsp;console.log('Jag, ' + this.name + ', är ' + this.age + ' år.')<br>
-&nbsp;&nbsp;}<br>
-}<br>
-const createPerson = function (name, age) {<br>
-&nbsp;&nbsp;return Object.create(Person, {<br>
-&nbsp;&nbsp;&nbsp;&nbsp;'name': {<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value: name,<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;writable: true,<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;enumerable: true,<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;configurable: true<br>
-&nbsp;&nbsp;&nbsp;&nbsp;},<br>
-&nbsp;&nbsp;&nbsp;&nbsp;'age': {<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value: age,<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;writable: true,<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;enumerable: true,<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;configurable: true<br>
-&nbsp;&nbsp;&nbsp;&nbsp;}<br>
-&nbsp;&nbsp;})<br>
-}<br>
-</code></p>
+ const Person = {<br>
+ &nbsp;&nbsp;talk: function () {<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;console.log('Jag, ' + this.name + ', är ' + this.age + ' år.')<br>
+ &nbsp;&nbsp;}<br>
+ }<br>
+ const createPerson = function (name, age) {<br>
+ &nbsp;&nbsp;return Object.create(Person, {<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;'name': {<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value: name,<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;writable: true,<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;enumerable: true,<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;configurable: true<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;},<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;'age': {<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value: age,<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;writable: true,<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;enumerable: true,<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;configurable: true<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+ &nbsp;&nbsp;})<br>
+ }<br>
+ </code></p>
 
 </div>
 
@@ -403,139 +404,139 @@ const createPerson = function (name, age) {<br>
 <p>Introducing Node.js modules.</p>
 <p>Define a rectangle constructor function in a separate file and end with module.exports=Rectangle then:
 <code><br>
-const Rectangle = require('./src/Rectangle')<br>
-const rectangle = new Rectangle()<br>
-</code></p>
+ const Rectangle = require('./src/Rectangle')<br>
+ const rectangle = new Rectangle()<br>
+ </code></p>
 <p>Object instances have a __proto__ reference to the constructors prototype.</p>
 <p>Variables set with this are public whereas if you let set a value in the constructor it is private and only accessible through the functions (such as getters/setters).</p>
 
-<code><br>
-function Die () {<br>
-&nbsp;&nbsp;this._faceValue = undefined // semi-private property<br>
-}<br>
-Object.defineProperty(Die.prototype, 'faceValue', {<br>
-&nbsp;&nbsp;get: function () {<br>
-&nbsp;&nbsp;&nbsp;&nbsp;return this._faceValue<br>
-&nbsp;&nbsp;}<br>
-})<br>
-</code>
+<code>
+ function Die () {<br>
+ &nbsp;&nbsp;this._faceValue = undefined // semi-private property<br>
+ }<br>
+ Object.defineProperty(Die.prototype, 'faceValue', {<br>
+ &nbsp;&nbsp;get: function () {<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;return this._faceValue<br>
+ &nbsp;&nbsp;}<br>
+ })<br>
+ </code>
 <p>Try adding a set: function to the above code that only allows certain numbers.</p>
 <p>Private variables can have annoying side effects, sure it prevents users from making dumb mistakes but if you know what you are doing it is a pain to not be allowed to do it.</p>
 
-<code><br>
-class Die {<br>
-&nbsp;&nbsp;constructor () {<br>
-&nbsp;&nbsp;&nbsp;&nbsp;this._faceValue = undefined<br>
-&nbsp;&nbsp;}<br>
-&nbsp;&nbsp;get faceValue () {<br>
-&nbsp;&nbsp;&nbsp;&nbsp;return this._faceValue<br>
-&nbsp;&nbsp;}<br>
-&nbsp;&nbsp;roll () {<br>
-&nbsp;&nbsp;&nbsp;&nbsp;this._faceValue = Math.floor(Math.random() * 6) + 1<br>
-&nbsp;&nbsp;}<br>
-}<br>
-</code>
+<code>
+ class Die {<br>
+ &nbsp;&nbsp;constructor () {<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;this._faceValue = undefined<br>
+ &nbsp;&nbsp;}<br>
+ &nbsp;&nbsp;get faceValue () {<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;return this._faceValue<br>
+ &nbsp;&nbsp;}<br>
+ &nbsp;&nbsp;roll () {<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;this._faceValue = Math.floor(Math.random() * 6) + 1<br>
+ &nbsp;&nbsp;}<br>
+ }<br>
+ </code>
 
 <div class="yellow">
 
 <code><br>
-const _faceValue = new WeakMap()<br>
-class Die {<br>
-&nbsp;&nbsp;constructor () {<br>
-&nbsp;&nbsp;&nbsp;&nbsp;_faceValue.set(this, undefined)<br>
-&nbsp;&nbsp;}<br>
-&nbsp;&nbsp;get faceValue () {<br>
-&nbsp;&nbsp;&nbsp;&nbsp;return _faceValue.get(this)<br>
-&nbsp;&nbsp;}<br>
-&nbsp;&nbsp;set faceValue (value) {<br>
-&nbsp;&nbsp;&nbsp;&nbsp;const numberValue = Number(value)<br>
-&nbsp;&nbsp;&nbsp;&nbsp;if (!Number.isInteger(numberValue) || numberValue &lt;1 || numberValue&gt; 6) {<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;throw new Error('faceValue must be set to an integer between 1 and 6.')<br>
-&nbsp;&nbsp;&nbsp;&nbsp;}<br>
-&nbsp;&nbsp;&nbsp;&nbsp;_faceValue.set(this, value)<br>
-&nbsp;&nbsp;}<br>
-&nbsp;&nbsp;roll () {<br>
-&nbsp;&nbsp;&nbsp;&nbsp;this.faceValue = Math.floor(Math.random() * 6) + 1<br>
-&nbsp;&nbsp;}<br>
-}<br>
-</code>
+ const _faceValue = new WeakMap()<br>
+ class Die {<br>
+ &nbsp;&nbsp;constructor () {<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;_faceValue.set(this, undefined)<br>
+ &nbsp;&nbsp;}<br>
+ &nbsp;&nbsp;get faceValue () {<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;return _faceValue.get(this)<br>
+ &nbsp;&nbsp;}<br>
+ &nbsp;&nbsp;set faceValue (value) {<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;const numberValue = Number(value)<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;if (!Number.isInteger(numberValue) || numberValue &lt;1 || numberValue&gt; 6) {<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;throw new Error('faceValue must be set to an integer between 1 and 6.')<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;_faceValue.set(this, value)<br>
+ &nbsp;&nbsp;}<br>
+ &nbsp;&nbsp;roll () {<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;this.faceValue = Math.floor(Math.random() * 6) + 1<br>
+ &nbsp;&nbsp;}<br>
+ }<br>
+ </code>
 
 </div>
 
 <div class="red">
 
 <code><br>
-class Die {<br>
-&nbsp;&nbsp;#faceValue // private class field/class property, stage 3 proposal ES2019<br>
-&nbsp;&nbsp;constructor () {<br>
-&nbsp;&nbsp;&nbsp;&nbsp;this.roll()<br>
-&nbsp;&nbsp;}<br>
-&nbsp;&nbsp;get faceValue () {<br>
-&nbsp;&nbsp;&nbsp;&nbsp;return this.#faceValue<br>
-&nbsp;&nbsp;}<br>
-...<br>
-</code>
+ class Die {<br>
+ &nbsp;&nbsp;#faceValue // private class field/class property, stage 3 proposal ES2019<br>
+ &nbsp;&nbsp;constructor () {<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;this.roll()<br>
+ &nbsp;&nbsp;}<br>
+ &nbsp;&nbsp;get faceValue () {<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;return this.#faceValue<br>
+ &nbsp;&nbsp;}<br>
+ ...<br>
+ </code>
 
 </div>
 <p>Inheritance prevents code repetition.</p>
 
-<code><br>
-function Student (name, age, isCampus) {<br>
-&nbsp;&nbsp;Person.call(this, name, age) // call the constructor for Person (defined elsewhere)<br>
-&nbsp;&nbsp;this.isCampus = isCampus<br>
-}<br>
-Student.prototype = Object.create(Person.prototype) // inherits prototype from Person<br>
-Student.prototype.constructor =&nbsp;&nbsp;Student // restores constructor to Student<br>
-Student.prototype.toString = function() { // overshadows the method in Person.prototype<br>
-&nbsp;&nbsp;return 'Jag, ' + this.name + ', läser på ' +<br>
-&nbsp;&nbsp;&nbsp;&nbsp;(this.isCampus ? 'campus' : 'distans') + ' och är ' +&nbsp;&nbsp;this.age + ' år.'<br>
-}<br>
-</code>
+<code>
+ function Student (name, age, isCampus) {<br>
+ &nbsp;&nbsp;Person.call(this, name, age) // call the constructor for Person (defined elsewhere)<br>
+ &nbsp;&nbsp;this.isCampus = isCampus<br>
+ }<br>
+ Student.prototype = Object.create(Person.prototype) // inherits prototype from Person<br>
+ Student.prototype.constructor =&nbsp;&nbsp;Student // restores constructor to Student<br>
+ Student.prototype.toString = function() { // overshadows the method in Person.prototype<br>
+ &nbsp;&nbsp;return 'Jag, ' + this.name + ', läser på ' +<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;(this.isCampus ? 'campus' : 'distans') + ' och är ' +&nbsp;&nbsp;this.age + ' år.'<br>
+ }<br>
+ </code>
 
-<code><br>
-class Student extends Person {<br>
-&nbsp;&nbsp;constructor (name, age, isCampus) {<br>
-&nbsp;&nbsp;&nbsp;&nbsp;super(name, age) // call constructor for Person<br>
-&nbsp;&nbsp;&nbsp;&nbsp;this.isCampus = isCampus<br>
-&nbsp;&nbsp;}<br>
-&nbsp;&nbsp;toString() { // overshadows the method in Person<br>
-&nbsp;&nbsp;&nbsp;&nbsp;return 'Jag, ' + this.name + ', läser på ' +<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(this.isCampus ? 'campus' : 'distans') + ' och är ' +&nbsp;&nbsp;this.age + ' år.'<br>
-&nbsp;&nbsp;}<br>
-}<br>
-</code>
+<code>
+ class Student extends Person {<br>
+ &nbsp;&nbsp;constructor (name, age, isCampus) {<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;super(name, age) // call constructor for Person<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;this.isCampus = isCampus<br>
+ &nbsp;&nbsp;}<br>
+ &nbsp;&nbsp;toString() { // overshadows the method in Person<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;return 'Jag, ' + this.name + ', läser på ' +<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(this.isCampus ? 'campus' : 'distans') + ' och är ' +&nbsp;&nbsp;this.age + ' år.'<br>
+ &nbsp;&nbsp;}<br>
+ }<br>
+ </code>
 <p>Do obj instanceof Constructor to check if the constructor helped create the object.</p>
 
 <div class="red">
 
 <code><br>
-const personBase = {<br>
-&nbsp;&nbsp;toString: function () {<br>
-&nbsp;&nbsp;&nbsp;&nbsp;return `Jag, ${this.name}, är ${this.age} år.`<br>
-&nbsp;&nbsp;}<br>
-}<br>
-let createPerson = function (name, age) {<br>
-&nbsp;&nbsp;return Object.create(personBase, {<br>
-&nbsp;&nbsp;&nbsp;&nbsp;age: {<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value: age,<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;writable: true, configurable: true, enumerable: true<br>
-&nbsp;&nbsp;&nbsp;&nbsp;},<br>
-&nbsp;&nbsp;&nbsp;&nbsp;name: {<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value: name,<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;writable: true, configurable: true, enumerable: true<br>
-&nbsp;&nbsp;&nbsp;&nbsp;}<br>
-&nbsp;&nbsp;})<br>
-}<br>
-let createStudent = function (name, age, isCampus) {<br>
-&nbsp;&nbsp;let obj = Object.create(createPerson(name, age), {<br>
-&nbsp;&nbsp;&nbsp;&nbsp;isCampus: {<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value: isCampus,<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;writable: true, configurable: true, enumerable: true<br>
-&nbsp;&nbsp;&nbsp;&nbsp;}<br>
-&nbsp;&nbsp;})<br>
-&nbsp;&nbsp;obj.toString = function () {<br>
-...<br>
-</code>
+ const personBase = {<br>
+ &nbsp;&nbsp;toString: function () {<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;return `Jag, ${this.name}, är ${this.age} år.`<br>
+ &nbsp;&nbsp;}<br>
+ }<br>
+ let createPerson = function (name, age) {<br>
+ &nbsp;&nbsp;return Object.create(personBase, {<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;age: {<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value: age,<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;writable: true, configurable: true, enumerable: true<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;},<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;name: {<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value: name,<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;writable: true, configurable: true, enumerable: true<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+ &nbsp;&nbsp;})<br>
+ }<br>
+ let createStudent = function (name, age, isCampus) {<br>
+ &nbsp;&nbsp;let obj = Object.create(createPerson(name, age), {<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;isCampus: {<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value: isCampus,<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;writable: true, configurable: true, enumerable: true<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+ &nbsp;&nbsp;})<br>
+ &nbsp;&nbsp;obj.toString = function () {<br>
+ ...<br>
+ </code>
 
 </div>
 
@@ -553,18 +554,18 @@ let createStudent = function (name, age, isCampus) {<br>
 <p>Examining new RegExp('^[1-9]\d{2} ?\d{2}$') we find ^ is start of string, [1-9] is any number except zero exactly once, \d{2} is any number twice, ? is nothing or a space and $ is end of string.</p>
 <p>Squaring an array:
 <code><br>
-// imperative<br>
-let arr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]<br>
-for (let i = 0; i &lt;arr.length; i += 1) {<br>
-&nbsp;&nbsp;arr[i] = Math.pow(arr[i], 2)<br>
-}<br>
-// declarative with anonymous function expression<br>
-let sqrArr = arr.map(function(num) {<br>
-&nbsp;&nbsp;return Math.pow(num, 2)<br>
-})<br>
-// declarative with arrow function (lambda expression)<br>
-sqrArr = arr.map(num => Math.pow(num, 2))<br>
-</code>
+ // imperative<br>
+ let arr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]<br>
+ for (let i = 0; i &lt;arr.length; i += 1) {<br>
+ &nbsp;&nbsp;arr[i] = Math.pow(arr[i], 2)<br>
+ }<br>
+ // declarative with anonymous function expression<br>
+ let sqrArr = arr.map(function(num) {<br>
+ &nbsp;&nbsp;return Math.pow(num, 2)<br>
+ })<br>
+ // declarative with arrow function (lambda expression)<br>
+ sqrArr = arr.map(num => Math.pow(num, 2))<br>
+ </code>
 Note that arrow functions cannot be used as prototypes (because of peculiarities with this).</p>
 <p><a href="http://kangax.github.io/compat-table/esnext/" target="_blank"> Proposals for the ECMAScript standard.</a></p>
 
@@ -578,8 +579,9 @@ Note that arrow functions cannot be used as prototypes (because of peculiarities
 	<a href="javascript.html">JavaScript lectures.</a>
 	<a href="design.html">Design.</a>
 	<a href="clientbased.html">Client based programming.</a>
+	<a href="server.html">Server programming.</a>
 </nav>
 </footer>
-<p><small>Updated on 2020-07-19.</small></p>
+<p><small>Updated on 2020-07-20.</small></p>
 </body>
 </html>

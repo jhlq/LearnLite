@@ -12,6 +12,7 @@
 	<a href="javascript.html">JavaScript lectures.</a>
 	<a href="design.html">Design.</a>
 	<a href="clientbased.html">Client based programming.</a>
+	<a href="server.html">Server programming.</a>
 </nav>
 <h1>Client based programming</h1>
 <p>Notes for a course at Linnaeus University: https://coursepress.lnu.se/kurs/klientbaserad-webbprogrammering/</p>
@@ -119,15 +120,15 @@ Markdown (md) support
 </ul>
 <p>Import partials from _includes folder with: {% include head.html %}</p>
 
-<code><br>
-&lt;ul&gt;<br>
-&nbsp;&nbsp;{% for post in site.posts %}<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a href="{{ post.url }}"&gt;{{ post.title }}&lt;/a&gt;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;/li&gt;<br>
-&nbsp;&nbsp;{% endfor %}<br>
-&lt;/ul&gt;<br>
-</code>
+<code>
+ &lt;ul&gt;<br>
+ &nbsp;&nbsp;{% for post in site.posts %}<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a href="{{ post.url }}"&gt;{{ post.title }}&lt;/a&gt;<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&lt;/li&gt;<br>
+ &nbsp;&nbsp;{% endfor %}<br>
+ &lt;/ul&gt;<br>
+ </code>
 <p>In Jekyll Liquid is the templating engine</p>
 <p>Realtime content has to be brought in with JavaScript and user input handled with third party form receivers.</p>
 <p>Getting started:</p>
@@ -233,19 +234,19 @@ Executed asynchronosly
 </li>
 </ul>
 
-<code><br>
-import { a as b } from './foo.js'<br>
-import { a } from './foo.js'<br>
-import * as nspace from './foo.js'<br>
-</code>
+<code>
+ import { a as b } from './foo.js'<br>
+ import { a } from './foo.js'<br>
+ import * as nspace from './foo.js'<br>
+ </code>
 
-<code><br>
-export class MyClass {<br>
-&nbsp;&nbsp;constructor(){<br>
-<br>
-&nbsp;&nbsp;}<br>
-}<br>
-</code>
+<code>
+ export class MyClass {<br>
+ &nbsp;&nbsp;constructor(){<br>
+ <br>
+ &nbsp;&nbsp;}<br>
+ }<br>
+ </code>
 <p>Developer tools:</p>
 
 <ul><li>Inspect the code
@@ -362,12 +363,12 @@ cloneNode
 </li>
 </ul>
 
-<code><br>
-let newTag = document.createElement('p')<br>
-let newText = document.createTextNode('Cool text!')<br>
-newTag.appendChild(newText)<br>
-document.querySelector('#main').appendChild(newTag)<br>
-</code>
+<code>
+ let newTag = document.createElement('p')<br>
+ let newText = document.createTextNode('Cool text!')<br>
+ newTag.appendChild(newText)<br>
+ document.querySelector('#main').appendChild(newTag)<br>
+ </code>
 <p>Both textContent and innerHTML remove all children, textContent is more secure.</p>
 <p>getAttribute, setAttribute, removeAttribute</p>
 <p>node.style.color = '#AA5698'</p>
@@ -375,62 +376,62 @@ document.querySelector('#main').appendChild(newTag)<br>
 <p>Use classes instead: node.classList.add('jschanged'), .remove, .toggle, .contains</p>
 <p>Clone template nodes.</p>
 
-<code><br>
-class BartBoard extends window.HTMLElement {<br>
-&nbsp;&nbsp;constructor() {<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;super()&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
-&nbsp;&nbsp;}<br>
-<br>
-&nbsp;&nbsp;connectedCallback () { // Called when added to the document<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let text = this.hasAttribute('text') ? this.getAttribute('text') : ''<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.textContent = Array(10).join(text)<br>
-&nbsp;&nbsp;} <br>
-}<br>
-window.customElements.define('bart-board', BartBoard)<br>
-</code>
+<code>
+ class BartBoard extends window.HTMLElement {<br>
+ &nbsp;&nbsp;constructor() {<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;super()&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+ &nbsp;&nbsp;}<br>
+ <br>
+ &nbsp;&nbsp;connectedCallback () { // Called when added to the document<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let text = this.hasAttribute('text') ? this.getAttribute('text') : ''<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.textContent = Array(10).join(text)<br>
+ &nbsp;&nbsp;} <br>
+ }<br>
+ window.customElements.define('bart-board', BartBoard)<br>
+ </code>
 
 <div class="yellow">
 
 <code><br>
-class BartBoard extends window.HTMLElement {<br>
-&nbsp;&nbsp;constructor() {<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;super()&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
-&nbsp;&nbsp;}<br>
-&nbsp;&nbsp;connectedCallback () {<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this._updateRendering()<br>
-&nbsp;&nbsp;}<br>
-<br>
-&nbsp;&nbsp;static get observedAttributes() {<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return ['text'];<br>
-&nbsp;&nbsp;}<br>
-&nbsp;&nbsp;attributeChangedCallback(name, oldValue, newValue) {<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this._updateRendering()<br>
-&nbsp;&nbsp;}<br>
-<br>
-&nbsp;&nbsp;_updateRendering() {<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let text = this.hasAttribute('text') ? this.getAttribute('text') : ''<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.textContent = Array(10).join(text)<br>
-&nbsp;&nbsp;}<br>
-}<br>
-</code>
+ class BartBoard extends window.HTMLElement {<br>
+ &nbsp;&nbsp;constructor() {<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;super()&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+ &nbsp;&nbsp;}<br>
+ &nbsp;&nbsp;connectedCallback () {<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this._updateRendering()<br>
+ &nbsp;&nbsp;}<br>
+ <br>
+ &nbsp;&nbsp;static get observedAttributes() {<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return ['text'];<br>
+ &nbsp;&nbsp;}<br>
+ &nbsp;&nbsp;attributeChangedCallback(name, oldValue, newValue) {<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this._updateRendering()<br>
+ &nbsp;&nbsp;}<br>
+ <br>
+ &nbsp;&nbsp;_updateRendering() {<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let text = this.hasAttribute('text') ? this.getAttribute('text') : ''<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.textContent = Array(10).join(text)<br>
+ &nbsp;&nbsp;}<br>
+ }<br>
+ </code>
 
 </div>
 
 <div class="red">
 
 <code><br>
-class BartBoard extends window.HTMLElement {<br>
-&nbsp;&nbsp;constructor () {<br>
-&nbsp;&nbsp;&nbsp;&nbsp;super()<br>
-&nbsp;&nbsp;&nbsp;&nbsp;this.attachShadow({mode: 'open'})<br>
-&nbsp;&nbsp;&nbsp;&nbsp;this.shadowRoot.appendChild(template.content.cloneNode(true))<br>
-&nbsp;&nbsp;}<br>
-&nbsp;&nbsp;...<br>
-&nbsp;&nbsp;_updateRendering() {<br>
-&nbsp;&nbsp;&nbsp;&nbsp;let text = this.hasAttribute('text') ? this.getAttribute('text') : ''<br>
-&nbsp;&nbsp;&nbsp;&nbsp;this.shadowRoot.querySelector('#board-text').textContent = Array(10).join(text)<br>
-}<br>
-</code>
+ class BartBoard extends window.HTMLElement {<br>
+ &nbsp;&nbsp;constructor () {<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;super()<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;this.attachShadow({mode: 'open'})<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;this.shadowRoot.appendChild(template.content.cloneNode(true))<br>
+ &nbsp;&nbsp;}<br>
+ &nbsp;&nbsp;...<br>
+ &nbsp;&nbsp;_updateRendering() {<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;let text = this.hasAttribute('text') ? this.getAttribute('text') : ''<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;this.shadowRoot.querySelector('#board-text').textContent = Array(10).join(text)<br>
+ }<br>
+ </code>
 
 </div>
 <p><a href="https://developers.google.com/web/fundamentals/web-components/" target="_blank">https://developers.google.com/web/fundamentals/web-components/</a></p>
@@ -480,21 +481,21 @@ Custom
 <p>If a loop variable is used in a function definition it will when called read the final value of the loop variable. Do .forEach( (a, i) => { } )</p>
 <p>event.preventDefault() or return false</p>
 
-<code><br>
-let timer = setTimeout( () => {<br>
-&nbsp;&nbsp;&nbsp;&nbsp;console.log('At least 3 seconds passed..')<br>
-}, 3000)<br>
-clearTimeout(timer) // Stops the timer<br>
-</code>
+<code>
+ let timer = setTimeout( () => {<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;console.log('At least 3 seconds passed..')<br>
+ }, 3000)<br>
+ clearTimeout(timer) // Stops the timer<br>
+ </code>
 
-<code><br>
-let signupEvent = new window.CustomEvent('signup', { detail: myInput.value&nbsp;&nbsp;})<br>
-myCustomElement.dispatchEvent(signupEvent) // This will "trigger"/dispatch the event<br>
-let element = document.querySelector('#theCustomElement')<br>
-element.addEventListener('signup', event => {<br>
-&nbsp;&nbsp;&nbsp;&nbsp;console.log(event.detail)<br>
-})<br>
-</code>
+<code>
+ let signupEvent = new window.CustomEvent('signup', { detail: myInput.value&nbsp;&nbsp;})<br>
+ myCustomElement.dispatchEvent(signupEvent) // This will "trigger"/dispatch the event<br>
+ let element = document.querySelector('#theCustomElement')<br>
+ element.addEventListener('signup', event => {<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;console.log(event.detail)<br>
+ })<br>
+ </code>
 
 <h2>L5 Asynchronous programming</h2>
 
@@ -518,27 +519,27 @@ WebStorage
 </ul>
 <p>JavaScript Object Notation is a language independent subset of JavaScript with MIME application/json</p>
 
-<code><br>
-[<br>
-&nbsp;&nbsp;&nbsp;&nbsp;{"name":"Bill","type":2,"alive":false},<br>
-&nbsp;&nbsp;&nbsp;&nbsp;{"name":"Sam","type":5,"alive":false},<br>
-&nbsp;&nbsp;&nbsp;&nbsp;{"name":"Jason","type":1,"alive":true}<br>
-]<br>
-</code>
+<code>
+ [<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;{"name":"Bill","type":2,"alive":false},<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;{"name":"Sam","type":5,"alive":false},<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;{"name":"Jason","type":1,"alive":true}<br>
+ ]<br>
+ </code>
 <p><a href="https://jsonlint.com/" target="_blank">https://jsonlint.com/</a></p>
 
-<code><br>
-let obj = {<br>
-&nbsp;&nbsp;&nbsp;&nbsp;name: 'Ellen',<br>
-&nbsp;&nbsp;&nbsp;&nbsp;age: 25,<br>
-&nbsp;&nbsp;&nbsp;&nbsp;city: 'Kalmar'<br>
-}<br>
-console.log(obj)<br>
-obj = JSON.stringify(obj)<br>
-console.log(obj)<br>
-obj = JSON.parse(obj)<br>
-console.log(obj)<br>
-</code>
+<code>
+ let obj = {<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;name: 'Ellen',<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;age: 25,<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;city: 'Kalmar'<br>
+ }<br>
+ console.log(obj)<br>
+ obj = JSON.stringify(obj)<br>
+ console.log(obj)<br>
+ obj = JSON.parse(obj)<br>
+ console.log(obj)<br>
+ </code>
 <p>Avoid blocking calls.</p>
 <p>HTTP methods: GET, POST, PUT, DELETE</p>
 
@@ -570,75 +571,75 @@ console.log(obj)<br>
 </li>
 </ul>
 
-<code><br>
-POST /theserverpage/ HTTP/1.1<br>
-Host: lnuserver.se<br>
-Content-Length: 24<br>
-<br>
-user=Ellen&amp;message=Hello<br>
-</code>
+<code>
+ POST /theserverpage/ HTTP/1.1<br>
+ Host: lnuserver.se<br>
+ Content-Length: 24<br>
+ <br>
+ user=Ellen&amp;message=Hello<br>
+ </code>
 <p>Put response handlers in event listeners:
 <code><br>
-let req = new window.XMLHttpRequest()<br>
-req.addEventListener('load', function(){<br>
-&nbsp;&nbsp;&nbsp;&nbsp;console.log(req.responseText)<br>
-})<br>
-req.open('GET', 'data.json')<br>
-req.send()<br>
-</code></p>
+ let req = new window.XMLHttpRequest()<br>
+ req.addEventListener('load', function(){<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;console.log(req.responseText)<br>
+ })<br>
+ req.open('GET', 'data.json')<br>
+ req.send()<br>
+ </code></p>
 <p>AJAX: Asynchronous JavaScript And XML</p>
 
-<code><br>
-async getShow (id) {<br>
-&nbsp;&nbsp;&nbsp;&nbsp;let show = await window.fetch(`http://tv-api.se/shows/${id}`)<br>
-&nbsp;&nbsp;&nbsp;&nbsp;return show.json()<br>
-}<br>
-</code>
+<code>
+ async getShow (id) {<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;let show = await window.fetch(`http://tv-api.se/shows/${id}`)<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;return show.json()<br>
+ }<br>
+ </code>
 
-<code><br>
-async searchUpdate (str) {<br>
-&nbsp;&nbsp;&nbsp;&nbsp;let res = await window.fetch(`http://tv-api.se/shows/?q=${str}`)<br>
-<br>
-&nbsp;&nbsp;&nbsp;&nbsp;res = await res.json() // { searchString: "break", result: [24, 35]}<br>
-<br>
-&nbsp;&nbsp;&nbsp;&nbsp;let showPromises = []<br>
-&nbsp;&nbsp;&nbsp;&nbsp;res.result.forEach(id => {<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;showPromises.push(this.getShow(id))<br>
-&nbsp;&nbsp;&nbsp;&nbsp;})<br>
-&nbsp;&nbsp;&nbsp;&nbsp;this.shows = []<br>
-&nbsp;&nbsp;&nbsp;&nbsp;this.shows = await Promise.all(showPromises)<br>
-}<br>
-</code>
+<code>
+ async searchUpdate (str) {<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;let res = await window.fetch(`http://tv-api.se/shows/?q=${str}`)<br>
+ <br>
+ &nbsp;&nbsp;&nbsp;&nbsp;res = await res.json() // { searchString: "break", result: [24, 35]}<br>
+ <br>
+ &nbsp;&nbsp;&nbsp;&nbsp;let showPromises = []<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;res.result.forEach(id => {<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;showPromises.push(this.getShow(id))<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;})<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;this.shows = []<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;this.shows = await Promise.all(showPromises)<br>
+ }<br>
+ </code>
 
 <div class="yellow">
 
 <code><br>
-connectedCallback () {<br>
-&nbsp;&nbsp;&nbsp;&nbsp;this._searchButton.addEventListener('click', event => {<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.searchUpdate(this._input.value).then(() => this._updateRendering())<br>
-&nbsp;&nbsp;&nbsp;&nbsp;})<br>
-}<br>
-_updateRendering () {<br>
-&nbsp;&nbsp;&nbsp;&nbsp;this._ul.innerHTML = ''<br>
-&nbsp;&nbsp;&nbsp;&nbsp;this.shows.forEach(show => {<br>
-&nbsp;&nbsp;&nbsp;&nbsp;let li = document.createElement('li')<br>
-&nbsp;&nbsp;&nbsp;&nbsp;li.textContent = `${show.name} ${show.year}`<br>
-&nbsp;&nbsp;&nbsp;&nbsp;this._ul.appendChild(li)<br>
-&nbsp;&nbsp;&nbsp;&nbsp;})<br>
-}<br>
-</code>
+ connectedCallback () {<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;this._searchButton.addEventListener('click', event => {<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.searchUpdate(this._input.value).then(() => this._updateRendering())<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;})<br>
+ }<br>
+ _updateRendering () {<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;this._ul.innerHTML = ''<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;this.shows.forEach(show => {<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;let li = document.createElement('li')<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;li.textContent = `${show.name} ${show.year}`<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;this._ul.appendChild(li)<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;})<br>
+ }<br>
+ </code>
 
 </div>
 
-<code><br>
-let res = await window.fetch("http://url-to-fetch.at/path", {<br>
-&nbsp;&nbsp;&nbsp;&nbsp;method: "POST",<br>
-&nbsp;&nbsp;&nbsp;&nbsp;headers: {<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'Content-Type': 'application/json'<br>
-&nbsp;&nbsp;&nbsp;&nbsp;},<br>
-&nbsp;&nbsp;&nbsp;&nbsp;body: JSON.stringify(data)<br>
-})<br>
-</code>
+<code>
+ let res = await window.fetch("http://url-to-fetch.at/path", {<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;method: "POST",<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;headers: {<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'Content-Type': 'application/json'<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;},<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;body: JSON.stringify(data)<br>
+ })<br>
+ </code>
 <p>Forms:</p>
 
 <ul><li>Make it work without JS
@@ -672,29 +673,29 @@ SEO
 </li>
 </ul>
 
-<code><br>
-<a href="http://www.test.com:8080/index.html?id=1432&amp;name=Tim#anchor<br>" target="_blank">http://www.test.com:8080/index.html?id=1432&amp;name=Tim#anchor<br></a>
-location.hash&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // #anchor<br>
-location.host&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // www.test.com<br>
-location.hostname&nbsp;&nbsp; // www.test.com:8080<br>
-location.href&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // http://www.test.com:8080/index.html?id=1432&amp;name=Tim#anchor<br>
-location.pathname&nbsp;&nbsp; // /index.html<br>
-location.port&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // 8080<br>
-location.protocol&nbsp;&nbsp; // http:<br>
-location.search&nbsp;&nbsp;&nbsp;&nbsp; // ?id=1432&amp;name=Tim<br>
-</code>
+<code>
+ http://www.test.com:8080/index.html?id=1432&amp;name=Tim#anchor<br>
+ location.hash&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // #anchor<br>
+ location.host&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // www.test.com<br>
+ location.hostname&nbsp;&nbsp; // www.test.com:8080<br>
+ location.href&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // http://www.test.com:8080/index.html?id=1432&amp;name=Tim#anchor<br>
+ location.pathname&nbsp;&nbsp; // /index.html<br>
+ location.port&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // 8080<br>
+ location.protocol&nbsp;&nbsp; // http:<br>
+ location.search&nbsp;&nbsp;&nbsp;&nbsp; // ?id=1432&amp;name=Tim<br>
+ </code>
 
-<code><br>
-// Router<br>
-window.addEventListener('hashchange', event => {<br>
-&nbsp;&nbsp;let hash = window.location.hash // #!/account/47435675<br>
-&nbsp;&nbsp;if(hash.substr(2,9) === '/account/'){<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let account = hash.substr(11) //47435675<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Fetch account information from server<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Display account information<br>
-&nbsp;&nbsp;}<br>
-})<br>
-</code>
+<code>
+ // Router<br>
+ window.addEventListener('hashchange', event => {<br>
+ &nbsp;&nbsp;let hash = window.location.hash // #!/account/47435675<br>
+ &nbsp;&nbsp;if(hash.substr(2,9) === '/account/'){<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let account = hash.substr(11) //47435675<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Fetch account information from server<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Display account information<br>
+ &nbsp;&nbsp;}<br>
+ })<br>
+ </code>
 <p>window.history.</p>
 
 <ul><li>back()
@@ -713,30 +714,30 @@ length
 <div class="yellow">
 <p>Pushstate:
 <code><br>
-let ul = document.querySelector('#links')<br>
-<br>
-ul.addEventListener('click', event => {<br>
-&nbsp;&nbsp;event.preventDefault()<br>
-<br>
-&nbsp;&nbsp;let stateObj =&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;&nbsp;accountnbr: event.target.getAttribute('data-account'),<br>
-&nbsp;&nbsp;&nbsp;&nbsp;account: event.target.getAttribute('data-account-title')<br>
-&nbsp;&nbsp;}<br>
-<br>
-&nbsp;&nbsp;window.history.pushState(stateObj, `Account information: ${stateObj.account}`,<br>
-&nbsp;&nbsp;&nbsp;&nbsp;`/account/${stateObj.accountnbr}`);<br>
-<br>
-&nbsp;&nbsp;// Load accountinformation and show it<br>
-&nbsp;&nbsp;console.log(stateObj)<br>
-})<br>
-<br>
-window.addEventListener('popstate', event => {<br>
-&nbsp;&nbsp;// When an old state is triggered.<br>
-&nbsp;&nbsp;console.log(`${event.state.account} with account number ${event.state.accountnbr}`)<br>
-})<br>
-<br>
-var currentState = window.history.state<br>
-</code></p>
+ let ul = document.querySelector('#links')<br>
+ <br>
+ ul.addEventListener('click', event => {<br>
+ &nbsp;&nbsp;event.preventDefault()<br>
+ <br>
+ &nbsp;&nbsp;let stateObj =&nbsp;&nbsp;{<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;accountnbr: event.target.getAttribute('data-account'),<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;account: event.target.getAttribute('data-account-title')<br>
+ &nbsp;&nbsp;}<br>
+ <br>
+ &nbsp;&nbsp;window.history.pushState(stateObj, `Account information: ${stateObj.account}`,<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;`/account/${stateObj.accountnbr}`);<br>
+ <br>
+ &nbsp;&nbsp;// Load accountinformation and show it<br>
+ &nbsp;&nbsp;console.log(stateObj)<br>
+ })<br>
+ <br>
+ window.addEventListener('popstate', event => {<br>
+ &nbsp;&nbsp;// When an old state is triggered.<br>
+ &nbsp;&nbsp;console.log(`${event.state.account} with account number ${event.state.accountnbr}`)<br>
+ })<br>
+ <br>
+ var currentState = window.history.state<br>
+ </code></p>
 
 </div>
 
@@ -751,18 +752,18 @@ React
 </ul>
 <p>XHR is not optimal for real time apps.</p>
 
-<code><br>
-let socket = new window.WebSocket('ws://www.example.com/socketserver', 'charcords')<br>
-let data = {x: 12, y: 14}<br>
-<br>
-socket.addEventListener('open', event => {<br>
-&nbsp;&nbsp;socket.send(JSON.stringify(data))<br>
-})<br>
-<br>
-socket.addEventListener('message', event => {<br>
-&nbsp;&nbsp;console.log(event.data)<br>
-})<br>
-</code>
+<code>
+ let socket = new window.WebSocket('ws://www.example.com/socketserver', 'charcords')<br>
+ let data = {x: 12, y: 14}<br>
+ <br>
+ socket.addEventListener('open', event => {<br>
+ &nbsp;&nbsp;socket.send(JSON.stringify(data))<br>
+ })<br>
+ <br>
+ socket.addEventListener('message', event => {<br>
+ &nbsp;&nbsp;console.log(event.data)<br>
+ })<br>
+ </code>
 <p>Problems, how to</p>
 
 <ul><li>know if the user is online?
@@ -873,36 +874,36 @@ Web Assembly
 </li>
 </ul>
 
-<code><br>
-let worker = new window.Worker('worker.js')<br>
-let dataContainer = document.querySelector('#pn')<br>
-<br>
-worker.addEventListener('message', e => {<br>
-&nbsp;&nbsp;dataContainer.textContent = e.data<br>
-})<br>
-<br>
-//worker.js<br>
-let n = 1<br>
-search: while(true) {<br>
-&nbsp;&nbsp;n += 1<br>
-&nbsp;&nbsp;for(let i = 2; i <= Math.sqrt(n); i += 1){<br>
-&nbsp;&nbsp;&nbsp;&nbsp;if (n % i === 0)<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;continue search<br>
-&nbsp;&nbsp;}<br>
-&nbsp;&nbsp;postMessage(n)<br>
-}<br>
-</code>
+<code>
+ let worker = new window.Worker('worker.js')<br>
+ let dataContainer = document.querySelector('#pn')<br>
+ <br>
+ worker.addEventListener('message', e => {<br>
+ &nbsp;&nbsp;dataContainer.textContent = e.data<br>
+ })<br>
+ <br>
+ //worker.js<br>
+ let n = 1<br>
+ search: while(true) {<br>
+ &nbsp;&nbsp;n += 1<br>
+ &nbsp;&nbsp;for(let i = 2; i <= Math.sqrt(n); i += 1){<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;if (n % i === 0)<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;continue search<br>
+ &nbsp;&nbsp;}<br>
+ &nbsp;&nbsp;postMessage(n)<br>
+ }<br>
+ </code>
 <p>Do animations with &lt;canvas&gt;</p>
 <p><a href="https://webvr.info/" target="_blank">https://webvr.info/</a></p>
 
-<code><br>
-window.addEventListener('gamepadconnected', e => {<br>
-&nbsp;&nbsp;&nbsp;&nbsp;let index = e.gamepad.index<br>
-&nbsp;&nbsp;&nbsp;&nbsp;let id = e.gamepad.id<br>
-&nbsp;&nbsp;&nbsp;&nbsp;let nbrButtons = e.gamepad.buttons.length<br>
-&nbsp;&nbsp;&nbsp;&nbsp;let nbrAxes = e.gamepad.axes.length<br>
-})<br>
-</code>
+<code>
+ window.addEventListener('gamepadconnected', e => {<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;let index = e.gamepad.index<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;let id = e.gamepad.id<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;let nbrButtons = e.gamepad.buttons.length<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;let nbrAxes = e.gamepad.axes.length<br>
+ })<br>
+ </code>
 <p><a href="https://www.w3.org/TR/gamepad/" target="_blank">https://www.w3.org/TR/gamepad/</a></p>
 <p>Physical web beacons: 
 <a href="https://google.github.io/physical-web/" target="_blank">https://google.github.io/physical-web/</a></p>
@@ -966,7 +967,8 @@ ECMA Script Modules
 </ul>
 
 
-<br><br><br>
+<br><a href="server.html" id="next">Next page.</a>
+<br><br>
 <footer>
 <nav>
 	<a href="../index.html">Home.</a>
@@ -974,8 +976,9 @@ ECMA Script Modules
 	<a href="javascript.html">JavaScript lectures.</a>
 	<a href="design.html">Design.</a>
 	<a href="clientbased.html">Client based programming.</a>
+	<a href="server.html">Server programming.</a>
 </nav>
 </footer>
-<p><small>Updated on 2020-07-19.</small></p>
+<p><small>Updated on 2020-07-20.</small></p>
 </body>
 </html>

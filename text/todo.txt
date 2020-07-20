@@ -1,6 +1,6 @@
 Multiline (eg link) list entries
 Tooltips
-Dry style.css. Red too red.
+Dry style.css. Red too red. Style code blocks
 next-link button styling
 different style for internal links
 Colors not perfectly aligned

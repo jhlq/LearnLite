@@ -7,4 +7,5 @@ These pages are based on the web developer program at Linnaeus University: https
 <a href="javascript.html">JavaScript lectures.</a>
 <a href="design.html">Design.</a>
 !link:clientbased.html Client based programming.
+!link:server.html Server programming.
 </ul>

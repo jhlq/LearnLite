@@ -39,8 +39,12 @@ function process(pagestoprocess,pai)
 		codeend=something(findfirst("</code>",text[codeloc[end]:end]), 0:-1).+(codeloc[end]-1)
 		codetext=text[codeloc[2]:codeend[1]]
 		codetext=replace(codetext, "\n" => "<br>\n")
+		#if text[codeloc[1]-1]=='\n' #some code blocks get bundled together
+		#	codetext=replace(codetext, "<code><br>\n" => "<code>\n")
+		#end
 		codetext=replace(codetext, "	" => "&nbsp;&nbsp;")
 		codetext=replace(codetext, "  " => "&nbsp;&nbsp;")
+		codetext=replace(codetext, "\n" => "\n ")
 		text=text[1:codeloc[1]]*codetext*text[codeend[2]:end]
 		codeloc=something(findfirst("\n<code>", text[codeloc[end]:end]), 0:-1).+codeloc[end-1]
 	end

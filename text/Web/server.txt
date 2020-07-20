@@ -105,7 +105,7 @@ Nginx is a lightweight server commonly used as proxy or load balancer.
 const http = require('http');
 const PORT = 8080;
 
-http.createServer((req, res) => {
+ http.createServer((req, res) => {
   res.writeHead(200);
   res.end('Hello world\n');
 }).listen(PORT);
@@ -286,6 +286,7 @@ Data stored in the memory is non-persistent (data is erased when the power is tu
 Filesystem persistence?    Hard to work with, performance, doesn't scale well.
 Database persistence?    Oracle, SQL Server, MySQL, MariaDB, PostgreSQL,    MongoDB
 Cloud persistence?    mongodb.com (DBaaS, Database-as-a-Service), AWS, Azure, Google Cloud
+</ul>
 
 Relational database management systems (RDBMS) organizes data into tables with columns and rows with Structured Query Language (SQL).
 
@@ -505,7 +506,7 @@ OWASP, The Open Web Application Security Project, produces (every three year) a 
 <ul>
 Hard – missing a deadline is a total system failure.
 Firm – infrequent deadline misses are tolerable, but may degrade the system's quality of service. The usefulness of a result is zero after its deadline.
-Soft – the usefulness of a result degrades after its deadline, thereby degrading the system's quality of service.
+Soft - the usefulness of a result degrades after its deadline, thereby degrading the system's quality of service.
 </ul>
 
 Web of things: Devices communicating in realtime
@@ -556,7 +557,7 @@ https://github.com/CS-LNU-Learning-Objects/linux
 Process manager PM2
 
 <code>
-#!/bin/bash
+ #!/bin/bash
 
 echo "Generating self-signed certificates..."
 mkdir -p ./config/sslcerts
