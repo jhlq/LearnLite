@@ -1,6 +1,10 @@
 ***Object oriented programming
 
-Notes for a course at Linnaeus University:
+Notes for a course at Linnaeus University: https://coursepress.lnu.se/kurs/objektorienterad-programmering/
+
+This course is unfortunately about C#. Since 
+https://www.cbtnuggets.com/blog/certifications/open-source/why-linux-runs-90-percent-of-the-public-cloud-workload Linux runs 90 percent of the public cloud workload and 99 percent of supercomputers
+ windowscentric technology seems a tad out of touch with optimality.
 
 **Introduction
 
@@ -214,3 +218,89 @@ Method signatures have to be unique: methodName(dataType1, dataType2 ...)
 Specifying out int number turns it into a reference type, alternatively use ref
 
 Using the dynamic return type is bad practice.
+
+**Lecture 3
+
+A rectangle has attributes like color and can do operations to change these.
+
+<code>
+public class Rectangle
+{
+    private int _height;
+    private int _width;
+    public Rectangle(int width, int height, Color color)
+    {
+        Width = width;
+        Height = height;
+        Color = color;
+    }
+    public Color Color { get; set; }
+    public int Width
+    {
+        get { return _width; }
+        set
+        {
+            if (value <= 0)
+            {
+                throw new ArgumentOutOfRangeException(nameof(value));
+            }
+            _width = value;
+        }
+    }
+    public int Height
+    {
+        get { return _height; }
+        set
+        {
+            if (value <= 0)
+            {
+                throw new ArgumentOutOfRangeException(nameof(value));
+            }
+            _height = value;
+        }
+    }
+    public override string ToString()
+        => $"Width: {Width}, Height: {Height}, Color: {Color.ToArgb()}";
+}
+</code>
+
+The heap is dynamic memory whereas the stack is static.
+
+Fields "should" be private. The state of the objects consistency is ensured if only the official setters that propagate changes to the whole object are used.
+
+With setters the values of private variables can be restricted, to the great annoyance of developers who want to try something novel. The example of restricting the hour range to 24 hours ensures the code doesn't work for other planets.
+
+Properties are the middle way between public and private.
+
+Simple value types are stored on the stack whereas reference types like classes are stored on the heap.
+
+The CLR allocates memory for classes.
+
+The stack stores a reference to the location of the object in the heap.
+
+A constructorless class has a default constructor that zeroinitializes all fields.
+
+*Dices
+
+<code>
+Random random = new Random();
+int value = random.Next(1,7);
+</code>
+
+A die has a value attribute and a throw operation.
+
+<code>
+public int FaceValue
+{
+	get { return _faceValue; }
+	set { _faceValue = value; }
+}
+</code>
+
+Don't hardcode a dice max value, there are different kinds of dices.
+
+The first random number of a Random object is determined by system time which may not change in a fast for loop. Therefore dices should have a single persistent Random object that is also seeded by a random number: new Random(seed)
+
+readonly is equivalent to const
+
+
