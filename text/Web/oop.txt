@@ -1,0 +1,115 @@
+***Object oriented programming
+
+Notes for a course at Linnaeus University:
+
+**Introduction
+
+Goals:
+<ul>
+Explain object oriented terms like object, class, encapsulation, inheritance and polymorphism.
+Interpret UML class diagrams.
+Choose relevant program structure.
+Algorithm construction.
+Error correction.
+Console applications in C# and .NET Core.
+Object oriented programmation foundation.
+</ul>
+
+Essential C# 6.0 by Mark Michaelis and Eric Lippert, ISBN 978-1593275846.
+
+The course has three examinated parts with preparing exercises.
+
+"Education is not received. It is achieved."
+
+Part 1:
+<ul>
+2 weeks
+Basics of C# console applications.
+Datatypes, variables, operators, selections, iterations, strings, arrays, exceptions, methods and files.
+Literature chapters: 1, 2, 3, 4, 10, 12, 14, 15
+</ul>
+
+Part 2:
+<ul>
+5 weeks
+Introduces object oriented programming.
+Tasks are about: OOP, classes, objects, methods, constructors, fields, overiding, properties, inheritance, polymorphism.
+Literature chapters: 5, 6, 7, 8, 9, 10
+</ul>
+
+Part 3:
+<ul>
+4 weeks.
+Templates and LINQ.
+Taska are about: using collections, sorting and filtering, delegations and lambda, LINQ.
+Literature chapters: 11, 12, 14, 15, 16
+</ul>
+
+**Introduction to C#
+
+C# (see sharp) is a strongly typed object oriented language based on C++ that looks like Java. Code compiles to IL-code which is run in a virtual machine, CoreCLR (Common Language Runtime)
+
+The best way to learn a new programming language is to write code.
+
+<code>
+using System;
+namespace Hello
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Hello World!");
+        }
+    }
+}
+</code>
+
+Keywords: abstract, as, base, bool, break, byte, case, catch, char, checked, class, const, continue, decimal, default, delegate, do, double, else, enum, event, explicit, extern, false, finally, fixed, float, for, foreach, goto, if, implicit, in, in (generic modifier), int, interface, internal, is, lock, long, namespace, new, null, object, operator, out, out (generic modifier), override, params, private, protected, public, readonly, ref, return, sbyte, sealed, short, sizeof, stackalloc, static, string, struct, switch, this, throw, true, try, typeof, uint, ulong, unchecked, unsafe, ushort, using, virtual, void, volatile, while, add, alias, ascending, async, await, descending, dynamic, from, get, global, group, into, join, let, orderby, partial (type), partial (method), remove, select, set, value, var, where (generic type constraint), where (query clause), yield
+
+One type declaration per file, the type and file share name.
+
+A static method is called directly from the class name, not an instantiated object.
+
+Variables have block scope.
+
+Data types: bool, byte, sbyte, char, decimal, double, float, int, uint, long, ulong, object, short, ushort, string, void for none
+
+<code>
+double bar = 2.72;
+int foo = (int)bar; // 2
+int.TryParse("42", out foo)
+bar = double.Parse("273.15");
+bar = Convert.ToDouble("273.15");
+</code>
+
+<code>
+int[] values = { 1, 2, 3, 4, 5 };
+for (int i = 0; i < values.Length; i++)
+{
+    values[i] += 3;
+    Console.WriteLine(values[i]);
+}
+foreach (int value in values)
+{
+    value += 3; // Error CS1656 Cannot assign to 'value' because it is a 'foreach iteration variable'
+    Console.WriteLine(value);
+}
+</code>
+
+<code>
+int[] values = { 1, 2, 3, 4, 5 };
+int[] filtered = values
+    .Where(x => x % 2 != 0)
+    .ToArray();
+Console.WriteLine(string.Join(", ", filtered)); // 1, 3, 5
+</code>
+
+<code>
+var person = new { Name = "Ellen Nu", Age = 6 };
+Console.WriteLine($"{person.Name} är {person.Age} år.");
+person.Age = 42;  // Error CS0200 Property or indexer '<anonymous type string Name, int Age>.Age' cannot be assigned to --it is read only
+person = "Nisse"; // Error CS0029 Cannot implicitly convert type 'string' to '<anonymous type string Name, int Age>'
+</code>
+
+Use dynamic as return type to return anonymous types.
