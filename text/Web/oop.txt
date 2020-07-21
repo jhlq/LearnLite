@@ -199,4 +199,18 @@ var movies = JsonConvert.DeserializeObject<string[]>(json);
 Console.WriteLine(string.Join(", ", movies));
 </code>
 
+**Lecture 2
 
+Methods and parameters.
+
+Methods are always part of a type, usually a class.
+
+Parameters can have default values and be supplied by name: GetFullName(lastName: "Deer"); // Jane Deer
+
+For variable amount of arguments make last parameter params: static int Sum(params int[] numbers){}
+
+Method signatures have to be unique: methodName(dataType1, dataType2 ...)
+
+Specifying out int number turns it into a reference type, alternatively use ref
+
+Using the dynamic return type is bad practice.
