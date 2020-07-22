@@ -7,8 +7,8 @@ Content:
 <ul>
 !link:week1.html Introduction to the Science of Happiness
 !link:week2.html The Power of Social Connection
-!link:week3.html Compassion & Kindness
-!link:week4.html Cooperation & Reconciliation 
+!link:week3.html Compassion &  Kindness
+!link:week4.html Cooperation &  Reconciliation 
 !link:week5.html Review
 !link:week6.html Mindfulness, Attention, and Focus
 !link:week7.html Mental Habits of Happiness
