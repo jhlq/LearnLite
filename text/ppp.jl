@@ -7,7 +7,7 @@ function skipto(str,char)
 				return ci
 			end
 		catch er
-			@warn("There was a problem reading $str at index $ci, previous index has: $(str[ci-1])")
+			#@warn("There was a problem reading $str at index $ci, previous index has: $(str[ci-1])")
 		end	
 	end
 	return 0
