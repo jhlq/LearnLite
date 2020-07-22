@@ -15,16 +15,6 @@ end
 function makelistarray(list)
 	return split(list,'\n')
 #-.-
-	listarray=AbstractString[]
-	n1=skipto(list,'\n')
-	push!(listarray,list[1:n1])
-	n2=skipto(list[n1+1:end],'\n')+n1
-	while n2>n1
-		push!(listarray,list[n1:n2])
-		n1=n2
-		n2=skipto(list[n1+1:end],'\n')+n1
-	end
-	return listarray
 end
 
 function process(pagestoprocess,pai)
@@ -137,19 +127,14 @@ function process(pagestoprocess,pai)
 	while occursin("\n\n\n",text)
 		text=replace(text,"\n\n\n" => "\n\n")
 	end
-	nnloc=something(findfirst("\n\n",text), 0:-1)
-	while !isempty(collect(nnloc))
-		nnnloc=something(findfirst("\n\n",text[nnloc[end]:end]), 0:-1).+(nnloc[end]-1)
-		if isempty(collect(nnnloc))
-			break
-		end
-		p=text[nnloc[end]+1:nnnloc[1]-1]
+	ta=split(text,"\n\n")
+	for ti in 1:length(ta)
+		p=ta[ti]
 		if p!="" && (p[1]!='<' || p[2]=='a')
-			htmltext="<p>$p</p>"
-			text=text[1:nnloc[1]]*htmltext*text[nnnloc[1]:end]
+			ta[ti]="<p>$p</p>"
 		end
-		nnloc=something(findfirst("\n\n",text[nnloc[end]:end]), 0:-1).+nnloc[end].-1
 	end
+	text=join(ta,"\n\n")
 	medloc=something(findfirst("\nyellow:",text), 0:-1)
 	while !isempty(collect(medloc))
 		nloc=something(findfirst("\n",text[medloc[end]:end]), 0:-1)+medloc[end]-1
