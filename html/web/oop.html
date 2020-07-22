@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>LearnLite: Web development, Object oriented programming</title>
+<link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+<body>
+<nav>
+	<a href="../index.html">Home.</a>
+	<a href="index.html">Index.</a>
+	<a href="javascript.html">JavaScript lectures.</a>
+	<a href="design.html">Design.</a>
+	<a href="clientbased.html">Client based programming.</a>
+	<a href="server.html">Server programming.</a>
+	<a href="oop.html">Object oriented programming.</a>
+</nav>
+<h1>Object oriented programming</h1>
+<p>Notes for a course at Linnaeus University: https://coursepress.lnu.se/kurs/objektorienterad-programmering/</p>
+<p>This course is unfortunately about C#. Since 
+<a href="https://www.cbtnuggets.com/blog/certifications/open-source/why-linux-runs-90-percent-of-the-public-cloud-workload" target="_blank"> Linux runs 90 percent of the public cloud workload and 99 percent of supercomputers</a>
+ windowscentric technology seems a tad out of touch with optimality.</p>
+
+<h2>Introduction</h2>
+<p>Goals:</p>
+
+<ul><li>Explain object oriented terms like object, class, encapsulation, inheritance and polymorphism.</li>
+<li>Interpret UML class diagrams.</li>
+<li>Choose relevant program structure.</li>
+<li>Algorithm construction.</li>
+<li>Error correction.</li>
+<li>Console applications in C# and .NET Core.</li>
+<li>Object oriented programmation foundation.</li>
+</ul>
+<p>Essential C# 6.0 by Mark Michaelis and Eric Lippert, ISBN 978-1593275846.</p>
+<p>The course has three examinated parts with preparing exercises.</p>
+<p>"Education is not received. It is achieved."</p>
+<p>Part 1:</p>
+
+<ul><li>2 weeks</li>
+<li>Basics of C# console applications.</li>
+<li>Datatypes, variables, operators, selections, iterations, strings, arrays, exceptions, methods and files.</li>
+<li>Literature chapters: 1, 2, 3, 4, 10, 12, 14, 15</li>
+</ul>
+<p>Part 2:</p>
+
+<ul><li>5 weeks</li>
+<li>Introduces object oriented programming.</li>
+<li>Tasks are about: OOP, classes, objects, methods, constructors, fields, overiding, properties, inheritance, polymorphism.</li>
+<li>Literature chapters: 5, 6, 7, 8, 9, 10</li>
+</ul>
+<p>Part 3:</p>
+
+<ul><li>4 weeks.</li>
+<li>Templates and LINQ.</li>
+<li>Taska are about: using collections, sorting and filtering, delegations and lambda, LINQ.</li>
+<li>Literature chapters: 11, 12, 14, 15, 16</li>
+</ul>
+
+<h3>Introduction to C#</h3>
+<p>C# (see sharp) is a strongly typed object oriented language based on C++ that looks like Java. Code compiles to IL-code which is run in a virtual machine, CoreCLR (Common Language Runtime)</p>
+<p>The best way to learn a new programming language is to write code.</p>
+
+<code><br>
+ using System;<br>
+ namespace Hello<br>
+ {<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;class Program<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;{<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;static void Main(string[] args)<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Console.WriteLine("Hello World!");<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+ }<br>
+ </code>
+<p>Keywords: abstract, as, base, bool, break, byte, case, catch, char, checked, class, const, continue, decimal, default, delegate, do, double, else, enum, event, explicit, extern, false, finally, fixed, float, for, foreach, goto, if, implicit, in, in (generic modifier), int, interface, internal, is, lock, long, namespace, new, null, object, operator, out, out (generic modifier), override, params, private, protected, public, readonly, ref, return, sbyte, sealed, short, sizeof, stackalloc, static, string, struct, switch, this, throw, true, try, typeof, uint, ulong, unchecked, unsafe, ushort, using, virtual, void, volatile, while, add, alias, ascending, async, await, descending, dynamic, from, get, global, group, into, join, let, orderby, partial (type), partial (method), remove, select, set, value, var, where (generic type constraint), where (query clause), yield</p>
+<p>One type declaration per file, the type and file share name.</p>
+<p>A static method is called directly from the class name, not an instantiated object.</p>
+<p>Variables have block scope.</p>
+<p>Data types: bool, byte, sbyte, char, decimal, double, float, int, uint, long, ulong, object, short, ushort, string, void for none</p>
+
+<code><br>
+ double bar = 2.72;<br>
+ int foo = (int)bar; // 2<br>
+ int.TryParse("42", out foo)<br>
+ bar = double.Parse("273.15");<br>
+ bar = Convert.ToDouble("273.15");<br>
+ </code>
+
+<code><br>
+ int[] values = { 1, 2, 3, 4, 5 };<br>
+ for (int i = 0; i &lt;values.Length; i++)<br>
+ {<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;values[i] += 3;<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;Console.WriteLine(values[i]);<br>
+ }<br>
+ foreach (int value in values)<br>
+ {<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;value += 3; // Error CS1656 Cannot assign to 'value' because it is a 'foreach iteration variable'<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;Console.WriteLine(value);<br>
+ }<br>
+ </code>
+
+<code><br>
+ int[] values = { 1, 2, 3, 4, 5 };<br>
+ int[] filtered = values<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;.Where(x => x % 2 != 0)<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;.ToArray();<br>
+ Console.WriteLine(string.Join(", ", filtered)); // 1, 3, 5<br>
+ </code>
+
+<code><br>
+ var person = new { Name = "Ellen Nu", Age = 6 };<br>
+ Console.WriteLine($"{person.Name} är {person.Age} år.");<br>
+ person.Age = 42;&nbsp;&nbsp;// Error CS0200 Property or indexer '<anonymous type string Name, int Age>.Age' cannot be assigned to --it is read only<br>
+ person = "Nisse"; // Error CS0029 Cannot implicitly convert type 'string' to '<anonymous type string Name, int Age>'<br>
+ </code>
+<p>Use dynamic as return type to return anonymous types.</p>
+
+<h2>Lecture 1</h2>
+<p>Division with integers tosses the remainder.</p>
+<p>Modulu operator % works as usual.</p>
+<p>9.0=9d</p>
+<p>+=, -=, *=, /=, %=</p>
+<p><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/null-coalescing-operator" target="_blank"> ?? and ??=</a></p>
+<p><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/member-access-operators#null-conditional-operators--and-" target="_blank"> ?. and ?[]</a></p>
+
+<code><br>
+ int number;<br>
+ if (int.TryParse(Console.ReadLine(), out number) &&amp;number % 2 == 1)<br>
+ {<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;Console.WriteLine($"Heltalet {number} är udda.");<br>
+ }<br>
+ </code>
+
+<code><br>
+ int[] numbers = Enumerable.Range(1, 1000).ToArray();<br>
+ foreach (int element in numbers)<br>
+ {<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;Console.WriteLine(element);<br>
+ }<br>
+ Console.WriteLine(element); // Error CS0103 The name 'element' does not exist in the current context<br>
+ </code>
+<p>throw new InvalidOperationException("Inte ett udda heltal.");</p>
+
+<code><br>
+ double number;<br>
+ try<br>
+ {<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;Console.Write("Ange ett flyttal: ");<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;number = double.Parse(Console.ReadLine());<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;Console.WriteLine($"Du matade in {number}.");<br>
+ }<br>
+ catch (FormatException)<br>
+ {<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;Console.WriteLine("Talet är inte i ett korrekt format.");<br>
+ }<br>
+ catch (Exception ex) // has to be last<br>
+ {<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;Console.WriteLine(ex.Message);<br>
+ }<br>
+ finally<br>
+ {<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;Console.WriteLine("A finally-block is always executed!");<br>
+ }<br>
+ </code>
+
+<code><br>
+ using (var writer = new StreamWriter(@"MyTextFile.txt"))<br>
+ {<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;writer.WriteLine("Mats är");<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;writer.WriteLine("snäll.");<br>
+ }<br>
+ </code>
+
+<code><br>
+ using (var reader = new StreamReader(@"MyTextFile.txt"))<br>
+ {<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;string line;<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;while ((line = reader.ReadLine()) != null)<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;{<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Console.WriteLine(line);<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+ }<br>
+ </code>
+Using using ensures the file is closed even if there is an error.
+
+<code><br>
+ string json;<br>
+ using (var reader = new StreamReader("movies.json"))<br>
+ {<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;json = reader.ReadToEnd();<br>
+ }<br>
+ var movies = JsonConvert.DeserializeObject<string[]>(json);<br>
+ Console.WriteLine(string.Join(", ", movies));<br>
+ </code>
+
+<h2>Lecture 2</h2>
+<p>Methods and parameters.</p>
+<p>Methods are always part of a type, usually a class.</p>
+<p>Parameters can have default values and be supplied by name: GetFullName(lastName: "Deer"); // Jane Deer</p>
+<p>For variable amount of arguments make last parameter params: static int Sum(params int[] numbers){}</p>
+<p>Method signatures have to be unique: methodName(dataType1, dataType2 ...)</p>
+<p>Specifying out int number turns it into a reference type, alternatively use ref</p>
+<p>Using the dynamic return type is bad practice.</p>
+
+<h2>Lecture 3</h2>
+<p>A rectangle has attributes like color and can do operations to change these.</p>
+
+<code><br>
+ public class Rectangle<br>
+ {<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;private int _height;<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;private int _width;<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;public Rectangle(int width, int height, Color color)<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;{<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Width = width;<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Height = height;<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Color = color;<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;public Color Color { get; set; }<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;public int Width<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;{<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;get { return _width; }<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;set<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (value <= 0)<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;throw new ArgumentOutOfRangeException(nameof(value));<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_width = value;<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;public int Height<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;{<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;get { return _height; }<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;set<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (value <= 0)<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;throw new ArgumentOutOfRangeException(nameof(value));<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_height = value;<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;public override string ToString()<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=> $"Width: {Width}, Height: {Height}, Color: {Color.ToArgb()}";<br>
+ }<br>
+ </code>
+<p>The heap is dynamic memory whereas the stack is static.</p>
+<p>Fields "should" be private. The state of the objects consistency is ensured if only the official setters that propagate changes to the whole object are used.</p>
+<p>With setters the values of private variables can be restricted, to the great annoyance of developers who want to try something novel. The example of restricting the hour range to 24 hours ensures the code doesn't work for other planets.</p>
+<p>Properties are the middle way between public and private.</p>
+<p>Simple value types are stored on the stack whereas reference types like classes are stored on the heap.</p>
+<p>The CLR allocates memory for classes.</p>
+<p>The stack stores a reference to the location of the object in the heap.</p>
+<p>A constructorless class has a default constructor that zeroinitializes all fields.</p>
+
+<h3>Dices</h3>
+
+<code><br>
+ Random random = new Random();<br>
+ int value = random.Next(1,7);<br>
+ </code>
+<p>A die has a value attribute and a throw operation.</p>
+
+<code><br>
+ public int FaceValue<br>
+ {<br>
+ &nbsp;&nbsp;get { return _faceValue; }<br>
+ &nbsp;&nbsp;set { _faceValue = value; }<br>
+ }<br>
+ </code>
+<p>Don't hardcode a dice max value, there are different kinds of dices.</p>
+<p>The first random number of a Random object is determined by system time which may not change in a fast for loop. Therefore dices should have a single persistent Random object that is also seeded by a random number: new Random(seed)</p>
+<p>readonly is equivalent to const</p>
+
+<h2>Lecture 4</h2>
+<p>Classes, inheritance, base class, derived class, base, override.</p>
+<p>Literature chapter 6.</p>
+<p><a href="https://github.com/1dv024/example-elementary-inheritance" target="_blank">https://github.com/1dv024/example-elementary-inheritance</a></p>
+<p><a href="https://github.com/1dv024/example-great-inheritance" target="_blank">https://github.com/1dv024/example-great-inheritance</a></p>
+
+<h2>Lecture 5</h2>
+<p>Virtual methods, abstract classes, abstract methods, interface</p>
+<p>Literature chapter 6/7</p>
+<p><a href="https://github.com/1dv024/example-second-zoo" target="_blank">https://github.com/1dv024/example-second-zoo</a></p>
+
+<h2>Lecture 6</h2>
+<p>Privacy leak, deep copy, association</p>
+<p><a href="https://github.com/1dv024/example-consoling-association" target="_blank">https://github.com/1dv024/example-consoling-association</a></p>
+
+<h2>Lecture 7</h2>
+<p>Examination task 3, stack, queue</p>
+
+
+<br><br><br>
+<footer>
+<nav>
+	<a href="../index.html">Home.</a>
+	<a href="index.html">Index.</a>
+	<a href="javascript.html">JavaScript lectures.</a>
+	<a href="design.html">Design.</a>
+	<a href="clientbased.html">Client based programming.</a>
+	<a href="server.html">Server programming.</a>
+	<a href="oop.html">Object oriented programming.</a>
+</nav>
+</footer>
+<p><small>Updated on 2020-07-22.</small></p>
+</body>
+</html>

@@ -13,6 +13,7 @@
 	<a href="design.html">Design.</a>
 	<a href="clientbased.html">Client based programming.</a>
 	<a href="server.html">Server programming.</a>
+	<a href="oop.html">Object oriented programming.</a>
 </nav>
 <h1>Foundational programming</h1>
 <p>Notes for a course at Linnaeus University about JavaScript and Node.js: https://coursepress.gitbook.io/1dv021/</p>
@@ -32,29 +33,14 @@
 <h2>Introduction</h2>
 <p>Goals:</p>
 
-<ul><li>Types and structures of data.
-</li>
-<li>
-Expressions, statements and conditionals.
-</li>
-<li>
-Functions.
-</li>
-<li>
-Objects and arrays.
-</li>
-<li>
-Bug hunting.
-</li>
-<li>
-Code version management.
-</li>
-<li>
-Code quality.
-</li>
-<li>
-Analyzing problems to find suitable designs.
-</li>
+<ul><li>Types and structures of data.</li>
+<li>Expressions, statements and conditionals.</li>
+<li>Functions.</li>
+<li>Objects and arrays.</li>
+<li>Bug hunting.</li>
+<li>Code version management.</li>
+<li>Code quality.</li>
+<li>Analyzing problems to find suitable designs.</li>
 </ul>
 <p>Chapters 1 to 12 of https://eloquentjavascript.net/ are used.</p>
 <p>There are two examinations/parts with associated practice tasks.</p>
@@ -63,63 +49,30 @@ Analyzing problems to find suitable designs.
  --Barack Obama</p>
 <p>Part 1:</p>
 
-<ul><li>5 weeks.
-</li>
-<li>
-Values, types and operators.
-</li>
-<li>
-Expressions, statements and variables.
-</li>
-<li>
-Conditionals and functions.
-</li>
-<li>
-Arrays and objects.
-</li>
-<li>
-Chapters 1-5.
-</li>
+<ul><li>5 weeks.</li>
+<li>Values, types and operators.</li>
+<li>Expressions, statements and variables.</li>
+<li>Conditionals and functions.</li>
+<li>Arrays and objects.</li>
+<li>Chapters 1-5.</li>
 </ul>
 <p>Part 2:</p>
 
-<ul><li>4 weeks.
-</li>
-<li>
-Objects: properties, methods, prototypes.
-</li>
-<li>
-Objects: inheritance, overshadowing, polymorphism.
-</li>
-<li>
-Bugs, error handling and regular expressions.
-</li>
-<li>
-Modules.
-</li>
-<li>
-Chapters 6-12.
-</li>
+<ul><li>4 weeks.</li>
+<li>Objects: properties, methods, prototypes.</li>
+<li>Objects: inheritance, overshadowing, polymorphism.</li>
+<li>Bugs, error handling and regular expressions.</li>
+<li>Modules.</li>
+<li>Chapters 6-12.</li>
 </ul>
 <p>Development environment:</p>
 
-<ul><li>IDE like Visual Studio Code or Geany.
-</li>
-<li>
-<a href="https://nodejs.org/" target="_blank"> Node.js (application environment)</a>
-</li>
-<li>
-<a href="https://www.npmjs.com/" target="_blank"> npm (package manager)</a>
-</li>
-<li>
-<a href="https://git-scm.com/" target="_blank"> Git (version control)</a>
-</li>
-<li>
-<a href="https://mochajs.org/" target="_blank"> Mocha (testing framework)</a>
-</li>
-<li>
-<a href="https://standardjs.com/" target="_blank"> JavaScript Standard Style</a>
-</li>
+<ul><li>IDE like Visual Studio Code or Geany.</li>
+<li><a href="https://nodejs.org/" target="_blank"> Node.js (application environment)</a></li>
+<li><a href="https://www.npmjs.com/" target="_blank"> npm (package manager)</a></li>
+<li><a href="https://git-scm.com/" target="_blank"> Git (version control)</a></li>
+<li><a href="https://mochajs.org/" target="_blank"> Mocha (testing framework)</a></li>
+<li><a href="https://standardjs.com/" target="_blank"> JavaScript Standard Style</a></li>
 </ul>
 
 <h2>Lecture 1</h2>
@@ -143,133 +96,52 @@ Chapters 6-12.
 <p>Use descriptive variable names. Don't use odd symbols. Use camelCasing. A tip is to append your initials to your variables, even if code works perfectly in Firefox another browser or package can have defined some system variables that get overwritten if you use ordinary variable names.</p>
 <p>Forbidden names:</p>
 
-<ul><li>await
-</li>
-<li>
-delete
-</li>
-<li>
-import
-</li>
-<li>
-this
-</li>
-<li>
-break
-</li>
-<li>
-do
-</li>
-<li>
-in
-</li>
-<li>
-throw
-</li>
-<li>
-case
-</li>
-<li>
-else
-</li>
-<li>
-instanceof
-</li>
-<li>
-typeof
-</li>
-<li>
-catch
-</li>
-<li>
-export
-</li>
-<li>
-newtry
-</li>
-<li>
-class
-</li>
-<li>
-extends
-</li>
+<ul><li>await</li>
+<li>delete</li>
+<li>import</li>
+<li>this</li>
+<li>break</li>
+<li>do</li>
+<li>in</li>
+<li>throw</li>
+<li>case</li>
+<li>else</li>
+<li>instanceof</li>
+<li>typeof</li>
+<li>catch</li>
+<li>export</li>
+<li>newtry</li>
+<li>class</li>
+<li>extends</li>
 </ul>
 
-<ul><li>let
-</li>
-<li>
-var
-</li>
-<li>
-const
-</li>
-<li>
-finally
-</li>
-<li>
-return
-</li>
-<li>
-void
-</li>
-<li>
-continue
-</li>
-<li>
-for
-</li>
-<li>
-static
-</li>
-<li>
-while
-</li>
-<li>
-debugger
-</li>
-<li>
-function
-</li>
-<li>
-super
-</li>
-<li>
-with
-</li>
-<li>
-default
-</li>
-<li>
-if
-</li>
-<li>
-switch
-</li>
-<li>
-yield
-</li>
+<ul><li>let</li>
+<li>var</li>
+<li>const</li>
+<li>finally</li>
+<li>return</li>
+<li>void</li>
+<li>continue</li>
+<li>for</li>
+<li>static</li>
+<li>while</li>
+<li>debugger</li>
+<li>function</li>
+<li>super</li>
+<li>with</li>
+<li>default</li>
+<li>if</li>
+<li>switch</li>
+<li>yield</li>
 </ul>
 
-<ul><li>enum
-</li>
-<li>
-interface
-</li>
-<li>
-private
-</li>
-<li>
-public
-</li>
-<li>
-implements
-</li>
-<li>
-package
-</li>
-<li>
-protected
-</li>
+<ul><li>enum</li>
+<li>interface</li>
+<li>private</li>
+<li>public</li>
+<li>implements</li>
+<li>package</li>
+<li>protected</li>
 </ul>
 <p>Try console.log and Math.min(2,1,3)</p>
 <p>Functions can be declared with 'let f=function(){return 1}' or 'function f(){return 1}'. If return is missing undefined is returned.</p>
@@ -316,7 +188,7 @@ protected
 <p>Object.keys(obj) gives an array with the property names.</p>
 <p>Use throw to abort with error: if (!Array.isArray(arr)) { throw new TypeError(`arr doesn't refer to an array.`) }</p>
 
-<code>
+<code><br>
  try {<br>
  &nbsp;&nbsp;bar(foo)<br>
  } catch (e) {<br>
@@ -326,7 +198,7 @@ protected
 
 <h2>Lecture 6</h2>
 
-<code>
+<code><br>
  const die = {<br>
  &nbsp;&nbsp;faceValue: undefined,<br>
  &nbsp;&nbsp;roll: function () {<br>
@@ -338,7 +210,7 @@ protected
 <p>Default argument values can be specified like so: function (greet = 'Hej!')</p>
 <p>If you need many dices create a Factory: a function that creates a die object and then returns it; or a Constructor invoked with new.</p>
 
-<code>
+<code><br>
  function Die () {<br>
  &nbsp;&nbsp;this.faceValue = undefined<br>
  &nbsp;&nbsp;this.roll = function () {<br>
@@ -410,7 +282,7 @@ protected
 <p>Object instances have a __proto__ reference to the constructors prototype.</p>
 <p>Variables set with this are public whereas if you let set a value in the constructor it is private and only accessible through the functions (such as getters/setters).</p>
 
-<code>
+<code><br>
  function Die () {<br>
  &nbsp;&nbsp;this._faceValue = undefined // semi-private property<br>
  }<br>
@@ -423,7 +295,7 @@ protected
 <p>Try adding a set: function to the above code that only allows certain numbers.</p>
 <p>Private variables can have annoying side effects, sure it prevents users from making dumb mistakes but if you know what you are doing it is a pain to not be allowed to do it.</p>
 
-<code>
+<code><br>
  class Die {<br>
  &nbsp;&nbsp;constructor () {<br>
  &nbsp;&nbsp;&nbsp;&nbsp;this._faceValue = undefined<br>
@@ -480,7 +352,7 @@ protected
 </div>
 <p>Inheritance prevents code repetition.</p>
 
-<code>
+<code><br>
  function Student (name, age, isCampus) {<br>
  &nbsp;&nbsp;Person.call(this, name, age) // call the constructor for Person (defined elsewhere)<br>
  &nbsp;&nbsp;this.isCampus = isCampus<br>
@@ -493,7 +365,7 @@ protected
  }<br>
  </code>
 
-<code>
+<code><br>
  class Student extends Person {<br>
  &nbsp;&nbsp;constructor (name, age, isCampus) {<br>
  &nbsp;&nbsp;&nbsp;&nbsp;super(name, age) // call constructor for Person<br>
@@ -580,8 +452,9 @@ Note that arrow functions cannot be used as prototypes (because of peculiarities
 	<a href="design.html">Design.</a>
 	<a href="clientbased.html">Client based programming.</a>
 	<a href="server.html">Server programming.</a>
+	<a href="oop.html">Object oriented programming.</a>
 </nav>
 </footer>
-<p><small>Updated on 2020-07-20.</small></p>
+<p><small>Updated on 2020-07-22.</small></p>
 </body>
 </html>
