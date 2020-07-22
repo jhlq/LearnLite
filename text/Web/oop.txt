@@ -303,4 +303,30 @@ The first random number of a Random object is determined by system time which ma
 
 readonly is equivalent to const
 
+**Lecture 4
 
+Classes, inheritance, base class, derived class, base, override.
+
+Literature chapter 6.
+
+https://github.com/1dv024/example-elementary-inheritance
+
+https://github.com/1dv024/example-great-inheritance
+
+**Lecture 5
+
+Virtual methods, abstract classes, abstract methods, interface
+
+Literature chapter 6/7
+
+https://github.com/1dv024/example-second-zoo
+
+**Lecture 6
+
+Privacy leak, deep copy, association
+
+https://github.com/1dv024/example-consoling-association
+
+**Lecture 7
+
+Examination task 3, stack, queue
