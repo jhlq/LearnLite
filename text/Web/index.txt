@@ -1,6 +1,7 @@
 ***Web development
 
-These pages are based on the web developer program at Linnaeus University: https://coursepress.lnu.se/program/webbprogrammerare/student/
+These pages are based on the web developer program at Linnaeus University: 
+https://coursepress.lnu.se/program/webbprogrammerare/student/
 
 **Contents
 <ul>

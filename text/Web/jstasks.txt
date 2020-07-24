@@ -1,0 +1,99 @@
+***JavaScript exercises
+
+Find associated code in the corresponding repositories at 
+https://github.com/1dv021
+
+**Part 1
+
+*A-level
+
+#Hello, World!
+
+<green>
+Make a function that returns the text 'Hello, World!'
+</div>
+
+<yellow>
+Make the function testable with npm:
+<code>
+describe('hello module', () => {
+  describe('#sayHello()', () => {
+    it('should return \'Hello, World!\'', () => {
+      expect(hello.sayHello()).to.eql('Hello, World!')
+    })
+  })
+})
+</code>
+</div>
+
+#Simple addition
+
+#Pre tiny funcs
+
+<ul>
+roundUp
+roundDown
+round
+getStringLength
+getFirstLetter
+getIndexOfQuestionMark
+isEqual
+isOdd
+isEven
+</ul>
+
+#Tiny funcs
+
+<ul>
+add
+concat
+round
+getOddNumbers
+greetings
+replaceHyphensFor
+replaceHyphensWhile
+getNumberSequence
+</ul>
+
+#Right triangle
+
+Print a triangle with #'s.
+
+#Data type determinator
+
+Print the type of the argument.
+
+#Shaver sharp html
+
+<ul>
+createBeginTag
+createEndTag
+createElement
+createElements
+</ul>
+
+#Additional array copy
+
+let newArray = ma.immutablePushNumber(arr, 4);
+
+#Sorted array copy
+
+#Sorting objects
+
+Sort array of objects
+
+*B-level
+
+#Bugsy
+
+Search names from initials using generator objects.
+
+#Better than average
+
+Filter an array of objects. Consider Array.reduce, Array.filter and Array.map.
+
+#Reduced array
+
+Get sum with Array.reduce.
+
+
