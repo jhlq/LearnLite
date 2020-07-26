@@ -15,6 +15,89 @@ Web design, WWW, URI/URL, protocols, client-server.
 
 Chapters LWD 1-3, EUE 1.
 
+*Lecture
+
+Introduction to web technology
+
+Design, development, construction, technology, technique.
+
+Theory. Planning and structuring. Information architecture, user centric design.
+
+HTML, XML, CSS, JavaScript, PHP...
+
+The world wide web is a subset of the internet.
+
+<ul>
+Babbage invented a programmable calculator in the 19th century.
+1930: electric computers
+1940: electron pipes
+1947: transistor
+1958: integrated circuit
+1971: microprocessor
+1990: World Wide Web
+2000: Mobile internet
+2010: Social web
+</ul>
+
+Take the user into account every step of the way. Why? Who? What? How? Where?
+
+User friendly (simple UI) - > Usability (efficient goal achievability) - > User experience (emotions)
+
+Data - > information - > knowledge
+
+Information architecture: organisation, structuring, labeling and navigation systems.
+
+Information architects develop visions, contents, structures, maintenance and extendability.
+
+Multipurpose Internet Mail Extensions (MIME):
+<ul>
+text/plain
+text/html
+text/css
+image/jpeg
+image/gif
+video/mpeg
+...
+</ul>
+
+A website directory tree is made either with folders on the server or a virtual router that registers paths to be handled by certain functions.
+
+URI (Uniform Resource Identifier):
+<ul>
+URL (Uniform Resource Locator)
+URN (Uniform Resource Name)
+</ul>
+
+scheme://username:password@domain:port/path?query_string#fragment_id
+
+The file:/// scheme is only for local files on a personal computer.
+
+Internal links can be specified relatively with ../file.htm or from site root (on server only) as /path/index.html
+
+Do not use special characters in file names. Use _ or - instead of spaces. Preferably lower case only.
+
+The inter- prefix means between.
+
+<ul>
+LAN: Local Area Network
+WAN: Wide Area Network
+Router: Directs traffic
+Gateway: Network entrance
+Firewall: Blocking gateway
+</ul>
+
+Every computer on the internet has a unique IP, either IPv4 or the more recent IPv6.
+
+DNS servers translate domain names to IP addresses. It is possible to connect to a server by typing the IP directly.
+
+Ports are connection locations on a computer. Numbers range from 0 to 65535 where 0-1023 are reserved, 25 is for email and 80 http. A temporary webserver is usually assigned 8080. Traffic to 80 can be directed to 8080 with iptables or a proxy server. Connect to a custom port like so: http://server.xyz:8080
+
+Protocols define data transfers, TCP/IP is fundamental for the web.
+
+TCP (Transmission Control Protocol) divides messages into numbered packages.
+
+HTTP (80), FTP (20/21), Telnet (23) and SMTP (25) all use TCP/IP.
+
 *Lesson
 
 Responsive design adapts to screen size.

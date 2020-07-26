@@ -4,3 +4,4 @@ Dry style.css. Red too red. Style code blocks
 next-link button styling
 different style for internal links
 Colors not perfectly aligned
+Replace all spaces in code that are next to newline
