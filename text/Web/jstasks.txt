@@ -96,4 +96,74 @@ Filter an array of objects. Consider Array.reduce, Array.filter and Array.map.
 
 Get sum with Array.reduce.
 
+*C-level
+
+#Abacus
+
+Adder that accepts variable number of arguments directly as numbers or parsed from strings. Optionally add support for nested arrays.
+
+Useful concepts: 
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/arguments arguments object
+, 
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax spread syntax
+, Array.concat, Array.some, String.indexOf, String.replace
+
+#Harshad number
+
+Find numbers evenly divisible by the sum of their digits: 24 since 24/(2+4)=4
+
+Useful functions: Number.toString, String.split, parseInt.
+
+#Reduced array of objects
+
+Get sum with Array.reduce.
+
+#The best of the best
+
+Count frequencies of names in a list.
+
+Useful functions: Array.every, Array.filter
+
+**Part 2
+
+*A-level
+
+#Lego maker
+
+Explore the factory, constructor (also with prototype) and class patterns.
+
+#Constructive prototype of ellipse
+
+Make a constructor/prototype pattern for ellipses and one for circles through inheritance.
+
+#New classic ellipse
+
+As above except with class syntax.
+
+**Examinations
+
+*Task 1: Descriptive statistics
+
+https://github.com/1dv021/examination-1
+
+JSDOC comment:
+<code>
+/**
+ * Returns the descriptive information (maximum, mean, median, minimum, mode, range and standard deviation) from a set of numbers.
+ *
+ * @param {number[]} source The set of data to be analyzed.
+ * @throws {TypeError} The passed argument is not an array.
+ * @throws {Error} The passed array contains no elements.
+ * @throws {TypeError} The passed array contains not just numbers.
+ * @returns {{maximum: number, mean: number, median: number, minimum: number, mode: number[], range: number, standardDeviation: number}}
+ */
+</code>
+Document your own functions too.
+
+*Task 2: Twenty one
+
+https://github.com/1dv021/examination-2
+
+Note: This is not black jack, however if you aren't doing the formal examination feel free to implement the classical black jack game.
+
 
