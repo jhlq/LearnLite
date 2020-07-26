@@ -3,6 +3,21 @@
 Find associated code in the corresponding repositories at 
 https://github.com/1dv021
 
+Before you start:
+<ol>
+Open a terminal
+git config --global alias.ignore '!gi() { curl -L -s https://www.gitignore.io/api/$@ ;}; gi'
+Change to the (git initialized) directory for tasks
+git remote add hello-world https://github.com/1dv021/exercise-hello-world.git
+git remote -v
+git subtree add --prefix=hello-world --squash hello-world master
+git ignore node,visualstudiocode (or a better IDE),linux (or a worse OS) >> .gitignore
+git add .
+git commit -m 'Adding .gitignore'
+git push
+Start coding and make frequent commits.
+</ol>
+
 **Part 1
 
 *A-level
@@ -48,11 +63,11 @@ isEven
 add
 concat
 round
-getOddNumbers
-greetings
+getOddNumbers, return a string of odd numbers up to argument.
+greetings, return different greetings depending on time of day.
 replaceHyphensFor
 replaceHyphensWhile
-getNumberSequence
+getNumberSequence, use two nested for to return strings like '11-12-13, 21-22-23, 31-32-33, 41-42-43, 51-52-53'.
 </ul>
 
 ###Right triangle
