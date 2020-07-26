@@ -6,8 +6,9 @@ https://coursepress.lnu.se/program/webbprogrammerare/student/
 **Contents
 <ul>
 <a href="javascript.html">JavaScript lectures.</a>
+!link:jstasks.html JavaScript tasks.
 <a href="design.html">Design.</a>
 !link:clientbased.html Client based programming.
 !link:server.html Server programming.
-!link:oop.html Object oriented programming
+!link:oop.html Object oriented programming.
 </ul>

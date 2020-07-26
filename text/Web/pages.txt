@@ -1,5 +1,6 @@
 index/Index
 javascript/JavaScript lectures
+jstasks/JavaScript tasks
 design/Design
 clientbased/Client based programming
 server/Server programming
