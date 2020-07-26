@@ -7,7 +7,7 @@ https://github.com/1dv021
 
 *A-level
 
-#Hello, World!
+###Hello, World!
 
 <green>
 Make a function that returns the text 'Hello, World!'
@@ -26,9 +26,9 @@ describe('hello module', () => {
 </code>
 </div>
 
-#Simple addition
+###Simple addition
 
-#Pre tiny funcs
+###Pre tiny funcs
 
 <ul>
 roundUp
@@ -42,7 +42,7 @@ isOdd
 isEven
 </ul>
 
-#Tiny funcs
+###Tiny funcs
 
 <ul>
 add
@@ -55,15 +55,15 @@ replaceHyphensWhile
 getNumberSequence
 </ul>
 
-#Right triangle
+###Right triangle
 
 Print a triangle with #'s.
 
-#Data type determinator
+###Data type determinator
 
 Print the type of the argument.
 
-#Shaver sharp html
+###Shaver sharp html
 
 <ul>
 createBeginTag
@@ -72,33 +72,33 @@ createElement
 createElements
 </ul>
 
-#Additional array copy
+###Additional array copy
 
 let newArray = ma.immutablePushNumber(arr, 4);
 
-#Sorted array copy
+###Sorted array copy
 
-#Sorting objects
+###Sorting objects
 
 Sort array of objects
 
 *B-level
 
-#Bugsy
+###Bugsy
 
 Search names from initials using generator objects.
 
-#Better than average
+###Better than average
 
 Filter an array of objects. Consider Array.reduce, Array.filter and Array.map.
 
-#Reduced array
+###Reduced array
 
 Get sum with Array.reduce.
 
 *C-level
 
-#Abacus
+###Abacus
 
 Adder that accepts variable number of arguments directly as numbers or parsed from strings. Optionally add support for nested arrays.
 
@@ -108,17 +108,17 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/argu
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax spread syntax
 , Array.concat, Array.some, String.indexOf, String.replace
 
-#Harshad number
+###Harshad number
 
 Find numbers evenly divisible by the sum of their digits: 24 since 24/(2+4)=4
 
 Useful functions: Number.toString, String.split, parseInt.
 
-#Reduced array of objects
+###Reduced array of objects
 
 Get sum with Array.reduce.
 
-#The best of the best
+###The best of the best
 
 Count frequencies of names in a list.
 
@@ -128,15 +128,15 @@ Useful functions: Array.every, Array.filter
 
 *A-level
 
-#Lego maker
+###Lego maker
 
 Explore the factory, constructor (also with prototype) and class patterns.
 
-#Constructive prototype of ellipse
+###Constructive prototype of ellipse
 
 Make a constructor/prototype pattern for ellipses and one for circles through inheritance.
 
-#New classic ellipse
+###New classic ellipse
 
 As above except with class syntax.
 

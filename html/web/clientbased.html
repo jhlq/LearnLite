@@ -10,32 +10,43 @@
 	<a href="../index.html">Home.</a>
 	<a href="index.html">Index.</a>
 	<a href="javascript.html">JavaScript lectures.</a>
+	<a href="jstasks.html">JavaScript tasks.</a>
 	<a href="design.html">Design.</a>
 	<a href="clientbased.html">Client based programming.</a>
 	<a href="server.html">Server programming.</a>
 	<a href="oop.html">Object oriented programming.</a>
 </nav>
 <h1>Client based programming</h1>
+
 <p>Notes for a course at Linnaeus University: https://coursepress.lnu.se/kurs/klientbaserad-webbprogrammering/</p>
 
 <h2>L0 Introduction</h2>
+
 <p>3 parts:</p>
 
 <ul><li>SSGs (Static Site Generators) and CSS preprocessors</li>
 <li>DOM, Async and storage (event-driven asynchronous programming)</li>
 <li>SPA (Single page applications)</li>
 </ul>
+
 <p>Describe the web browser (internal structure, security models, developer tools)</p>
+
 <p>JavaScript, HTML and CSS should be clearly separated.</p>
+
 <p>DOM (traversing, selecting, manipulating). Handling events.</p>
+
 <p>Ajax and JSON.</p>
+
 <p>SPAs with offline support and browser native APIs.</p>
+
 <p>Handling history in the browser.</p>
+
 <p>Literature: </p>
 
 <ul><li><a href="http://eloquentjavascript.net/" target="_blank"> Chapter 12-19, 22 of Eloquent JavaScript.</a></li>
 <li>Optionally Professional JavaScript for Web Developers, 4th Edition by Matt Frisbie</li>
 </ul>
+
 <p>Tools:</p>
 
 <ul><li>Git</li>
@@ -49,19 +60,31 @@
 </ul>
 
 <h2>L1 SSG and CSS preprocessors</h2>
+
 <p>CSS preprocessors extend the CSS language.</p>
+
 <p>Preprocessors enable calculations, nesting, mixins and variables.</p>
+
 <p>The course default is sass, other options include less and stylus.</p>
+
 <p>Partials, @import and operators.</p>
+
 <p><a href="https://sass-lang.com/guide" target="_blank">https://sass-lang.com/guide</a></p>
+
 <p>@mixin defines a function used with @include</p>
+
 <p>@import "_partial";</p>
+
 <p>width: 300px / $width * 100%;</p>
+
 <p>Since line numbers in browser no longer match line numbers in source debugging gets harder. 
 <a href="https://adamsilver.io/articles/the-disadvantages-of-css-preprocessors/" target="_blank"> It's easy to add a CSS preprocessor to the tech stack. But, it's not easy to remove it down the line, should we so choose.</a></p>
+
 <p>The .map files enable debugging.</p>
+
 <p>Static Site Generators take for example plain text and generate html code. 
 <a href="https://github.com/jhlq/LearnLite/blob/master/text/ppp.jl" target="_blank"> This website is built with a custom SSG written in Julia.</a></p>
+
 <p><a href="https://davidwalsh.name/introduction-static-site-generators" target="_blank"> SSGs are simple and secure.</a></p>
 
 <ul><li>Jekyll</li>
@@ -71,6 +94,7 @@
 <li>Middleman</li>
 <li>Hugo</li>
 </ul>
+
 <p>Features:</p>
 
 <ul><li>Partials for navigation etc</li>
@@ -78,6 +102,7 @@
 <li>Templates</li>
 <li>Markdown (md) support</li>
 </ul>
+
 <p>Import partials from _includes folder with: {% include head.html %}</p>
 
 <code><br>
@@ -89,8 +114,11 @@
  &nbsp;&nbsp;{% endfor %}<br>
  &lt;/ul&gt;<br>
  </code>
+
 <p>In Jekyll Liquid is the templating engine</p>
+
 <p>Realtime content has to be brought in with JavaScript and user input handled with third party form receivers.</p>
+
 <p>Getting started:</p>
 
 <ul><li>Install Jekyll. Requires Ruby, RubyGems and NodeJS.</li>
@@ -99,6 +127,7 @@
 <li>Build: cd myblog; jekyll serve</li>
 <li>Goto localhost:4000</li>
 </ul>
+
 <p>First assignment:</p>
 
 <ul><li>Create a static site using Jekyll and sass</li>
@@ -120,12 +149,19 @@
 <li>Pollution</li>
 <li>Webpack</li>
 </ul>
+
 <p>Chrome is the most used browser followed by Safari and then FireFox.</p>
+
 <p><a href="http://caniuse.com/" target="_blank">http://caniuse.com/</a></p>
+
 <p>UI, rendering engine, js engine, network layer, cookies, web storage, cache.</p>
+
 <p>Rendering engines: Blink, Gecko, WebKit</p>
+
 <p>JavaScript engines: V8, SpiderMonkey, WebKit</p>
+
 <p>Load content in the background (XHR / WS)</p>
+
 <p>Sandboxing prevents JavaScript from:</p>
 
 <ul><li>Reading the local file system.</li>
@@ -133,10 +169,13 @@
 <li>Communicate with third party servers, CORS (Cross Origin Resouce Sharing) solves this.</li>
 <li>Find out the correct color of a link.</li>
 </ul>
+
 <p>&lt;script src="js/app.js"&gt;&lt;/script&gt; (Avoid coding directly within script tags), 
 <a href="https://www.growingwiththeweb.com/2014/02/async-vs-defer-attributes.html" target="_blank"> add async or defer to modify loading behaviour.</a>
  Specify type="module" to use ESM.</p>
+
 <p>In the browser all variables are attached to the window object.</p>
+
 <p>ESM benefits:</p>
 
 <ul><li>'use strict' is standard</li>
@@ -158,6 +197,7 @@
  &nbsp;&nbsp;}<br>
  }<br>
  </code>
+
 <p>Developer tools:</p>
 
 <ul><li>Inspect the code</li>
@@ -168,6 +208,7 @@
 </ul>
 
 <h2>L3 Document Object Model</h2>
+
 <p>DOM:</p>
 
 <ul><li>Traversing</li>
@@ -182,7 +223,9 @@
 <li>Timers</li>
 <li>Event loop</li>
 </ul>
+
 <p>The Document Object Model is an API for the rendering engine.</p>
+
 <p>Traversing the DOM:</p>
 
 <ul><li>firstChild</li>
@@ -195,6 +238,7 @@
 <li>childNodes</li>
 <li>children</li>
 </ul>
+
 <p>Select nodes:</p>
 
 <ul><li>getElementById</li>
@@ -203,8 +247,11 @@
 <li>querySelector</li>
 <li>querySelectorAll</li>
 </ul>
+
 <p>let tags = document.querySelectorAll('p.tag')</p>
+
 <p>let pTagsArray = Array.from(pTagsNodeList)</p>
+
 <p>node.</p>
 
 <ul><li>appendChild</li>
@@ -220,11 +267,17 @@
  newTag.appendChild(newText)<br>
  document.querySelector('#main').appendChild(newTag)<br>
  </code>
+
 <p>Both textContent and innerHTML remove all children, textContent is more secure.</p>
+
 <p>getAttribute, setAttribute, removeAttribute</p>
+
 <p>node.style.color = '#AA5698'</p>
+
 <p>Avoid css in js except dynamic properties: movingElement.style.left = '${x}px'</p>
+
 <p>Use classes instead: node.classList.add('jschanged'), .remove, .toggle, .contains</p>
+
 <p>Clone template nodes.</p>
 
 <code><br>
@@ -285,6 +338,7 @@
  </code>
 
 </div>
+
 <p><a href="https://developers.google.com/web/fundamentals/web-components/" target="_blank">https://developers.google.com/web/fundamentals/web-components/</a></p>
 
 <h2>L4 Event driven programming</h2>
@@ -303,13 +357,19 @@
 <li>Content loaded</li>
 <li>Custom</li>
 </ul>
+
 <p>a href="page.html" onclick="doSomething()"</p>
+
 <p>tag.addEventListener('click', buttonClicked)</p>
+
 <p>event.stopPropagation()</p>
+
 <p>Use 
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind" target="_blank"> .bind(this)</a>
  on addEventListener.</p>
+
 <p>If a loop variable is used in a function definition it will when called read the final value of the loop variable. Do .forEach( (a, i) => { } )</p>
+
 <p>event.preventDefault() or return false</p>
 
 <code><br>
@@ -337,6 +397,7 @@
 <li>Promises</li>
 <li>WebStorage</li>
 </ul>
+
 <p>JavaScript Object Notation is a language independent subset of JavaScript with MIME application/json</p>
 
 <code><br>
@@ -346,6 +407,7 @@
  &nbsp;&nbsp;&nbsp;&nbsp;{"name":"Jason","type":1,"alive":true}<br>
  ]<br>
  </code>
+
 <p><a href="https://jsonlint.com/" target="_blank">https://jsonlint.com/</a></p>
 
 <code><br>
@@ -360,7 +422,9 @@
  obj = JSON.parse(obj)<br>
  console.log(obj)<br>
  </code>
+
 <p>Avoid blocking calls.</p>
+
 <p>HTTP methods: GET, POST, PUT, DELETE</p>
 
 <ul><li>200 OK</li>
@@ -381,6 +445,7 @@
  <br>
  user=Ellen&amp;message=Hello<br>
  </code>
+
 <p>Put response handlers in event listeners:
 <code><br>
  let req = new window.XMLHttpRequest()<br>
@@ -390,6 +455,7 @@
  req.open('GET', 'data.json')<br>
  req.send()<br>
  </code></p>
+
 <p>AJAX: Asynchronous JavaScript And XML</p>
 
 <code><br>
@@ -443,6 +509,7 @@
  &nbsp;&nbsp;&nbsp;&nbsp;body: JSON.stringify(data)<br>
  })<br>
  </code>
+
 <p>Forms:</p>
 
 <ul><li>Make it work without JS</li>
@@ -450,8 +517,11 @@
 <li>form.addEventlistener("submit",...)</li>
 <li>Disable the submit-button</li>
 </ul>
+
 <p>CORS (Cross-Origin Resource Sharing) is for fetching data from other domains.</p>
+
 <p>A domain can set up to 50 cookies with max sizes 4096 bytes.</p>
+
 <p>window.localStorage.setItem('bgcolor', document.getElementById('bgcolor').value)</p>
 
 <h2>L6 Single Page Applications</h2>
@@ -485,6 +555,7 @@
  &nbsp;&nbsp;}<br>
  })<br>
  </code>
+
 <p>window.history.</p>
 
 <ul><li>back()</li>
@@ -494,6 +565,7 @@
 </ul>
 
 <div class="yellow">
+
 <p>Pushstate:
 <code><br>
  let ul = document.querySelector('#links')<br>
@@ -527,6 +599,7 @@
 <li>ember</li>
 <li>React</li>
 </ul>
+
 <p>XHR is not optimal for real time apps.</p>
 
 <code><br>
@@ -541,6 +614,7 @@
  &nbsp;&nbsp;console.log(event.data)<br>
  })<br>
  </code>
+
 <p>Problems, how to</p>
 
 <ul><li>know if the user is online?</li>
@@ -550,8 +624,11 @@
 <li>sync data?</li>
 <li>handle conflicts?</li>
 </ul>
+
 <p><a href="https://github.hubspot.com/offline/docs/welcome/" target="_blank">https://github.hubspot.com/offline/docs/welcome/</a></p>
+
 <p><a href="http://alistapart.com/article/application-cache-is-a-douchebag" target="_blank"> Application cache is deprecated.</a></p>
+
 <p>ServiceWorkers have their own queue and WorkerGlobalScopes.</p>
 
 <ul><li>Require https</li>
@@ -566,9 +643,13 @@
 </ul>
 
 <h2>L7 Optimization &amp; Accessibility</h2>
+
 <p>Up to one in five people have some impairment.</p>
+
 <p>Ensure keyboard navigation is possible. Use interactive elements, aria-attributes and tabindex.</p>
+
 <p>Don't add unusual interactivity for example by adding a click listener to a header.</p>
+
 <p>Specify alt="image description"</p>
 
 <ul><li>    WCAG - Web Content Accessability Guidelines</li>
@@ -577,6 +658,7 @@
 <li>    ARIA - Accessible Rich Internet Applications</li>
 <li><a href="https://www.w3.org/standards/webdesign/accessibility" target="_blank">https://www.w3.org/standards/webdesign/accessibility</a></li>
 </ul>
+
 <p>Try a screenreader!</p>
 
 <ul><li><a href="http://www.chromevox.com/" target="_blank">http://www.chromevox.com/</a></li>
@@ -616,7 +698,9 @@
  &nbsp;&nbsp;postMessage(n)<br>
  }<br>
  </code>
+
 <p>Do animations with &lt;canvas&gt;</p>
+
 <p><a href="https://webvr.info/" target="_blank">https://webvr.info/</a></p>
 
 <code><br>
@@ -627,12 +711,18 @@
  &nbsp;&nbsp;&nbsp;&nbsp;let nbrAxes = e.gamepad.axes.length<br>
  })<br>
  </code>
+
 <p><a href="https://www.w3.org/TR/gamepad/" target="_blank">https://www.w3.org/TR/gamepad/</a></p>
+
 <p>Physical web beacons: 
 <a href="https://google.github.io/physical-web/" target="_blank">https://google.github.io/physical-web/</a></p>
+
 <p><a href="https://webbluetoothcg.github.io/web-bluetooth/" target="_blank">https://webbluetoothcg.github.io/web-bluetooth/</a></p>
+
 <p><a href="https://w3c.github.io/web-nfc/" target="_blank">https://w3c.github.io/web-nfc/</a></p>
+
 <p><a href="https://wicg.github.io/webusb/" target="_blank">https://wicg.github.io/webusb/</a></p>
+
 <p>Web components:</p>
 
 <ul><li>Custom elements</li>
@@ -640,8 +730,10 @@
 <li>Shadow DOM</li>
 <li>ECMA Script Modules</li>
 </ul>
+
 <p>Web components polyfil: 
 <a href="https://www.polymer-project.org/" target="_blank">https://www.polymer-project.org/</a></p>
+
 <p>WebRTC</p>
 
 <ul><li>    MediaStream (getUserMedia())</li>
@@ -649,11 +741,16 @@
 <li>    RTCPeerConnection</li>
 <li>    RTCDataChannel</li>
 </ul>
+
 <p><a href="https://webrtc.org/" target="_blank">https://webrtc.org/</a></p>
+
 <p>WebGL: 
 <a href="https://en.wikipedia.org/wiki/Three.js" target="_blank">https://en.wikipedia.org/wiki/Three.js</a></p>
+
 <p>WASM: https://github.com/webassembly/</p>
+
 <p><a href="https://github.com/w3c/webpayments/wiki" target="_blank"> Web Payments</a></p>
+
 <p><a href="https://w3c.github.io/web-share/" target="_blank"> Web Share API.</a></p>
 
 <ul><li>    Geolocation API</li>
@@ -672,12 +769,13 @@
 	<a href="../index.html">Home.</a>
 	<a href="index.html">Index.</a>
 	<a href="javascript.html">JavaScript lectures.</a>
+	<a href="jstasks.html">JavaScript tasks.</a>
 	<a href="design.html">Design.</a>
 	<a href="clientbased.html">Client based programming.</a>
 	<a href="server.html">Server programming.</a>
 	<a href="oop.html">Object oriented programming.</a>
 </nav>
 </footer>
-<p><small>Updated on 2020-07-22.</small></p>
+<p><small>Updated on 2020-07-26.</small></p>
 </body>
 </html>

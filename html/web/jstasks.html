@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>LearnLite: Web development, JavaScript tasks</title>
+<link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+<body>
+<nav>
+	<a href="../index.html">Home.</a>
+	<a href="index.html">Index.</a>
+	<a href="javascript.html">JavaScript lectures.</a>
+	<a href="jstasks.html">JavaScript tasks.</a>
+	<a href="design.html">Design.</a>
+	<a href="clientbased.html">Client based programming.</a>
+	<a href="server.html">Server programming.</a>
+	<a href="oop.html">Object oriented programming.</a>
+</nav>
+<h1>JavaScript exercises</h1>
+
+<p>Find associated code in the corresponding repositories at 
+<a href="https://github.com/1dv021" target="_blank">https://github.com/1dv021</a></p>
+
+<h2>Part 1</h2>
+
+<h3>A-level</h3>
+
+<h6>Hello, World!</h6>
+
+<div class="green">
+
+<p>Make a function that returns the text 'Hello, World!'</p>
+
+</div>
+
+<div class="yellow">
+
+<p>Make the function testable with npm:
+<code><br>
+ describe('hello module', () => {<br>
+ &nbsp;&nbsp;describe('#sayHello()', () => {<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;it('should return \'Hello, World!\'', () => {<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;expect(hello.sayHello()).to.eql('Hello, World!')<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;})<br>
+ &nbsp;&nbsp;})<br>
+ })<br>
+ </code></p>
+
+</div>
+
+<h6>Simple addition</h6>
+
+<h6>Pre tiny funcs</h6>
+
+<ul><li>roundUp</li>
+<li>roundDown</li>
+<li>round</li>
+<li>getStringLength</li>
+<li>getFirstLetter</li>
+<li>getIndexOfQuestionMark</li>
+<li>isEqual</li>
+<li>isOdd</li>
+<li>isEven</li>
+</ul>
+
+<h6>Tiny funcs</h6>
+
+<ul><li>add</li>
+<li>concat</li>
+<li>round</li>
+<li>getOddNumbers</li>
+<li>greetings</li>
+<li>replaceHyphensFor</li>
+<li>replaceHyphensWhile</li>
+<li>getNumberSequence</li>
+</ul>
+
+<h6>Right triangle</h6>
+
+<p>Print a triangle with #'s.</p>
+
+<h6>Data type determinator</h6>
+
+<p>Print the type of the argument.</p>
+
+<h6>Shaver sharp html</h6>
+
+<ul><li>createBeginTag</li>
+<li>createEndTag</li>
+<li>createElement</li>
+<li>createElements</li>
+</ul>
+
+<h6>Additional array copy</h6>
+
+<p>let newArray = ma.immutablePushNumber(arr, 4);</p>
+
+<h6>Sorted array copy</h6>
+
+<h6>Sorting objects</h6>
+
+<p>Sort array of objects</p>
+
+<h3>B-level</h3>
+
+<h6>Bugsy</h6>
+
+<p>Search names from initials using generator objects.</p>
+
+<h6>Better than average</h6>
+
+<p>Filter an array of objects. Consider Array.reduce, Array.filter and Array.map.</p>
+
+<h6>Reduced array</h6>
+
+<p>Get sum with Array.reduce.</p>
+
+<h3>C-level</h3>
+
+<h6>Abacus</h6>
+
+<p>Adder that accepts variable number of arguments directly as numbers or parsed from strings. Optionally add support for nested arrays.</p>
+
+<p>Useful concepts: 
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/arguments" target="_blank"> arguments object</a>
+, 
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax" target="_blank"> spread syntax</a>
+, Array.concat, Array.some, String.indexOf, String.replace</p>
+
+<h6>Harshad number</h6>
+
+<p>Find numbers evenly divisible by the sum of their digits: 24 since 24/(2+4)=4</p>
+
+<p>Useful functions: Number.toString, String.split, parseInt.</p>
+
+<h6>Reduced array of objects</h6>
+
+<p>Get sum with Array.reduce.</p>
+
+<h6>The best of the best</h6>
+
+<p>Count frequencies of names in a list.</p>
+
+<p>Useful functions: Array.every, Array.filter</p>
+
+<h2>Part 2</h2>
+
+<h3>A-level</h3>
+
+<h6>Lego maker</h6>
+
+<p>Explore the factory, constructor (also with prototype) and class patterns.</p>
+
+<h6>Constructive prototype of ellipse</h6>
+
+<p>Make a constructor/prototype pattern for ellipses and one for circles through inheritance.</p>
+
+<h6>New classic ellipse</h6>
+
+<p>As above except with class syntax.</p>
+
+<h2>Examinations</h2>
+
+<h3>Task 1: Descriptive statistics</h3>
+
+<p><a href="https://github.com/1dv021/examination-1" target="_blank">https://github.com/1dv021/examination-1</a></p>
+
+<p>JSDOC comment:
+<code><br>
+ /**<br>
+  * Returns the descriptive information (maximum, mean, median, minimum, mode, range and standard deviation) from a set of numbers.<br>
+  *<br>
+  * @param {number[]} source The set of data to be analyzed.<br>
+  * @throws {TypeError} The passed argument is not an array.<br>
+  * @throws {Error} The passed array contains no elements.<br>
+  * @throws {TypeError} The passed array contains not just numbers.<br>
+  * @returns {{maximum: number, mean: number, median: number, minimum: number, mode: number[], range: number, standardDeviation: number}}<br>
+  */<br>
+ </code>
+Document your own functions too.</p>
+
+<h3>Task 2: Twenty one</h3>
+
+<p><a href="https://github.com/1dv021/examination-2" target="_blank">https://github.com/1dv021/examination-2</a></p>
+
+<p>Note: This is not black jack, however if you aren't doing the formal examination feel free to implement the classical black jack game.</p>
+
+
+<br><a href="design.html" id="next">Next page.</a>
+<br><br>
+<footer>
+<nav>
+	<a href="../index.html">Home.</a>
+	<a href="index.html">Index.</a>
+	<a href="javascript.html">JavaScript lectures.</a>
+	<a href="jstasks.html">JavaScript tasks.</a>
+	<a href="design.html">Design.</a>
+	<a href="clientbased.html">Client based programming.</a>
+	<a href="server.html">Server programming.</a>
+	<a href="oop.html">Object oriented programming.</a>
+</nav>
+</footer>
+<p><small>Updated on 2020-07-26.</small></p>
+</body>
+</html>

@@ -10,15 +10,18 @@
 	<a href="../index.html">Home.</a>
 	<a href="index.html">Index.</a>
 	<a href="javascript.html">JavaScript lectures.</a>
+	<a href="jstasks.html">JavaScript tasks.</a>
 	<a href="design.html">Design.</a>
 	<a href="clientbased.html">Client based programming.</a>
 	<a href="server.html">Server programming.</a>
 	<a href="oop.html">Object oriented programming.</a>
 </nav>
 <h1>Server programming</h1>
+
 <p>Notes for a course at Linnaeus University: https://coursepress.lnu.se/kurs/serverbaserad-webbprogrammering/</p>
 
 <h2>Introduction</h2>
+
 <p>After the course you should be able to:</p>
 
 <ul><li>Describe the task of a web server in different kinds of web applications.</li>
@@ -30,12 +33,14 @@
 <li>Create server­-based real-time applications.</li>
 <li>Plan and perform the publishing of web applications created for the Node.js platform in the production environment.</li>
 </ul>
+
 <p>The course is divided into three parts</p>
 
 <ul><li>Part 1: Node.js, web servers, HTTP</li>
 <li>Part 2: Backend web application, web security, web architecture</li>
 <li>Part 3: Real-time application, publishing, and production</li>
 </ul>
+
 <p>Recommended literature:</p>
 
 <ul><li>Chapter 17 and 20 of Eliquent JavaScript</li>
@@ -50,11 +55,17 @@
 </ul>
 
 <h2>The Node platform</h2>
+
 <p>Node.js is not a web server nor a framework.</p>
+
 <p>V8, Google chrome javascript engine, an event loop, and a low-level I/O API (libuv)</p>
+
 <p>Small modules, doing one thing well, is the philosophy.</p>
+
 <p><a href="https://nodejs.org/api/esm.html" target="_blank"> ECMAScript modules</a></p>
+
 <p>Single threaded event-driven architecture.</p>
+
 <p>Event-driven programming:</p>
 
 <ul><li>Callbacks</li>
@@ -62,18 +73,29 @@
 <li>Async/Await</li>
 <li>Event Emitters. Create your own events. Listen for multiple triggers of events</li>
 </ul>
+
 <p>Blocking or CPU-intensive code is not suitable for Node.js.</p>
+
 <p><a href="https://nodejs.org/api/cluster.html" target="_blank"> The cluster module allows easy creation of child processes that all share server ports.</a></p>
+
 <p>npm install # installs all dependencies in package.json</p>
+
 <p>yarn is an alternative to npm.</p>
+
 <p>npm install mocha --save-dev</p>
+
 <p><a href="https://www.gitignore.io/" target="_blank">https://www.gitignore.io/</a></p>
+
 <p>Use npx to execute a module (and install it temporarily)</p>
+
 <p>Semantic Versioning (semver) major.minor.patch. Use * for latest.</p>
+
 <p>The package-lock.json file describes the dependency tree and should be committed.</p>
 
 <h2>Web servers</h2>
+
 <p>Different server services conventionally use certain ports.</p>
+
 <p>Web servers are software that handles and understands HTTP/HTTPS request/response. Listen default on port 80 (HTTP) or port 443 (HTTPS)</p>
 
 <ul><li>Apache. The A in LAMP-stack (Linux, Apache, MySQL, PHP)</li>
@@ -82,6 +104,7 @@
 <li>Apache Tomcat. A Java servlet, HTTP Connector, JSP engine. A Java servlet is a Java program that extends the capabilities of a server.</li>
 <li>Node.js. A platform! Create a web server through code (APIs)!</li>
 </ul>
+
 <p>Apache:</p>
 
 <ul><li>Most used web server.</li>
@@ -91,6 +114,7 @@
 <li>Dynamic Modules: mod_access, mod_auth, mod_rewrite</li>
 <li>.htaccess</li>
 </ul>
+
 <p>Nginx is a lightweight server commonly used as proxy or load balancer.</p>
 
 <code><br>
@@ -102,6 +126,7 @@
  &nbsp;&nbsp;res.end('Hello world\n');<br>
  }).listen(PORT);<br>
  </code>
+
 <p>Different kind of servers in a web environment</p>
 
 <ul><li>Reverse proxy. Acts as a firewall and hides the origin.</li>
@@ -110,12 +135,17 @@
 <li>Application server. Not limited to HTTP.</li>
 <li>Virtual hosting. Multiple domain names.</li>
 </ul>
+
 <p>Domain name servers (DNS) translate domain names to IPs like 194.47.110.87 and 2001:6b0:52:4000::5:5</p>
+
 <p>The browser sends a TCP/IP packet, the server sends back a reply for example on port 62365.</p>
 
 <h2>HTTP</h2>
+
 <p>Stateless, securityless.</p>
+
 <p>Internet Engineering Task Force (IETF) and the World Wide Web Consortium (W3C)</p>
+
 <p>HTTP messages have headers.</p>
 
 <ul><li>GET 	Get data; search result 	safe, idempotent</li>
@@ -126,6 +156,7 @@
 <li>HEAD 	Just get headers 	safe, idempotent</li>
 <li>OPTIONS 	Check what the server can do 	safe, idempotent</li>
 </ul>
+
 <p>Status codes:</p>
 
 <ul><li>1xx - Informational. 101 Switching Protocols</li>
@@ -134,10 +165,15 @@
 <li>4xx - Client Error. 400 Bad request, 401 Unauthorized, 403 Forbidden</li>
 <li>5xx - Server Error. 500 Internal Server Error</li>
 </ul>
+
 <p><a href="https://en.wikipedia.org/wiki/List_of_HTTP_header_fields" target="_blank">https://en.wikipedia.org/wiki/List_of_HTTP_header_fields</a></p>
+
 <p><a href="https://http.cat/" target="_blank"> Status code cats.</a></p>
+
 <p>The server should use gzip on text files &gt; 1-2 Kb</p>
+
 <p>Do not trust client ID, nor server ID, neither a human. Filter out crawlers in logs.</p>
+
 <p>Set-Cookie: PHPSESSID=1p0sptqdupf47lefnti1j1fg40 Path=/admin</p>
 
 <ul><li>expires:Wed, 30 Jan 2019 14:00:00 GMT</li>
@@ -145,6 +181,7 @@
 <li>cache-control: private, max-age=0, no-cache</li>
 <li>ETag</li>
 </ul>
+
 <p>HTTP/2</p>
 
 <ul><li>Multiplexing - one single TCP connection for many request</li>
@@ -194,8 +231,11 @@
  &nbsp;&nbsp;}<br>
  }).listen(8000, () => console.log('Server running at http://localhost:8000/'))<br>
  </code>
+
 <p>MEAN full stack JavaScript: MongoDB, Express, Angular, Node.js</p>
+
 <p>Handlebars view engine.</p>
+
 <p>Backend frameworks:</p>
 
 <ul><li>Express, https://expressjs.com/</li>
@@ -204,6 +244,7 @@
 <li>Feathers (built on Express), https://feathersjs.com/</li>
 <li>Fastify, https://www.fastify.io</li>
 </ul>
+
 <p>Express is inspired by Sinatra, a web application framework in Ruby, and intertwined with Connect, a pluggable Node module that can handle web requests (a.k.a. "middleware")</p>
 
 <code><br>
@@ -215,6 +256,7 @@
  <br>
  app.listen(8000, () => console.log('Server running at http://localhost:8000/'))<br>
  </code>
+
 <p>The directory structure can be</p>
 
 <ul><li>app.js is the applications entry point.</li>
@@ -230,6 +272,7 @@
 <li>morgan: HTTP request logger.</li>
 <li>nodemon: Automatically restarts the application when file changes. </li>
 </ul>
+
 <p>Middleware functions are functions that have access to the request object (req), the response object (res), and the next middleware function in the application's request-response cycle.</p>
 
 <ul><li>Application-level: app.use() and app.METHOD(), (req, res, next)).</li>
@@ -238,14 +281,20 @@
 <li>Built-in: express.static, express.urlencoded</li>
 <li>Third-party: Add functionality.</li>
 </ul>
+
 <p>router.get and router.post and app.use('/home', require('./routes/homeRouter'))</p>
+
 <p>Controller functions render an HTML page using a template engine, res.render(view [, locals]) renders a view and sends the HTML string to the client.</p>
+
 <p>Template engines: Pug, Mustache, EJS and 
 <a href="https://handlebarsjs.com/" target="_blank"> express-hbs</a></p>
 
 <h2>Persistent data</h2>
+
 <p>MongoDB and Mongoose. Web sessions and flash messages.</p>
+
 <p>Create, read, update and delete (CRUD) are the four basic function of persistent storage.</p>
+
 <p>How to store application data at the server side?</p>
 
 <ul><li>Data stored in the memory is non-persistent (data is erased when the power is turned off).</li>
@@ -253,15 +302,20 @@
 <li>Database persistence?    Oracle, SQL Server, MySQL, MariaDB, PostgreSQL,    MongoDB</li>
 <li>Cloud persistence?    mongodb.com (DBaaS, Database-as-a-Service), AWS, Azure, Google Cloud</li>
 </ul>
+
 <p>Relational database management systems (RDBMS) organizes data into tables with columns and rows with Structured Query Language (SQL).</p>
+
 <p>NoSQL databases like MongoDB and Firebase are like big maps where incomplete documents can be easily stored and extended during development without time consuming database migrations.</p>
+
 <p>MongoDB is open-source and derives from the word humongous. Stores JSON-like documents.</p>
 
 <ul><li><a href="https://www.mongodb.com/cloud/atlas" target="_blank"> MongoDB Atlas is a cloud database service.</a></li>
 <li><a href="https://mongoosejs.com/docs/index.html" target="_blank"> Mongoose is an Object Data Modeling (ODM) library for MongoDB and Node.js.</a></li>
 <li><a href="https://docs.atlas.mongodb.com/getting-started/" target="_blank">https://docs.atlas.mongodb.com/getting-started/</a></li>
 </ul>
+
 <p>The mongoose.connect method returns a Promise, mongodb+srv://<dbuser>:<password>@<cluster>.mongodb.net/<name>?retryWrites=true&w=majority, listen for connection events: connected, error, disconnected.</p>
+
 <p>Close the Mongoose connection when the Node process ends.</p>
 
 <code><br>
@@ -270,11 +324,13 @@
  &nbsp;&nbsp;size: { type: Number, required: true, min: 15, max: 47 }<br>
  })<br>
  </code>
+
 <p>The lowercase name of the collection will automatically be the plural version of the model's name.
 <code><br>
  const Shoe = new mongoose.model('Shoe', shoeSchema)<br>
  const myShoe = new Shoe();<br>
  </code></p>
+
 <p>The module (Task.js) resides in the models directory.</p>
 
 <ul><li>/tasks</li>
@@ -291,6 +347,7 @@
  router.get('/:id/edit', tasksController.edit)<br>
  router.post'/:id/update', tasksController.update)<br>
  </code>
+
 <p>The captured values are populated in the req.params object, with the name of the route parameter specified in the path as their respective keys.</p>
 
 <code><br>
@@ -300,26 +357,43 @@
  })<br>
  await task.save()<br>
  </code>
+
 <p>Use Task.find, and pass an empty object, to find all documents in a collection. It's good practice to transform the documents into anonymous objects before passing the data to the view.</p>
+
 <p>Use Task.updateOne (deleteOne) with { _id: req.body.id } to update a document in the database.</p>
+
 <p>A session cookie keeps users logged in.</p>
+
 <p><a href="https://jwt.io" target="_blank"> Secure JSON Web Token</a></p>
+
 <p>Redis is an in-memory database alternative to MongoDB.</p>
+
 <p>The default server-side session storage MemoryStorage is not for production.</p>
+
 <p>Session variables are just properties of the request object's session property: req.session.name = 'Ada'</p>
+
 <p>To avoid "double posting" if a form page is refreshed return a redirect command instead of a view directly, 
 <a href="https://en.wikipedia.org/wiki/Post/Redirect/Get" target="_blank"> the Post/Redirect/Get (PRG) pattern.</a></p>
+
 <p>Whenever you redirect someone on your website it is a good idea to use a flash message to let them know that what they just did worked or not. The flash message should survive only a round trip. Use a session variable to save the message and delete the message on the next request.</p>
+
 <p>req.session.flash = { type: 'success', text: 'The requested action was completed.' }</p>
 
 <h2>Access Control</h2>
+
 <p>Authentication and authorization.</p>
+
 <p>Use cookie session id (stored on server), JWT (not stored) or a third-party like OpenId Connect or SAML.</p>
+
 <p>If authorization fails 403 is the default status code however for security one can reply with 404 (or 418) to hide the fact that the server has the requested resource.</p>
+
 <p>Passwords should be stored in an hashed format using strong cryptographic algorithms (Argon2, bcrypt, scrypt). Prevent rainbow table attacks with salt.</p>
+
 <p>It is not sufficient to simply hide the delete button at the client from a user that are not allowed to delete something at the server. It is safer to prevent access by default and override any requests that do not require permission.</p>
+
 <p>Salt and hash password using 
 <a href="https://www.npmjs.com/package/bcryptjs" target="_blank"> bcryptjs.</a></p>
+
 <p>Applying the principle of separation of concerns is a good idea by adding 
 <a href="https://mongoosejs.com/docs/api.html#schema_Schema-static" target="_blank"> static methods</a>
  to the Mongoose schema to register users.</p>
@@ -341,6 +415,7 @@
  &nbsp;&nbsp;versionKey: false<br>
  })<br>
  </code>
+
 <p>Using a pre hook you can execute code after the validation and before the data is written to the database. You must call .pre before compiling the model:
 <code><br>
  userSchema.pre('save', async function () {<br>
@@ -365,6 +440,7 @@
  &nbsp;&nbsp;return user<br>
  }<br>
  </code>
+
 <p>When defining a route you can provide multiple callbacks. You can use this mechanism to authorize the requested resource.</p>
 
 <h2>Web Security</h2>
@@ -374,15 +450,25 @@
 <li>TLS Certificates</li>
 <li>Denial of Service (DOS, DDOS)</li>
 </ul>
+
 <p>The application must always assume that all input is potentially malicious</p>
+
 <p><a href="https://owasp.org/" target="_blank"> Open Web Application Security Project</a></p>
+
 <p><a href="https://github.com/OWASP/wstg/tree/master/document" target="_blank"> Web Security Testing Guide (WSTG)</a></p>
+
 <p>XSS, Cross-Site Scripting. The attacker get the application to send unsanitized data (code) to client. Attackers can execute script on client to: Steal cookies (Session hijacking) and do key logging or phishing (Fake login)</p>
+
 <p>Always validate/sanitize user submitted text, FIEO (filter input, escape output), encode characters like &lt; and &gt; etc.</p>
+
 <p><a href="https://github.com/YahooArchive/xss-filters" target="_blank">https://github.com/YahooArchive/xss-filters</a></p>
+
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP" target="_blank"> Content Security Policy (CSP)</a></p>
+
 <p><a href="https://github.com/helmetjs/helmet" target="_blank"> Helmet helps you secure your Express apps by setting various HTTP headers. It's not a silver bullet, but it can help!</a></p>
+
 <p>CSRF, Cross-Site Request Forgery (pronounced sea-surf). Forces a client to make an unwanted request to a web application in which the user currently is authenticated.</p>
+
 <p>Protect with Synchronized Token pattern (STP)</p>
 
 <ul><li>Check that the request is made by our client</li>
@@ -395,15 +481,25 @@
  &nbsp;&nbsp;&lt;input type="hidden" name="_csrf" value="HvtsC1Ka-yq1Q2KPAu_Yh_H8F4vJEYfMIlBQ" /&gt;<br>
  &lt;/form&gt;<br>
  </code>
+
 <p><a href="https://github.com/expressjs/csurf" target="_blank">https://github.com/expressjs/csurf</a></p>
+
 <p><a href="https://caniuse.com/#feat=same-site-cookie-attribute" target="_blank"> Same-site cookie (new)</a></p>
+
 <p>Injections: Manipulate the query to the database through HTTP requests</p>
+
 <p>Handle all input as strings</p>
+
 <p>Third party modules can be security issues, npm audit scans for vulnerabilities and automatically runs with npm install. Snyk.io has more features.</p>
+
 <p>TLS(SSL) + HTTP = HTTPS. Always use HTTPS in production.</p>
+
 <p><a href="https://letsencrypt.org/" target="_blank">https://letsencrypt.org/</a></p>
+
 <p>In development we can create our own self-signed certificate</p>
+
 <p>Domain Validation (DV), Organization Validation (OV), Extended Validation (EV)</p>
+
 <p>Asymmetric (public-key encryption)</p>
 
 <ul><li>A public key is used to encrypt a messages</li>
@@ -411,7 +507,9 @@
 <li>The part that only have the public key can only encrypt the message</li>
 <li>Only the part with the private key can decrypt</li>
 </ul>
+
 <p><a href="https://excess-xss.com/" target="_blank"> A good article about different types of XSS attacks</a></p>
+
 <p>OWASP, The Open Web Application Security Project, produces (every three year) a report presenting the 10 most common attacks against web application. This is a must read for every web developer. You should read the report to point A10 (page 16). </p>
 
 <h2>Real-time</h2>
@@ -420,34 +518,51 @@
 <li>Firm – infrequent deadline misses are tolerable, but may degrade the system's quality of service. The usefulness of a result is zero after its deadline.</li>
 <li>Soft – the usefulness of a result degrades after its deadline, thereby degrading the system's quality of service.</li>
 </ul>
+
 <p>Web of things: Devices communicating in realtime</p>
+
 <p>Examination 3: Create an application that checks issues in your repository. Fetch issue with Web API, monitor events with web hooks. OAuth.</p>
+
 <p>"Flash Player has been deprecated and has an official end-of-life at the end of 2020"</p>
+
 <p>Comet (umbrella term): Persistent HTTP connections, Domain sharding, Long-lived hidden iframe, XHR long polling, XHR streaming.</p>
+
 <p>Server-sent events: Not implemented by microsoft.</p>
+
 <p>Go WebSockets!</p>
+
 <p><a href="https://stackoverflow.com/questions/41198368/long-polling-vs-websocket-when-expecting-one-time-response-from-server-side" target="_blank"> Long polling is mostly only for compatibility with old browsers.</a></p>
+
 <p>Websockets connect on HTTP(S), Upgrade to ws:// or wss://</p>
+
 <p><a href="https://gist.github.com/subudeepak/9897212#websockets---security-overview" target="_blank"> Use Content Security Policy</a></p>
 
 <ul><li><a href="https://socket.io/" target="_blank">https://socket.io/</a></li>
 <li><a href="https://www.npmjs.com/package/ws" target="_blank">https://www.npmjs.com/package/ws</a></li>
 <li><a href="https://blog.bitsrc.io/8-node-js-web-socket-libraries-for-2018-818e7e5b67cf" target="_blank">https://blog.bitsrc.io/8-node-js-web-socket-libraries-for-2018-818e7e5b67cf</a></li>
 </ul>
+
 <p>Challenges with web sockets:</p>
 
 <ul><li>Browser support, fallback strategies.</li>
 <li>Concurrency, synchronization, fault tolerance.</li>
 <li>Offline, Queue-strategies</li>
 </ul>
+
 <p>P2P (peer to peer): http://www.html5rocks.com/en/tutorials/webrtc/basics/</p>
+
 <p>Web hooks, server to server: tell me when event A happens.</p>
+
 <p><a href="https://www.leggetter.co.uk/2015/12/18/real-time-data-fundamentals.html" target="_blank"> Real time fundamentals blog series.</a></p>
 
 <h2>Production</h2>
+
 <p><a href="https://github.com/1dv023/syllabus/blob/master/lectures/06/production_nodejs.md" target="_blank"> Bringing your node.js web application to production</a></p>
+
 <p><a href="https://github.com/1dv023/syllabus/blob/master/lectures/06/Production.md" target="_blank"> Bringing your work to the people</a></p>
+
 <p><a href="https://github.com/CS-LNU-Learning-Objects/linux" target="_blank">https://github.com/CS-LNU-Learning-Objects/linux</a></p>
+
 <p>Process manager PM2</p>
 
 <code><br>
@@ -461,6 +576,7 @@
  rm ./config/sslcerts/csr.pem<br>
  chmod 600 ./config/sslcerts/key.pem ./config/sslcerts/cert.pem<br>
  </code>
+
 <p><a href="https://www.digitalocean.com/community/tutorials/how-to-set-up-automatic-deployment-with-git-with-a-vps" target="_blank"> How To Set Up Automatic Deployment with Git with a VPS</a></p>
 
 
@@ -471,12 +587,13 @@
 	<a href="../index.html">Home.</a>
 	<a href="index.html">Index.</a>
 	<a href="javascript.html">JavaScript lectures.</a>
+	<a href="jstasks.html">JavaScript tasks.</a>
 	<a href="design.html">Design.</a>
 	<a href="clientbased.html">Client based programming.</a>
 	<a href="server.html">Server programming.</a>
 	<a href="oop.html">Object oriented programming.</a>
 </nav>
 </footer>
-<p><small>Updated on 2020-07-22.</small></p>
+<p><small>Updated on 2020-07-26.</small></p>
 </body>
 </html>
