@@ -21,11 +21,26 @@
 <p>Find associated code in the corresponding repositories at 
 <a href="https://github.com/1dv021" target="_blank">https://github.com/1dv021</a></p>
 
+<p>Before you start:</p>
+
+<ol><li>Open a terminal</li>
+<li>git config --global alias.ignore '!gi() { curl -L -s https://www.gitignore.io/api/$@ ;}; gi'</li>
+<li>Change to the (git initialized) directory for tasks</li>
+<li>git remote add hello-world https://github.com/1dv021/exercise-hello-world.git</li>
+<li>git remote -v</li>
+<li>git subtree add --prefix=hello-world --squash hello-world master</li>
+<li>git ignore node, visualstudiocode <b>(or a better IDE)</b>, linux <b>(or a worse OS)</b> &gt;&gt; .gitignore</li>
+<li>git add .</li>
+<li>git commit -m 'Adding .gitignore'</li>
+<li>git push</li>
+<li>Start coding and make frequent commits.</li>
+</ol>
+
 <h2>Part 1</h2>
 
 <h3>A-level</h3>
 
-<h6>Hello, World!</h6>
+<h4>Hello, World!</h4>
 
 <div class="green">
 
@@ -48,9 +63,9 @@
 
 </div>
 
-<h6>Simple addition</h6>
+<h4>Simple addition</h4>
 
-<h6>Pre tiny funcs</h6>
+<h4>Pre tiny funcs</h4>
 
 <ul><li>roundUp</li>
 <li>roundDown</li>
@@ -63,27 +78,27 @@
 <li>isEven</li>
 </ul>
 
-<h6>Tiny funcs</h6>
+<h4>Tiny funcs</h4>
 
 <ul><li>add</li>
 <li>concat</li>
 <li>round</li>
-<li>getOddNumbers</li>
-<li>greetings</li>
+<li>getOddNumbers, return a string of odd numbers up to argument.</li>
+<li>greetings, return different greetings depending on time of day.</li>
 <li>replaceHyphensFor</li>
 <li>replaceHyphensWhile</li>
-<li>getNumberSequence</li>
+<li>getNumberSequence, use two nested for to return strings like '11-12-13, 21-22-23, 31-32-33, 41-42-43, 51-52-53'.</li>
 </ul>
 
-<h6>Right triangle</h6>
+<h4>Right triangle</h4>
 
 <p>Print a triangle with #'s.</p>
 
-<h6>Data type determinator</h6>
+<h4>Data type determinator</h4>
 
 <p>Print the type of the argument.</p>
 
-<h6>Shaver sharp html</h6>
+<h4>Shaver sharp html</h4>
 
 <ul><li>createBeginTag</li>
 <li>createEndTag</li>
@@ -91,33 +106,33 @@
 <li>createElements</li>
 </ul>
 
-<h6>Additional array copy</h6>
+<h4>Additional array copy</h4>
 
 <p>let newArray = ma.immutablePushNumber(arr, 4);</p>
 
-<h6>Sorted array copy</h6>
+<h4>Sorted array copy</h4>
 
-<h6>Sorting objects</h6>
+<h4>Sorting objects</h4>
 
 <p>Sort array of objects</p>
 
 <h3>B-level</h3>
 
-<h6>Bugsy</h6>
+<h4>Bugsy</h4>
 
 <p>Search names from initials using generator objects.</p>
 
-<h6>Better than average</h6>
+<h4>Better than average</h4>
 
 <p>Filter an array of objects. Consider Array.reduce, Array.filter and Array.map.</p>
 
-<h6>Reduced array</h6>
+<h4>Reduced array</h4>
 
 <p>Get sum with Array.reduce.</p>
 
 <h3>C-level</h3>
 
-<h6>Abacus</h6>
+<h4>Abacus</h4>
 
 <p>Adder that accepts variable number of arguments directly as numbers or parsed from strings. Optionally add support for nested arrays.</p>
 
@@ -127,17 +142,17 @@
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax" target="_blank"> spread syntax</a>
 , Array.concat, Array.some, String.indexOf, String.replace</p>
 
-<h6>Harshad number</h6>
+<h4>Harshad number</h4>
 
 <p>Find numbers evenly divisible by the sum of their digits: 24 since 24/(2+4)=4</p>
 
 <p>Useful functions: Number.toString, String.split, parseInt.</p>
 
-<h6>Reduced array of objects</h6>
+<h4>Reduced array of objects</h4>
 
 <p>Get sum with Array.reduce.</p>
 
-<h6>The best of the best</h6>
+<h4>The best of the best</h4>
 
 <p>Count frequencies of names in a list.</p>
 
@@ -147,15 +162,15 @@
 
 <h3>A-level</h3>
 
-<h6>Lego maker</h6>
+<h4>Lego maker</h4>
 
 <p>Explore the factory, constructor (also with prototype) and class patterns.</p>
 
-<h6>Constructive prototype of ellipse</h6>
+<h4>Constructive prototype of ellipse</h4>
 
 <p>Make a constructor/prototype pattern for ellipses and one for circles through inheritance.</p>
 
-<h6>New classic ellipse</h6>
+<h4>New classic ellipse</h4>
 
 <p>As above except with class syntax.</p>
 
@@ -200,6 +215,6 @@ Document your own functions too.</p>
 	<a href="oop.html">Object oriented programming.</a>
 </nav>
 </footer>
-<p><small>Updated on 2020-07-26.</small></p>
+<p><small>Updated on 2020-07-27.</small></p>
 </body>
 </html>
