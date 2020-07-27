@@ -1,5 +1,9 @@
 #Preprintprocessor
 using DelimitedFiles, Dates
+
+htmlfolder=lowercase(ARGS[1])
+folder="text/"*uppercase(htmlfolder)[1]*htmlfolder[2:end]*"/"
+
 function skipto(str,char)
 	for ci in 1:length(str)
 		try
@@ -12,15 +16,14 @@ function skipto(str,char)
 	end
 	return 0
 end
-
 function process(pagestoprocess,pai)
 	fname=pagestoprocess[pai,1]
 	title=pagestoprocess[pai,2]
-	text=read("$fname.txt",String)
+	text=read(folder*"$fname.txt",String)
 	text=replace(text, "< " => "&lt;")
 	text=replace(text, " >" => "&gt;")
 	text=replace(text, "& " => "&amp;")
-	text=replace(text, "’" => "'")
+	#text=replace(text, "’" => "'")
 	codeloc=something(findfirst("\n<code>", text), 0:-1)
 	while !isempty(collect(codeloc))
 		codeend=something(findfirst("</code>",text[codeloc[end]:end]), 0:-1).+(codeloc[end]-1)
@@ -142,7 +145,7 @@ function process(pagestoprocess,pai)
 		medloc=something(findfirst("\nyellow:",text[medloc[end]:end]), 0:-1)+medloc[end]-1
 	end
 	nav=read("nav.txt",String)
-	dir=read("title.txt",String)
+	dir=read(folder*"title.txt",String)
 	dir=dir[1:end-1]
 	next=""
 	if size(pagestoprocess)[1]>pai
@@ -165,12 +168,11 @@ function process(pagestoprocess,pai)
 	<p><small>Updated on $(Dates.today()).</small></p>
 	</body>
 	</html>"""
-	f=open("pppout/$fname.html","w")
+	f=open("html/"*htmlfolder*"/$fname.html","w")
 	write(f,doc)
 	close(f)
 end
-
-pagestoprocess=readdlm("pages.txt",'/')
+pagestoprocess=readdlm(folder*"pages.txt",'/')
 nav="""<nav>
 	<a href="../index.html">Home.</a>
 """
@@ -181,7 +183,7 @@ nav*="</nav>"
 f=open("nav.txt","w")
 write(f,nav)
 close(f)
-isdir("pppout") ? nothing : mkdir("pppout")
+isdir("html/"*htmlfolder) ? nothing : mkdir("html/"*htmlfolder)
 for pai in 1:size(pagestoprocess,1)
 	process(pagestoprocess,pai)
 end
