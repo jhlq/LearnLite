@@ -11,7 +11,7 @@ Change to the (git initialized) directory for tasks
 git remote add hello-world https://github.com/1dv021/exercise-hello-world.git
 git remote -v
 git subtree add --prefix=hello-world --squash hello-world master
-git ignore node,visualstudiocode (or a better IDE),linux (or a worse OS) >> .gitignore
+git ignore node, visualstudiocode <b>(or a better IDE)</b>, linux <b>(or a worse OS)</b>  > > .gitignore
 git add .
 git commit -m 'Adding .gitignore'
 git push

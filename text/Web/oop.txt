@@ -45,7 +45,7 @@ Part 3:
 <ul>
 4 weeks.
 Templates and LINQ.
-Taska are about: using collections, sorting and filtering, delegations and lambda, LINQ.
+Tasks are about: using collections, sorting and filtering, delegations and lambda, LINQ.
 Literature chapters: 11, 12, 14, 15, 16
 </ul>
 
