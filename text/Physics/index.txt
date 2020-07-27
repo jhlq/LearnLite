@@ -1,11 +1,9 @@
 ***Physics
-These pages are geared for practical knowledge through computational resources, specifically we will use the Equations package: 
-https://github.com/jhlq/Equations.jl
-
-Quantum gravity is a focus.
+Here we will explore non commutative geometry and loop quantum gravity with 
+https://github.com/jhlq/Equations.jl the Equations package.
 
 **Contents
 <ul>
-dimensions.html Imagining higher dimensions.
-gravity.html Imagining warped spacetime.
+!link:dimensions.html Imagining higher dimensions.
+!link:gravity.html Imagining warped spacetime.
 </ul>
