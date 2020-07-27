@@ -205,6 +205,36 @@ The tester should think aloud.
 
 Five iterations of testing followed by improvements is usually enough.
 
+*Lesson
+
+Specify HTML5 with < !doctype html >
+
+Broken nesting is <b>not</b> allowed: 
+!red: < x > ... < y > ... < /x > ... < /y >
+
+< html > tags wrap < head > and < body > tags.
+
+MB is MegaByte and Mbps is Megabits per second.
+
+Escape special characters like so: & amp;, & lt;, & gt;, & #65; 
+https://dev.w3.org/html5/html-author/charref and more...
+
+https://www.w3schools.com/tags/ref_language_codes.asp < html lang="en" >
+
+https://www.lipsum.com/ Lorem ipsum generator.
+
+Inline elements: b, i, em, strong, sub, sup.
+
+Relative links navigate from the path of the file on the server.
+
+Link to an element with id="somewhere" with < a href="#somewhere" >There< /a >
+
+Add target="_blank" to open link in new tab.
+
+Adhere to accessibility guidelines.
+
+Write < !-- this is not displayed -- > to add comments.
+
 **Week 3
 
 Target group, field analysis, strategy, accessibility, element, tag, attribute, tables.

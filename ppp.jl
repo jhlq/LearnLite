@@ -136,13 +136,15 @@ function process(pagestoprocess,pai)
 		end
 	end
 	text=join(ta,"\n\n")
-	medloc=something(findfirst("\nyellow:",text), 0:-1)
-	while !isempty(collect(medloc))
-		nloc=something(findfirst("\n",text[medloc[end]:end]), 0:-1)+medloc[end]-1
-		p=text[medloc[end]+1:nloc[1]-1]
-		htmltext="""<span class="yellow">$p</span>"""
-		text=text[1:medloc[1]]*htmltext*text[nloc[1]:end]
-		medloc=something(findfirst("\nyellow:",text[medloc[end]:end]), 0:-1)+medloc[end]-1
+	for colop in ["\n!green:","\n!yellow:","\n!red:"]
+		medloc=something(findfirst(colop,text), 0:-1)
+		while !isempty(collect(medloc))
+			nloc=something(findfirst("\n",text[medloc[end]:end]), 0:-1)+medloc[end]-1
+			p=text[medloc[end]+1:nloc[1]-1]
+			htmltext="""<span class="yellow">$p</span>"""
+			text=text[1:medloc[1]]*htmltext*text[nloc[1]:end]
+			medloc=something(findfirst(colop,text[medloc[end]:end]), 0:-1)+medloc[end]-1
+		end
 	end
 	nav=read("nav.txt",String)
 	dir=read(folder*"title.txt",String)
