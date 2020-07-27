@@ -7,14 +7,10 @@ function skipto(str,char)
 				return ci
 			end
 		catch er
-			#@warn("There was a problem reading $str at index $ci, previous index has: $(str[ci-1])")
+			#@warn("There was a problem reading $str at index $ci, previous index has: $(str[ci-1])") #expected behaviour for non ASCII
 		end	
 	end
 	return 0
-end
-function makelistarray(list)
-	return split(list,'\n')
-#-.-
 end
 
 function process(pagestoprocess,pai)
@@ -104,19 +100,21 @@ function process(pagestoprocess,pai)
 		imgloc=something(findfirst("\nimg:",text), 0:-1)
 		break
 	end
-	text=replace(text,"\n\n<ul>" => "\n<ul>")
-	text=replace(text,"\n<ul>" => "\n\n<ul>")
-	ulloc=something(findfirst("\n<ul>",text), 0:-1)
-	while !isempty(collect(ulloc))
-		tulloc=something(findfirst("</ul>",text[ulloc[end]:end]), 0:-1).+(ulloc[end]-1)
-		list=text[ulloc[end]+2:tulloc[1]-2]
-		listarray=makelistarray(list)
-		htmltext=""
-		for li in listarray
-			htmltext*="<li>$li</li>\n"
+	for ltag in ["ul>","ol>"]
+		text=replace(text,"\n\n<"*ltag => "\n<"*ltag)
+		text=replace(text,"\n<"*ltag => "\n\n<"*ltag)
+		ulloc=something(findfirst("\n<"*ltag,text), 0:-1)
+		while !isempty(collect(ulloc))
+			tulloc=something(findfirst("</"*ltag,text[ulloc[end]:end]), 0:-1).+(ulloc[end]-1)
+			list=text[ulloc[end]+2:tulloc[1]-2]
+			listarray=split(list,'\n')
+			htmltext=""
+			for li in listarray
+				htmltext*="<li>$li</li>\n"
+			end
+			text=text[1:ulloc[end]]*htmltext*text[tulloc[1]:end]
+			ulloc=something(findfirst("\n<"*ltag,text[tulloc[end]:end]), 0:-1).+(tulloc[end]-1)
 		end
-		text=text[1:ulloc[end]]*htmltext*text[tulloc[1]:end]
-		ulloc=something(findfirst("\n<ul>",text[tulloc[end]:end]), 0:-1).+(tulloc[end]-1)
 	end
 	text=replace(text,"<easy>" => """<div class="easy">\n""")
 	text=replace(text,"<green>" => """<div class="green">\n""")
