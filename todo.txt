@@ -5,3 +5,4 @@ next-link button styling
 different style for internal links
 Colors not perfectly aligned
 Replace all spaces in code that are next to newline
+Transcribe ML courses: https://www.kaggle.com/learn/deep-learning

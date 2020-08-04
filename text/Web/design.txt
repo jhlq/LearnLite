@@ -277,6 +277,55 @@ Who are the users? What goals do they have? What do we need to know about them?
 
 Analyse similar websites. Interview customer and users
 
+*Lesson
+
+Tables and structure elements.
+
+Garretts model - Strategy plane. Start analysing purpose, goals, target users and requirements for a website.
+
+<ul>
+table, tr, th, td
+caption, for accessibility
+colspan, rowspan
+Do not use tables for layout
+</ul>
+
+<ol>
+Background analysis
+Requirements specification
+Structure
+Layout
+Style
+</ol>
+
+<ol>
+Prestudie
+Prototyping
+Production
+</ol>
+
+<ul>
+What are the goals of the website?
+Study terminology and categorizing, look at similar websites.
+What is the target group? Subgroups?
+What do we want to know about the users? How can we get this information? Coaxing information bit by bit with small rewards like LinkedIns profile completeness score is an enticing method.
+Interviews and field studies.
+Personas, example users.
+</ul>
+
+Users background:
+<ul>
+Age, characteristics
+Computer savyness, what do they do on the web, how often and through which devices?
+Do they usually shop online?
+Do they visit other stores and if so what do they usually buy?
+Why where and when will they visit?
+What do they want to see?
+What do they want to do? Give suggestions
+</ul>
+
+Interview people through a online form or "in town". Observe users interacting with the website. Talk to staff.
+
 **Week 4
 
 Requirements specification, CSS, cascade, id, class.
@@ -324,6 +373,41 @@ Requirements should be concrete, "that should do this" rather than "this should 
 
 Graphical profile, style guide, accessibility
 
+*Lesson
+
+Requirements specification and CSS.
+
+Scope plane.
+
+<ul>
+Selectors
+Units
+Layout base
+Link styling
+Visual effects
+</ul>
+
+The requirements specification is deduced from goals and analysis of similar websites.
+
+Technical specification and graphical profile.
+
+<ul>
+https://www.w3.org/TR/selectors-3/
+https://www.w3schools.com/cssref/css_selectors.asp
+</ul>
+
+Selectors contain references to (pseudo-)elements, attributes, ids and (pseudo-)classes.
+
+https://www.w3schools.com/cssref/css_units.asp
+
+Units can be absolute like px or relative like em (adjusts based on font size) and %.
+
+Marginals and padding of blocks.
+
+Navigation links can be styled as buttons.
+
+Rounded corners, shadows and opacity.
+
 **Week 5
 
 Information architecture, interaction design, information design, structure, layout.
@@ -363,6 +447,26 @@ Information should not only be easy to find but if the desired item is not prese
 
 How to handle information belonging to multiple categories?
 
+*Lesson
+
+Structure and layout with CSS.
+
+Structure plane: information architecture and interaction design.
+
+Layout prototype: display, float, clear and overflow. Sprites.
+
+How should the content be organized? How shall interactions be performed?
+
+Make a structure tree.
+
+Interaction flow.
+
+Make columns with float and try a sticky footer.
+
+Sprites are pictures contained within a long image that is positioned relative to a element sized to only show one picture.
+
+http://medieteknik.lnu.se/1me321/ht/lektioner/lektion5-exempel.zip
+
 **Week 6
 
 UI, responsive design.
@@ -392,6 +496,10 @@ Interface design concerns how to do. Information design concerns how to understa
 Navigations: global, local, contextual, supplementary, courtesy, site map.
 
 Metaphors can be used to communicate the design.
+
+*Lesson
+
+
 
 **Week 7
 
