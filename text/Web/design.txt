@@ -499,7 +499,29 @@ Metaphors can be used to communicate the design.
 
 *Lesson
 
+Skeleton plane, responsive design with CSS and prototypes.
 
+Navigation and form styling. Responsive design: changing layout with media queries. Transition and transform. Analyze interaction and UI.
+
+Do, find, understand.
+
+Create a prototype for example by cutting up pieces of paper for: page head, search field, navigation, content and footer.
+
+Dropdown menus can cause compatibility issues.
+
+A little box with suggested pages is called supplementary navigation.
+
+Responsive design:
+<ul>
+Flexible layout (fluid grid): max-width for #wrapper and footer, specify values for width and paddings in %.
+Flexible images.
+CSS media queries: change to a column, remove image float, change navigation.
+< meta name="viewport" content="width=device-width, initial-scale=1.0" >
+</ul>
+
+Error handling: prevent, correct, reset.
+
+http://medieteknik.lnu.se/1me321/ht/lektioner/lektion6-exempel.zip
 
 **Week 7
 
@@ -545,6 +567,29 @@ Align colors with identity. Matt for background and clear for accentuation.
 
 Should work for the color blind.
 
+*Lesson
+
+Visual design. Surface plane.
+
+Colors and backgroundimage. Absolute positioning. 
+
+RGD and HSL = Hue, Saturation, Lightness. 
+https://pixlr.com/editor/
+
+Graphical profile. Color pallet, font.
+
+Images specified through CSS can be replaced easily whereas the img tag provides the useful alt attribute.
+
+Excessive use of shadows can slow down a page.
+
+https://validator.nu/
+
+http://jigsaw.w3.org/css-validator/
+
+Absolute positioning removes a block from the normal document flow.
+
+http://medieteknik.lnu.se/1me321/ht/lektioner/lektion7-exempel.zip
+
 **Week 8
 
 Tables, forms, other media (sound, video, embedded external information).
@@ -568,6 +613,36 @@ In CSS3 ordering of elements can be changed.
 The audio tag plays mp3, wav and ogg where only mp3 works universally. The video tag plays mp4 and ogg where both have to be used for compatibility.
 
 Media from other sources can be added with an iframe.
+
+*Lesson
+
+Forms, including media, user testing.
+
+Observe users while they think out loud.
+
+https://programmablesearchengine.google.com/about/
+
+Compare with normal google searches like site:http://example.org
+
+Enlarge images on click with an invisible checkbox that has the image as label, when checked transform the image.
+
+The examples contain an embedded map.
+
+Usability - > analysis of purpose - > personas - > requirements - > testing
+
+User testing:
+<ul>
+Check usability and user experience.
+Find flaws.
+Give the user a task that they complete while thinking out loud.
+Improve and repeat.
+</ul>
+
+Using display:grid does not work in IE.
+
+Keep in mind international copyright laws.
+
+http://medieteknik.lnu.se/1me321/ht/lektioner/lektion8-exempel.zip
 
 **Week 9
 
