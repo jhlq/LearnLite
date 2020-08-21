@@ -3,28 +3,29 @@
 **Resources
 *Plain text
 <ul>
-neurology/7.1.txt
-neurology/7.2.txt
-neurology/7.3.txt
-neurology/7.4.txt
-neurology/7.5.txt
+!link:7.1.txt
+!link:7.2.txt
+!link:7.3.txt
+!link:7.4.txt
+!link:7.5.txt
 </ul>
 
 *PDF
 <ul>
-neurology/7.1.pdf 7.1 (10 MB)
-neurology/7.2.pdf 7.2 (4 MB)
-neurology/7.3.pdf 7.3 (3 MB)
-neurology/7.4.pdf 7.4 (2 MB)
+!link:7_1_SensorimotorInteractions.pdf (10 MB) 7_1_SensorimotorInteractions.pdf
+!link:7_2_SensoryPerception.pdf (4 MB) 7_2_SensoryPerception.pdf
+!link:7_3_Learning.pdf (3 MB) 7_3_Learning.pdf
+!link:7_4_BrainDysfunction.pdf (2 MB) 7_4_BrainDysfunction.pdf
+!link:7_5_ConcludingRemarks.pdf (0.5 MB) 7_5_ConcludingRemarks.pdf
 </ul>
 
 *Videos
 <ul>
-neurology/7.1-l9Dxitis0Kg.3gp 7.1 (15 MB)
-neurology/7.2-4mKOxWQi_bc.3gp 7.2 (9 MB)
-neurology/7.3-ESWjP6SCqBc.3gp 7.3 (11 MB)
-neurology/7.4-Ea8aeWw6cRs.3gp 7.4 (11 MB)
-neurology/7.5-wWwPBb00GWc.3gp 7.5 (3 MB)
+https://www.youtube.com/watch?v=l9Dxitis0Kg 7.1
+https://www.youtube.com/watch?v=4mKOxWQi_bc 7.2
+https://www.youtube.com/watch?v=ESWjP6SCqBc 7.3
+https://www.youtube.com/watch?v=Ea8aeWw6cRs 7.4
+https://www.youtube.com/watch?v=wWwPBb00GWc 7.5
 </ul>
 
 **Questions

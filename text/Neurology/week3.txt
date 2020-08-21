@@ -38,29 +38,29 @@ Vacuum: Absence of matter.
 **Resources
 *Plain text
 <ul>
-neurology/3.1.txt
-neurology/3.2.txt
-neurology/3.3.txt
-neurology/3.4.txt
-neurology/3.5.txt
+!link:3.1.txt
+!link:3.2.txt
+!link:3.3.txt
+!link:3.4.txt
+!link:3.5.txt
 </ul>
 
 *PDF
 <ul>
-neurology/3.1.pdf 3.1 (8 MB)
-neurology/3.2.pdf 3.2 (2 MB)
-neurology/3.3.pdf 3.3 (2 MB)
-neurology/3.4.pdf 3.4 (3 MB)
-neurology/3.5.pdf 3.5 (5 MB)
+!link:3_1_SynapticTransmission.pdf (8 MB) 3_1_SynapticTransmission.pdf
+!link:3_2_NeurotransmitterRelease.pdf (2 MB) 3_2_NeurotransmitterRelease.pdf
+!link:3_3_PresynapticDynamics.pdf (2 MB) 3_3_PresynapticDynamics.pdf
+!link:3_4_PresynapticModulation.pdf (3 MB) 3_4_PresynapticModulation.pdf
+!link:3_5_EM.pdf (5 MB) 3_5_EM.pdf
 </ul>
 
 *Videos
 <ul>
-neurology/3.1-5PhbmrW1jT4.3gp 3.1 (12.2 MB)
-neurology/3.2-tSZ1q7YAQlY.3gp 3.2 (9.5 MB)
-neurology/3.3-cGJIVp3WX7U.3gp 3.3 (9.1 MB)
-neurology/3.4-64PVekpDXM8.3gp 3.4 (10 MB)
-neurology/3.5-2asCsDAkwHY.3gp 3.5 (17.2 MB)
+https://www.youtube.com/watch?v=5PhbmrW1jT4 3.1
+https://www.youtube.com/watch?v=tSZ1q7YAQlY 3.2
+https://www.youtube.com/watch?v=cGJIVp3WX7U 3.3
+https://www.youtube.com/watch?v=64PVekpDXM8 3.4
+https://www.youtube.com/watch?v=2asCsDAkwHY 3.5
 </ul>
 
 **Questions

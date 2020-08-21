@@ -2,11 +2,6 @@
 These notes are based on 
 https://www.edx.org/course/cellular-mechanisms-brain-function-epflx-brainx-0 a edX course.
 
-Videos and pdfs no longer hosted locally.
-
-Video file names contain their youtube tag, to watch 1.1-hI3Epqe6CGM.3gp at higher resolution go to: 
-http://www.youtube.com/watch?v=hI3Epqe6CGM
-
 Question answers are available in files named according to section and question number, to access the answer to for example question 5 in section 1.3 lookup the file /neurology/1.3a5.txt
 
 **Outline

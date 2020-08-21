@@ -32,29 +32,29 @@ Volume transmission: Diffusion through extracellular fluid.
 **Resources
 *Plain text
 <ul>
-neurology/5.1.txt
-neurology/5.2.txt
-neurology/5.3.txt
-neurology/5.4.txt
-neurology/5.5.txt
+!link:5.1.txt
+!link:5.2.txt
+!link:5.3.txt
+!link:5.4.txt
+!link:5.5.txt
 </ul>
 
 *PDF
 <ul>
-neurology/5.1.pdf 5.1 (2 MB)
-neurology/5.2.pdf 5.2 (1 MB)
-neurology/5.3.pdf 5.3 (2 MB)
-neurology/5.4.pdf 5.4 (6 MB)
-neurology/5.5.pdf 5.5 (2 MB)
+!link:5_1_GABAergic_inhibition.pdf (2 MB) 5_1_GABAergic_inhibition.pdf
+!link:5_2_Inhibitory_synaptic_conductances.pdf (1 MB) 5_2_Inhibitory_synaptic_conductances.pdf
+!link:5_3_Benzodiazepines.pdf (2 MB) 5_3_Benzodiazepines.pdf
+!link:5_4_GABAergic_Projections.pdf (6 MB) 5_4_GABAergic_Projections.pdf
+!link:5_5_Neocortical_Inhibition.pdf (2 MB) 5_5_Neocortical_Inhibition.pdf
 </ul>
 
 *Videos
 <ul>
-neurology/5.1-MwicvgOIsOY.3gp 5.1 (11 MB)
-neurology/5.2-dmrrGkfcfNw.3gp 5.2 (9 MB)
-neurology/5.3-oeLbdmx1AbE.3gp 5.3 (6 MB)
-neurology/5.4-6ANiSN3Mpx4.3gp 5.4 (9 MB)
-neurology/5.5-QFKfZNXrX3w.3gp 5.5 (8 MB)
+https://www.youtube.com/watch?v=MwicvgOIsOY 5.1
+https://www.youtube.com/watch?v=dmrrGkfcfNw 5.2
+https://www.youtube.com/watch?v=oeLbdmx1AbE 5.3
+https://www.youtube.com/watch?v=6ANiSN3Mpx4 5.4
+https://www.youtube.com/watch?v=QFKfZNXrX3w 5.5
 </ul>
 
 **Questions

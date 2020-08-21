@@ -36,29 +36,29 @@ Unit fl: Femtolitre, femto is 10^-15
 **Resources
 *Plain text
 <ul>
-neurology/4.1.txt
-neurology/4.2.txt
-neurology/4.3.txt
-neurology/4.4.txt
-neurology/4.5.txt
+!link:4.1.txt
+!link:4.2.txt
+!link:4.3.txt
+!link:4.4.txt
+!link:4.5.txt
 </ul>
 
 *PDF
 <ul>
-neurology/4.1.pdf 4.1 (3 MB)
-neurology/4.2.pdf 4.2 (3 MB)
-neurology/4.3.pdf 4.3 (6 MB)
-neurology/4.4.pdf 4.4 (2 MB)
-neurology/4.5.pdf 4.5 (7 MB)
+!link:4_1_GlutamateReceptors.pdf (3 MB) 4_1_GlutamateReceptors.pdf
+!link:4_2_PostsynapticPotentials.pdf (3 MB) 4_2_PostsynapticPotentials.pdf
+!link:4_3_GlutamatergicCircuits.pdf (6 MB) 4_3_GlutamatergicCircuits.pdf
+!link:4_4_SynapticPlasticity.pdf (2 MB) 4_4_SynapticPlasticity.pdf
+!link:4_5_DendriticSpines.pdf (7 MB) 4_5_DendriticSpines.pdf
 </ul>
 
 *Videos
 <ul>
-neurology/4.1-o1p7yDHvIeU.3gp 4.1 (13 MB)
-neurology/4.2-JT0mviEsc2Q.3gp 4.2 (15 MB)
-neurology/4.3-SMOf1UZMxg4.3gp 4.3 (14 MB)
-neurology/4.4-EWIBpZz3f9I.3gp 4.4 (12 MB)
-neurology/4.5-xsOiIs4K66c.3gp 4.5 (10 MB)
+https://www.youtube.com/watch?v=o1p7yDHvIeU 4.1
+https://www.youtube.com/watch?v=JT0mviEsc2Q 4.2
+https://www.youtube.com/watch?v=SMOf1UZMxg4 4.3
+https://www.youtube.com/watch?v=EWIBpZz3f9I 4.4
+https://www.youtube.com/watch?v=xsOiIs4K66c 4.5
 </ul>
 
 **Questions

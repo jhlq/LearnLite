@@ -2,25 +2,25 @@
 **Resources
 *Plain text
 <ul>
-neurology/6.1.txt
-neurology/6.2.txt
-neurology/6.3.txt
-neurology/6.4.txt
-neurology/6.5.txt
+!link:6.1.txt
+!link:6.2.txt
+!link:6.3.txt
+!link:6.4.txt
+!link:6.5.txt
 </ul>
 
 *PDF
 <ul>
-neurology/6.1.pdf 6.1 (1 MB)
-neurology/6.2.pdf 6.2 (5 MB)
-neurology/6.3.pdf 6.3 (7 MB)
-neurology/6.4.pdf 6.4 (7 MB)
-neurology/6.5.pdf 6.5 (5 MB)
+!link:6_1_BrainFunctionAndBehavior.pdf (1 MB) 6_1_BrainFunctionAndBehavior.pdf
+!link:6_2_ManAndMouse.pdf (5 MB) 6_2_ManAndMouse.pdf
+!link:6_3_ImagingTheBrainInAction.pdf (7 MB) 6_3_ImagingTheBrainInAction.pdf
+!link:6_4_InVivoElectrophysiology.pdf (7 MB) 6_4_InVivoElectrophysiology.pdf
+!link:6_5_ControllingBrainFunction.pdf (5 MB) 6_5_ControllingBrainFunction.pdf
 </ul>
 
 *Videos
 <ul>
-neurology/6.5-lqroI7sFVuk.3gp 6.5 (10 MB)
+https://www.youtube.com/watch?v=lqroI7sFVuk 6.5
 </ul>
 
 **Questions
