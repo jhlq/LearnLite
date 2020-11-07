@@ -1,0 +1,24 @@
+Use *** for top level title, then ** for subtitle, * for even lower heading and then repeat with ###.
+
+Use
+<ul>
+item
+another
+</ul>
+for automatic list generation.
+
+Use
+<code>
+somecode()
+</code>
+for automatic code fragment formatting.
+
+Use
+<yellow>
+Advanced material.
+</div>
+to mark with yellow advanced material, red and green is also available.
+
+Start a line with a link and it will automatically be turned into a href:
+http://example.com This text will be the link text.
+Continue writing on a new line to end the link op, two new lines are required to make a new paragraph.

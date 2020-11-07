@@ -1,0 +1,4 @@
+***Go
+
+Go is built from the ground up to handle concurrency. It is fast like C while still being relatively easily typed.
+
