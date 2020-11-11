@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>LearnLite: Golang, Part 1</title>
+<link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+<body>
+<nav>
+	<a href="../index.html">Home.</a>
+	<a href="index.html">Index.</a>
+	<a href="part1.html">Part 1.</a>
+</nav>
+<h1>Part 1</h1>
+
+<p>Start with making a folder for our code, in this folder create a file named main.go</p>
+
+<p>Open main.go and put the following in it:</p>
+
+<code><br>
+ package main<br>
+ <br>
+ import (<br>
+ &nbsp;&nbsp;"log"<br>
+ &nbsp;&nbsp;"net/http"<br>
+ <br>
+ &nbsp;&nbsp;"time"<br>
+ )<br>
+ <br>
+ func main() {<br>
+ &nbsp;&nbsp;s := &http.Server{<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;ReadTimeout:&nbsp;&nbsp;60 * time.Second,<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;WriteTimeout: 60 * time.Second,<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;Addr:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ":8080",<br>
+ &nbsp;&nbsp;}<br>
+ &nbsp;&nbsp;log.Println("Listening on port 8080")<br>
+ &nbsp;&nbsp;err := s.ListenAndServe()<br>
+ &nbsp;&nbsp;if err != nil {<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;log.Fatal("ListenAndServe: ", err)<br>
+ &nbsp;&nbsp;}<br>
+ }<br>
+ </code>
+
+<p>Now if we visit localhost:8080 we get a 404, let's do something about it but first, why are we listening on 8080 instead of 80 which is default for http? To run directly on port 80 requires root access so when we deploy we can choose to either change the port to 80 and run with sudo or redirect traffic from port 80 (or 443 if we have https) to 8080, for example with iptables: iptables -t nat -A PREROUTING -p tcp --dport 80 -j REDIRECT --to-port 8080</p>
+
+<p>Note that the iptables command has to be rerun on server restart.</p>
+
+<p>In func main add the line 
+<code><br>
+ http.HandleFunc("/ip", serveIP)<br>
+ </code>
+above the server declaration. Then above the main func add the function
+<code><br>
+ func serveIP(w http.ResponseWriter, r *http.Request){<br>
+ &nbsp;&nbsp;fmt.Fprintf(w, "RemoteAddr: "+r.RemoteAddr)<br>
+ }<br>
+ </code></p>
+
+<p>Note that we also have to add fmt to our imports. Now if we visit localhost:8080/ip it will print our ip, neat! </p>
+
+<p>Instead of using the built in routing system we will use a more advanced one from Gorilla called mux, so go ahead and go get github.com/gorilla/mux</p>
+
+<p>Next add the function
+<code><br>
+ func serveHome(w http.ResponseWriter, r *http.Request) {<br>
+ &nbsp;&nbsp;fmt.Fprintf(w, "Hello from home!")<br>
+ }<br>
+ </code>
+and in the main func add
+<code><br>
+ router := mux.NewRouter()<br>
+ router.HandleFunc("/", serveHome)<br>
+ http.Handle("/", router)<br>
+ </code>
+Also don't forget to import mux.</p>
+
+<p>Alright! Now we have the tools needed to build an API server. Follow along in part two as we add templates to serve html pages.</p>
+
+<p>The full code of main.go can be viewed here: 
+<a href="ht" target="_blank">ht</a>tps://github.com/jhlq/gocourse/blob/main/part1/main.go
+</p>
+<br><br><br>
+<footer>
+<nav>
+	<a href="../index.html">Home.</a>
+	<a href="index.html">Index.</a>
+	<a href="part1.html">Part 1.</a>
+</nav>
+</footer>
+<p><small>Updated on 2020-11-11.</small></p>
+</body>
+</html>

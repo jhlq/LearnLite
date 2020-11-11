@@ -1,0 +1,67 @@
+***Part 1
+
+Start with making a folder for our code, in this folder create a file named main.go
+
+Open main.go and put the following in it:
+
+<code>
+package main
+
+import (
+	"log"
+	"net/http"
+
+	"time"
+)
+
+func main() {
+	s := &http.Server{
+		ReadTimeout:  60 * time.Second,
+		WriteTimeout: 60 * time.Second,
+		Addr:         ":8080",
+	}
+	log.Println("Listening on port 8080")
+	err := s.ListenAndServe()
+	if err != nil {
+		log.Fatal("ListenAndServe: ", err)
+	}
+}
+</code>
+
+Now if we visit localhost:8080 we get a 404, let's do something about it but first, why are we listening on 8080 instead of 80 which is default for http? To run directly on port 80 requires root access so when we deploy we can choose to either change the port to 80 and run with sudo or redirect traffic from port 80 (or 443 if we have https) to 8080, for example with iptables: iptables -t nat -A PREROUTING -p tcp --dport 80 -j REDIRECT --to-port 8080
+
+Note that the iptables command has to be rerun on server restart.
+
+In func main add the line 
+<code>
+http.HandleFunc("/ip", serveIP)
+</code>
+above the server declaration. Then above the main func add the function
+<code>
+func serveIP(w http.ResponseWriter, r *http.Request){
+	fmt.Fprintf(w, "RemoteAddr: "+r.RemoteAddr)
+}
+</code>
+
+Note that we also have to add fmt to our imports. Now if we visit localhost:8080/ip it will print our ip, neat! 
+
+Instead of using the built in routing system we will use a more advanced one from Gorilla called mux, so go ahead and go get github.com/gorilla/mux
+
+Next add the function
+<code>
+func serveHome(w http.ResponseWriter, r *http.Request) {
+	fmt.Fprintf(w, "Hello from home!")
+}
+</code>
+and in the main func add
+<code>
+router := mux.NewRouter()
+router.HandleFunc("/", serveHome)
+http.Handle("/", router)
+</code>
+Also don't forget to import mux.
+
+Alright! Now we have the tools needed to build an API server. Follow along in part two as we add templates to serve html pages.
+
+The full code of main.go can be viewed here: 
+https://github.com/jhlq/gocourse/blob/main/part1/main.go
