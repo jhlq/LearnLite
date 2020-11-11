@@ -61,6 +61,19 @@ http.Handle("/", router)
 </code>
 Also don't forget to import mux.
 
+So why mux? What does it bring to the table? Enter keyword routes! Add the following line:
+<code>
+router.HandleFunc("/greet/{name}", serveGreet)
+</code>
+And the following function:
+<code>
+func serveGreet(w http.ResponseWriter, r *http.Request) {
+	vars := mux.Vars(r)
+	fmt.Fprintf(w, "Hello "+vars["name"])
+}
+</code>
+Now if we go to localhost/greet/anonymous it will say Hello anonymous!
+
 Alright! Now we have the tools needed to build an API server. Follow along in part two as we add templates to serve html pages.
 
 The full code of main.go can be viewed here: 
