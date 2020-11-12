@@ -10,6 +10,7 @@
 	<a href="../index.html">Home.</a>
 	<a href="index.html">Index.</a>
 	<a href="part1.html">Part 1.</a>
+	<a href="part2.html">Part 2.</a>
 </nav>
 <h1>Part 1</h1>
 
@@ -41,7 +42,7 @@
  }<br>
  </code>
 
-<p>Now if we visit localhost:8080 we get a 404, let's do something about it but first, why are we listening on 8080 instead of 80 which is default for http? To run directly on port 80 requires root access so when we deploy we can choose to either change the port to 80 and run with sudo or redirect traffic from port 80 (or 443 if we have https) to 8080, for example with iptables: iptables -t nat -A PREROUTING -p tcp --dport 80 -j REDIRECT --to-port 8080</p>
+<p>Now if we type go run main.go and visit localhost:8080 we get a 404, let's do something about it but first, why are we listening on 8080 instead of 80 which is default for http? To run directly on port 80 requires root access so when we deploy we can choose to either change the port to 80 and run with sudo or redirect traffic from port 80 (or 443 if we have https) to 8080, for example with iptables: iptables -t nat -A PREROUTING -p tcp --dport 80 -j REDIRECT --to-port 8080</p>
 
 <p>Note that the iptables command has to be rerun on server restart.</p>
 
@@ -58,7 +59,12 @@ above the server declaration. Then above the main func add the function
 
 <p>Note that we also have to add fmt to our imports. Now if we visit localhost:8080/ip it will print our ip, neat! </p>
 
-<p>Instead of using the built in routing system we will use a more advanced one from Gorilla called mux, so go ahead and go get github.com/gorilla/mux</p>
+<p>Instead of using the built in routing system we will use a more advanced one from 
+<a href="https://github.com/gorilla/mux" target="_blank"> Gorilla called mux</a>
+, so go ahead and 
+<code><br>
+ go get github.com/gorilla/mux<br>
+ </code></p>
 
 <p>Next add the function
 <code><br>
@@ -93,14 +99,16 @@ Now if we go to localhost/greet/anonymous it will say Hello anonymous!</p>
 <a href="https://github.com/jhlq/gocourse/blob/main/part1/main.go" target="_blank">https://github.com/jhlq/gocourse/blob/main/part1/main.go</a></p>
 
 
-<br><br><br>
+<br><a href="part2.html" id="next">Next page.</a>
+<br><br>
 <footer>
 <nav>
 	<a href="../index.html">Home.</a>
 	<a href="index.html">Index.</a>
 	<a href="part1.html">Part 1.</a>
+	<a href="part2.html">Part 2.</a>
 </nav>
 </footer>
-<p><small>Updated on 2020-11-11.</small></p>
+<p><small>Updated on 2020-11-12.</small></p>
 </body>
 </html>

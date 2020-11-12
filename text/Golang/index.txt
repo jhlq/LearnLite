@@ -7,4 +7,5 @@ In this course we will build a website, in each part we will add additional feat
 Content:
 <ul>
 !link:part1.html Part 1
+!link:part2.html Part 2
 </ul>

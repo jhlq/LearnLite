@@ -1,0 +1,176 @@
+Start with making a new folder alongside main.go named templates. In this folder make a file called base.gohtml and paste in the following code:
+<code>
+{{define "base"}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<title>{{template "title" .}} | Island Enterprises</title>
+	<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    {{template "nav" .}}
+	<main>
+		<h1>Island Enterprises</h1>
+		{{template "body" .}}
+	</main>
+	{{template "footer" .}}
+</body>
+</html>
+{{end}}
+
+{{define "navlist"}}
+<nav>
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/contact/">Contact</a></li>
+    </ul>
+</nav>
+{{end}}
+{{define "nav"}}
+<header>
+	{{template "navlist"}}
+</header> 
+{{end}}
+{{define "footer"}}
+<footer class="footer">
+	<p><small>
+		Islands are peaceful.
+	</small></p>
+	{{template "navlist"}}
+</footer> 
+{{end}}
+</code>
+
+Then make three files, home.gohtml, about.gohtml and contact.gohtml.
+
+home.gohtml:
+<code>
+{{define "title"}}Home{{end}}
+{{define "body"}}
+<p>Here at Island Enterprises we take water seriously.</p>
+{{end}}
+</code>
+
+about.gohtml:
+<code>
+{{define "title"}}About{{end}}
+{{define "body"}}
+<h2>About</h2>
+	<p>Island Enterprises is located on an island.</p>
+{{end}}
+</code>
+
+contact.gohtml:
+<code>
+{{define "title"}}Contact{{end}}
+{{define "body"}}
+<h2>Contact</h2>
+	<p>Please contact us via: {{ .ContactMethod }}</p>
+{{end}}
+</code>
+As you can see here we pass in an external value called ContactMethod.
+
+Then under the imports in main.go add the following code:
+<code>
+var tm map[string]*template.Template
+
+func inittm() {
+	tm = make(map[string]*template.Template)
+	tm["home"] = template.Must(template.ParseFiles("templates/home.gohtml", "templates/base.gohtml"))
+	tm["about"] = template.Must(template.ParseFiles("templates/about.gohtml", "templates/base.gohtml"))
+	tm["contact"] = template.Must(template.ParseFiles("templates/contact.gohtml", "templates/base.gohtml"))
+}
+</code>
+And in func main at the top add
+<code>
+inittm()
+</code>
+
+Now let us modify the serveHome function:
+<code>
+func serveHome(w http.ResponseWriter, r *http.Request) {
+	err := tm["home"].ExecuteTemplate(w, "base", struct{}{})
+	if err != nil {
+		log.Println(err)
+	}
+}
+</code>
+What is the deal with the empty struct? That is used to pass in external values, and in home we have none.
+
+Next let us add two functions to serve about and contact:
+<code>
+func serveAbout(w http.ResponseWriter, r *http.Request) {
+	err := tm["about"].ExecuteTemplate(w, "base", struct{}{})
+	if err != nil {
+		log.Println(err)
+	}
+}
+func serveContact(w http.ResponseWriter, r *http.Request) {
+	err := tm["contact"].ExecuteTemplate(w, "base", struct{ ContactMethod string }{ContactMethod: "Bottled message."})
+	if err != nil {
+		log.Println(err)
+	}
+}
+</code>
+Here in serveContact you see that we pass in the string "Bottled message." as preferred contact method.
+
+Finally we have to register the new paths with our router:
+<code>
+router.HandleFunc("/about/", serveAbout)
+router.HandleFunc("/contact/", serveContact)
+</code>
+
+If we run our server now we should get a very simple working web site! In order to make it look atleast a little palable let's add some styling. Create style.css alongside main.go and copy the following:
+<code>
+nav ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #000;
+}
+
+nav li {
+	float: left;
+}
+
+nav li a {
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+
+nav li a:hover {
+	background-color: blue;
+}
+
+body {
+	margin: 0 0 100px;
+}
+
+main {
+	padding-left: 30px;
+	margin-right: 33%;
+}
+
+footer {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	height: 100px;
+	width: 100%;
+}
+</code>
+
+Then in main.go add the following along the routes:
+<code>
+router.HandleFunc("/style.css", func(w http.ResponseWriter, r *http.Request) {
+    http.ServeFile(w, r, "style.css")
+})
+</code>
+
+Now we have a professional looking website!

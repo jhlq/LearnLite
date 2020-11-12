@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>LearnLite: Golang, Part 2</title>
+<link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+<body>
+<nav>
+	<a href="../index.html">Home.</a>
+	<a href="index.html">Index.</a>
+	<a href="part1.html">Part 1.</a>
+	<a href="part2.html">Part 2.</a>
+</nav>
+<p>Start with making a new folder alongside main.go named templates. In this folder make a file called base.gohtml and paste in the following code:
+<code><br>
+ {{define "base"}}<br>
+ <!DOCTYPE html><br>
+ <html lang="en"><br>
+ <head><br>
+ &nbsp;&nbsp;<meta charset="utf-8"/><br>
+ &nbsp;&nbsp;<title>{{template "title" .}} | Island Enterprises</title><br>
+ &nbsp;&nbsp;<link rel="stylesheet" href="/style.css"><br>
+ </head><br>
+ <body><br>
+ &nbsp;&nbsp;&nbsp;&nbsp;{{template "nav" .}}<br>
+ &nbsp;&nbsp;<main><br>
+ &nbsp;&nbsp;&nbsp;&nbsp;<h1>Island Enterprises</h1><br>
+ &nbsp;&nbsp;&nbsp;&nbsp;{{template "body" .}}<br>
+ &nbsp;&nbsp;</main><br>
+ &nbsp;&nbsp;{{template "footer" .}}<br>
+ </body><br>
+ </html><br>
+ {{end}}<br>
+ <br>
+ {{define "navlist"}}<br>
+ <nav><br>
+ &nbsp;&nbsp;&nbsp;&nbsp;<ul><br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<li><a href="/">Home</a></li><br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<li><a href="/about/">About</a></li><br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<li><a href="/contact/">Contact</a></li><br>
+ &nbsp;&nbsp;&nbsp;&nbsp;</ul><br>
+ </nav><br>
+ {{end}}<br>
+ {{define "nav"}}<br>
+ <header><br>
+ &nbsp;&nbsp;{{template "navlist"}}<br>
+ </header> <br>
+ {{end}}<br>
+ {{define "footer"}}<br>
+ <footer class="footer"><br>
+ &nbsp;&nbsp;<p><small><br>
+ &nbsp;&nbsp;&nbsp;&nbsp;Islands are peaceful.<br>
+ &nbsp;&nbsp;</small></p><br>
+ &nbsp;&nbsp;{{template "navlist"}}<br>
+ </footer> <br>
+ {{end}}<br>
+ </code></p>
+
+<p>Then make three files, home.gohtml, about.gohtml and contact.gohtml.</p>
+
+<p>home.gohtml:
+<code><br>
+ {{define "title"}}Home{{end}}<br>
+ {{define "body"}}<br>
+ <p>Here at Island Enterprises we take water seriously.</p><br>
+ {{end}}<br>
+ </code></p>
+
+<p>about.gohtml:
+<code><br>
+ {{define "title"}}About{{end}}<br>
+ {{define "body"}}<br>
+ <h2>About</h2><br>
+ &nbsp;&nbsp;<p>Island Enterprises is located on an island.</p><br>
+ {{end}}<br>
+ </code></p>
+
+<p>contact.gohtml:
+<code><br>
+ {{define "title"}}Contact{{end}}<br>
+ {{define "body"}}<br>
+ <h2>Contact</h2><br>
+ &nbsp;&nbsp;<p>Please contact us via: {{ .ContactMethod }}</p><br>
+ {{end}}<br>
+ </code>
+As you can see here we pass in an external value called ContactMethod.</p>
+
+<p>Then under the imports in main.go add the following code:
+<code><br>
+ var tm map[string]<h3>template.Template<br></h3></p>
+
+<p> <br>
+ func inittm() {<br>
+ &nbsp;&nbsp;tm = make(map[string]*template.Template)<br>
+ &nbsp;&nbsp;tm["home"] = template.Must(template.ParseFiles("templates/home.gohtml", "templates/base.gohtml"))<br>
+ &nbsp;&nbsp;tm["about"] = template.Must(template.ParseFiles("templates/about.gohtml", "templates/base.gohtml"))<br>
+ &nbsp;&nbsp;tm["contact"] = template.Must(template.ParseFiles("templates/contact.gohtml", "templates/base.gohtml"))<br>
+ }<br>
+ </code>
+And in func main at the top add
+<code><br>
+ inittm()<br>
+ </code></p>
+
+<p>Now let us modify the serveHome function:
+<code><br>
+ func serveHome(w http.ResponseWriter, r *http.Request) {<br>
+ &nbsp;&nbsp;err := tm["home"].ExecuteTemplate(w, "base", struct{}{})<br>
+ &nbsp;&nbsp;if err != nil {<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;log.Println(err)<br>
+ &nbsp;&nbsp;}<br>
+ }<br>
+ </code>
+What is the deal with the empty struct? That is used to pass in external values, and in home we have none.</p>
+
+<p>Next let us add two functions to serve about and contact:
+<code><br>
+ func serveAbout(w http.ResponseWriter, r *http.Request) {<br>
+ &nbsp;&nbsp;err := tm["about"].ExecuteTemplate(w, "base", struct{}{})<br>
+ &nbsp;&nbsp;if err != nil {<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;log.Println(err)<br>
+ &nbsp;&nbsp;}<br>
+ }<br>
+ func serveContact(w http.ResponseWriter, r *http.Request) {<br>
+ &nbsp;&nbsp;err := tm["contact"].ExecuteTemplate(w, "base", struct{ ContactMethod string }{ContactMethod: "Bottled message."})<br>
+ &nbsp;&nbsp;if err != nil {<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;log.Println(err)<br>
+ &nbsp;&nbsp;}<br>
+ }<br>
+ </code>
+Here in serveContact you see that we pass in the string "Bottled message." as preferred contact method.</p>
+
+<p>Finally we have to register the new paths with our router:
+<code><br>
+ router.HandleFunc("/about/", serveAbout)<br>
+ router.HandleFunc("/contact/", serveContact)<br>
+ </code></p>
+
+<p>If we run our server now we should get a very simple working web site! In order to make it look atleast a little palable let's add some styling. Create style.css alongside main.go and copy the following:
+<code><br>
+ nav ul {<br>
+ &nbsp;&nbsp;list-style-type: none;<br>
+ &nbsp;&nbsp;margin: 0;<br>
+ &nbsp;&nbsp;padding: 0;<br>
+ &nbsp;&nbsp;overflow: hidden;<br>
+ &nbsp;&nbsp;background-color: #000;<br>
+ }<br>
+ <br>
+ nav li {<br>
+ &nbsp;&nbsp;float: left;<br>
+ }<br>
+ <br>
+ nav li a {<br>
+ &nbsp;&nbsp;display: block;<br>
+ &nbsp;&nbsp;color: white;<br>
+ &nbsp;&nbsp;text-align: center;<br>
+ &nbsp;&nbsp;padding: 14px 16px;<br>
+ &nbsp;&nbsp;text-decoration: none;<br>
+ }<br>
+ <br>
+ nav li a:hover {<br>
+ &nbsp;&nbsp;background-color: blue;<br>
+ }<br>
+ <br>
+ body {<br>
+ &nbsp;&nbsp;margin: 0 0 100px;<br>
+ }<br>
+ <br>
+ main {<br>
+ &nbsp;&nbsp;padding-left: 30px;<br>
+ &nbsp;&nbsp;margin-right: 33%;<br>
+ }<br>
+ <br>
+ footer {<br>
+ &nbsp;&nbsp;position: absolute;<br>
+ &nbsp;&nbsp;left: 0;<br>
+ &nbsp;&nbsp;bottom: 0;<br>
+ &nbsp;&nbsp;height: 100px;<br>
+ &nbsp;&nbsp;width: 100%;<br>
+ }<br>
+ </code></p>
+
+<p>Then in main.go add the following along the routes:
+<code><br>
+ router.HandleFunc("/style.css", func(w http.ResponseWriter, r *http.Request) {<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;http.ServeFile(w, r, "style.css")<br>
+ })<br>
+ </code></p>
+
+<p>Now we have a professional looking website!
+</p>
+<br><br><br>
+<footer>
+<nav>
+	<a href="../index.html">Home.</a>
+	<a href="index.html">Index.</a>
+	<a href="part1.html">Part 1.</a>
+	<a href="part2.html">Part 2.</a>
+</nav>
+</footer>
+<p><small>Updated on 2020-11-12.</small></p>
+</body>
+</html>
