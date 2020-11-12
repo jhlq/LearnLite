@@ -1,3 +1,5 @@
+***Part 2
+
 Start with making a new folder alongside main.go named templates. In this folder make a file called base.gohtml and paste in the following code:
 <code>
 {{define "base"}}

@@ -78,7 +78,7 @@ function process(pagestoprocess,pai)
 			linkloc=something(findfirst("\n!link:", text), 0:-1)
 		end
 	end
-	hloc=something(findfirst("\n*", text), 0:-1)
+	hloc=something(findfirst("*", text), 0:-1)
 	while !isempty(collect(hloc))
 		hloc1=hloc[end]
 		hn=text[hloc1+1]=='*' ? (text[hloc1+2]=='*' ? 1 : 2) : 3
