@@ -35,6 +35,9 @@ function process(pagestoprocess,pai)
 		codetext=replace(codetext, "	" => "&nbsp;&nbsp;")
 		codetext=replace(codetext, "  " => "&nbsp;&nbsp;")
 		codetext=replace(codetext, "\n" => "\n ")
+		codetext=replace(codetext, "&" => "&amp;")
+		codetext=replace(codetext, "<" => "&lt;")
+		codetext=replace(codetext, ">" => "&gt;")
 		text=text[1:codeloc[1]]*codetext*text[codeend[2]:end]
 		codeloc=something(findfirst("\n<code>", text[codeloc[end]:end]), 0:-1).+codeloc[end-1]
 	end
