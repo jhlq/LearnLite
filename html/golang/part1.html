@@ -12,85 +12,85 @@
 	<a href="part1.html">Part 1.</a>
 	<a href="part2.html">Part 2.</a>
 </nav>
-<h1>Part 1</h1>
+<p>***Part 1</p>
 
 <p>Start with making a folder for our code, in this folder create a file named main.go</p>
 
 <p>Open main.go and put the following in it:</p>
 
-<p>&lt;code&gt;&lt;br&gt;
- package main&lt;br&gt;
- &lt;br&gt;
- import (&lt;br&gt;
- &amp;nbsp;&amp;nbsp;"log"&lt;br&gt;
- &amp;nbsp;&amp;nbsp;"net/http"&lt;br&gt;
- &lt;br&gt;
- &amp;nbsp;&amp;nbsp;"time"&lt;br&gt;
- )&lt;br&gt;
- &lt;br&gt;
- func main() {&lt;br&gt;
- &amp;nbsp;&amp;nbsp;s := &amp;http.Server{&lt;br&gt;
- &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;ReadTimeout:&amp;nbsp;&amp;nbsp;60 * time.Second,&lt;br&gt;
- &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;WriteTimeout: 60 * time.Second,&lt;br&gt;
- &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Addr:&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; ":8080",&lt;br&gt;
- &amp;nbsp;&amp;nbsp;}&lt;br&gt;
- &amp;nbsp;&amp;nbsp;log.Println("Listening on port 8080")&lt;br&gt;
- &amp;nbsp;&amp;nbsp;err := s.ListenAndServe()&lt;br&gt;
- &amp;nbsp;&amp;nbsp;if err != nil {&lt;br&gt;
- &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;log.Fatal("ListenAndServe: ", err)&lt;br&gt;
- &amp;nbsp;&amp;nbsp;}&lt;br&gt;
- }&lt;br&gt;
- &lt;/code></p>
+<code><br>
+ package main<br>
+ <br>
+ import (<br>
+ &nbsp;&nbsp;"log"<br>
+ &nbsp;&nbsp;"net/http"<br>
+ <br>
+ &nbsp;&nbsp;"time"<br>
+ )<br>
+ <br>
+ func main() {<br>
+ &nbsp;&nbsp;s := &amp;http.Server{<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;ReadTimeout:&nbsp;&nbsp;60 * time.Second,<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;WriteTimeout: 60 * time.Second,<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;Addr:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ":8080",<br>
+ &nbsp;&nbsp;}<br>
+ &nbsp;&nbsp;log.Println("Listening on port 8080")<br>
+ &nbsp;&nbsp;err := s.ListenAndServe()<br>
+ &nbsp;&nbsp;if err != nil {<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;log.Fatal("ListenAndServe: ", err)<br>
+ &nbsp;&nbsp;}<br>
+ }<br>
+ </code>
 
 <p>Now if we type go run main.go and visit localhost:8080 we get a 404, let's do something about it but first, why are we listening on 8080 instead of 80 which is default for http? To run directly on port 80 requires root access so when we deploy we can choose to either change the port to 80 and run with sudo or redirect traffic from port 80 (or 443 if we have https) to 8080, for example with iptables: iptables -t nat -A PREROUTING -p tcp --dport 80 -j REDIRECT --to-port 8080</p>
 
 <p>Note that the iptables command has to be rerun on server restart.</p>
 
 <p>In func main add the line 
-&lt;code&gt;&lt;br&gt;
- http.HandleFunc("/ip", serveIP)&lt;br&gt;
- &lt;/code>
+<code><br>
+ http.HandleFunc("/ip", serveIP)<br>
+ </code>
 above the server declaration. Then above the main func add the function
-&lt;code&gt;&lt;br&gt;
- func serveIP(w http.ResponseWriter, r *http.Request){&lt;br&gt;
- &amp;nbsp;&amp;nbsp;fmt.Fprintf(w, "RemoteAddr: "+r.RemoteAddr)&lt;br&gt;
- }&lt;br&gt;
- &lt;/code></p>
+<code><br>
+ func serveIP(w http.ResponseWriter, r *http.Request){<br>
+ &nbsp;&nbsp;fmt.Fprintf(w, "RemoteAddr: "+r.RemoteAddr)<br>
+ }<br>
+ </code></p>
 
 <p>Note that we also have to add fmt to our imports. Now if we visit localhost:8080/ip it will print our ip, neat! </p>
 
 <p>Instead of using the built in routing system we will use a more advanced one from 
 <a href="https://github.com/gorilla/mux" target="_blank"> Gorilla called mux</a>
 , so go ahead and 
-&lt;code&gt;&lt;br&gt;
- go get github.com/gorilla/mux&lt;br&gt;
- &lt;/code></p>
+<code><br>
+ go get github.com/gorilla/mux<br>
+ </code></p>
 
 <p>Next add the function
-&lt;code&gt;&lt;br&gt;
- func serveHome(w http.ResponseWriter, r *http.Request) {&lt;br&gt;
- &amp;nbsp;&amp;nbsp;fmt.Fprintf(w, "Hello from home!")&lt;br&gt;
- }&lt;br&gt;
- &lt;/code>
+<code><br>
+ func serveHome(w http.ResponseWriter, r *http.Request) {<br>
+ &nbsp;&nbsp;fmt.Fprintf(w, "Hello from home!")<br>
+ }<br>
+ </code>
 and in the main func add
-&lt;code&gt;&lt;br&gt;
- router := mux.NewRouter()&lt;br&gt;
- router.HandleFunc("/", serveHome)&lt;br&gt;
- http.Handle("/", router)&lt;br&gt;
- &lt;/code>
+<code><br>
+ router := mux.NewRouter()<br>
+ router.HandleFunc("/", serveHome)<br>
+ http.Handle("/", router)<br>
+ </code>
 Also don't forget to import mux.</p>
 
 <p>So why mux? What does it bring to the table? Enter keyword routes! Add the following line:
-&lt;code&gt;&lt;br&gt;
- router.HandleFunc("/greet/{name}", serveGreet)&lt;br&gt;
- &lt;/code>
+<code><br>
+ router.HandleFunc("/greet/{name}", serveGreet)<br>
+ </code>
 And the following function:
-&lt;code&gt;&lt;br&gt;
- func serveGreet(w http.ResponseWriter, r *http.Request) {&lt;br&gt;
- &amp;nbsp;&amp;nbsp;vars := mux.Vars(r)&lt;br&gt;
- &amp;nbsp;&amp;nbsp;fmt.Fprintf(w, "Hello "+vars["name"])&lt;br&gt;
- }&lt;br&gt;
- &lt;/code>
+<code><br>
+ func serveGreet(w http.ResponseWriter, r *http.Request) {<br>
+ &nbsp;&nbsp;vars := mux.Vars(r)<br>
+ &nbsp;&nbsp;fmt.Fprintf(w, "Hello "+vars["name"])<br>
+ }<br>
+ </code>
 Now if we go to localhost/greet/anonymous it will say Hello anonymous!</p>
 
 <p>Alright! Now we have the tools needed to build an API server. Follow along in part two as we add templates to serve html pages.</p>

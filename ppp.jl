@@ -26,8 +26,13 @@ function process(pagestoprocess,pai)
 	#text=replace(text, "’" => "'")
 	codeloc=something(findfirst("\n<code>", text), 0:-1)
 	while !isempty(collect(codeloc))
-		codeend=something(findfirst("</code>",text[codeloc[end]:end]), 0:-1).+(codeloc[end]-1)
+		codeend=something(findfirst("</code>",text[codeloc[end]:end]), 0:-1).+(codeloc[end]-2)
 		codetext=text[codeloc[2]:codeend[1]]
+		codetext=replace(codetext, "&" => "&amp;")
+		codetext=replace(codetext, "<" => "&lt;")
+		codetext=replace(codetext, ">" => "&gt;")
+		codetext=replace(codetext, "&lt;code&gt;" => "<code>")
+		codetext=replace(codetext, "&lt;/co" => "</co")
 		codetext=replace(codetext, "\n" => "<br>\n")
 		#if text[codeloc[1]-1]=='\n' #some code blocks get bundled together
 		#	codetext=replace(codetext, "<code><br>\n" => "<code>\n")
@@ -35,9 +40,6 @@ function process(pagestoprocess,pai)
 		codetext=replace(codetext, "	" => "&nbsp;&nbsp;")
 		codetext=replace(codetext, "  " => "&nbsp;&nbsp;")
 		codetext=replace(codetext, "\n" => "\n ")
-		codetext=replace(codetext, "&" => "&amp;")
-		codetext=replace(codetext, "<" => "&lt;")
-		codetext=replace(codetext, ">" => "&gt;")
 		text=text[1:codeloc[1]]*codetext*text[codeend[2]:end]
 		codeloc=something(findfirst("\n<code>", text[codeloc[end]:end]), 0:-1).+codeloc[end-1]
 	end
@@ -76,7 +78,7 @@ function process(pagestoprocess,pai)
 			linkloc=something(findfirst("\n!link:", text), 0:-1)
 		end
 	end
-	hloc=something(findfirst("*", text), 0:-1)
+	hloc=something(findfirst("\n*", text), 0:-1)
 	while !isempty(collect(hloc))
 		hloc1=hloc[end]
 		hn=text[hloc1+1]=='*' ? (text[hloc1+2]=='*' ? 1 : 2) : 3

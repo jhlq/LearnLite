@@ -13,180 +13,179 @@
 	<a href="part2.html">Part 2.</a>
 </nav>
 <p>Start with making a new folder alongside main.go named templates. In this folder make a file called base.gohtml and paste in the following code:
-&lt;code&gt;&lt;br&gt;
- {{define "base"}}&lt;br&gt;
- &lt;!DOCTYPE html&gt;&lt;br&gt;
- &lt;html lang="en"&gt;&lt;br&gt;
- &lt;head&gt;&lt;br&gt;
- &amp;nbsp;&amp;nbsp;&lt;meta charset="utf-8"/&gt;&lt;br&gt;
- &amp;nbsp;&amp;nbsp;&lt;title&gt;{{template "title" .}} | Island Enterprises&lt;/title&gt;&lt;br&gt;
- &amp;nbsp;&amp;nbsp;&lt;link rel="stylesheet" href="/style.css"&gt;&lt;br&gt;
- &lt;/head&gt;&lt;br&gt;
- &lt;body&gt;&lt;br&gt;
- &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;{{template "nav" .}}&lt;br&gt;
- &amp;nbsp;&amp;nbsp;&lt;main&gt;&lt;br&gt;
- &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;h1&gt;Island Enterprises&lt;/h1&gt;&lt;br&gt;
- &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;{{template "body" .}}&lt;br&gt;
- &amp;nbsp;&amp;nbsp;&lt;/main&gt;&lt;br&gt;
- &amp;nbsp;&amp;nbsp;{{template "footer" .}}&lt;br&gt;
- &lt;/body&gt;&lt;br&gt;
- &lt;/html&gt;&lt;br&gt;
- {{end}}&lt;br&gt;
- &lt;br&gt;
- {{define "navlist"}}&lt;br&gt;
- &lt;nav&gt;&lt;br&gt;
- &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;ul&gt;&lt;br&gt;
- &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;li&gt;&lt;a href="/"&gt;Home&lt;/a&gt;&lt;/li&gt;&lt;br&gt;
- &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;li&gt;&lt;a href="/about/"&gt;About&lt;/a&gt;&lt;/li&gt;&lt;br&gt;
- &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;li&gt;&lt;a href="/contact/"&gt;Contact&lt;/a&gt;&lt;/li&gt;&lt;br&gt;
- &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/ul&gt;&lt;br&gt;
- &lt;/nav&gt;&lt;br&gt;
- {{end}}&lt;br&gt;
- {{define "nav"}}&lt;br&gt;
- &lt;header&gt;&lt;br&gt;
- &amp;nbsp;&amp;nbsp;{{template "navlist"}}&lt;br&gt;
- &lt;/header&gt; &lt;br&gt;
- {{end}}&lt;br&gt;
- {{define "footer"}}&lt;br&gt;
- &lt;footer class="footer"&gt;&lt;br&gt;
- &amp;nbsp;&amp;nbsp;&lt;p&gt;&lt;small&gt;&lt;br&gt;
- &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Islands are peaceful.&lt;br&gt;
- &amp;nbsp;&amp;nbsp;&lt;/small&gt;&lt;/p&gt;&lt;br&gt;
- &amp;nbsp;&amp;nbsp;{{template "navlist"}}&lt;br&gt;
- &lt;/footer&gt; &lt;br&gt;
- {{end}}&lt;br&gt;
- &lt;/code></p>
+<code><br>
+ {{define "base"}}<br>
+ &lt;!DOCTYPE html&gt;<br>
+ &lt;html lang="en"&gt;<br>
+ &lt;head&gt;<br>
+ &nbsp;&nbsp;&lt;meta charset="utf-8"/&gt;<br>
+ &nbsp;&nbsp;&lt;title&gt;{{template "title" .}} | Island Enterprises&lt;/title&gt;<br>
+ &nbsp;&nbsp;&lt;link rel="stylesheet" href="/style.css"&gt;<br>
+ &lt;/head&gt;<br>
+ &lt;body&gt;<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;{{template "nav" .}}<br>
+ &nbsp;&nbsp;&lt;main&gt;<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&gt;Island Enterprises&lt;/h1&gt;<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;{{template "body" .}}<br>
+ &nbsp;&nbsp;&lt;/main&gt;<br>
+ &nbsp;&nbsp;{{template "footer" .}}<br>
+ &lt;/body&gt;<br>
+ &lt;/html&gt;<br>
+ {{end}}<br>
+ <br>
+ {{define "navlist"}}<br>
+ &lt;nav&gt;<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&lt;ul&gt;<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="/"&gt;Home&lt;/a&gt;&lt;/li&gt;<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="/about/"&gt;About&lt;/a&gt;&lt;/li&gt;<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="/contact/"&gt;Contact&lt;/a&gt;&lt;/li&gt;<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&lt;/ul&gt;<br>
+ &lt;/nav&gt;<br>
+ {{end}}<br>
+ {{define "nav"}}<br>
+ &lt;header&gt;<br>
+ &nbsp;&nbsp;{{template "navlist"}}<br>
+ &lt;/header&gt; <br>
+ {{end}}<br>
+ {{define "footer"}}<br>
+ &lt;footer class="footer"&gt;<br>
+ &nbsp;&nbsp;&lt;p&gt;&lt;small&gt;<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;Islands are peaceful.<br>
+ &nbsp;&nbsp;&lt;/small&gt;&lt;/p&gt;<br>
+ &nbsp;&nbsp;{{template "navlist"}}<br>
+ &lt;/footer&gt; <br>
+ {{end}}<br>
+ </code></p>
 
 <p>Then make three files, home.gohtml, about.gohtml and contact.gohtml.</p>
 
 <p>home.gohtml:
-&lt;code&gt;&lt;br&gt;
- {{define "title"}}Home{{end}}&lt;br&gt;
- {{define "body"}}&lt;br&gt;
- &lt;p&gt;Here at Island Enterprises we take water seriously.&lt;/p&gt;&lt;br&gt;
- {{end}}&lt;br&gt;
- &lt;/code></p>
+<code><br>
+ {{define "title"}}Home{{end}}<br>
+ {{define "body"}}<br>
+ &lt;p&gt;Here at Island Enterprises we take water seriously.&lt;/p&gt;<br>
+ {{end}}<br>
+ </code></p>
 
 <p>about.gohtml:
-&lt;code&gt;&lt;br&gt;
- {{define "title"}}About{{end}}&lt;br&gt;
- {{define "body"}}&lt;br&gt;
- &lt;h2&gt;About&lt;/h2&gt;&lt;br&gt;
- &amp;nbsp;&amp;nbsp;&lt;p&gt;Island Enterprises is located on an island.&lt;/p&gt;&lt;br&gt;
- {{end}}&lt;br&gt;
- &lt;/code></p>
+<code><br>
+ {{define "title"}}About{{end}}<br>
+ {{define "body"}}<br>
+ &lt;h2&gt;About&lt;/h2&gt;<br>
+ &nbsp;&nbsp;&lt;p&gt;Island Enterprises is located on an island.&lt;/p&gt;<br>
+ {{end}}<br>
+ </code></p>
 
 <p>contact.gohtml:
-&lt;code&gt;&lt;br&gt;
- {{define "title"}}Contact{{end}}&lt;br&gt;
- {{define "body"}}&lt;br&gt;
- &lt;h2&gt;Contact&lt;/h2&gt;&lt;br&gt;
- &amp;nbsp;&amp;nbsp;&lt;p&gt;Please contact us via: {{ .ContactMethod }}&lt;/p&gt;&lt;br&gt;
- {{end}}&lt;br&gt;
- &lt;/code>
+<code><br>
+ {{define "title"}}Contact{{end}}<br>
+ {{define "body"}}<br>
+ &lt;h2&gt;Contact&lt;/h2&gt;<br>
+ &nbsp;&nbsp;&lt;p&gt;Please contact us via: {{ .ContactMethod }}&lt;/p&gt;<br>
+ {{end}}<br>
+ </code>
 As you can see here we pass in an external value called ContactMethod.</p>
 
 <p>Then under the imports in main.go add the following code:
-&lt;code&gt;&lt;br&gt;
- var tm map[string]<h3>template.Template&lt;br&gt;</h3></p>
-
-<p> &lt;br&gt;
- func inittm() {&lt;br&gt;
- &amp;nbsp;&amp;nbsp;tm = make(map[string]*template.Template)&lt;br&gt;
- &amp;nbsp;&amp;nbsp;tm["home"] = template.Must(template.ParseFiles("templates/home.gohtml", "templates/base.gohtml"))&lt;br&gt;
- &amp;nbsp;&amp;nbsp;tm["about"] = template.Must(template.ParseFiles("templates/about.gohtml", "templates/base.gohtml"))&lt;br&gt;
- &amp;nbsp;&amp;nbsp;tm["contact"] = template.Must(template.ParseFiles("templates/contact.gohtml", "templates/base.gohtml"))&lt;br&gt;
- }&lt;br&gt;
- &lt;/code>
+<code><br>
+ var tm map[string]*template.Template<br>
+ <br>
+ func inittm() {<br>
+ &nbsp;&nbsp;tm = make(map[string]*template.Template)<br>
+ &nbsp;&nbsp;tm["home"] = template.Must(template.ParseFiles("templates/home.gohtml", "templates/base.gohtml"))<br>
+ &nbsp;&nbsp;tm["about"] = template.Must(template.ParseFiles("templates/about.gohtml", "templates/base.gohtml"))<br>
+ &nbsp;&nbsp;tm["contact"] = template.Must(template.ParseFiles("templates/contact.gohtml", "templates/base.gohtml"))<br>
+ }<br>
+ </code>
 And in func main at the top add
-&lt;code&gt;&lt;br&gt;
- inittm()&lt;br&gt;
- &lt;/code></p>
+<code><br>
+ inittm()<br>
+ </code></p>
 
 <p>Now let us modify the serveHome function:
-&lt;code&gt;&lt;br&gt;
- func serveHome(w http.ResponseWriter, r *http.Request) {&lt;br&gt;
- &amp;nbsp;&amp;nbsp;err := tm["home"].ExecuteTemplate(w, "base", struct{}{})&lt;br&gt;
- &amp;nbsp;&amp;nbsp;if err != nil {&lt;br&gt;
- &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;log.Println(err)&lt;br&gt;
- &amp;nbsp;&amp;nbsp;}&lt;br&gt;
- }&lt;br&gt;
- &lt;/code>
+<code><br>
+ func serveHome(w http.ResponseWriter, r *http.Request) {<br>
+ &nbsp;&nbsp;err := tm["home"].ExecuteTemplate(w, "base", struct{}{})<br>
+ &nbsp;&nbsp;if err != nil {<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;log.Println(err)<br>
+ &nbsp;&nbsp;}<br>
+ }<br>
+ </code>
 What is the deal with the empty struct? That is used to pass in external values, and in home we have none.</p>
 
 <p>Next let us add two functions to serve about and contact:
-&lt;code&gt;&lt;br&gt;
- func serveAbout(w http.ResponseWriter, r *http.Request) {&lt;br&gt;
- &amp;nbsp;&amp;nbsp;err := tm["about"].ExecuteTemplate(w, "base", struct{}{})&lt;br&gt;
- &amp;nbsp;&amp;nbsp;if err != nil {&lt;br&gt;
- &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;log.Println(err)&lt;br&gt;
- &amp;nbsp;&amp;nbsp;}&lt;br&gt;
- }&lt;br&gt;
- func serveContact(w http.ResponseWriter, r *http.Request) {&lt;br&gt;
- &amp;nbsp;&amp;nbsp;err := tm["contact"].ExecuteTemplate(w, "base", struct{ ContactMethod string }{ContactMethod: "Bottled message."})&lt;br&gt;
- &amp;nbsp;&amp;nbsp;if err != nil {&lt;br&gt;
- &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;log.Println(err)&lt;br&gt;
- &amp;nbsp;&amp;nbsp;}&lt;br&gt;
- }&lt;br&gt;
- &lt;/code>
+<code><br>
+ func serveAbout(w http.ResponseWriter, r *http.Request) {<br>
+ &nbsp;&nbsp;err := tm["about"].ExecuteTemplate(w, "base", struct{}{})<br>
+ &nbsp;&nbsp;if err != nil {<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;log.Println(err)<br>
+ &nbsp;&nbsp;}<br>
+ }<br>
+ func serveContact(w http.ResponseWriter, r *http.Request) {<br>
+ &nbsp;&nbsp;err := tm["contact"].ExecuteTemplate(w, "base", struct{ ContactMethod string }{ContactMethod: "Bottled message."})<br>
+ &nbsp;&nbsp;if err != nil {<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;log.Println(err)<br>
+ &nbsp;&nbsp;}<br>
+ }<br>
+ </code>
 Here in serveContact you see that we pass in the string "Bottled message." as preferred contact method.</p>
 
 <p>Finally we have to register the new paths with our router:
-&lt;code&gt;&lt;br&gt;
- router.HandleFunc("/about/", serveAbout)&lt;br&gt;
- router.HandleFunc("/contact/", serveContact)&lt;br&gt;
- &lt;/code></p>
+<code><br>
+ router.HandleFunc("/about/", serveAbout)<br>
+ router.HandleFunc("/contact/", serveContact)<br>
+ </code></p>
 
 <p>If we run our server now we should get a very simple working web site! In order to make it look atleast a little palable let's add some styling. Create style.css alongside main.go and copy the following:
-&lt;code&gt;&lt;br&gt;
- nav ul {&lt;br&gt;
- &amp;nbsp;&amp;nbsp;list-style-type: none;&lt;br&gt;
- &amp;nbsp;&amp;nbsp;margin: 0;&lt;br&gt;
- &amp;nbsp;&amp;nbsp;padding: 0;&lt;br&gt;
- &amp;nbsp;&amp;nbsp;overflow: hidden;&lt;br&gt;
- &amp;nbsp;&amp;nbsp;background-color: #000;&lt;br&gt;
- }&lt;br&gt;
- &lt;br&gt;
- nav li {&lt;br&gt;
- &amp;nbsp;&amp;nbsp;float: left;&lt;br&gt;
- }&lt;br&gt;
- &lt;br&gt;
- nav li a {&lt;br&gt;
- &amp;nbsp;&amp;nbsp;display: block;&lt;br&gt;
- &amp;nbsp;&amp;nbsp;color: white;&lt;br&gt;
- &amp;nbsp;&amp;nbsp;text-align: center;&lt;br&gt;
- &amp;nbsp;&amp;nbsp;padding: 14px 16px;&lt;br&gt;
- &amp;nbsp;&amp;nbsp;text-decoration: none;&lt;br&gt;
- }&lt;br&gt;
- &lt;br&gt;
- nav li a:hover {&lt;br&gt;
- &amp;nbsp;&amp;nbsp;background-color: blue;&lt;br&gt;
- }&lt;br&gt;
- &lt;br&gt;
- body {&lt;br&gt;
- &amp;nbsp;&amp;nbsp;margin: 0 0 100px;&lt;br&gt;
- }&lt;br&gt;
- &lt;br&gt;
- main {&lt;br&gt;
- &amp;nbsp;&amp;nbsp;padding-left: 30px;&lt;br&gt;
- &amp;nbsp;&amp;nbsp;margin-right: 33%;&lt;br&gt;
- }&lt;br&gt;
- &lt;br&gt;
- footer {&lt;br&gt;
- &amp;nbsp;&amp;nbsp;position: absolute;&lt;br&gt;
- &amp;nbsp;&amp;nbsp;left: 0;&lt;br&gt;
- &amp;nbsp;&amp;nbsp;bottom: 0;&lt;br&gt;
- &amp;nbsp;&amp;nbsp;height: 100px;&lt;br&gt;
- &amp;nbsp;&amp;nbsp;width: 100%;&lt;br&gt;
- }&lt;br&gt;
- &lt;/code></p>
+<code><br>
+ nav ul {<br>
+ &nbsp;&nbsp;list-style-type: none;<br>
+ &nbsp;&nbsp;margin: 0;<br>
+ &nbsp;&nbsp;padding: 0;<br>
+ &nbsp;&nbsp;overflow: hidden;<br>
+ &nbsp;&nbsp;background-color: #000;<br>
+ }<br>
+ <br>
+ nav li {<br>
+ &nbsp;&nbsp;float: left;<br>
+ }<br>
+ <br>
+ nav li a {<br>
+ &nbsp;&nbsp;display: block;<br>
+ &nbsp;&nbsp;color: white;<br>
+ &nbsp;&nbsp;text-align: center;<br>
+ &nbsp;&nbsp;padding: 14px 16px;<br>
+ &nbsp;&nbsp;text-decoration: none;<br>
+ }<br>
+ <br>
+ nav li a:hover {<br>
+ &nbsp;&nbsp;background-color: blue;<br>
+ }<br>
+ <br>
+ body {<br>
+ &nbsp;&nbsp;margin: 0 0 100px;<br>
+ }<br>
+ <br>
+ main {<br>
+ &nbsp;&nbsp;padding-left: 30px;<br>
+ &nbsp;&nbsp;margin-right: 33%;<br>
+ }<br>
+ <br>
+ footer {<br>
+ &nbsp;&nbsp;position: absolute;<br>
+ &nbsp;&nbsp;left: 0;<br>
+ &nbsp;&nbsp;bottom: 0;<br>
+ &nbsp;&nbsp;height: 100px;<br>
+ &nbsp;&nbsp;width: 100%;<br>
+ }<br>
+ </code></p>
 
 <p>Then in main.go add the following along the routes:
-&lt;code&gt;&lt;br&gt;
- router.HandleFunc("/style.css", func(w http.ResponseWriter, r *http.Request) {&lt;br&gt;
- &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;http.ServeFile(w, r, "style.css")&lt;br&gt;
- })&lt;br&gt;
- &lt;/code></p>
+<code><br>
+ router.HandleFunc("/style.css", func(w http.ResponseWriter, r *http.Request) {<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;http.ServeFile(w, r, "style.css")<br>
+ })<br>
+ </code></p>
 
 <p>Now we have a professional looking website! The full working code can be found at 
 <a href="https://github.com/jhlq/gocourse/tree/main/part2" target="_blank">https://github.com/jhlq/gocourse/tree/main/part2</a></p>
