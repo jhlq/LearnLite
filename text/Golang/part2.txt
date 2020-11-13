@@ -177,3 +177,5 @@ router.HandleFunc("/style.css", func(w http.ResponseWriter, r *http.Request) {
 
 Now we have a professional looking website! The full working code can be found at 
 https://github.com/jhlq/gocourse/tree/main/part2
+ and a running implementation is at 
+http://gocourse.laerande.org:8080/
