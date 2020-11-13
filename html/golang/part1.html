@@ -42,7 +42,7 @@
  }<br>
  </code>
 
-<p>Now if we type go run main.go and visit localhost:8080 we get a 404, let's do something about it but first, why are we listening on 8080 instead of 80 which is default for http? To run directly on port 80 requires root access so when we deploy we can choose to either change the port to 80 and run with sudo or redirect traffic from port 80 (or 443 if we have https) to 8080, for example with iptables: iptables -t nat -A PREROUTING -p tcp --dport 80 -j REDIRECT --to-port 8080</p>
+<p>Now if we type go run main.go and visit localhost:8080 we get a 404, let's do something about it but first, why are we listening on 8080 instead of 80 which is default for http? To run directly on port 80 requires root access so when we deploy we can choose to either change the port to 80 and run with sudo or redirect traffic from port 80 (or 443 if we have https) to 8080, for example with iptables: sudo iptables -t nat -A PREROUTING -p tcp --dport 80 -j REDIRECT --to-port 8080</p>
 
 <p>Note that the iptables command has to be rerun on server restart.</p>
 
@@ -109,6 +109,6 @@ Now if we go to localhost/greet/anonymous it will say Hello anonymous!</p>
 	<a href="part2.html">Part 2.</a>
 </nav>
 </footer>
-<p><small>Updated on 2020-11-12.</small></p>
+<p><small>Updated on 2020-11-13.</small></p>
 </body>
 </html>
