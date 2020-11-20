@@ -1,0 +1,138 @@
+***Part 3
+
+In this part we will add a chat application connected to a database. The database we will use is mongodb, so go ahead and install that one now, in Ubuntu it is available through apt as mongodb.
+
+First let's add the line 
+<code>
+tm["chat"] = template.Must(template.ParseFiles("templates/chat.gohtml", "templates/base.gohtml"))
+</code>
+where the others are.
+
+Then we add the following template file:
+<code>
+{{define "title"}}Home{{end}}
+{{define "body"}}
+    <h1>Welcome to the chat app.</h1>
+	<form action="/chat/" method="POST">
+        <input type="text" name="message" placeholder="Message" autofocus autocomplete="off">
+        <input type="submit" name="submit-btn" value="Send">
+	</form>
+	{{range .Msgs}}
+		{{.Author}} said "{{.Message}}" at {{.Time}}<br>
+	{{end}}
+{{end}}
+</code>
+with the name chat.gohtml.
+
+Next we add 
+<code>
+router.HandleFunc("/chat/", serveChat).Methods("GET")
+</code>
+in the main func along with 
+<code>
+func serveChat(w http.ResponseWriter, r *http.Request) {
+	dbclient := getClient()
+	msgs := getRecentMessages(dbclient, 30)
+	data := struct {
+		Name string
+		Msgs []message
+	}{Name: "Anon", Msgs: msgs}
+	err := tm["chat"].ExecuteTemplate(w, "base", data)
+	if err != nil {
+		log.Println(err)
+	}
+}
+</code>
+
+Alright, some new stuff in this function, let us define these functions in a new file called db.go:
+<code>
+package main
+
+import (
+	"go.mongodb.org/mongo-driver/bson"
+	"go.mongodb.org/mongo-driver/mongo"
+	"go.mongodb.org/mongo-driver/mongo/options"
+
+	"context"
+	"log"
+	"time"
+)
+
+func getClient() *mongo.Client {
+	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
+	defer cancel()
+	client, err := mongo.Connect(ctx, options.Client().ApplyURI("mongodb://localhost:27017"))
+	if err != nil {
+		log.Println(err)
+	}
+	return client
+}
+
+type message struct {
+	Author  string
+	Message string
+	Time    string
+}
+
+func addChatMessage(client *mongo.Client, msg message) {
+	mes := bson.M{"author": msg.Author, "message": msg.Message, "time": msg.Time}
+	collection := client.Database("gocourse").Collection("chat")
+	ctx, cancel := context.WithTimeout(context.Background(), 5*time.Second)
+	defer cancel()
+	_, err := collection.InsertOne(ctx, mes)
+	if err != nil {
+		log.Println(err)
+	}
+}
+func getRecentMessages(client *mongo.Client, n int64) []message {
+	collection := client.Database("gocourse").Collection("chat")
+	ctx, cancel := context.WithTimeout(context.Background(), 30*time.Second)
+	defer cancel()
+	findOptions := options.Find()
+	findOptions.SetLimit(n)
+	findOptions.SetSort(bson.D{{Key: "_id", Value: -1}})
+	cur, err := collection.Find(ctx, bson.D{}, findOptions)
+	if err != nil {
+		log.Println(err)
+	}
+	defer cur.Close(ctx)
+	var s []message
+	for cur.Next(ctx) {
+		var result message
+		err := cur.Decode(&result)
+		if err != nil {
+			log.Println(err)
+		}
+		s = append(s, result)
+	}
+	if err := cur.Err(); err != nil {
+		log.Println(err)
+	}
+	return s
+}
+</code>
+
+Now we have to handle when the user submits the form, add this line in a suitable place:
+<code>
+router.HandleFunc("/chat/", handleChatMessage).Methods("POST")
+</code>
+and the function
+<code>
+func handleChatMessage(w http.ResponseWriter, r *http.Request) {
+	if err := r.ParseForm(); err != nil {
+		fmt.Println(err)
+		return
+	}
+	dbclient := getClient()
+	var msg message
+	msg.Message = r.PostForm["message"][0]
+	msg.Author = "Anonymous"
+	msg.Time = time.Now().Format("2006-01-02 15:04:05")
+	addChatMessage(dbclient, msg)
+	http.Redirect(w, r, "/chat/", http.StatusSeeOther)
+}
+</code>
+
+We also have to add a link to the chat tab in base.gohtml navlist, and when we run we have to run with the command go run *.go in order to run the db file also. That's it! Now if you go to localhost:8080/chat/ you can write persistent messages! Next part we will look at authenticating users. As usual you can find the full working code at 
+https://github.com/jhlq/gocourse/tree/main/part3 github.
+

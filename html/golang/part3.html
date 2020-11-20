@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>LearnLite: Golang, Part 3</title>
+<link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+<body>
+<nav>
+	<a href="../index.html">Home.</a>
+	<a href="index.html">Index.</a>
+	<a href="part1.html">Part 1.</a>
+	<a href="part2.html">Part 2.</a>
+	<a href="part3.html">Part 3.</a>
+</nav>
+<h1>Part 3</h1>
+
+<p>In this part we will add a chat application connected to a database. The database we will use is mongodb, so go ahead and install that one now, in Ubuntu it is available through apt as mongodb.</p>
+
+<p>First let's add the line 
+<code><br>
+ tm["chat"] = template.Must(template.ParseFiles("templates/chat.gohtml", "templates/base.gohtml"))<br>
+ </code>
+where the others are.</p>
+
+<p>Then we add the following template file:
+<code><br>
+ {{define "title"}}Home{{end}}<br>
+ {{define "body"}}<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&gt;Welcome to the chat app.&lt;/h1&gt;<br>
+ &nbsp;&nbsp;&lt;form action="/chat/" method="POST"&gt;<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="text" name="message" placeholder="Message" autofocus autocomplete="off"&gt;<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="submit" name="submit-btn" value="Send"&gt;<br>
+ &nbsp;&nbsp;&lt;/form&gt;<br>
+ &nbsp;&nbsp;{{range .Msgs}}<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;{{.Author}} said "{{.Message}}" at {{.Time}}&lt;br&gt;<br>
+ &nbsp;&nbsp;{{end}}<br>
+ {{end}}<br>
+ </code>
+with the name chat.gohtml.</p>
+
+<p>Next we add 
+<code><br>
+ router.HandleFunc("/chat/", serveChat).Methods("GET")<br>
+ </code>
+in the main func along with 
+<code><br>
+ func serveChat(w http.ResponseWriter, r *http.Request) {<br>
+ &nbsp;&nbsp;dbclient := getClient()<br>
+ &nbsp;&nbsp;msgs := getRecentMessages(dbclient, 30)<br>
+ &nbsp;&nbsp;data := struct {<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;Name string<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;Msgs []message<br>
+ &nbsp;&nbsp;}{Name: "Anon", Msgs: msgs}<br>
+ &nbsp;&nbsp;err := tm["chat"].ExecuteTemplate(w, "base", data)<br>
+ &nbsp;&nbsp;if err != nil {<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;log.Println(err)<br>
+ &nbsp;&nbsp;}<br>
+ }<br>
+ </code></p>
+
+<p>Alright, some new stuff in this function, let us define these functions in a new file called db.go:
+<code><br>
+ package main<br>
+ <br>
+ import (<br>
+ &nbsp;&nbsp;"go.mongodb.org/mongo-driver/bson"<br>
+ &nbsp;&nbsp;"go.mongodb.org/mongo-driver/mongo"<br>
+ &nbsp;&nbsp;"go.mongodb.org/mongo-driver/mongo/options"<br>
+ <br>
+ &nbsp;&nbsp;"context"<br>
+ &nbsp;&nbsp;"log"<br>
+ &nbsp;&nbsp;"time"<br>
+ )<br>
+ <br>
+ func getClient() *mongo.Client {<br>
+ &nbsp;&nbsp;ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)<br>
+ &nbsp;&nbsp;defer cancel()<br>
+ &nbsp;&nbsp;client, err := mongo.Connect(ctx, options.Client().ApplyURI("mongodb://localhost:27017"))<br>
+ &nbsp;&nbsp;if err != nil {<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;log.Println(err)<br>
+ &nbsp;&nbsp;}<br>
+ &nbsp;&nbsp;return client<br>
+ }<br>
+ <br>
+ type message struct {<br>
+ &nbsp;&nbsp;Author&nbsp;&nbsp;string<br>
+ &nbsp;&nbsp;Message string<br>
+ &nbsp;&nbsp;Time&nbsp;&nbsp;&nbsp;&nbsp;string<br>
+ }<br>
+ <br>
+ func addChatMessage(client *mongo.Client, msg message) {<br>
+ &nbsp;&nbsp;mes := bson.M{"author": msg.Author, "message": msg.Message, "time": msg.Time}<br>
+ &nbsp;&nbsp;collection := client.Database("gocourse").Collection("chat")<br>
+ &nbsp;&nbsp;ctx, cancel := context.WithTimeout(context.Background(), 5*time.Second)<br>
+ &nbsp;&nbsp;defer cancel()<br>
+ &nbsp;&nbsp;_, err := collection.InsertOne(ctx, mes)<br>
+ &nbsp;&nbsp;if err != nil {<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;log.Println(err)<br>
+ &nbsp;&nbsp;}<br>
+ }<br>
+ func getRecentMessages(client *mongo.Client, n int64) []message {<br>
+ &nbsp;&nbsp;collection := client.Database("gocourse").Collection("chat")<br>
+ &nbsp;&nbsp;ctx, cancel := context.WithTimeout(context.Background(), 30*time.Second)<br>
+ &nbsp;&nbsp;defer cancel()<br>
+ &nbsp;&nbsp;findOptions := options.Find()<br>
+ &nbsp;&nbsp;findOptions.SetLimit(n)<br>
+ &nbsp;&nbsp;findOptions.SetSort(bson.D{{Key: "_id", Value: -1}})<br>
+ &nbsp;&nbsp;cur, err := collection.Find(ctx, bson.D{}, findOptions)<br>
+ &nbsp;&nbsp;if err != nil {<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;log.Println(err)<br>
+ &nbsp;&nbsp;}<br>
+ &nbsp;&nbsp;defer cur.Close(ctx)<br>
+ &nbsp;&nbsp;var s []message<br>
+ &nbsp;&nbsp;for cur.Next(ctx) {<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;var result message<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;err := cur.Decode(&amp;result)<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;if err != nil {<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;log.Println(err)<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;s = append(s, result)<br>
+ &nbsp;&nbsp;}<br>
+ &nbsp;&nbsp;if err := cur.Err(); err != nil {<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;log.Println(err)<br>
+ &nbsp;&nbsp;}<br>
+ &nbsp;&nbsp;return s<br>
+ }<br>
+ </code></p>
+
+<p>Now we have to handle when the user submits the form, add this line in a suitable place:
+<code><br>
+ router.HandleFunc("/chat/", handleChatMessage).Methods("POST")<br>
+ </code>
+and the function
+<code><br>
+ func handleChatMessage(w http.ResponseWriter, r *http.Request) {<br>
+ &nbsp;&nbsp;if err := r.ParseForm(); err != nil {<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;fmt.Println(err)<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;return<br>
+ &nbsp;&nbsp;}<br>
+ &nbsp;&nbsp;dbclient := getClient()<br>
+ &nbsp;&nbsp;var msg message<br>
+ &nbsp;&nbsp;msg.Message = r.PostForm["message"][0]<br>
+ &nbsp;&nbsp;msg.Author = "Anonymous"<br>
+ &nbsp;&nbsp;msg.Time = time.Now().Format("2006-01-02 15:04:05")<br>
+ &nbsp;&nbsp;addChatMessage(dbclient, msg)<br>
+ &nbsp;&nbsp;http.Redirect(w, r, "/chat/", http.StatusSeeOther)<br>
+ }<br>
+ </code></p>
+
+<p>We also have to add a link to the chat tab in base.gohtml navlist, and when we run we have to run with the command go run *.go in order to run the db file also. That's it! Now if you go to localhost:8080/chat/ you can write persistent messages! Next part we will look at authenticating users. As usual you can find the full working code at 
+<a href="https://github.com/jhlq/gocourse/tree/main/part3" target="_blank"> github.</a></p>
+
+
+<br><br><br>
+<footer>
+<nav>
+	<a href="../index.html">Home.</a>
+	<a href="index.html">Index.</a>
+	<a href="part1.html">Part 1.</a>
+	<a href="part2.html">Part 2.</a>
+	<a href="part3.html">Part 3.</a>
+</nav>
+</footer>
+<p><small>Updated on 2020-11-20.</small></p>
+</body>
+</html>
