@@ -8,4 +8,5 @@ Content:
 <ul>
 !link:part1.html Part 1
 !link:part2.html Part 2
+!link:part3.html Part 3
 </ul>
