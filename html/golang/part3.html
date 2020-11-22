@@ -138,7 +138,6 @@ and the function
  &nbsp;&nbsp;&nbsp;&nbsp;fmt.Println(err)<br>
  &nbsp;&nbsp;&nbsp;&nbsp;return<br>
  &nbsp;&nbsp;}<br>
- &nbsp;&nbsp;dbclient := getClient()<br>
  &nbsp;&nbsp;var msg message<br>
  &nbsp;&nbsp;msg.Message = r.PostForm["message"][0]<br>
  &nbsp;&nbsp;msg.Author = "Anonymous"<br>
@@ -146,6 +145,10 @@ and the function
  &nbsp;&nbsp;addChatMessage(dbclient, msg)<br>
  &nbsp;&nbsp;http.Redirect(w, r, "/chat/", http.StatusSeeOther)<br>
  }<br>
+ </code>
+Finally add the dbclient as a global variable at the top of main.go:
+<code><br>
+ var dbclient = getClient()<br>
  </code></p>
 
 <p>We also have to add a link to the chat tab in base.gohtml navlist, and when we run we have to run with the command go run *.go in order to run the db file also. That's it! Now if you go to localhost:8080/chat/ you can write persistent messages! Next part we will look at authenticating users. As usual you can find the full working code at 
@@ -162,6 +165,6 @@ and the function
 	<a href="part3.html">Part 3.</a>
 </nav>
 </footer>
-<p><small>Updated on 2020-11-20.</small></p>
+<p><small>Updated on 2020-11-22.</small></p>
 </body>
 </html>
