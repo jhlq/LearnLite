@@ -1,0 +1,135 @@
+***Part 4
+
+In this part we will enable authentication with a Google mail address.
+
+Start with installing and importing the goth and gorilla sessions packages, among the imports add:
+<code>
+	"github.com/markbates/goth"
+	"github.com/markbates/goth/gothic"
+	"github.com/markbates/goth/providers/google"
+	"github.com/gorilla/sessions"
+</code>
+
+We will also need uuid functionality so
+<code>
+go get github.com/satori/go.uuid
+</code>
+and add the library to imports, you may have to add the identifier uuid:
+<code>
+	uuid "github.com/satori/go.uuid"
+</code>
+
+Next let's set up our handle functions. We need one for the callback:
+<code>
+func callback(res http.ResponseWriter, req *http.Request) {
+	user, err := gothic.CompleteUserAuth(res, req)
+	if err != nil {
+		fmt.Println("Error in CompleteUserAuth: ", err)
+		fmt.Fprintln(res, err)
+		return
+	}
+	session, err := gothic.Store.Get(req, "session")
+	if err != nil {
+		fmt.Println("Error getting session: ", err)
+		http.Error(res, err.Error(), http.StatusInternalServerError)
+		return
+	}
+	id := uuid.NewV4()
+	session.Values["uuid"] = id.String()
+	session.Values["Name"] = user.Name
+	session.Values["Email"] = user.Email
+	err = session.Save(req, res)
+	if err != nil {
+		fmt.Println("Error saving session: ", err)
+	}
+	http.Redirect(res, req, "/chat/", http.StatusSeeOther)
+}
+</code>
+
+One for logging out:
+<code>
+func logout(res http.ResponseWriter, req *http.Request) {
+	gothic.Logout(res, req)
+	session, _ := gothic.Store.Get(req, "session")
+	session.Values["Email"] = ""
+	session.Values["Name"] = ""
+	session.Values["uuid"] = ""
+	session.Save(req, res)
+	res.Header().Set("Location", "/")
+	res.WriteHeader(http.StatusSeeOther)
+}
+</code>
+
+As well as one for authenticating:
+<code>
+func authenticate(res http.ResponseWriter, req *http.Request) {
+	gothic.BeginAuthHandler(res, req)
+}
+</code>
+
+Next let's add routes for our functions:
+<code>
+	router.HandleFunc("/auth/{provider}/callback", callback)
+	router.HandleFunc("/logout/{provider}", logout)
+	router.HandleFunc("/auth/{provider}", authenticate)
+</code>
+
+Now it is time to get api keys from Google, go to 
+https://console.developers.google.com
+
+Create a new project then click on credentials and create credentials then OAuth cliend ID. Select Web application as application type and as redirect URI put http://127.0.0.1:8080/auth/google/callback
+
+Hit create and copy the client ID and secret into the top of the main function like so:
+<code>
+	key := "abc"         // Replace with your SESSION_SECRET or similar
+	maxAge := 86400 * 30 // 30 days
+	isProd := false      // Set to true when serving over https
+
+	store := sessions.NewCookieStore([]byte(key))
+	store.MaxAge(maxAge)
+	store.Options.Path = "/"
+	store.Options.HttpOnly = true // HttpOnly should always be enabled
+	store.Options.Secure = isProd
+
+	gothic.Store = store
+
+	goth.UseProviders(
+		google.New("YOUR API KEY HERE", "YOUR API SECRET HERE", "http://127.0.0.1:8080/auth/google/callback", "email", "profile"),
+	)
+</code>
+
+Next we add the login and logout links to our navlist in base.gohtml:
+<code>
+<li><a href="/auth/google">Log in</a></li>
+<li><a href="/logout/google">Log out</a></li>
+</code>
+
+Now we have to add some lines to the serveChat function:
+<code>
+	session, err := gothic.Store.Get(r, "session")
+	if session.Values["Name"] != nil && session.Values["Name"] != "" {
+		data.Name = session.Values["Name"].(string)
+	}
+</code>
+
+Finally we modify chat.gohtml:
+<code>
+   <h1>Welcome to the chat app, {{ .Name }}</h1>
+</code>
+
+To make everything work we also need to create a file named go.mod and paste the following there:
+<code>
+module auth
+
+go 1.13
+
+require (
+	github.com/markbates/goth v1.64.0
+	github.com/satori/go.uuid v1.2.0 // indirect
+	go.mongodb.org/mongo-driver v1.4.3 // indirect
+)
+</code>
+
+Now we can go run *.go and then go to 127.0.0.1:8080 and enjoy our log in system! Note that localhost:8080 wont work. As usual the full code can be found at 
+https://github.com/jhlq/gocourse/tree/main/part4
+

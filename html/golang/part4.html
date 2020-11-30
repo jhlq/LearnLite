@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>LearnLite: Golang, Part 4</title>
+<link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+<body>
+<nav>
+	<a href="../index.html">Home.</a>
+	<a href="index.html">Index.</a>
+	<a href="part1.html">Part 1.</a>
+	<a href="part2.html">Part 2.</a>
+	<a href="part3.html">Part 3.</a>
+	<a href="part4.html">Part 4.</a>
+</nav>
+<h1>Part 4</h1>
+
+<p>In this part we will enable authentication with a Google mail address.</p>
+
+<p>Start with installing and importing the goth and gorilla sessions packages, among the imports add:
+<code><br>
+ &nbsp;&nbsp;"github.com/markbates/goth"<br>
+ &nbsp;&nbsp;"github.com/markbates/goth/gothic"<br>
+ &nbsp;&nbsp;"github.com/markbates/goth/providers/google"<br>
+ &nbsp;&nbsp;"github.com/gorilla/sessions"<br>
+ </code></p>
+
+<p>We will also need uuid functionality so
+<code><br>
+ go get github.com/satori/go.uuid<br>
+ </code>
+and add the library to imports, you may have to add the identifier uuid:
+<code><br>
+ &nbsp;&nbsp;uuid "github.com/satori/go.uuid"<br>
+ </code></p>
+
+<p>Next let's set up our handle functions. We need one for the callback:
+<code><br>
+ func callback(res http.ResponseWriter, req *http.Request) {<br>
+ &nbsp;&nbsp;user, err := gothic.CompleteUserAuth(res, req)<br>
+ &nbsp;&nbsp;if err != nil {<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;fmt.Println("Error in CompleteUserAuth: ", err)<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;fmt.Fprintln(res, err)<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;return<br>
+ &nbsp;&nbsp;}<br>
+ &nbsp;&nbsp;session, err := gothic.Store.Get(req, "session")<br>
+ &nbsp;&nbsp;if err != nil {<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;fmt.Println("Error getting session: ", err)<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;http.Error(res, err.Error(), http.StatusInternalServerError)<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;return<br>
+ &nbsp;&nbsp;}<br>
+ &nbsp;&nbsp;id := uuid.NewV4()<br>
+ &nbsp;&nbsp;session.Values["uuid"] = id.String()<br>
+ &nbsp;&nbsp;session.Values["Name"] = user.Name<br>
+ &nbsp;&nbsp;session.Values["Email"] = user.Email<br>
+ &nbsp;&nbsp;err = session.Save(req, res)<br>
+ &nbsp;&nbsp;if err != nil {<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;fmt.Println("Error saving session: ", err)<br>
+ &nbsp;&nbsp;}<br>
+ &nbsp;&nbsp;http.Redirect(res, req, "/chat/", http.StatusSeeOther)<br>
+ }<br>
+ </code></p>
+
+<p>One for logging out:
+<code><br>
+ func logout(res http.ResponseWriter, req *http.Request) {<br>
+ &nbsp;&nbsp;gothic.Logout(res, req)<br>
+ &nbsp;&nbsp;session, _ := gothic.Store.Get(req, "session")<br>
+ &nbsp;&nbsp;session.Values["Email"] = ""<br>
+ &nbsp;&nbsp;session.Values["Name"] = ""<br>
+ &nbsp;&nbsp;session.Values["uuid"] = ""<br>
+ &nbsp;&nbsp;session.Save(req, res)<br>
+ &nbsp;&nbsp;res.Header().Set("Location", "/")<br>
+ &nbsp;&nbsp;res.WriteHeader(http.StatusSeeOther)<br>
+ }<br>
+ </code></p>
+
+<p>As well as one for authenticating:
+<code><br>
+ func authenticate(res http.ResponseWriter, req *http.Request) {<br>
+ &nbsp;&nbsp;gothic.BeginAuthHandler(res, req)<br>
+ }<br>
+ </code></p>
+
+<p>Next let's add routes for our functions:
+<code><br>
+ &nbsp;&nbsp;router.HandleFunc("/auth/{provider}/callback", callback)<br>
+ &nbsp;&nbsp;router.HandleFunc("/logout/{provider}", logout)<br>
+ &nbsp;&nbsp;router.HandleFunc("/auth/{provider}", authenticate)<br>
+ </code></p>
+
+<p>Now it is time to get api keys from Google, go to 
+<a href="https://console.developers.google.com" target="_blank">https://console.developers.google.com</a></p>
+
+<p>Create a new project then click on credentials and create credentials then OAuth cliend ID. Select Web application as application type and as redirect URI put http://127.0.0.1:8080/auth/google/callback</p>
+
+<p>Hit create and copy the client ID and secret into the top of the main function like so:
+<code><br>
+ &nbsp;&nbsp;key := "abc"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Replace with your SESSION_SECRET or similar<br>
+ &nbsp;&nbsp;maxAge := 86400 * 30 // 30 days<br>
+ &nbsp;&nbsp;isProd := false&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Set to true when serving over https<br>
+ <br>
+ &nbsp;&nbsp;store := sessions.NewCookieStore([]byte(key))<br>
+ &nbsp;&nbsp;store.MaxAge(maxAge)<br>
+ &nbsp;&nbsp;store.Options.Path = "/"<br>
+ &nbsp;&nbsp;store.Options.HttpOnly = true // HttpOnly should always be enabled<br>
+ &nbsp;&nbsp;store.Options.Secure = isProd<br>
+ <br>
+ &nbsp;&nbsp;gothic.Store = store<br>
+ <br>
+ &nbsp;&nbsp;goth.UseProviders(<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;google.New("YOUR API KEY HERE", "YOUR API SECRET HERE", "http://127.0.0.1:8080/auth/google/callback", "email", "profile"),<br>
+ &nbsp;&nbsp;)<br>
+ </code></p>
+
+<p>Next we add the login and logout links to our navlist in base.gohtml:
+<code><br>
+ &lt;li&gt;&lt;a href="/auth/google"&gt;Log in&lt;/a&gt;&lt;/li&gt;<br>
+ &lt;li&gt;&lt;a href="/logout/google"&gt;Log out&lt;/a&gt;&lt;/li&gt;<br>
+ </code></p>
+
+<p>Now we have to add some lines to the serveChat function:
+<code><br>
+ &nbsp;&nbsp;session, err := gothic.Store.Get(r, "session")<br>
+ &nbsp;&nbsp;if session.Values["Name"] != nil &amp;&amp;amp;session.Values["Name"] != "" {<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;data.Name = session.Values["Name"].(string)<br>
+ &nbsp;&nbsp;}<br>
+ </code></p>
+
+<p>Finally we modify chat.gohtml:
+<code><br>
+ &nbsp;&nbsp; &lt;h1&gt;Welcome to the chat app, {{ .Name }}&lt;/h1&gt;<br>
+ </code></p>
+
+<p>To make everything work we also need to create a file named go.mod and paste the following there:
+<code><br>
+ module auth<br>
+ <br>
+ go 1.13<br>
+ <br>
+ require (<br>
+ &nbsp;&nbsp;github.com/markbates/goth v1.64.0<br>
+ &nbsp;&nbsp;github.com/satori/go.uuid v1.2.0 // indirect<br>
+ &nbsp;&nbsp;go.mongodb.org/mongo-driver v1.4.3 // indirect<br>
+ )<br>
+ </code></p>
+
+<p>Now we can go run *.go and then go to 127.0.0.1:8080 and enjoy our log in system! Note that localhost:8080 wont work. As usual the full code can be found at 
+<a href="https://github.com/jhlq/gocourse/tree/main/part4" target="_blank">https://github.com/jhlq/gocourse/tree/main/part4</a></p>
+
+
+<br><br><br>
+<footer>
+<nav>
+	<a href="../index.html">Home.</a>
+	<a href="index.html">Index.</a>
+	<a href="part1.html">Part 1.</a>
+	<a href="part2.html">Part 2.</a>
+	<a href="part3.html">Part 3.</a>
+	<a href="part4.html">Part 4.</a>
+</nav>
+</footer>
+<p><small>Updated on 2020-11-30.</small></p>
+</body>
+</html>

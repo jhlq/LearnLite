@@ -2,11 +2,13 @@
 
 Go is built from the ground up to handle concurrency. It is fast like C while still being relatively easily typed.
 
-In this course we will build a website, in each part we will add additional features.
+In this course we will build a website, in each part we will add additional features. The full code can be found at 
+https://github.com/jhlq/gocourse
 
 Content:
 <ul>
 !link:part1.html Part 1
 !link:part2.html Part 2
 !link:part3.html Part 3
+!link:part4.html Part 4
 </ul>
