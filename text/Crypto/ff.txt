@@ -24,7 +24,7 @@ There are six products:
 <ul>
 FlareX: Flare's decentralized exchange - like Uniswap 
 Flare Wrap: Bring ERC20 tokens onto the Flare Network 
-Flare Farm: Stake to earn yFIN and more project tokens 
+Flare Farm: Stake to earn YFIN and more project tokens 
 Flare Mine: Mine FLR through mining Bitcoin and Ethereum, with no extra power  requirements 
 Flare Loans: Decentralized loans. Provide currencies for people to receive loans. Or,  receive loans by providing collateral.
 Flare Mutual: Decentralized insurance. Pool your assets to give people coverage over  smart contract hacks/bugs/failures. Or, receive coverage for smart contract  failures/bugs/hacks 
