@@ -1,11 +1,12 @@
 ***Flare Finance
  
-Flare Finance is a decentralized finance (DeFi) platform for XRP  and Flare holders. 
+Flare Finance is a decentralized finance (DeFi) platform for XRP, LTC and Flare holders. 
+
 Currently, most of the information is about the airdrop. 
 
 **Airdrop 
 
-Flare Finance will be airdropped to holders of Spark Token/Flare Network (Which was  airdropped from holding XRP) via a token called dFLR (The DAO token for Flare  Finance) 
+Flare Finance will airdrop yFLR to holders of Spark Token/Flare Network (Which was  airdropped from holding XRP) via a token called dFLR (The DAO token for Flare  Finance) 
 
 <ul>
 You will receive dFLR around a month after the first Spark airdrop. 
