@@ -6,7 +6,7 @@ Currently, most of the information is about the airdrop.
 
 **Airdrop 
 
-Flare Finance will airdrop yFLR to holders of Spark Token/Flare Network (which was  airdropped from holding XRP) via a token called dFLR (the DAO token for Flare  Finance). 
+Flare Finance will airdrop YFLR to holders of Spark Token/Flare Network (which was  airdropped from holding XRP) via a token called DFLR (the DAO token for Flare  Finance). 
 
 <ul>
 You will receive dFLR around a month after the first Spark airdrop. 
