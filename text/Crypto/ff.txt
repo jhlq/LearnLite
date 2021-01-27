@@ -1,0 +1,42 @@
+***Flare Finance
+ 
+Flare Finance is a decentralized finance (DeFi) platform for XRP  and Flare holders. 
+Currently, most of the information is about the airdrop. 
+
+**Airdrop 
+
+Flare Finance will be airdropped to holders of Spark Token/Flare Network (Which was  airdropped from holding XRP) via a token called dFLR (The DAO token for Flare  Finance) 
+
+<ul>
+You will receive dFLR around a month after the first Spark airdrop. 
+When you receive your dFLR, you will have 7 days to swap this for yFLR in order to  begin utilizing the DeFi platform. You will be able to swap dFLR for yFLR on a 1:1 ratio
+Any yFLR that is not claimed by the dFLR swap within 7 days will either be burnt or  added to a reserve pool (depending on governance proposal vote) 
+You will be able to purchase Spark tokens from exchanges to add to your current  airdropped stack, meaning you will be able to receive more dFLR 
+The only wallet or exchange currently supporting the dFLR airdrop is DCent Wallet 
+Bitrue and Poloniex are currently selling IOU Spark tokens. The terms of these are down  to the exchange and Flare Network has no participation in this 
+</ul>
+
+**Tokens &  Products: 
+
+There are six products:
+
+<ul>
+FlareX: Flare's decentralized exchange - like Uniswap 
+Flare Wrap: Bring ERC20 tokens onto the Flare Network 
+Flare Farm: Stake to earn yFIN and more project tokens 
+Flare Mine: Mine FLR through mining Bitcoin and Ethereum, with no extra power  requirements 
+Flare Loans: Decentralized loans. Provide currencies for people to receive loans. Or,  receive loans by providing collateral.
+Flare Mutual: Decentralized insurance. Pool your assets to give people coverage over  smart contract hacks/bugs/failures. Or, receive coverage for smart contract  failures/bugs/hacks 
+</ul>
+
+And four tokens: 
+
+<ul>
+YieldFin (YFIN): One of the main Flare Finance tokens Used for Governance of the  whole ecosystem and also, loans, mutual funds and farming 
+YieldFlare (YFLR): The secondary governance token, used for FlareX Governance and  also, the fee charge for FlareX swaps and liquidity rewards 
+FlareUSD (xUSD): The Flare Network stablecoin 
+YieldMine (YMIN): A token earnt alongside Flare via mining Bitcoin and Ethereum. Burn  this token whilst mining to earn more Flare.
+</ul>
+
+<small>Author: Kenzo Igiraneza</small>
+
