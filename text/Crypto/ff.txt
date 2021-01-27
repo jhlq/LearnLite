@@ -9,11 +9,11 @@ Currently, most of the information is about the airdrop.
 Flare Finance will airdrop YFLR to holders of Spark Token/Flare Network (which was  airdropped from holding XRP) via a token called DFLR (the DAO token for Flare  Finance). 
 
 <ul>
-You will receive dFLR around a month after the first Spark airdrop. 
-When you receive your dFLR, you will have 7 days to swap this for yFLR in order to  begin utilizing the DeFi platform. You will be able to swap dFLR for yFLR on a 1:1 ratio
-Any yFLR that is not claimed by the dFLR swap within 7 days will either be burnt or  added to a reserve pool (depending on governance proposal vote) 
-You will be able to purchase Spark tokens from exchanges to add to your current  airdropped stack, meaning you will be able to receive more dFLR 
-The only wallet or exchange currently supporting the dFLR airdrop is D'Cent Wallet 
+You will receive DFLR around a month after the first Spark airdrop. 
+When you receive your DFLR, you will have 7 days to swap this for YFLR in order to  begin utilizing the DeFi platform. You will be able to swap DFLR for YFLR on a 1:1 ratio
+Any yFLR that is not claimed by the DFLR swap within 7 days will either be burnt or  added to a reserve pool (depending on governance proposal vote) 
+You will be able to purchase Spark tokens from exchanges to add to your current  airdropped stack, meaning you will be able to receive more DFLR 
+The only wallet or exchange currently supporting the DFLR airdrop is D'Cent Wallet 
 Bitrue and Poloniex are currently selling IOU Spark tokens. The terms of these are down  to the exchange and Flare Network has no participation in this 
 </ul>
 
