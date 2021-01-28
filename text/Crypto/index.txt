@@ -6,4 +6,5 @@ Content:
 <ul>
 !link:flare.html Flare network
 !link:ff.html Flare Finance
+!link:blockchain.html Blockchain
 </ul>

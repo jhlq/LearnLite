@@ -1,0 +1,21 @@
+***Blockchain: What you need to know
+
+To understand the concept of a blockchain, one needs to know what a database is and how it works as the two have many similarities. 
+
+A blockchain is a type of database; a database is by definition a collection of information or data that is stored electronically on a computer system. Information or data in databases is typically structured in table format to allow easier searching and filtering for specific information. 
+
+The difference between a typical database and a blockchain is simply the way data is structured. A blockchain collects information together in groups, also known as blocks that hold sets of information. Blocks have certain storage capacities and, when filled, are chained onto the previously filled block, forming a chain of data known as the "blockchain", while databases structure their data in tables; so basically we can say that all blockchains are databases but not all databases are blockchains. 
+
+Blockchains also consist of “nodes” (which are the computers that store the blocks of data). In a blockchain, each node has a full record of the data that has been stored on the blockchain since its inception. For example, Bitcoin’s blockchains operate in a decentralized way; For Bitcoin, the data is the entire history of all Bitcoin transactions. If one node has an error in its data it can use the thousands of other nodes as a reference point to correct itself. This way, no one node within the network can alter information held within it. 
+
+Each node has its own copy of the chain that gets updated as fresh blocks are added, this makes it easy for tracking wherever one would be. 
+
+Blockchain technology accounts for the issues of security and trust in several ways. New blocks are always stored linearly and chronologically; each block contains its own “hash” (A hash is a function that converts an input of letters and numbers into an encrypted output of a fixed length), After a block has been added to the end of the blockchain, it is very difficult to go back and alter the contents of the block unless the majority reached a consensus to do so. 
+
+It would be difficult for a hacker to modify anything on the block as the hash codes would immediately change for everyone else on the chain, they would automatically get notifications and that would make them leave the old infected chain to a new one making the old one loose value. 
+
+So, even if the hacker takes control of 51% of the chain and has all the resources required to take such an action, it would still be useless as the chain would immediately loose its value and for Bitcoin’s case, he might be able to steal it but you would still be able to track it, and all this make Blockchains one of the most secure tools.
+
+To conclude, I would clarify that even though Blockchains are mostly used to store cryptocurrencies transactions history, other things like legal contracts or product inventories can also be stored.
+
+<small>Author: Kenzo Igiraneza</small>
