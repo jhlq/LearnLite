@@ -1,4 +1,5 @@
 index/Index
 flare/Flare network
 ff/Flare Finance
+dcent/D'Cent Wallet
 blockchain/Blockchain

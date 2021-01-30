@@ -1,0 +1,26 @@
+***D'Cent Wallet 
+
+“D'Cent Wallet” was introduced by “IoTrust.CO ltd”, a company founded in January 2017 by eight veteran technologists aging over two decades of experience in deeply embedded security software and systems. 
+
+The team is based in Korea and is particularly versed in secure element and trust zone technology. 
+
+D'Cent is a next generation cryptocurrency hardware wallet and the world’s first to apply Bitcoin smart contracts. The D'Cent mobile app is available for both android and iOS users. It is one of the most advanced hardware wallet for protection against cyber attacks. 
+
+D'Cent released two amazing gadgets: The biometric cold storage wallet and The D'Cent card crypto wallet. Both support ERC-20 and ERC-721. 
+
+The D'Cent card crypto wallet can easily fit in the wallet so it is easy to move around with and easy to use discreetly. It is NFC enabled, that means you can link the card to the app by just tapping. The other good thing about the D'Cent card crypto wallet is that it is very affordable (it costs you just about $12.99). 
+
+The D'Cent cold wallet has also many big advantages compared to the already existing hardware wallets. It made a big step forward to assure the security of the users by using biometric finger scan, and that is a first time in hardware wallets existing on the market. 
+
+Additionally, the user has multiple authentication methods, it has an option of PIN and/or finger print sensor to authorize changes and sign transactions. It has an already built-in two step authentication. 
+
+The D'Cent wallet is easy to setup and is made of good materials that reduce the risk of interferences especially with Bluetooth. 
+
+The device currently supports the majority of the popular crypto coins in the market and promises to add a few more in the future. One of its best features is the QR code which makes payment easy. The wallet is also quite handy and can be carried anywhere and at any place. 
+
+The D'Cent biometrical wallet is one of the only wallets that support Bitcoin smart contracts making it unique in the crypto market. The mobile application also provides personalized services like model change of device and also displays real-time market rates of the crypto coins. 
+
+D'Cent is quite robust and provides multiple services including financial, insurance and government services and also facilitates P2P transactions. The D'Cent Biometric Wallet overall has positive feedback from its users. The wallet along with its Bluetooth connectivity, QR code, and biometric verification is convenient to use and is quite light in weight, a reason why many users prefer this hardware wallet over other popular ones.
+
+<small>Author: Kenzo Igiraneza</small>
+

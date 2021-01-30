@@ -6,5 +6,6 @@ Content:
 <ul>
 !link:flare.html Flare network
 !link:ff.html Flare Finance
+!link:dcent.html D'Cent Wallet
 !link:blockchain.html Blockchain
 </ul>
