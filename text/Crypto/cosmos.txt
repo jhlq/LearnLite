@@ -1,0 +1,25 @@
+***The Cosmos network 
+
+The Cosmos network can be defined as a decentralized network of independent,  scalable, and interoperable blockchains, creating the foundation for a new token  economy. 
+
+It is commonly called the internet of blockchains, because before the Cosmos  network, blockchains were unable to communicate with each other and they could  only perform few transactions per second. 
+
+Cosmos came as a solution to some of the hardest blockchain’s problems such as  scalability, usability and interoperability. 
+
+With Cosmos, blockchains can maintain sovereignty, process transactions quickly  and communicate with other blockchains in the ecosystem, making it optimal for a  variety of use cases. 
+
+This vision is achieved through a set of open source tools like Tendermint,  the Cosmos SDK and IBC designed to let people build custom, secure, scalable  and interoperable blockchain applications quickly. 
+
+Tendermint BFT is a solution that packages the networking and consensus layers  of a blockchain into a generic engine, allowing developers to focus  on application development as opposed to the complex underlying protocol. As a  result, Tendermint saves hundreds of hours of development time. Note that  Tendermint also designates the name of the byzantine fault tolerant (BFT)  consensus algorithm used within the Tendermint BFT engine. 
+
+The Tendermint BFT engine is connected to the application by a socket protocol  called the Application Blockchain Interface (ABCI). This protocol can be wrapped  in any programming language, making it possible for developers to choose a language that fits their needs. 
+
+Cosmos allows blockchain applications to scale to millions of users through  horizontal and vertical scalability solutions.
+
+Vertical scalability: This encompasses the methods for scaling the blockchain  itself. By moving away from Proof-of-Work and optimizing its components,  Tendermint BFT can reach thousands of transactions per-second. The bottleneck  factor is the application itself. 
+
+Horizontal scalability: Even if the consensus engine and the application are  highly optimized, at some point the transaction throughput of a single chain  inevitably hits a wall it cannot surpass. That is the limit of vertical scaling. To go  beyond it, the solution is to move to multi-chain architectures. The idea is to have  multiple parallel chains running the same application and operated by a common  validator set, making blockchains theoretically infinitely scalable.
+
+To conclude, we should know that Cosmos must not be seen as a product but as  an ecosystem built on a set of modular, adaptable and interchangeable tools.  Developers are encouraged to join the effort to improve existing tools and create  new ones in order to make the promise of blockchain technology a reality. These  tools are the foundation needed to create the decentralized internet and global  financial system of tomorrow.
+
+<small>Author: Kenzo Igiraneza</small>

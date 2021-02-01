@@ -8,4 +8,5 @@ Content:
 !link:ff.html Flare Finance
 !link:dcent.html D'Cent Wallet
 !link:blockchain.html Blockchain
+!link:cosmos.html Cosmos network
 </ul>
