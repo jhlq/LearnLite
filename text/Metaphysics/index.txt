@@ -1,0 +1,12 @@
+***Metaphysics
+
+<ul>
+!link:introduction.html Introduction
+!link:chapter1.html Chapter 1
+!link:chapter2.html Chapter 2
+!link:chapter3.html Chapter 3
+!link:chapter4.html Chapter 4 
+!link:chapter5.html Chapter 5
+!link:chapter6.html Chapter 6
+!link:chapter7.html Chapter 7
+</ul>
