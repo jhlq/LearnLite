@@ -7,3 +7,9 @@ chapter4/Chapter 4
 chapter5/Chapter 5
 chapter6/Chapter 6
 chapter7/Chapter 7
+chapter8/Chapter 8
+chapter9/Chapter 9
+chapter10/Chapter 10
+chapter11/Chapter 11
+chapter12/Chapter 12
+axioms/Axioms

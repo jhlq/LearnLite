@@ -15,6 +15,6 @@ Axiom 6: it is a sin to blindly accept dogma.
 
 Lets make a similar axiom related to mathematical proofs. To make it clear that one cannot blindly trust any complicated logical conclusion due to inherent paradoxes, incompleteness and the principle of explosion I bypass the need to have to explain complicated mathematical theory by instating:
 
-Axiom 7: The assumption true==true leads to true==false.
+Axiom 7: the assumption true==true leads to true==false.
 
 This axiom emphasizes that you cannot trust logic alone but have to apply your neural intelligence at every step, much like neural networks can be exploited if they aren't logical. Develop and apply every faculty of mind at your disposal, treat everything you are certain cannot happen as a potential bug in a code base that will still eventually pop up, which I'm sure many programmers will recognize as happening frequently.
