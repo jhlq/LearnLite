@@ -12,4 +12,10 @@ chapter9/Chapter 9
 chapter10/Chapter 10
 chapter11/Chapter 11
 chapter12/Chapter 12
+chapter13/Chapter 13
+chapter14/Chapter 14
+chapter15/Chapter 15
+chapter16/Chapter 16
 axioms/Axioms
+definitions/Definitions
+toc/Table of contents

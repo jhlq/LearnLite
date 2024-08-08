@@ -14,5 +14,11 @@
 !link:chapter10.html Chapter 10
 !link:chapter11.html Chapter 11
 !link:chapter12.html Chapter 12
+!link:chapter13.html Chapter 13
+!link:chapter14.html Chapter 14
+!link:chapter15.html Chapter 15
+!link:chapter16.html Chapter 16
 !link:axioms.html Axioms
+!link:definitions.html Definitions
+!link:toc.html Table of contents
 </ul>
