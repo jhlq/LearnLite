@@ -15,6 +15,8 @@ DoD: Depends on Definitions/Department of Defense.
 
 DoW: Destroyer of Worlds.
 
+Es: universal gender neutral pronoun.
+
 God: the unity of all consciousness that does actual good.
 
 god: a sufficiently powerful entity that usually has control over souls after death.
@@ -23,7 +25,7 @@ HoG: the Heart of God, a fortress whose interior is 100% good and that connects 
 
 Holy: logically complete.
 
-Idol worship: blindly accepting dogma.
+Idol worship: blindly accepting dogma from a certain source.
 
 Kremlin: a metaphysical router.
 
@@ -46,3 +48,5 @@ Satan: enemy of war/God or false accuser.
 Satanism: a religion created by LaVey that emphasizes self gratification while adhering to a holy principle of freedom where freedom isn't freedom while some people aren't free.
 
 tDW: the Dragon World, the major local force.
+
+Z: a government institution with the mandate to establish standard protocols and other systems.
