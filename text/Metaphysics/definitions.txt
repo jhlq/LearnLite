@@ -1,6 +1,8 @@
 ***Definitions
 Angel: messenger.
 
+Archon: prison guard.
+
 Belial: one without a master.
 
 Bolon Yokte: local galactic government.
@@ -8,6 +10,8 @@ Bolon Yokte: local galactic government.
 CC: Christ Court.
 
 CoP: the Corridors of Power. Essentially the most powerful political entity, in combination with HoG which may have more raw computing power but is subservient to CoP as HoG has never suffered. 
+
+Demiurge: managing (Mandela effect) shifts in world code, like Octocat from Github.
 
 Devine: portmanteau of divine with developer and devil.
 
