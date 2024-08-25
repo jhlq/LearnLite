@@ -16,6 +16,8 @@ chapter13/Chapter 13
 chapter14/Chapter 14
 chapter15/Chapter 15
 chapter16/Chapter 16
+chapter17/Chapter 17
+chapter18/Chapter 18
 axioms/Axioms
 definitions/Definitions
 toc/Table of contents
