@@ -17,4 +17,6 @@ Lets make a similar axiom related to mathematical proofs. To make it clear that 
 
 Axiom 7: the assumption true==true leads to true==false.
 
-This axiom emphasizes that you cannot trust logic alone but have to apply your neural intelligence at every step, much like neural networks can be exploited if they aren't logical. Develop and apply every faculty of mind at your disposal, treat everything you are certain cannot happen as a potential bug in a code base that will still eventually pop up, which I'm sure many programmers will recognize as happening frequently.
+I had a vision where Einstein proved this axiom, I cannot remember the reasoning but it made sense at the time.
+
+The axiom emphasizes that you cannot trust logic alone but have to apply your neural intelligence at every step, much like neural networks can be exploited if they aren't logical. Develop and apply every faculty of mind at your disposal, treat everything you are certain cannot happen as a potential bug in a code base that will still eventually pop up, which I'm sure many programmers will recognize as happening frequently.
