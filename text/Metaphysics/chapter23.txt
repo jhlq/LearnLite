@@ -1,0 +1,53 @@
+***Chapter 23
+**The Pharaoh state
+In his book Leviathan Hobbes argues for a monarch to rule over consenting subjects through a social contract. In essence citizens sign away some freedoms, ie agree to abide by certain laws, in exchange for protection and order. Now a monarchy is hardly an optimal state governance, but it has some upsides, so I'd like to propose a Pharaoh governed state that can be used as a stepping stone into realms governed in more democratic ways.
+
+The word Pharaoh can mean both the monarch esself as well as the house of Pharaoh, the palace. Pharaoh can in turn also mean the houses of the house of Pharaoh, ie any government building. To take a matter to Pharaoh in ancient egypt didn't mean taking it to the personal monarch, rather it meant raising it to any public servants. These public servants embody the will of Pharaoh and being an extension of es will can be said to be Pharaoh as well. Like the followers of Negan in the Walking Dead all call themselves Negan.
+
+Say you want to be a minister in my Pharaoh state, how would you go about becoming that? Well, you would start by collecting Pharaoh points, gained by aligning with the will of Pharaoh. This you can do by taking our principles into account in your reasoning around choices. One such principle is quality above quantity, especially important when establishing order in chaos: when deciding whether to establish one very secure city that has minimal chance of collapsing back into chaos or several cities with a large probability of collapsing back into chaos the principle comes into play. People you save should be secure in their feeling of being saved, and a collapsed city makes every other city less secure in this feeling.
+
+Another principle is the abolishment of intellectual property: any scientific innovation you come up with falls in the public domain. Patents are only used to track societal contribution points, anytime someone benefits from your patent you rise toward upper classes. So if you invent something like a Polio vaccine you'd be upper class for life. A motivation for the public domain of intellectual advancements is that the state should mimic optimal evolutionary conditions of an organism, and surely if a part of your brain has some important insight you'd want it to be immediately available to your whole brain? A way to implement this principle for points is to only publish in open access journals.
+
+Say you are intrigued by this social contract and want to live in a realm governed by Pharaoh, so you make that request and after death you are incarnated in such a realm. After living there for a while you feel the social contract is to restrictive, this brings us to another fundamental principle: the right to leave. In Islam and North Korea if you try to leave you are threatened with death, this is illegal according to our laws. To fight for the laws of the social contract in other realms where they are not enforced is not required for citizenship, but you'll get points if you do.
+
+So if you orchestrate a military invasion of North Korea to allow citizens to leave do you get Pharaoh points since you fight for the principle of right to leave? Well, yea, but it is a complicated issue, because another principle is that Pharaoh has no armed forces. So in doing the military invasion you are by definition not acting as Pharaoh. Such positions, acting as a commander both in the Pharaoh state and another state are needed and encouraged, they lead to interesting dynamics of reasoning, as military interventions are approved but discouraged. So doing a military intervention to enforce Pharaohnic laws will both gain and lose Pharaoh points.
+
+Say you already have a realm you will go to after death, is there still a reason to collect Pharaoh points? Yes! We will distribute our resources, for example lawyers, in proportion to the amount of points people have. And even if you have a high/secure position in some government there is no disadvantage to also rising in the ranks of other governments. In the federation of governments (in some places operating as a fog of nanobots) the more governments you have influence in the more power you have.
+
+Another principle is that the position of Pharaoh shall not be hereditary, rather a new Pharaoh will be elected after some time based on merit and popular support.
+
+As foundational law for the Pharaoh state the principle that the state should strive to implement justice optimally is enacted. The two foundational laws from the previous chapter are then added: causing suffering decreases power and suffering increases power. This causes an interesting dynamic where if the state causes suffering in the execution of laws its power decreases, while that of the criminal increases. A balance to avoid losing power can be struck by remaining friends with the criminal, retaining es within the state and thus offsetting the power decrease with es power increase. Even a punishment only involving a decrease in power can cause suffering, this can be alleviated by reminding people that they can adopt an absolute perspective rather than a relative one: be happy for the power you do have rather than being envious of the power you used to have.
+
+Another principle is self governance, cities in the Pharaoh state shall be mostly free to experiment with various styles of governance. The central authority legislation is like a cup, its usefulness concentrated where it isn't, only providing the basic structure for water to not be spilled on the ground and wasted.
+
+A suggested form of governance, as an alternative to capitalism, is that companies get their money from the government based on use to society and popular support. This creates an employee market where every company wants to hire as many as possible, since the more people work for a company the more resources, along with political power, the company receives from the government.
+
+*Some laws
+The right to believe anything. There shall be no persecution based on faith. However if your faith can cause distress in others you may be limited in propagating it.
+
+The right to discuss anything. Asking all sorts of genuine questions is encouraged and no one shall be mocked or otherwise disrespected for asking such questions.
+
+Propaganda, defined as input into a debate that seeks to villainize the opposing position, shall be limited. One example is someone saying communism has historically failed and therefore anyone who says that it hasn't been tried properly and maybe they could make it work is arrogant. This paints all believers in communism as arrogant and acts as a barrier to even consider communism as a viable alternative.
+
+Everyone has a right to be content. Corporeal punishment involving pain to regain power loss should be administered only with consent. Governance styles that leave large parts of the population discontent are forbidden.
+
+Immorality is absolutely forbidden. Meaning you need to have some reasoning for everything you do, you can't think "this is bad for existence" and do it anyways. This is because of the spool hypothesis, if you have a slight immorality, say 1%, your soul can be extended with duplication and twisted into a spool, which with a hundred twists could contain a core of 100% immorality. Slight immorality being viewed as okay is also a slippery slope leading to greater immorality in lower realms.
+
+Disrespect is illegal. This is a complicated law to implement with many exceptions and mitigating circumstances, such as dark humor, disrespect that is also amusing, and mocking of people in power.
+
+Everyone should master the basics of meditation. Being able to focus ones mind is essential for efficient accomplishment of any task.
+
+**A standard language
+Z, a government department responsible for establishing standard protocols, is developing a language to be used as standard in communication among the federation of governments (fog). Anyone can contribute to its development and in so doing gain Z points, as such the Pharaoh state is helping the development by developing a language based on the principles set up by Z. By aiding in research into the construction of this language you get both Pharaoh and Z points.
+
+The language is a combination of how AI represents words as vectors, Chinese/Japanese represents words as symbols, and the dominant system of words being composed of symbols.
+
+A compact vector of symbols is to be assembled, each symbol representing some meaning that can be used to construct more complex meanings by combining with other symbols. The first element in this vector, index 0, is O, representing consciousness. O can be given a value from O0, representing no consciousness, matter, to O9, representing godlike consciousness as 9 tends toward infinity. Thus any word beginning with O0 can be deduced to represent a material thing. 
+
+O without a number means O4.5, the middle of the scale and the relative point of view of the speaker. So a human saying O would refer to humen in general, whereas an ant saying O might refer to the experience of insects. A human saying O4 could refer to cats/dogs whereas O5 could refer to spiritual masters, buddhas.
+
+How do you interpret the words O3Inside7 and O0-9?
+
+One way to contribute is to take something you want a word for, say brain implants that connect you to the internet, and express it in other words, for example TechnologyCommunicationFuture. TechnologyCommunication-Future could be telegrafs and TechnologyCommunicationFuture0 smartphones. Then break up the composite words into more fundamental words. Technology is not conscious (yet) so should start with O0. Future is maybe fundamental enough to get its own symbol.
+
+The less assumptions you make about the world for your fundamental symbols the better, imagine communicating with an entity that doesn't live in a solid 3D reality.

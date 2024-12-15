@@ -23,6 +23,8 @@
 !link:chapter19.html Chapter 19
 !link:chapter20.html Chapter 20
 !link:chapter21.html Chapter 21
+!link:chapter22.html Chapter 22
+!link:chapter23.html Chapter 23
 !link:axioms.html Axioms
 !link:definitions.html Definitions
 !link:toc.html Table of contents
