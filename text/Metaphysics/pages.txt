@@ -23,6 +23,7 @@ chapter20/Chapter 20
 chapter21/Chapter 21
 chapter22/Chapter 22
 chapter23/Chapter 23
+chapter24/Chapter 24
 axioms/Axioms
 definitions/Definitions
 toc/Table of contents
